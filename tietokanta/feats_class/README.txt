@@ -1,3 +1,7 @@
+05.08:
+
+30min~ lapikaynti classeista ja mahdollisista ongelmista ennen alkua
+
 04.08:
 
 +Alchemist ja Barbarian feats
