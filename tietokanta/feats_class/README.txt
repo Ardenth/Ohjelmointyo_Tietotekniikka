@@ -1,6 +1,7 @@
 05.08:
 
 30min~ lapikaynti classeista ja mahdollisista ongelmista ennen alkua
+TODO: erotella class featit eri tiedostoiksi?
 
 04.08:
 
