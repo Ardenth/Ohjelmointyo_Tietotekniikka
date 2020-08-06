@@ -1,3 +1,6 @@
+06.08:
+TODO: General feat vs Skill Feat
+
 04.08 muutokset:
 + Vaatimukset maaritelty "general feat" - tietokannalla
 + formatting:
