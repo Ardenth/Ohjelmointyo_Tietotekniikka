@@ -1,0 +1,1 @@
+Spell Per Day seuranta
