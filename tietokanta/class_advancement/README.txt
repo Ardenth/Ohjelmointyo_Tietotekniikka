@@ -13,3 +13,8 @@ Kaikki progression feat tiedot: general feat, skill feat, class feat, etc. ovat 
 
 Muut class esim skill nousut tai vastaavat taidot ovat tassa tiedostossa maariteltyja
 
+2.9
+
+Paljon aikaa kaytetty mahdollisten formatointi ongelmien valttamiseksi
+- ei ole viela muutettu tarvittavia tietoja class progressio -tiedostosta
+	- viela hieman mietinnan alla
