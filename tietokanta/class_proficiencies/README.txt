@@ -11,3 +11,6 @@ OccultAttack
 OccultDC
 =>
 pelkka OccultDC?
+
+-------------------
+testaus suoraan tiedostosta hakuun ilman etta erottelisi classit aina

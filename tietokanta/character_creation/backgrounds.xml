@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<backgrounds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Background>
+		<Name>Acolyte</Name>
+		<Boost>Free|||Intelligence||||Wisdom</Boost>
+		<Skill>Religion|Trained|||Lore(Scribing)|Trained</Skill>
+		<Feat>Student of the Canon</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Acrobat</Name>
+		<Boost>Free|||Strength||||Dexterity</Boost>
+		<Skill>Acrobatics|Trained|||Lore(Circus)|Trained</Skill>
+		<Feat>Steady Balance</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Animal Whisperer</Name>
+		<Boost>Free|||Wisdom||||Charisma</Boost>
+		<Skill>Nature|Trained|||Lore|Trained</Skill>
+		<Feat>Train Animal</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Artisan</Name>
+		<Boost>Free|||Strength||||Intelligence</Boost>
+		<Skill>Crafting|Trained|||Lore(Guild)|Trained</Skill>
+		<Feat>Specialty Crafting</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Barkeep</Name>
+		<Boost>Free|||Constitution||||Charisma</Boost>
+		<Skill>Diplomacy|Trained|||Lore(Alcohol)|Trained</Skill>
+		<Feat>Hobnobber</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Barrister</Name>
+		<Boost>Free|||Intelligence||||Charisma</Boost>
+		<Skill>Diplomacy|Trained|||Lore(Legal)|Trained</Skill>
+		<Feat>Group Impression</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Bounty Hunter</Name>
+		<Boost>Free|||Strength||||Wisdom</Boost>
+		<Skill>Survival|Trained|||Lore(Legal)|Trained</Skill>
+		<Feat>Experienced Tracker</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Charlatan</Name>
+		<Boost>Free|||Intelligence||||Charisma</Boost>
+		<Skill>Deception|Trained|||Lore(Underworld)|Trained</Skill>
+		<Feat>Charming Liar</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Criminal</Name>
+		<Boost>Free|||Dexterity||||Intelligence</Boost>
+		<Skill>Stealth|Trained|||Lore(Underworld)|Trained</Skill>
+		<Feat>Experienced Smuggler</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Detective</Name>
+		<Boost>Free|||Intelligence||||Wisdom</Boost>
+		<Skill>Society|Trained|||Lore(Underworld)|Trained</Skill>
+		<Feat>Streetwise</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Emissary</Name>
+		<Boost>Free|||Intelligence||||Charisma</Boost>
+		<Skill>Society|Trained|||Lore(City)|Trained</Skill>
+		<Feat>Multilingual</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Entertainer</Name>
+		<Boost>Free|||Dexterity||||Charisma</Boost>
+		<Skill>Performance|Trained|||Lore(Theater)|Trained</Skill>
+		<Feat>Fascinating Performance</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Farmhand</Name>
+		<Boost>Free|||Constitution||||Wisdom</Boost>
+		<Skill>Athletics|Trained|||Lore(Farming)|Trained</Skill>
+		<Feat>Assurance(Athletics)</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Field Medic</Name>
+		<Boost>Free|||Constitution||||Wisdom</Boost>
+		<Skill>Medicine|Trained|||Lore(Warfare)|Trained</Skill>
+		<Feat>Battle Medic</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Fortune Teller</Name>
+		<Boost>Free|||Intelligence||||Charisma</Boost>
+		<Skill>Occultism|Trained|||Lore(Fortunetelling)|Trained</Skill>
+		<Feat>Oddity Identification</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Gambler</Name>
+		<Boost>Free|||Dexterity||||Charisma</Boost>
+		<Skill>Deception|Trained|||Lore(Games)|Trained</Skill>
+		<Feat>Lie to Me</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Gladiator</Name>
+		<Boost>Free|||Strength||||Charisma</Boost>
+		<Skill>Performance|Trained|||Lore(Gladiatorial)|Trained</Skill>
+		<Feat>Impressive Performance</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Guard</Name>
+		<Boost>Free|||Strength||||Charisma</Boost>
+		<Skill>Intimidation|Trained|||Lore(Legal)|Trained||||Lore(Warfare)|Trained</Skill>
+		<Feat>Quick Coercion</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Herbalist</Name>
+		<Boost>Free|||Constitution||||Wisdom</Boost>
+		<Skill>Nature|Trained|||Lore(Herbalism)|Trained</Skill>
+		<Feat>Natural Medicine</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Hermit</Name>
+		<Boost>Free|||Constitution||||Intelligence</Boost>
+		<Skill>Occultism|Trained|||Nature|Trained|||Lore(Terrain)|Trained</Skill>
+		<Feat>Dubious Knowledge</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Hunter</Name>
+		<Boost>Free|||Dexterity||||Wisdom</Boost>
+		<Skill>Survival|Trained|||Lore(Tanning)|Trained</Skill>
+		<Feat>Survey Wildlife</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Laborer</Name>
+		<Boost>Free|||Strength||||Constitution</Boost>
+		<Skill>Athletics|Trained|||Lore(Labor)|Trained</Skill>
+		<Feat>Hefty Hauler</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Martial Disciple1</Name>
+		<Boost>Free|||Strength||||Dexterity</Boost>
+		<Skill>Acrobatics|Trained|||Lore(Warfare)|Trained</Skill>
+		<Feat>Catfall</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Martial Disciple2</Name>
+		<Boost>Free|||Strength||||Dexterity</Boost>
+		<Skill>Athletics|Trained|||Lore(Warfare)|Trained</Skill>
+		<Feat>Quick Jump</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Merchant</Name>
+		<Boost>Free|||Intelligence||||Charisma</Boost>
+		<Skill>Diplomacy|Trained|||Lore(Mercantile)|Trained</Skill>
+		<Feat>Bargain Hunter</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Miner</Name>
+		<Boost>Free|||Strength||||Wisdom</Boost>
+		<Skill>Survival|Trained|||Lore(Miner)|Trained</Skill>
+		<Feat>Terrain Expertise(underground)</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Noble1</Name>
+		<Boost>Free|||Intelligence||||Charisma</Boost>
+		<Skill>Society|Trained|||Lore(Genealogy)|Trained</Skill>
+		<Feat>Courtly Graces</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Noble2</Name>
+		<Boost>Free|||Intelligence||||Charisma</Boost>
+		<Skill>Society|Trained|||Lore(Heraldry)|Trained</Skill>
+		<Feat>Courtly Graces</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Nomad</Name>
+		<Boost>Free|||Constitution||||Wisdom</Boost>
+		<Skill>Survival|Trained|||Lore(Terrain)|Trained</Skill>
+		<Feat>Assurance(Survival)</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Prisoner</Name>
+		<Boost>Free|||Strength||||Constitution</Boost>
+		<Skill>Stealth|Trained|||Lore(Underworld)|Trained</Skill>
+		<Feat>Experienced Smuggler</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Sailor</Name>
+		<Boost>Free|||Strength||||Dexterity</Boost>
+		<Skill>Athletics|Trained|||Lore(Sailing)|Trained</Skill>
+		<Feat>Underwater Marauder</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Scholar1</Name>
+		<Boost>Free|||Intelligence||||Wisdom</Boost>
+		<Skill>Religion|Trained|||Lore(Academia)|Trained</Skill>
+		<Feat>Assurrance(Religion)</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Scholar2</Name>
+		<Boost>Free|||Intelligence||||Wisdom</Boost>
+		<Skill>Arcana|Trained|||Lore(Academia)|Trained</Skill>
+		<Feat>Assurrance(Arcana)</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Scholar3</Name>
+		<Boost>Free|||Intelligence||||Wisdom</Boost>
+		<Skill>Nature|Trained|||Lore(Academia)|Trained</Skill>
+		<Feat>Assurrance(Nature)</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Scholar4</Name>
+		<Boost>Free|||Intelligence||||Wisdom</Boost>
+		<Skill>Occultism|Trained|||Lore(Academia)|Trained</Skill>
+		<Feat>Assurrance(Occultism)</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Scout</Name>
+		<Boost>Free|||Dexterity||||Wisdom</Boost>
+		<Skill>Survival|Trained|||Lore(Terrain)|Trained</Skill>
+		<Feat>Forager</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Street Urchin</Name>
+		<Boost>Free|||Dexterity||||Constitution</Boost>
+		<Skill>Thievery|Trained|||Lore(City)|Trained</Skill>
+		<Feat>Pickpocket</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Tinker</Name>
+		<Boost>Free|||Dexterity||||Intelligence</Boost>
+		<Skill>Crafting|Trained|||Lore(Engineering)|Trained</Skill>
+		<Feat>Specialty Crafting</Feat>
+		<Description>placeholder</Description>
+	</Background>
+	<Background>
+		<Name>Warrior</Name>
+		<Boost>Free|||Strength||||Constitution</Boost>
+		<Skill>Intimidation|Trained|||Lore(Warfare)|Trained</Skill>
+		<Feat>Intimidating Glare</Feat>
+		<Description>placeholder</Description>
+	</Background>
+</backgrounds>

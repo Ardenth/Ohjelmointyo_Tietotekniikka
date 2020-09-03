@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Advancements xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Advancement>
+		<Name>Feat(Class)</Name>
+		<Class>Alchemist||||Barbarian||||Bard|||Champion||||Cleric||||Druid||||Fighter||||Monk||||Ranger||||Rogue||||Sorcerer||||Wizard</Class>
+		<Effect>route class feat</Effect>
+		<Description>placeholder</Description>
+	</Advancement>
+	<Advancement>
+		<Name>Feat(Skill)</Name>
+		<Class>Alchemist||||Barbarian||||Bard|||Champion||||Cleric||||Druid||||Fighter||||Monk||||Ranger||||Rogue||||Sorcerer||||Wizard</Class>
+		<Effect>route skill feat</Effect>
+		<Description>placeholder</Description>
+	</Advancement>
+	<Advancement>
+		<Name>Feat(General)</Name>
+		<Class>Alchemist||||Barbarian||||Bard|||Champion||||Cleric||||Druid||||Fighter||||Monk||||Ranger||||Rogue||||Sorcerer||||Wizard</Class>
+		<Effect>route general feat</Effect>
+		<Description>placeholder</Description>
+	</Advancement>
+	<Advancement>
+		<Name>Feat(Ancestry)</Name>
+		<Class>Alchemist||||Barbarian||||Bard|||Champion||||Cleric||||Druid||||Fighter||||Monk||||Ranger||||Rogue||||Sorcerer||||Wizard</Class>
+		<Effect>route ancestry feat</Effect>
+		<Description>placeholder</Description>
+	</Advancement>
+	<Advancement>
+		<Name>Fear(Initial)</Name>
+		<Class>Alchemist||||Barbarian||||Bard|||Champion||||Cleric||||Druid||||Fighter||||Monk||||Ranger||||Rogue||||Sorcerer||||Wizard</Class>
+		<Effect>route class feat, initial</Effect>
+		<Description>placeholder</Description>
+	</Advancement>
+	<Advancement>
+		<Name>SkillIncrease</Name>
+		<Class>Alchemist||||Barbarian||||Bard|||Champion||||Cleric||||Druid||||Fighter||||Monk||||Ranger||||Rogue||||Sorcerer||||Wizard</Class>
+		<Effect>skills[randomskill[++]]</Effect>
+		<Description>placeholder</Description>
+	</Advancement>
+	<Advancement>
+		<Name>AbilityBoost</Name>
+		<Class>Alchemist||||Barbarian||||Bard|||Champion||||Cleric||||Druid||||Fighter||||Monk||||Ranger||||Rogue||||Sorcerer||||Wizard</Class>
+		<Effect>Characteristic|++</Effect>
+		<Description>placeholder</Description>
+	</Advancement>
+	<Advancement>
+		<Name>Alchemy</Name>
+		<Class>Alchemist</Class>
+		<Description>placeholder</Description>
+	</Advancement>
+	<Advancement>
+		<Name>Quick Alchemy</Name>
+		<Class>Alchemist</Class>
+		<Description>placeholder</Description>
+	</Advancement>
+	<Advancement>
+		<Name>Formula Book</Name>
+		<Class>Alchemist</Class>
+		<Description>placeholder</Description>
+	</Advancement>
+	<Advancement>
+		<Name>Field Discovery</Name>
+		<Class>Alchemist</Class>
+		<Description>placeholder</Description>
+	</Advancement>
+	<Advancement>
+		<Name>Alchemical Weapon Expertise</Name>
+		<Class>Alchemist</Class>
+		<Effect>Simple|Expert|||Bombs|Expert</Effect>
+		<Description>placeholder</Description>
+	</Advancement>
+	<Advancement>
+		<Name>Iron Will</Name>
+		<Class>Alchemist||||Ranger</Class>
+		<Effect>Will|Expert</Effect>
+		<Description>placeholder</Description>
+	</Advancement>
+	<Advancement>
+		<Name>Perpetal Infusions</Name>
+		<Class>Alchemist</Class>
+		<Description>placeholder</Description>
+	</Advancement>
+	<Advancement>
+		<Name>Alchemical Experise</Name>
+		<Class>Alchemist</Class>
+		<Effect>classDC|Expert</Effect>
+		<Description>placeholder</Description>
+	</Advancement>
+	<Advancement>
+		<Name>Alertness</Name>
+		<Class>Alchemist||||Champion||||Cleric||||Druid||||Monk||||Sorcerer||||Wizard</Class>
+		<Effect>Perception|Expert</Effect>
+		<Description>placeholder</Description>
+	</Advancement>
+	<Advancement>
+		<Name>Double Brew</Name>
+		<Class>Alchemist</Class>
+		<Description>placeholder</Description>
+	</Advancement>
+	<Advancement>
+		<Name>Juggernaut</Name>
+		<Class>Alchemist||||Barbarian||||Champion||||Fighter||||Ranger</Class>
+		<Effect>Fortitude|Master</Effect>
+		<Description>placeholder</Description>
+	</Advancement>
+	<Advancement>
+		<Name>Perpetual Potency</Name>
+		<Class>Alchemist</Class>
+		<Description>placeholder</Description>
+	</Advancement>
+	<Advancement>
+		<Name>Greater Field Discovery</Name>
+		<Class>Alchemist</Class>
+		<Description>placeholder</Description>
+	</Advancement>
+	<Advancement>
+		<Name>Light Armor Expertise</Name>
+		<Class>Alchemist||||Bard||||Rogue</Class>
+		<Effect>Light|Expert|||Unarmored|Expert</Effect>
+		<Description>placeholder</Description>
+	</Advancement>
+	<Advancement>
+		<Name>Weapon Specialization</Name>
+		<Class>Alchemist||||Barbarian||||Bard|||Champion||||Cleric||||Druid||||Fighter||||Monk||||Ranger||||Rogue||||Sorcerer||||Wizard</Class>
+		<Description>placeholder</Description>
+	</Advancement>
+	<Advancement>
+		<Name>Alchemical Alacrity</Name>
+		<Class>Alchemist</Class>
+		<Description>placeholder</Description>
+	</Advancement>
+	<Advancement>
+		<Name>Evasion</Name>
+		<Class>Alchemist||||Fighter||||Ranger||||Rogue</Class>
+		<Effect>Reflex|Master</Effect>
+		<Description>placeholder</Description>
+	</Advancement>
+	<Advancement>
+		<Name>Alchemical Mastery</Name>
+		<Class>Alchemist</Class>
+		<Effect>classDC|Master</Effect>
+		<Description>placeholder</Description>
+	</Advancement>
+	<Advancement>
+		<Name>Perpetual Perfection</Name>
+		<Class>Alchemist</Class>
+		<Description>placeholder</Description>
+	</Advancement>
+	<Advancement>
+		<Name>Light Armor Mastery</Name>
+		<Class>Alchemist||||Rogue</Class>
+		<Effect>Light|Master|||Unarmored|Master</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Rage</Name>
+		<Class>Barbarian</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Deny Advantage</Name>
+		<Class>Barbarian||||Rogue</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Brutality</Name>
+		<Class>Barbarian</Class>
+		<Effect>Simple|Expert|||Martial|Expert|||Unarmed|Expert</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Lightning Reflexes</Name>
+		<Class>Barbarian||||Bard||||Champion||||Cleric||||Druid||||Sorcerer||||Wizard</Class>
+		<Effect>Reflex|Expert</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Raging Resistance</Name>
+		<Class>Barbarian</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Mighty Rage</Name>
+		<Class>Barbarian</Class>
+		<Effect>classDC|Expert</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Greater Juggernaut</Name>
+		<Class>Barbarian</Class>
+		<Effect>Fortitude|Legendary</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Medium Armor Expertise</Name>
+		<Class>Barbarian||||Druid||||Ranger</Class>
+		<Effect>Light|Expert|||Medium|Expert|||Unarmored|Expert</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Weapon Fury</Name>
+		<Class>Barbarian</Class>
+		<Effect>Simple|Master|||Martial|Master|||Unarmed|Master</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Greater Weapon Specialization</Name>
+		<Class>Barbarian||||Champion||||Fighter||||Monk||||Ranger||||Rogue</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Indomitable Will</Name>
+		<Class>Barbarian</Class>
+		<Effect>Will|Master</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Heightened Senses</Name>
+		<Class>Barbarian</Class>
+		<Effect>Perception|Master</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Quick Rage</Name>
+		<Class>Barbarian</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Armor of Fury</Name>
+		<Class>Barbarian</Class>
+		<Effect>Light|Master|||Medium|Master|||Unarmored|Master</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Devastator</Name>
+		<Class>Barbarian</Class>
+		<Effect>classDC|Master</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Spellcasting Occult</Name>
+		<Class>Bard</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Composition</Name>
+		<Class>Bard</Class>
+		<Effect>FocusPool|1</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Signature Spells</Name>
+		<Class>Bard||||Sorcerer</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Expert Spellcaster</Name>
+		<Class>Bard||||Druid||||Sorcerer||||Wizard</Class>
+		<Effect>SpellDC|Expert</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Great Fortitude</Name>
+		<Class>Bard||||Druid||||Rogue</Class>
+		<Effect>Fortitude|Expert</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Resolve</Name>
+		<Class>Bard||||Cleric||||Druid||||Wizard</Class>
+		<Effect>Will|Master</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Bard Weapon Expertise</Name>
+		<Class>Bard</Class>
+		<Effect>InitialWeapons|Expert</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Vigilant Senses</Name>
+		<Class>Bard||||Ranger</Class>
+		<Effect>Perception|Master</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Master Spellcaster</Name>
+		<Class>Bard||||Druid||||Sorcerer||||Wizard</Class>
+		<Effect>SpellDC|Expert</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Greater Resolve</Name>
+		<Class>Bard</Class>
+		<Effect>Will|Legendary</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Magnum Opus</Name>
+		<Class>Bard</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Legendary Spellcaster</Name>
+		<Class>Bard||||Druid||||Sorcerer</Class>
+		<Effect>SpellDC|Legendary</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Deity</Name>
+		<Class>Champion||||Cleric</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Deitic Weapon</Name>
+		<Class>Champion</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Champion's React</Name>
+		<Class>Champion</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Devotion Spell</Name>
+		<Class>Champion</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Shield Block</Name>
+		<Class>Champion||||Druid||||Fighter</Class>
+		<Effect>General Feat(Shield Block)</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Divine Ally</Name>
+		<Class>Champion</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Weapon Expertise</Name>
+		<Class>Champion||||Ranger</Class>
+		<Effect>Simple|Expert|||Martial|Expert</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Armor Expertise</Name>
+		<Class>Champion||||Fighter</Class>
+		<Effect>Light|Expert|||Medium|Expert|||Heavy|Expert|||Unarmored|Expert</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Champion Expertise</Name>
+		<Class>Champion</Class>
+		<Effect>ClassDC|Expert</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Divine Smite</Name>
+		<Class>Champion</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Divine Will</Name>
+		<Class>Champion</Class>
+		<Effect>Will|Master</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Exalt</Name>
+		<Class>Champion</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Armor Mastery</Name>
+		<Class>Champion||||Fighter</Class>
+		<Effect>Light|Master|||Medium|Master|||Heavy|Master|||Unarmored|Master</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Weapon Mastery</Name>
+		<Class>Champion||||Ranger</Class>
+		<Effect>Simple|Master|||Martial|Master</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Legendary Armor</Name>
+		<Class>Champion</Class>
+		<Effect>Light|Legendary|||Medium|Legendary|||Heavy|Legendary|||Unarmored|Legendary</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Hero's Defiance</Name>
+		<Class>Champion</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Divine Spellcasting</Name>
+		<Class>Cleric</Class>
+		<Effect>SpellSchool|Divine</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Divine Font</Name>
+		<Class>Cleric</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Divine Defense</Name>
+		<Class>Cleric</Class>
+		<Effect>Unarmored|Master</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Miraculous Spell</Name>
+		<Class>Cleric</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Doctrine 1</Name>
+		<Class>Cleric</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Doctrine 2</Name>
+		<Class>Cleric</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Doctrine 3</Name>
+		<Class>Cleric</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Doctrine 4</Name>
+		<Class>Cleric</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Doctrine 5</Name>
+		<Class>Cleric</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Doctrine 6</Name>
+		<Class>Cleric</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Anathema</Name>
+		<Class>Druid</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Language Druidic</Name>
+		<Class>Druid</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Wild Empathy</Name>
+		<Class>Druid</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Primal Spellcasting</Name>
+		<Class>Druid</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Druid Weapon Expertise</Name>
+		<Class>Druid</Class>
+		<Effect>Simple|Expert|||Unarmed|Expert</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Primal Hierophant</Name>
+		<Class>Druid</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Attack of Opportunity</Name>
+		<Class>Fighter</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Bravery</Name>
+		<Class>Fighter</Class>
+		<Effect>Will|Expert</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Fighter Weapon Mastery</Name>
+		<Class>Fighter</Class>
+		<Description>Weapon Grp Weapon Legend effects</Description>
+	</Advancement>
+	<Advancement>
+		<Name>Battlefield Surveyor</Name>
+		<Class>Fighter</Class>
+		<Effect>Perception|Master</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Combat Flexibility</Name>
+		<Class>Fighter</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Fighter Expertise</Name>
+		<Class>Fighter</Class>
+		<Effect>ClassDC|Expert</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Weapon Legend</Name>
+		<Class>Fighter</Class>
+		<Effect>Simple|Master|||Martial|Master|||Advanced|Expert</Effect>
+		<Description>Weapon Grp Versatile Legend effects</Description>
+	</Advancement>
+	<Advancement>
+		<Name>Improved Flexibility</Name>
+		<Class>Fighter</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Versatile Legend</Name>
+		<Class>Fighter</Class>
+		<Effect>Simple|Legendary|||Martial|Legendary|||Advanced|Master|||ClassDC|Master</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Flurry of Blow</Name>
+		<Class>Monk</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Powerful Fist</Name>
+		<Class>Monk</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Movement Increase(10)</Name>
+		<Class>Monk</Class>
+		<Effect>BaseSpeed++|||BaseSpeed++</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Movement Increase(5)</Name>
+		<Class>Monk</Class>
+		<Effect>BaseSpeed++</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Mystic Strikes</Name>
+		<Class>Monk</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Expert Strikes</Name>
+		<Class>Monk</Class>
+		<Effect>Simple|Expert|||Unarmed|Expert</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Path to Perfection</Name>
+		<Class>Monk</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Metal Strikes</Name>
+		<Class>Monk</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Monk Expertise</Name>
+		<Class>Monk</Class>
+		<Effect>ClassDC|Expert</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Path to Perfection 2</Name>
+		<Class>Monk</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Graceful Mastery</Name>
+		<Class>Monk</Class>
+		<Effect>Unarmored|Master</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Master Strikes</Name>
+		<Class>Monk</Class>
+		<Effect>Simple|Master|||Unarmed|Master</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Adamantine Strikes</Name>
+		<Class>Monk</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Graceful Legend</Name>
+		<Class>Monk</Class>
+		<Effect>ClassDC|Master|||Unarmored|Legendary</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Perfected Form</Name>
+		<Class>Monk</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Hunt Prey</Name>
+		<Class>Ranger</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Trackless Step</Name>
+		<Class>Ranger</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Ranger Expertise</Name>
+		<Class>Ranger</Class>
+		<Effect>ClassDC|Expert</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Nature's Edge</Name>
+		<Class>Ranger</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Wild Stride</Name>
+		<Class>Ranger</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Improved Evasion</Name>
+		<Class>Ranger||||Rogue</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Incredible Senses</Name>
+		<Class>Ranger||||Rogue</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Masterful Hunter</Name>
+		<Class>Ranger</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Second Skin</Name>
+		<Class>Ranger</Class>
+		<Effect>Light|Master|||Medium|||Master|||Unarmored|Master</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Swift Prey</Name>
+		<Class>Ranger</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Sneak Attack 1</Name>
+		<Class>Rogue</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Surprise Attack</Name>
+		<Class>Rogue</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Sneak Attack 2</Name>
+		<Class>Rogue</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Weapon Tricks</Name>
+		<Class>Rogue</Class>
+		<Effect>InitialWeapon|Expert</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Debilitating Strike</Name>
+		<Class>Rogue</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Rogue Expertise</Name>
+		<Class>Rogue</Class>
+		<Effect>ClassDC|Expert</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Sneak Attack 3</Name>
+		<Class>Rogue</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Master Tricks</Name>
+		<Class>Rogue</Class>
+		<Effect>InitialWeapon|Master</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Double Debilitation</Name>
+		<Class>Rogue</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Slippery Mind</Name>
+		<Class>Rogue</Class>
+		<Effect>Will|Master</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Sneak Attack 4</Name>
+		<Class>Rogue</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Master Strike</Name>
+		<Class>Rogue</Class>
+		<Effect>ClassDC|Master</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Magical Fortitude</Name>
+		<Class>Sorcerer||||Wizard</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Simple Weapon Expertise</Name>
+		<Class>Sorcerer</Class>
+		<Effect>Simple|Expert</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Defensive Robes</Name>
+		<Class>Sorcerer||||Wizard</Class>
+		<Effect>Unarmored|Expert</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Bloodline Paragon</Name>
+		<Class>Sorcerer</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Spell Repertoire</Name>
+		<Class>Sorcerer||||Bard</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Arcane Bond</Name>
+		<Class>Wizard</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Wizard Weapon Expertise</Name>
+		<Class>Wizard</Class>
+		<Effect>InitialWeapon|Expert</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Archwizard's Spellcraft</Name>
+		<Class>Wizard</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Legendary Archwizard</Name>
+		<Class>Wizard</Class>
+		<Effect>SpellDC|Legendary</Effect>
+	</Advancement>
+	<Advancement>
+		<Name>Arcane School</Name>
+		<Class>Wizard</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Spell Level 1</Name>
+		<Class>Bard||||Cleric||||Druid||||Sorcerer||||Wizard</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Spell Level 2</Name>
+		<Class>Bard||||Cleric||||Druid||||Sorcerer||||Wizard</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Spell Level 3</Name>
+		<Class>Bard||||Cleric||||Druid||||Sorcerer||||Wizard</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Spell Level 4</Name>
+		<Class>Bard||||Cleric||||Druid||||Sorcerer||||Wizard</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Spell Level 5</Name>
+		<Class>Bard||||Cleric||||Druid||||Sorcerer||||Wizard</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Spell Level 6</Name>
+		<Class>Bard||||Cleric||||Druid||||Sorcerer||||Wizard</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Spell Level 7</Name>
+		<Class>Bard||||Cleric||||Druid||||Sorcerer||||Wizard</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Spell Level 8</Name>
+		<Class>Bard||||Cleric||||Druid||||Sorcerer||||Wizard</Class>
+	</Advancement>
+	<Advancement>
+		<Name>Spell Level 9</Name>
+		<Class>Bard||||Cleric||||Druid||||Sorcerer||||Wizard</Class>
+	</Advancement>
+</Advancements>
