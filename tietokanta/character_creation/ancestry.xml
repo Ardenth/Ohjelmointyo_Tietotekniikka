@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ancestry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<race>
+		<Ancestry>Dwarf</Ancestry>
+		<HP>10</HP>
+		<Size>Medium</Size>
+		<Speed>20</Speed>
+		<Boost>Constitution|||Wisdom|||Free</Boost>
+		<Flaw>Charisma</Flaw>
+		<Language>Common|||Dwarf|||intmod</Language>
+		<Trait>Dwarf|||Humanoid</Trait>
+		<Special>Darkvision</Special>
+	</race>
+	<race>
+		<Ancestry>Elf</Ancestry>
+		<HP>6</HP>
+		<Size>Medium</Size>
+		<Speed>30</Speed>
+		<Boost>Dexterity|||Intelligence|||Free</Boost>
+		<Flaw>Constitution</Flaw>
+		<Language>Common|||Elven|||intmod</Language>
+		<Trait>Elf|||Humanoid</Trait>
+		<Special>LowLight Vision</Special>
+	</race>
+	<race>
+		<Ancestry>Gnome</Ancestry>
+		<HP>8</HP>
+		<Size>Small</Size>
+		<Speed>25</Speed>
+		<Boost>Constitution|||Charisma|||Free</Boost>
+		<Flaw>Strength</Flaw>
+		<Language>Common|||Gnomish|||Sylvan|||intmod</Language>
+		<Trait>Gnome|||Humanoid</Trait>
+		<Special>LowLight Vision</Special>
+	</race>
+	<race>
+		<Ancestry>Goblin</Ancestry>
+		<HP>6</HP>
+		<Size>Small</Size>
+		<Speed>25</Speed>
+		<Boost>Dexterity|||Charisma|||Free</Boost>
+		<Flaw>Wisdom</Flaw>
+		<Language>Common|||Goblin|||intmod</Language>
+		<Trait>Goblin|||Humanoid</Trait>
+		<Special>Darkvision</Special>
+	</race>
+	<race>
+		<Ancestry>Halfling</Ancestry>
+		<HP>6</HP>
+		<Size>Small</Size>
+		<Speed>25</Speed>
+		<Boost>Dexterity|||Wisdom|||Free</Boost>
+		<Flaw>Strength</Flaw>
+		<Language>Common|||Halfling|||intmod</Language>
+		<Trait>Halfling|||Humanoid</Trait>
+		<Special>Keen Eyes</Special>
+	</race>
+	<race>
+		<Ancestry>Human</Ancestry>
+		<HP>8</HP>
+		<Size>Medium</Size>
+		<Speed>25</Speed>
+		<Boost>Free|||Free</Boost>
+		<Language>Common|||intmod</Language>
+		<Trait>Human|||Humanoid</Trait>
+	</race>
+</ancestry>

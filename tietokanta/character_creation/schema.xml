@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ancestry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<race>
+<Ancestry>Dwarf</Ancestry>
+<HP>10</HP>
+<Size>Medium</Size>
+<Speed>20</Speed>
+<Boost>Constitution|||Wisdom|||Free</Boost>
+<Flaw>Charisma</Flaw>
+<Language>Common|||Dwarf|||intmod</Language>
+<Trait>Dwarf|||Humanoid</Trait>
+<Special>Darkvision</Special>
+</race>
+
+<race>
+<Ancestry>Elf</Ancestry>
+<HP>6</HP>
+<Size>Medium</Size>
+<Speed>30</Speed>
+<Boost>Dexterity|||Wisdom|||Free</Boost>
+<Flaw>Constituion</Flaw>
+<Language>Common|||Elven|||intmod</Language>
+<Trait>Elf|||Humanoid</Trait>
+<Special>Lowlight Vision</Special>
+</race>
+</ancestry>

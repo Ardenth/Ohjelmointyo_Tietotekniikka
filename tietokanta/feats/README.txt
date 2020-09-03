@@ -11,6 +11,8 @@ TODO: General feat vs Skill Feat
 ||||| splitter for feat
 
 TODO general: feat splitter kyseenalainen, ei ehka toimi?
+splitter => | vs ||
+
 
 TODO class: split classes erillisiin tiedostoihin? formatointi parempi?
 ---------------------------------------------------------------------
