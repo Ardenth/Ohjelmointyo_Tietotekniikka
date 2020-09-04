@@ -25,3 +25,4 @@ testauksena onko progressiot yhdessa vai useassa tiedostossa (eli onko yksi xml 
 ---------------------------------------------
 4.9
 xml tiedostot valmiina, jokainen class yksitellen
+- tarkista kutsunimet
