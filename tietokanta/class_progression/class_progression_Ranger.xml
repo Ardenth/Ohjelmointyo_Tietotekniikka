@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Progressions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Progression>
+		<Level>1</Level>
+		<Advancement1>Ancestry</Advancement1>
+		<Advancement2>Background</Advancement2>
+		<Advancement3>Proficiencies</Advancement3>
+		<Advancement4>Hunter Prey</Advancement4>
+		<Advancement5>Initial Feat</Advancement5>
+		<Advancement6>Ranger Feat</Advancement6>
+	</Progression>
+	<Progression>
+		<Level>2</Level>
+		<Advancement1>Ranger Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>3</Level>
+		<Advancement1>General Feat</Advancement1>
+		<Advancement2>Iron Will</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>4</Level>
+		<Advancement1>Ranger Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>5</Level>
+		<Advancement1>Ability Boost</Advancement1>
+		<Advancement2>Ancestry Feat</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+		<Advancement4>Trackless Step</Advancement4>
+		<Advancement5>Weapon Expertise</Advancement5>
+	</Progression>
+	<Progression>
+		<Level>6</Level>
+		<Advancement1>Ranger Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>7</Level>
+		<Advancement1>Evasion</Advancement1>
+		<Advancement2>General Feat</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+		<Advancement4>Vigilant Senses</Advancement4>
+		<Advancement5>Weapon Specialization</Advancement5>
+	</Progression>
+	<Progression>
+		<Level>8</Level>
+		<Advancement1>Ranger Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>9</Level>
+		<Advancement1>Ancestry Feat</Advancement1>
+		<Advancement2>Nature's Edge</Advancement2>
+		<Advancement3>Ranger Expertise</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>10</Level>
+		<Advancement1>Ranger Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+		<Advancement3>Ability Boost</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>11</Level>
+		<Advancement1>General Feat</Advancement1>
+		<Advancement2>Juggernaut</Advancement2>
+		<Advancement3>Medium Armor Expertise</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+		<Advancement5>Wild Stride</Advancement5>
+	</Progression>
+	<Progression>
+		<Level>12</Level>
+		<Advancement1>Ranger Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>13</Level>
+		<Advancement1>Ancestry Feat</Advancement1>
+		<Advancement2>Skill Increase</Advancement2>
+		<Advancement3>Wild Stride</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>14</Level>
+		<Advancement1>Ranger Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>15</Level>
+		<Advancement1>Ability Boosts</Advancement1>
+		<Advancement2>General Feat</Advancement2>
+		<Advancement3>Greater Weapon Specialization</Advancement3>
+		<Advancement4>Improved Evasion</Advancement4>
+		<Advancement5>Incredible Senses</Advancement5>
+		<Advancement6>Skill Increase</Advancement6>
+	</Progression>
+	<Progression>
+		<Level>16</Level>
+		<Advancement1>Ranger Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>17</Level>
+		<Advancement1>Ancestry Feat</Advancement1>
+		<Advancement2>Masterful Hunter</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>18</Level>
+		<Advancement1>Ranger Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>19</Level>
+		<Advancement1>General Feat</Advancement1>
+		<Advancement2>Second Skin</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+		<Advancement4>Swift Prey</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>20</Level>
+		<Advancement1>Ranger Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+		<Advancement3>Ability Boost</Advancement3>
+	</Progression>
+</Progressions>

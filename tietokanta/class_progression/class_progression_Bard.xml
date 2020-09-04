@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Progressions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Progression>
+		<Level>1</Level>
+		<Advancement1>Ancestry</Advancement1>
+		<Advancement2>Background</Advancement2>
+		<Advancement3>Proficiencies</Advancement3>
+		<Advancement4>Spellcasting Occult</Advancement4>
+		<Advancement5>Spells</Advancement5>
+		<Advancement6>Composition</Advancement6>
+		<Advancement7>Initial Feat</Advancement7>
+	</Progression>
+	<Progression>
+		<Level>2</Level>
+		<Advancement1>Bard Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>3</Level>
+		<Advancement1>Spells Level 2</Advancement1>
+		<Advancement2>General Feat</Advancement2>
+		<Advancement3>Lightning Reflexes</Advancement3>
+		<Advancement4>Signature Spells</Advancement4>
+		<Advancement5>Skill Increase</Advancement5>
+	</Progression>
+	<Progression>
+		<Level>4</Level>
+		<Advancement1>Bard Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>5</Level>
+		<Advancement1>Spells Level 3</Advancement1>
+		<Advancement2>Ability Boost</Advancement2>
+		<Advancement3>Ancestry Feat</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>6</Level>
+		<Advancement1>Bard Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>7</Level>
+		<Advancement1>Spells Level 4</Advancement1>
+		<Advancement2>Expert Spellcaster</Advancement2>
+		<Advancement3>General Feat</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>8</Level>
+		<Advancement1>Bard Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>9</Level>
+		<Advancement1>Spells Level 5</Advancement1>
+		<Advancement2>Ancestry Feat</Advancement2>
+		<Advancement3>Great Fortitude</Advancement3>
+		<Advancement4>Resolve</Advancement4>
+		<Advancement5>Skill Increase</Advancement5>
+	</Progression>
+	<Progression>
+		<Level>10</Level>
+		<Advancement1>Bard Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+		<Advancement3>Ability Boost</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>11</Level>
+		<Advancement1>Spells Level 6</Advancement1>
+		<Advancement2>Bard Weapon Expertise</Advancement2>
+		<Advancement3>General Feat</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+		<Advancement5>Vigilant Senses</Advancement5>
+	</Progression>
+	<Progression>
+		<Level>12</Level>
+		<Advancement1>Bard Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>13</Level>
+		<Advancement1>Spells Level 7</Advancement1>
+		<Advancement2>Ancestry Feat</Advancement2>
+		<Advancement3>Light Armor Expertise</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+		<Advancement5>Weapon Specialization</Advancement5>
+	</Progression>
+	<Progression>
+		<Level>14</Level>
+		<Advancement1>Bard Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>15</Level>
+		<Advancement1>Spells Level 8</Advancement1>
+		<Advancement2>Ability Boost</Advancement2>
+		<Advancement3>General Feat</Advancement3>
+		<Advancement4>Master Spellcaster</Advancement4>
+		<Advancement5>Skill Increase</Advancement5>
+	</Progression>
+	<Progression>
+		<Level>16</Level>
+		<Advancement1>Bard Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>17</Level>
+		<Advancement1>Spells Level 9</Advancement1>
+		<Advancement2>Ancestry Feat</Advancement2>
+		<Advancement3>Greater Resolve</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>18</Level>
+		<Advancement1>Bard Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>19</Level>
+		<Advancement1>General Feat</Advancement1>
+		<Advancement2>Legendary Spellcaster</Advancement2>
+		<Advancement3>Magnum Opus</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>20</Level>
+		<Advancement1>Bard Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+		<Advancement3>Ability Boost</Advancement3>
+	</Progression>
+</Progressions>

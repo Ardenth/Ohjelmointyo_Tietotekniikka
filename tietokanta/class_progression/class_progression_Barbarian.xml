@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Progressions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Progression>
+		<Level>1</Level>
+		<Advancement1>Ancestry</Advancement1>
+		<Advancement2>Background</Advancement2>
+		<Advancement3>Proficiencies</Advancement3>
+		<Advancement4>Rage</Advancement4>
+		<Advancement5>Initial Feat</Advancement5>
+		<Advancement6>Barbarian Feat</Advancement6>
+	</Progression>
+	<Progression>
+		<Level>2</Level>
+		<Advancement1>Barbarian Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>3</Level>
+		<Advancement1>Deny Advantage</Advancement1>
+		<Advancement2>General Feat</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>4</Level>
+		<Advancement1>Barbarian Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>5</Level>
+		<Advancement1>Ability Boost</Advancement1>
+		<Advancement2>Ancestry Feat</Advancement2>
+		<Advancement3>Brutality</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>6</Level>
+		<Advancement1>Barbarian Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>7</Level>
+		<Advancement1>General Feat</Advancement1>
+		<Advancement2>Juggernaut</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+		<Advancement4>Weapon Specialization</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>8</Level>
+		<Advancement1>Barbarian Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>9</Level>
+		<Advancement1>Ancestry Feat</Advancement1>
+		<Advancement2>Lightning Reflexes</Advancement2>
+		<Advancement3>Raging Resistance</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>10</Level>
+		<Advancement1>Barbarian Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+		<Advancement3>Ability Boost</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>11</Level>
+		<Advancement1>General Feat</Advancement1>
+		<Advancement2>Mighty Rage</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>12</Level>
+		<Advancement1>Barbarian Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>13</Level>
+		<Advancement1>Ancestry Feat</Advancement1>
+		<Advancement2>Greater Juggernaut</Advancement2>
+		<Advancement3>Medium Armor Proficiency</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+		<Advancement5>Weapon Fury</Advancement5>
+	</Progression>
+	<Progression>
+		<Level>14</Level>
+		<Advancement1>Barbarian Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>15</Level>
+		<Advancement1>Ability Boost</Advancement1>
+		<Advancement2>General Feat</Advancement2>
+		<Advancement3>Greater Weapon Specialization</Advancement3>
+		<Advancement4>Indomitable Will</Advancement4>
+		<Advancement5>Skill Increase</Advancement5>
+	</Progression>
+	<Progression>
+		<Level>16</Level>
+		<Advancement1>Barbarian Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>17</Level>
+		<Advancement1>Ancestry Feat</Advancement1>
+		<Advancement2>Heightened Senses</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+		<Advancement4>Quick Rage</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>18</Level>
+		<Advancement1>Barbarian Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>19</Level>
+		<Advancement1>Armor of Fury</Advancement1>
+		<Advancement2>Devastator</Advancement2>
+		<Advancement3>General Feat</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>20</Level>
+		<Advancement1>Barbarian Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+		<Advancement3>Ability Boost</Advancement3>
+	</Progression>
+</Progressions>

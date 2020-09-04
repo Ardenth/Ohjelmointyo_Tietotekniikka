@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Progressions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Progression>
+		<Level>1</Level>
+		<Advancement1>Ancestry</Advancement1>
+		<Advancement2>Background</Advancement2>
+		<Advancement3>Proficiencies</Advancement3>
+		<Advancement4>Flurry of Blows</Advancement4>
+		<Advancement5>Monk Feat</Advancement5>
+		<Advancement6>Powerful Fist</Advancement6>
+	</Progression>
+	<Progression>
+		<Level>2</Level>
+		<Advancement1>Monk Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>3</Level>
+		<Advancement1>General Feat</Advancement1>
+		<Advancement2>Movement Increase (10)</Advancement2>
+		<Advancement3>Mystic Strikes</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>4</Level>
+		<Advancement1>Monk Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>5</Level>
+		<Advancement1>Ability Boost</Advancement1>
+		<Advancement2>Alertness</Advancement2>
+		<Advancement3>Ancestry Feat</Advancement3>
+		<Advancement4>Expert Strikes</Advancement4>
+		<Advancement5>Skill Increase</Advancement5>
+	</Progression>
+	<Progression>
+		<Level>6</Level>
+		<Advancement1>Monk Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>7</Level>
+		<Advancement1>General Feat</Advancement1>
+		<Advancement2>Movement Increase (5)</Advancement2>
+		<Advancement3>Path to Perfection 1</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+		<Advancement5>Weapon Specialization</Advancement5>
+	</Progression>
+	<Progression>
+		<Level>8</Level>
+		<Advancement1>Monk Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>9</Level>
+		<Advancement1>Ancestry Feat</Advancement1>
+		<Advancement2>Metal Strikes</Advancement2>
+		<Advancement3>Monk Expertise</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>10</Level>
+		<Advancement1>Monk Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+		<Advancement3>Ability Boost</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>11</Level>
+		<Advancement1>General Feat</Advancement1>
+		<Advancement2>Movement Increase (5)</Advancement2>
+		<Advancement3>Path to Perfection 2</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>12</Level>
+		<Advancement1>Monk Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>13</Level>
+		<Advancement1>Ancestry Feat</Advancement1>
+		<Advancement2>Graceful Mastery</Advancement2>
+		<Advancement3>Master Strikes</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>14</Level>
+		<Advancement1>Monk Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>15</Level>
+		<Advancement1>Ability Boost</Advancement1>
+		<Advancement2>General Feat</Advancement2>
+		<Advancement3>Greater Weapon Specialization</Advancement3>
+		<Advancement4>Movement Increase (5)</Advancement4>
+		<Advancement5>Skill Increase</Advancement5>
+		<Advancement6>Path to Perfection 3</Advancement6>
+	</Progression>
+	<Progression>
+		<Level>16</Level>
+		<Advancement1>Monk Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>17</Level>
+		<Advancement1>Adamantine Strikes</Advancement1>
+		<Advancement2>Ancestry Feat</Advancement2>
+		<Advancement3>Graceful Legend</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>18</Level>
+		<Advancement1>Monk Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>19</Level>
+		<Advancement1>General Feat</Advancement1>
+		<Advancement2>Movement Increase (5)</Advancement2>
+		<Advancement3>Perfected Form</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>20</Level>
+		<Advancement1>Monk Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+		<Advancement3>Ability Boost</Advancement3>
+	</Progression>
+</Progressions>

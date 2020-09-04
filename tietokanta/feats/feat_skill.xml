@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Feats xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Feat>
+		<FeatName>Assurance</FeatName>
+		<Level>1</Level>
+		<Prerequisite>Skill||Trained</Prerequisite>
+	</Feat>
+	<Feat>
+		<FeatName>Dubious Knowledge</FeatName>
+		<Level>1</Level>
+		<Prerequisite>Recall Knowledge||Trained</Prerequisite>
+	</Feat>
+	<Feat>
+		<FeatName>Quick Identification</FeatName>
+		<Level>1</Level>
+		<Prerequisite>Arcana||Trained||||Nature||Trained||||Occultism||Trained||||Religion||Trained</Prerequisite>
+	</Feat>
+	<Feat>
+		<FeatName>Recognize Spell</FeatName>
+		<Level>1</Level>
+		<Prerequisite>Arcana||Trained||||Nature||Trained||||Occultism||Trained||||Religion||Trained</Prerequisite>
+	</Feat>
+	<Feat>
+		<FeatName>Skill Training</FeatName>
+		<Level>1</Level>
+		<Prerequisite>int|12</Prerequisite>
+	</Feat>
+	<Feat>
+		<FeatName>Trick Magic Item</FeatName>
+		<Level>1</Level>
+		<Prerequisite>Arcana||Trained||||Nature||Trained||||Occultism||Trained||||Religion||Trained</Prerequisite>
+	</Feat>
+	<Feat>
+		<FeatName>Automatic Knowledge</FeatName>
+		<Level>2</Level>
+		<Prerequisite>Recall Knowledge||Expert|||Assurance||Skill</Prerequisite>
+	</Feat>
+	<Feat>
+		<FeatName>Magical Shorthand</FeatName>
+		<Level>2</Level>
+		<Prerequisite>Arcana||Expert||||Nature||Expert||||Occultism||Expert||||Religion||Expert</Prerequisite>
+	</Feat>
+	<Feat>
+		<FeatName>Quick Recognition</FeatName>
+		<Level>7</Level>
+		<Prerequisite>Arcana||Master||||Nature||Master||||Occultism||Master||||Religion||Master|||||Recognize Spell</Prerequisite>
+	</Feat>
+</Feats>

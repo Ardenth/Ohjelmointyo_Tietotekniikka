@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<proficiencies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	
+	<proficiency>
+		<Class>Alchemist</Class>
+		<InitialBoost>Intelligence</InitialBoost>
+		<HP>8+Con</HP>
+		<FortitudeSave>Fortitude|Expert</FortitudeSave>
+		<ReflexSave>Reflex|Expert</ReflexSave>
+		<WillSave>Will|Trained</WillSave>
+		<Skill1>Perception|Trained</Skill1>
+		<Skill2>Crafting|Trained</Skill2>
+		<Skill3></Skill3>
+		<Languages>3+int|Trained</Languages>
+		<Attack1>Unarmed|Trained</Attack1>
+		<Attack2>Simple|Trained</Attack2>
+		<Attack3></Attack3>
+		<Attack4></Attack4>
+		<AttackSpecial>Bomb|Trained</AttackSpecial>
+		<Defense1>Unarmored|Trained</Defense1>
+		<Defense2>Light|Trained</Defense2>
+		<Defense3></Defense3>
+		<Defense4></Defense4>
+		<ClassDC>ClassDC|Trained</ClassDC>
+		<SpellDC>SpellDC|Trained</SpellDC>
+	</proficiency>
+	
+	<proficiency>
+		<Class>Barbarian</Class>
+		<InitialBoost>Strength</InitialBoost>
+		<HP>12+Con</HP>
+		<FortitudeSave>Fortitude|Expert</FortitudeSave>
+		<ReflexSave>Reflex|Trained</ReflexSave>
+		<WillSave>Will|Expert</WillSave>
+		<Skill1>Perception|Expert</Skill1>
+		<Skill2>Athletics|Trained</Skill2>
+		<Skill3></Skill3>
+		<Languages>3+int|Trained</Languages>
+		<Attack1>Unarmed|Trained</Attack1>
+		<Attack2>Simple|Trained</Attack2>
+		<Attack3>Martial|Trained</Attack3>
+		<Attack4></Attack4>
+		<AttackSpecial></AttackSpecial>
+		<Defense1>Unarmored|Trained</Defense1>
+		<Defense2>Light|Trained</Defense2>
+		<Defense3>Medium|Trained</Defense3>
+		<Defense4></Defense4>
+		<ClassDC>ClassDC|Trained</ClassDC>
+		<SpellDC></SpellDC>
+	</proficiency>
+</proficiencies>

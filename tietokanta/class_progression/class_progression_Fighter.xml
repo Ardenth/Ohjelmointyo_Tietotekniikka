@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Progressions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Progression>
+		<Level>1</Level>
+		<Advancement1>Ancestry</Advancement1>
+		<Advancement2>Background</Advancement2>
+		<Advancement3>Proficiencies</Advancement3>
+		<Advancement4>Attack of opportunity</Advancement4>
+		<Advancement5>Fighter Feat</Advancement5>
+		<Advancement6>Shield Block</Advancement6>
+	</Progression>
+	<Progression>
+		<Level>2</Level>
+		<Advancement1>Fighter Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>3</Level>
+		<Advancement1>Bravery</Advancement1>
+		<Advancement2>General Feat</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>4</Level>
+		<Advancement1>Fighter Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>5</Level>
+		<Advancement1>Ability Boost</Advancement1>
+		<Advancement2>Ancestry Feat</Advancement2>
+		<Advancement3>Fighter Weapon Mastery</Advancement3>
+		<Advancement4>Skill increase</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>6</Level>
+		<Advancement1>Fighter Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>7</Level>
+		<Advancement1>Battlefield Surveyor</Advancement1>
+		<Advancement2>General Feat</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+		<Advancement4>Weapon Specialization</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>8</Level>
+		<Advancement1>Fighter Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>9</Level>
+		<Advancement1>Ancestry Feat</Advancement1>
+		<Advancement2>Combat Flexibility</Advancement2>
+		<Advancement3>Juggernaut</Advancement3>
+		<Advancement4>Skill increase</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>10</Level>
+		<Advancement1>Fighter Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+		<Advancement3>Ability Boost</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>11</Level>
+		<Advancement1>Armor Expertise</Advancement1>
+		<Advancement2>Fighter Expertise</Advancement2>
+		<Advancement3>General Feat</Advancement3>
+		<Advancement4>Skill increase</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>12</Level>
+		<Advancement1>Fighter Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>13</Level>
+		<Advancement1>Ancestry Feat</Advancement1>
+		<Advancement2>Skill Increase</Advancement2>
+		<Advancement3>Weapon Legend</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>14</Level>
+		<Advancement1>Fighter Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>15</Level>
+		<Advancement1>Ability Boost</Advancement1>
+		<Advancement2>Evasion</Advancement2>
+		<Advancement3>General Feat</Advancement3>
+		<Advancement4>Greater Weapon Specialization</Advancement4>
+		<Advancement5>Improved Flexibility</Advancement5>
+		<Advancement6>Skill Increase</Advancement6>
+	</Progression>
+	<Progression>
+		<Level>16</Level>
+		<Advancement1>Fighter Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>17</Level>
+		<Advancement1>Ancestry Feat</Advancement1>
+		<Advancement2>Armor Mastery</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>18</Level>
+		<Advancement1>Fighter Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>19</Level>
+		<Advancement1>General Feat</Advancement1>
+		<Advancement2>Skill Increase</Advancement2>
+		<Advancement3>Versatile Legend</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>20</Level>
+		<Advancement1>Fighter Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+		<Advancement3>Ability Boost</Advancement3>
+	</Progression>
+</Progressions>

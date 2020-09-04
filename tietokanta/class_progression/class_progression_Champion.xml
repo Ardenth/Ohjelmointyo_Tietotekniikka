@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Progressions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Progression>
+		<Level>1</Level>
+		<Advancement1>Ancestry</Advancement1>
+		<Advancement2>Background</Advancement2>
+		<Advancement3>Proficiencies</Advancement3>
+		<Advancement4>Initial Feat</Advancement4>
+		<Advancement5>Deity</Advancement5>
+		<Advancement6>Deitic Weapon</Advancement6>
+		<Advancement7>Champion's Reaction</Advancement7>
+		<Advancement8>Devotion Spell</Advancement8>
+		<Advancement9>Champion Feat</Advancement9>
+		<Advancement10>Shield Block</Advancement10>
+	</Progression>
+	<Progression>
+		<Level>2</Level>
+		<Advancement1>Champion Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>3</Level>
+		<Advancement1>Divine Ally</Advancement1>
+		<Advancement2>General Feat</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>4</Level>
+		<Advancement1>Champion Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>5</Level>
+		<Advancement1>Ability Boost</Advancement1>
+		<Advancement2>Ancestry Feat</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+		<Advancement4>Weapon Expertise</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>6</Level>
+		<Advancement1>Champion Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>7</Level>
+		<Advancement1>Armor Expertise</Advancement1>
+		<Advancement2>General Feat</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+		<Advancement4>Weapon Specialization</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>8</Level>
+		<Advancement1>Champion Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>9</Level>
+		<Advancement1>Ancestry Feat</Advancement1>
+		<Advancement2>Champion Expertise</Advancement2>
+		<Advancement3>Divine Smite</Advancement3>
+		<Advancement4>Juggernaut</Advancement4>
+		<Advancement5>Lightning Reflexes</Advancement5>
+		<Advancement6>Skill Increase</Advancement6>
+	</Progression>
+	<Progression>
+		<Level>10</Level>
+		<Advancement1>Champion Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+		<Advancement3>Ability Boost</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>11</Level>
+		<Advancement1>Alertness</Advancement1>
+		<Advancement2>Divine Will</Advancement2>
+		<Advancement3>Exalt</Advancement3>
+		<Advancement4>General Feat</Advancement4>
+		<Advancement5>Skill Increase</Advancement5>
+	</Progression>
+	<Progression>
+		<Level>12</Level>
+		<Advancement1>Champion Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>13</Level>
+		<Advancement1>Ancestry Feat</Advancement1>
+		<Advancement2>Armor Mastery</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+		<Advancement4>Weapon Mastery</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>14</Level>
+		<Advancement1>Champion Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>15</Level>
+		<Advancement1>Ability Boost</Advancement1>
+		<Advancement2>General Feat</Advancement2>
+		<Advancement3>Greater Weapon Specialization</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>16</Level>
+		<Advancement1>Champion Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>17</Level>
+		<Advancement1>Ancestry Feat</Advancement1>
+		<Advancement2>Champion Mastery</Advancement2>
+		<Advancement3>Legendary Armor</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>18</Level>
+		<Advancement1>Champion Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>19</Level>
+		<Advancement1>General Feat</Advancement1>
+		<Advancement2>Hero's Defiance</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>20</Level>
+		<Advancement1>Champion Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+		<Advancement3>Ability Boost</Advancement3>
+	</Progression>
+</Progressions>

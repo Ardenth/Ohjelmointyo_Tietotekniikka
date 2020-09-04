@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Progressions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Progression>
+		<Level>1</Level>
+		<Advancement1>Ancestry</Advancement1>
+		<Advancement2>Background</Advancement2>
+		<Advancement3>Proficiencies</Advancement3>
+		<Advancement4>Initial Rogue</Advancement4>
+		<Advancement5>Sneak Attack 1</Advancement5>
+		<Advancement6>Surprise Attack</Advancement6>
+		<Advancement7>Rogue Feat</Advancement7>
+		<Advancement8>Skill Feat</Advancement8>
+	</Progression>
+	<Progression>
+		<Level>2</Level>
+		<Advancement1>Rogue Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>3</Level>
+		<Advancement1>Deny Advantage</Advancement1>
+		<Advancement2>General Feat</Advancement2>
+		<Advancement3>Skill Feat</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>4</Level>
+		<Advancement1>Rogue Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>5</Level>
+		<Advancement1>Ability Boost</Advancement1>
+		<Advancement2>Ancestry Feat</Advancement2>
+		<Advancement3>Skill Feat</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+		<Advancement5>Sneak Attack 2</Advancement5>
+		<Advancement6>Weapon Tricks</Advancement6>
+	</Progression>
+	<Progression>
+		<Level>6</Level>
+		<Advancement1>Rogue Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>7</Level>
+		<Advancement1>Evasion</Advancement1>
+		<Advancement2>General Feat</Advancement2>
+		<Advancement3>Skill Feat</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+		<Advancement5>Vigilant Senses</Advancement5>
+		<Advancement6>Weapon Specialization</Advancement6>
+	</Progression>
+	<Progression>
+		<Level>8</Level>
+		<Advancement1>Rogue Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>9</Level>
+		<Advancement1>Ancestry Feat</Advancement1>
+		<Advancement2>Debilitating Strike</Advancement2>
+		<Advancement3>Great Fortitude</Advancement3>
+		<Advancement4>Skill Feat</Advancement4>
+		<Advancement5>Skill Increase</Advancement5>
+	</Progression>
+	<Progression>
+		<Level>10</Level>
+		<Advancement1>Rogue Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+		<Advancement4>Ability Boost</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>11</Level>
+		<Advancement1>General Feat</Advancement1>
+		<Advancement2>Rogue Expertise</Advancement2>
+		<Advancement3>Skill Feat</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+		<Advancement5>Sneak Attack 3</Advancement5>
+	</Progression>
+	<Progression>
+		<Level>12</Level>
+		<Advancement1>Rogue Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>13</Level>
+		<Advancement1>Ancestry Feat</Advancement1>
+		<Advancement2>Improved Evasion</Advancement2>
+		<Advancement3>Incredible Senses</Advancement3>
+		<Advancement4>Light Armor Expertise</Advancement4>
+		<Advancement5>Skill Feat</Advancement5>
+		<Advancement6>Skill Increase</Advancement6>
+		<Advancement7>Master Tricks</Advancement7>
+		<Advancement8>Skill Feat</Advancement8>
+	</Progression>
+	<Progression>
+		<Level>14</Level>
+		<Advancement1>Rogue Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>15</Level>
+		<Advancement1>Ability Boost</Advancement1>
+		<Advancement2>Double Debilitation</Advancement2>
+		<Advancement3>General Feat</Advancement3>
+		<Advancement4>Greater Weapon Specialization</Advancement4>
+		<Advancement5>Skill Feat</Advancement5>
+		<Advancement6>Skill Increase</Advancement6>
+	</Progression>
+	<Progression>
+		<Level>16</Level>
+		<Advancement1>Rogue Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>17</Level>
+		<Advancement1>Ancestry Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+		<Advancement4>Slippery Mind</Advancement4>
+		<Advancement5>Sneak Attack 4</Advancement5>
+	</Progression>
+	<Progression>
+		<Level>18</Level>
+		<Advancement1>Rogue Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>19</Level>
+		<Advancement1>General Feat</Advancement1>
+		<Advancement2>Light Armor Mastery</Advancement2>
+		<Advancement3>Master Strike</Advancement3>
+		<Advancement4>Skill Feat</Advancement4>
+		<Advancement5>Skill Increase</Advancement5>
+	</Progression>
+	<Progression>
+		<Level>20</Level>
+		<Advancement1>Rogue Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+		<Advancement4>Ability Boost</Advancement4>
+	</Progression>
+</Progressions>

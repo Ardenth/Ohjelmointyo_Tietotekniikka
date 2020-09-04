@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Progressions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<Progression>
+	<Level>1</Level>
+	<Advancement1>Ancestry</Advancement1>
+	<Advancement2>Background</Advancement2>
+	<Advancement3>Proficiency</Advancement3>
+	<Advancement4>Alchemy</Advancement4>
+	<Advancement5>Formula Book</Advancement5>
+	<Advancement6>Alchemist Feat</Advancement6>
+	<Advancement7>Initial Feat</Advancement7>
+	<Advancement8></Advancement8>
+	<Advancement9></Advancement9>
+	<Advancement10></Advancement10>
+</Progression>
+
+<Progression>
+	<Level>2</Level>
+	<Advancement1>Alchemist Feat</Advancement1>
+	<Advancement2>Skill Feat</Advancement2>
+	<Advancement3></Advancement3>
+	<Advancement4></Advancement4>
+	<Advancement5></Advancement5>
+	<Advancement6></Advancement6>
+	<Advancement7></Advancement7>
+	<Advancement8></Advancement8>
+	<Advancement9></Advancement9>
+	<Advancement10></Advancement10>
+</Progression>
+
+</Progressions>

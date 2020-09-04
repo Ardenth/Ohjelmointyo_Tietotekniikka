@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Progressions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Progression>
+		<Level>1</Level>
+		<Advancement1>Ancestry</Advancement1>
+		<Advancement2>Background</Advancement2>
+		<Advancement3>Proficiencies</Advancement3>
+		<Advancement4>Deity</Advancement4>
+		<Advancement5>Spellcasting Divine</Advancement5>
+		<Advancement6>Divine Font</Advancement6>
+		<Advancement7>Doctrine</Advancement7>
+	</Progression>
+	<Progression>
+		<Level>2</Level>
+		<Advancement1>Cleric Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>3</Level>
+		<Advancement1>Spell Level 2</Advancement1>
+		<Advancement2>General Feat</Advancement2>
+		<Advancement3>Doctrine 2</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>4</Level>
+		<Advancement1>Cleric Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>5</Level>
+		<Advancement1>Spell Level 3</Advancement1>
+		<Advancement2>Ability Boost</Advancement2>
+		<Advancement3>Alertness</Advancement3>
+		<Advancement4>Ancestry Feat</Advancement4>
+		<Advancement5>Skill Increase</Advancement5>
+	</Progression>
+	<Progression>
+		<Level>6</Level>
+		<Advancement1>Cleric Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>7</Level>
+		<Advancement1>Spell Level 4</Advancement1>
+		<Advancement2>General Feat</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+		<Advancement4>Doctrine 3</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>8</Level>
+		<Advancement1>Cleric Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>9</Level>
+		<Advancement1>Spell Level 5</Advancement1>
+		<Advancement2>Ancestry Feat</Advancement2>
+		<Advancement3>Resolve</Advancement3>
+		<Advancement4>Skill increase</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>10</Level>
+		<Advancement1>Cleric Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+		<Advancement3>Ability Boost</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>11</Level>
+		<Advancement1>Spell Level 6</Advancement1>
+		<Advancement2>Doctrine 4</Advancement2>
+		<Advancement3>General Feat</Advancement3>
+		<Advancement4>Lightning Reflexes</Advancement4>
+		<Advancement5>Skill Increase</Advancement5>
+	</Progression>
+	<Progression>
+		<Level>12</Level>
+		<Advancement1>Cleric Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>13</Level>
+		<Advancement1>Spell Level 7</Advancement1>
+		<Advancement2>Ancestry Feat</Advancement2>
+		<Advancement3>Divine Defense</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+		<Advancement5>Weapon Specialization</Advancement5>
+	</Progression>
+	<Progression>
+		<Level>14</Level>
+		<Advancement1>Cleric Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>15</Level>
+		<Advancement1>Spell Level 8</Advancement1>
+		<Advancement2>Ability Boost</Advancement2>
+		<Advancement3>Doctrine 5</Advancement3>
+		<Advancement4>General Feat</Advancement4>
+		<Advancement5>Skill Increase</Advancement5>
+	</Progression>
+	<Progression>
+		<Level>16</Level>
+		<Advancement1>Cleric Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>17</Level>
+		<Advancement1>Spell Level 9</Advancement1>
+		<Advancement2>Ancestry Feat</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>18</Level>
+		<Advancement1>Cleric Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>19</Level>
+		<Advancement1>Doctrine 6</Advancement1>
+		<Advancement2>General Feat</Advancement2>
+		<Advancement3>Miraculous Spell</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>20</Level>
+		<Advancement1>Cleric Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+		<Advancement3>Ability Boost</Advancement3>
+	</Progression>
+</Progressions>

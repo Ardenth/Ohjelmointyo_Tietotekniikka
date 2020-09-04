@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Progressions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Progression>
+		<Level>1</Level>
+		<Advancement1>Ancestry</Advancement1>
+		<Advancement2>Background</Advancement2>
+		<Advancement3>Proficiency</Advancement3>
+		<Advancement4>Alchemy</Advancement4>
+		<Advancement5>Formula Book</Advancement5>
+		<Advancement6>Alchemist Feat</Advancement6>
+		<Advancement7>Initial Feat</Advancement7>
+	</Progression>
+	<Progression>
+		<Level>2</Level>
+		<Advancement1>Alchemist Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>3</Level>
+		<Advancement1>General Feat</Advancement1>
+		<Advancement2>Skill Increase</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>4</Level>
+		<Advancement1>Alchemist Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>5</Level>
+		<Advancement1>Ability Boost</Advancement1>
+		<Advancement2>Ancestry Feat</Advancement2>
+		<Advancement3>Field Discovery</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>6</Level>
+		<Advancement1>Alchemist Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>7</Level>
+		<Advancement1>Alchemical Weapon Expertise</Advancement1>
+		<Advancement2>General Feat</Advancement2>
+		<Advancement3>Iron Will</Advancement3>
+		<Advancement4>Perpetual Infusions</Advancement4>
+		<Advancement5>Skill Increase</Advancement5>
+	</Progression>
+	<Progression>
+		<Level>8</Level>
+		<Advancement1>Alchemist Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>9</Level>
+		<Advancement1>Alchemical Expertise</Advancement1>
+		<Advancement2>Alertness</Advancement2>
+		<Advancement3>Ancestry Feat</Advancement3>
+		<Advancement4>Double Brew</Advancement4>
+		<Advancement5>Skill Increase</Advancement5>
+	</Progression>
+	<Progression>
+		<Level>10</Level>
+		<Advancement1>Alchemist Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+		<Advancement3>Ability Boost</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>11</Level>
+		<Advancement1>General Feat</Advancement1>
+		<Advancement2>Juggernaut</Advancement2>
+		<Advancement3>Perpetual Potency</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>12</Level>
+		<Advancement1>Alchemist Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>13</Level>
+		<Advancement1>Ancestry Feat</Advancement1>
+		<Advancement2>Greater Field Discovery</Advancement2>
+		<Advancement3>Light Armor Expertise</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+		<Advancement5>Weapon Specialization</Advancement5>
+	</Progression>
+	<Progression>
+		<Level>14</Level>
+		<Advancement1>Alchemist Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>15</Level>
+		<Advancement1>Ability Boost</Advancement1>
+		<Advancement2>Alchemical Alacrity</Advancement2>
+		<Advancement3>Evasion</Advancement3>
+		<Advancement4>General Feat</Advancement4>
+		<Advancement5>Skill Increase</Advancement5>
+	</Progression>
+	<Progression>
+		<Level>16</Level>
+		<Advancement1>Alchemist Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>17</Level>
+		<Advancement1>Alchemical Mastery</Advancement1>
+		<Advancement2>Ancestry Feat</Advancement2>
+		<Advancement3>Perpetual Perfection</Advancement3>
+		<Advancement4>Skill Increase</Advancement4>
+	</Progression>
+	<Progression>
+		<Level>18</Level>
+		<Advancement1>Alchemist Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+	</Progression>
+	<Progression>
+		<Level>19</Level>
+		<Advancement1>General Feat</Advancement1>
+		<Advancement2>Light Armor Mastery</Advancement2>
+		<Advancement3>Skill Increase</Advancement3>
+	</Progression>
+	<Progression>
+		<Level>20</Level>
+		<Advancement1>Alchemist Feat</Advancement1>
+		<Advancement2>Skill Feat</Advancement2>
+		<Advancement3>Ability Boost</Advancement3>
+	</Progression>
+</Progressions>
