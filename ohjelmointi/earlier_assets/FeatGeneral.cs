@@ -6,15 +6,16 @@ using System.Xml.Serialization;
 
 public class FeatGeneral : MonoBehaviour
 {
-    [XmlAttribute("Name")]
-    public string name;
+    [XmlElement("FeatName")]
+    public string featname;
 
-    [XmlAttribute("Level")]
+    [XmlElement("Level")]
     public float level;
 
-    [XmlAttribute("Prerequisites")]
-    public string prerequisites;
+    [XmlElement("Prerequisite")]
+    public string prerequisite;
 
-    [XmlAttribute("Description")]
+    [XmlElement("Description")]
     public string description;
+
 }
