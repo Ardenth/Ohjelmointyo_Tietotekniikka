@@ -1,3 +1,6 @@
+6.9:
+excel kesken
+
 6.8:
 siirretaan jokainen "advancement" hahmon tasolla erilliseen soluun?
 logiikka: miksi erotella kun voi suoraan jo jakaa?

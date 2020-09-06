@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <AncestryFeats xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<AncestryFeat>
-		<AncestryFeatName>Iron-Skin Dwarf</AncestryFeatName>
-		<Ancestry>Dwarf</Ancestry>
-		<Level>Initial</Level>
-		<Prerequisite></Prerequisite>
-		<Benefit></Benefit>
-	</AncestryFeat>
-	<AncestryFeat>
-		<AncestryFeatName>Dweller Dwarf</AncestryFeatName>
-		<Ancestry>Dwarft</Ancestry>
-		<Level>Initial</Level>
-		<Prerequisite></Prerequisite>
-		<Benefit></Benefit>
-	</AncestryFeat>
+	<ancestryFeat>
+		<ancFeatName>Iron-Skin Dwarf</ancFeatName>
+		<ancestry>Dwarf</ancestry>
+		<level>Initial</level>
+		<prerequisite></prerequisite>
+		<description></description>
+	</ancestryFeat>
+	<ancestryFeat>
+		<ancFeatName>Dweller Dwarf</ancFeatName>
+		<ancestry>Dwarft</ancestry>
+		<level>Initial</level>
+		<prerequisite></prerequisite>
+		<description></description>
+	</ancestryFeat>
 </AncestryFeats>

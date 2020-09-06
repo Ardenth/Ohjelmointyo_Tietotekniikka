@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<backgrounds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<Background>
-		<Name>Acolyte</Name>
-		<Boost>Free|||Intelligence||||Wisdom</Boost>
-		<Skill>Religion|Trained|||Lore(Scribing)|Trained</Skill>
-		<Feat>Student of the Canon</Feat>
-		<Description>placeholder</Description>
-	</Background>
+<Backgrounds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<background>
+		<bckgrName>Acolyte</bckgrName>
+		<boost>Free|||Intelligence||||Wisdom</boost>
+		<skill>Religion|Trained|||Lore(Scribing)|Trained</skill>
+		<feat>Student of the Canon</feat>
+		<description>placeholder</description>
+	</background>
 	
-	<Background>
-		<Name>Acrobat</Name>
-		<Boost>Free|||Strength||||Dexterity</Boost>
-		<Skill>Acrobatics|Trained|||Lore(Circus)|Trained</Skill>
-		<Feat>Steady Balance</Feat>
-		<Description>placeholder</Description>
-	</Background>
-</backgrounds>
+	<background>
+		<bckgrName>Acrobat</bckgrName>
+		<boost>Free|||Strength||||Dexterity</boost>
+		<skill>Acrobatics|Trained|||Lore(Circus)|Trained</skill>
+		<feat>Steady Balance</feat>
+		<description>placeholder</description>
+	</background>
+</Backgrounds>

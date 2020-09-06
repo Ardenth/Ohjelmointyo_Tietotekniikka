@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Advancements xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-<Advancement>
-	<Name>Feat(Class)</Name>
-	<Class>Alchemist||||Barbarian||||Bard|||Champion||||Cleric||||Druid||||Fighter||||Monk||||Ranger||||Rogue||||Sorcerer||||Wizard</Class>
-	<Effect>Route Class Feat</Effect>
-	<Description>placeholder</Description>
-</Advancement>
+<advancement>
+	<advName>Feat(Class)</advName>
+	<class>Alchemist||||Barbarian||||Bard|||Champion||||Cleric||||Druid||||Fighter||||Monk||||Ranger||||Rogue||||Sorcerer||||Wizard</class>
+	<effect>Route Class Feat</effect>
+	<description>placeholder</description>
+</advancement>
 
-<Advancement>
-	<Name>Feat(Skill)</Name>
-	<Class>Alchemist||||Barbarian||||Bard|||Champion||||Cleric||||Druid||||Fighter||||Monk||||Ranger||||Rogue||||Sorcerer||||Wizard</Class>
-	<Effect>Route Skill Feat</Effect>
-	<Description>placeholder</Description>
-</Advancement>
+<advancement>
+	<advName>Feat(Skill)</advName>
+	<class>Alchemist||||Barbarian||||Bard|||Champion||||Cleric||||Druid||||Fighter||||Monk||||Ranger||||Rogue||||Sorcerer||||Wizard</class>
+	<effect>Route Skill Feat</effect>
+	<description>placeholder</description>
+</advancement>
 
 </Advancements>

@@ -23,6 +23,6 @@ Random Gen painotus
 
 ---------
 6.9:
-UI:n kehitys Unityssa oli paljon haastavampaa kuin kuvittelin
+UI:n kehitys Unityssa oli paljon haastavampaa kuin kuvittelin (talle projektille)
 
 

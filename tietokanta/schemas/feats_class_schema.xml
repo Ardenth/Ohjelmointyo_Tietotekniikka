@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ClassFeats xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<ClassFeat>
-		<ClassFeatName>Bomber</ClassFeatName>
-		<Class>Alchemist</Class>
-		<Level>Initial</Level>
-		<Prerequisite></Prerequisite>
-		<Benefit></Benefit>
-	</ClassFeat>
-	<ClassFeat>
-		<ClassFeatName>Chirurgeon</ClassFeatName>
-		<Class>Alchemist</Class>
-		<Level>Initial</Level>
-		<Prerequisite></Prerequisite>
-		<Benefit></Benefit>
-	</ClassFeat>
+	<classFeat>
+		<classFeatName>Bomber</classFeatName>
+		<class>Alchemist</class>
+		<level>Initial</level>
+		<prerequisite></prerequisite>
+		<description></description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Chirurgeon</classFeatName>
+		<class>Alchemist</class>
+		<level>Initial</level>
+		<prerequisite></prerequisite>
+		<description></description>
+	</classFeat>
 </ClassFeats>
