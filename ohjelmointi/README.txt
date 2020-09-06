@@ -16,6 +16,6 @@ Level up (UI update)
 
 Random Gen (kayttaa random gen -button)
 
-Random Gen painotus
+Random Gen painotus 
 
 
