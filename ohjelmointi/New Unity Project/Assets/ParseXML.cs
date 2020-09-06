@@ -8,16 +8,16 @@ public class ParseXML : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        List<Dictionary<string, string>> allTextDic = ParseFile();
-        Dictionary<string, string> dic = allTextDic[1];
+        List<Dictionary<string, string>> generalFeatDic = ParseGeneralFeat();
+        Dictionary<string, string> generalFeats = generalFeatDic[1];
         Debug.Log("hello");
-        Debug.Log(dic["name"]);
-        Debug.Log(dic["level"]); 
-        Debug.Log(dic["prerequisite"]);
-        Debug.Log(dic["description"]);
+        Debug.Log(generalFeats["name"]);
+        Debug.Log(generalFeats["level"]); 
+        Debug.Log(generalFeats["prerequisite"]);
+        Debug.Log(generalFeats["description"]);
     }
 
-    public List<Dictionary<string, string>> ParseFile()
+    public List<Dictionary<string, string>> ParseGeneralFeat()
     {
         TextAsset txtXmlAsset = Resources.Load<TextAsset>("feats_general");
         var doc = XDocument.Parse(txtXmlAsset.text);
