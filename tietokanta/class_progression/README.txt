@@ -1,3 +1,6 @@
+7.9:
+empty cell fill toimii paivityksien jalkeen, tuhlasin paljon aikaa eilen...
+
 6.9:
 excel kesken
 
