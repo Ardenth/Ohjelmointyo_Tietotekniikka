@@ -10,7 +10,6 @@ public class ParseXML : MonoBehaviour
     {
         List<Dictionary<string, string>> generalFeatDic = ParseGeneralFeat();
         Dictionary<string, string> generalFeats = generalFeatDic[1];
-        Debug.Log("hello");
         Debug.Log(generalFeats["name"]);
         Debug.Log(generalFeats["level"]); 
         Debug.Log(generalFeats["prerequisite"]);
