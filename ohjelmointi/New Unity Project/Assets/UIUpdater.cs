@@ -35,11 +35,8 @@ public class UIUpdater : MonoBehaviour
 
     }
 
-
-
-    //find how to edit specific TMPro - found
-    // Update is called once per frame
-    void Update()
+    //Update character sheet's statistics and modifiers based on the pre-determined character's information
+    void UIModUpdate()
     {
         strengthchar.text = "Strength: " + hello[0].ToString() + "\n Mod: +" + mods[0].ToString();
         dexteritychar.text = "Dexterity: " + hello[1].ToString() + "\n Mod: +" + mods[1].ToString();
@@ -47,6 +44,12 @@ public class UIUpdater : MonoBehaviour
         intelligencechar.text = "Intelligence: " + hello[3].ToString() + "\n Mod: +" + mods[3].ToString();
         wisdomchar.text = "Wisdom: " + hello[4].ToString() + "\n Mod: +" + mods[4].ToString();
         charismachar.text = "Charisma: " + hello[5].ToString() + "\n Mod: +" + mods[5].ToString();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        UIModUpdate();
         //
         //if (gameObject.name == "StrengthChar (1)")
         //{

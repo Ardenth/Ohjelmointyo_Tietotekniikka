@@ -5,6 +5,22 @@ using UnityEngine;
 
 public class Character
 {
+    //TODO:
+    //XML parset
+    //Character information => character UI
+    //Character Advancement and changes to the character details
+    //Generate character
+    //Manipulation to automated character generation (randomizer for start)
+
+
+  /*LEVELUP:
+    advancement lapikaynti:
+        katsotaan mita tapahtuu levelupissa
+        kun tulee vastaan esimerkiksi Feat(General) => luodaan lista mahdollisista General Feateista
+        jokaista General Feattia kohden tehdaan tarvittavat tarkistukset requirements elementin kautta
+        taman tarkistuksen aikana kaytetaan RequirementParsea apuna, jonka kautta mennaan RequirementTranslate
+        RequirementTranslate maarittaa mita tulkkia taytyy kayttaa, esimerkiksi StatCheck, ModCheck, FeatCheck tai SkillCheck
+     */
 
 
     public static int[] stats = new int[] { 10, 10, 10, 10, 10, 10 };
@@ -121,4 +137,100 @@ public class Character
         }
         return statsMod;
     }
+
+    public static int GetStat(string statName)
+    {
+        int characterStat = 0;
+        switch (statName)
+        {
+            case ("Strength"):
+            case ("Str"):
+                characterStat = stats[0];
+            break;
+            case ("Dexterity"):
+            case ("Dex"):
+                characterStat = stats[1];
+                break;
+            case ("Constitution"):
+            case ("Con"):
+                characterStat = stats[2];
+                break;
+            case ("Intelligence"):
+            case ("Int"):
+                characterStat = stats[3];
+                break;
+            case ("Wisdom"):
+            case ("Wis"):
+                characterStat = stats[4];
+                break;
+            case ("Charisma"):
+            case ("Cha"):
+                characterStat = stats[5];
+                break;
+            default:
+                break;
+        }
+        return characterStat;
+    }
+
+    public static int GetMod(string statName)
+    {
+        int statMod = 0;
+        switch (statName)
+        {
+            case ("Strength"):
+            case ("Str"):
+                statMod = stats[0];
+                break;
+            case ("Dexterity"):
+            case ("Dex"):
+                statMod = stats[1];
+                break;
+            case ("Constitution"):
+            case ("Con"):
+                statMod = stats[2];
+                break;
+            case ("Intelligence"):
+            case ("Int"):
+                statMod = stats[3];
+                break;
+            case ("Wisdom"):
+            case ("Wis"):
+                statMod = stats[4];
+                break;
+            case ("Charisma"):
+            case ("Cha"):
+                statMod = stats[5];
+                break;
+            default:
+                break;
+        }
+        return statMod;
+    }
+
+    //tarkistetaan onko hahmolla tarvittava Feat (boolean return, string parametri?)
+    //string parametri on Featin Nimi
+    public static void CheckFeats()
+    {
+        //
+    }
+
+    //tarkistetaan onko hahmon skilli tarvittavalla tasolla (boolean return, string parametri?)
+    //string parametri olisi skill||taso => joka menee parsen kautta takaisin aliohjelmaan
+    //jossa se tarkastetaan tietokannan kautta
+    public static void CheckSkills()
+    {
+        //
+    }
+
+    //muuta haluttua skillia korkeammaksi
+    //parametrina kyseisen stringin nimi
+    //untrained => trained => expert => master => legendary
+    //saatetaan muuttaa ylikirjoittamiseksi yhden tason nousun sijaan, jolloin tarvitaan parametriksi myos mika on haluttu taso
+    //dictionary parametrilla muutetaan taso
+    public static void IncreaseSkill(string skillName)
+    {
+        //
+    }
+
 }

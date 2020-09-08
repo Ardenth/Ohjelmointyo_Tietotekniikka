@@ -50,9 +50,4 @@ public class ParseXML : MonoBehaviour
         return allTextDic;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
