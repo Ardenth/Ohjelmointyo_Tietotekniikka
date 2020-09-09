@@ -1,0 +1,4259 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ClassFeats xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<classFeat>
+		<classFeatName>Bomber</classFeatName>
+		<class>Alchemist</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Chirurgeon</classFeatName>
+		<class>Alchemist</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Mutagenist</classFeatName>
+		<class>Alchemist</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Alchemical Familiar</classFeatName>
+		<class>Alchemist</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Alchemical Savant</classFeatName>
+		<class>Alchemist</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Far Lobber</classFeatName>
+		<class>Alchemist</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Quick Bomber</classFeatName>
+		<class>Alchemist</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Poison Resistance</classFeatName>
+		<class>Alchemist</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Revivifying Mutagen</classFeatName>
+		<class>Alchemist</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Smoke Bomb</classFeatName>
+		<class>Alchemist</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Calculated Splash</classFeatName>
+		<class>Alchemist</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Efficient Alchemy</classFeatName>
+		<class>Alchemist</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Enduring Alchemy</classFeatName>
+		<class>Alchemist</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Combine Elixirs</classFeatName>
+		<class>Alchemist</class>
+		<level>6</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Debilitating Bomb</classFeatName>
+		<class>Alchemist</class>
+		<level>6</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Directional Bombs</classFeatName>
+		<class>Alchemist</class>
+		<level>6</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Feral Mutagen</classFeatName>
+		<class>Alchemist</class>
+		<level>8</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Powerful Alchemy</classFeatName>
+		<class>Alchemist</class>
+		<level>8</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Sticky Bomb</classFeatName>
+		<class>Alchemist</class>
+		<level>8</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Elastic Mutagen</classFeatName>
+		<class>Alchemist</class>
+		<level>10</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Expanded Splash</classFeatName>
+		<class>Alchemist</class>
+		<level>10</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Greater Debilitating Bomb</classFeatName>
+		<class>Alchemist</class>
+		<level>10</level>
+		<prerequisite>Debilitating Bomb</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Merciful Elixir</classFeatName>
+		<class>Alchemist</class>
+		<level>10</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Potent Poisoner</classFeatName>
+		<class>Alchemist</class>
+		<level>10</level>
+		<prerequisite>Powerful Alchemy</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Extend Elixir</classFeatName>
+		<class>Alchemist</class>
+		<level>12</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Invincible Mutagen</classFeatName>
+		<class>Alchemist</class>
+		<level>12</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Uncanny Bombs</classFeatName>
+		<class>Alchemist</class>
+		<level>12</level>
+		<prerequisite>Far Lobber</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Glib Mutagen</classFeatName>
+		<class>Alchemist</class>
+		<level>14</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Greater Merciful Elixir</classFeatName>
+		<class>Alchemist</class>
+		<level>14</level>
+		<prerequisite>Merciful Elixir</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>True Debilitating Bomb</classFeatName>
+		<class>Alchemist</class>
+		<level>14</level>
+		<prerequisite>Greater Debilitating Bomb</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Eternal Elixir</classFeatName>
+		<class>Alchemist</class>
+		<level>16</level>
+		<prerequisite>Extend Elixir</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Exploitive Bomb</classFeatName>
+		<class>Alchemist</class>
+		<level>16</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Genius Mutagen</classFeatName>
+		<class>Alchemist</class>
+		<level>16</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Persistent Mutaen</classFeatName>
+		<class>Alchemist</class>
+		<level>16</level>
+		<prerequisite>Extend Elixir</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Improbable Elixirs</classFeatName>
+		<class>Alchemist</class>
+		<level>18</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Mindblank Mutagen</classFeatName>
+		<class>Alchemist</class>
+		<level>18</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Miracle Worker</classFeatName>
+		<class>Alchemist</class>
+		<level>18</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Perfect Debilitation</classFeatName>
+		<class>Alchemist</class>
+		<level>18</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Craft Philosopher's Stone</classFeatName>
+		<class>Alchemist</class>
+		<level>20</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Mega Bomb</classFeatName>
+		<class>Alchemist</class>
+		<level>20</level>
+		<prerequisite>Expanded Splash</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Perfect Mutagen</classFeatName>
+		<class>Alchemist</class>
+		<level>20</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Animal Instinct</classFeatName>
+		<class>Barbarian</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Dragon Instinct</classFeatName>
+		<class>Barbarian</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Fury Instinct</classFeatName>
+		<class>Barbarian</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Giant Instinct</classFeatName>
+		<class>Barbarian</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Spirit Instinct</classFeatName>
+		<class>Barbarian</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Acute Vision</classFeatName>
+		<class>Barbarian</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Moment of Clarity</classFeatName>
+		<class>Barbarian</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Raging Intimidation</classFeatName>
+		<class>Barbarian</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Raging Thrower</classFeatName>
+		<class>Barbarian</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Sudden Charge</classFeatName>
+		<class>Barbarian</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Acute Scent</classFeatName>
+		<class>Barbarian</class>
+		<level>2</level>
+		<prerequisite>Acute Vision||||darkvision</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Furious Finish</classFeatName>
+		<class>Barbarian</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>No Escape</classFeatName>
+		<class>Barbarian</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Second Wind</classFeatName>
+		<class>Barbarian</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Shake It Off</classFeatName>
+		<class>Barbarian</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Fast Movement</classFeatName>
+		<class>Barbarian</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Raging Athlete</classFeatName>
+		<class>Barbarian</class>
+		<level>4</level>
+		<prerequisite>Athletics||Expert</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Swipe</classFeatName>
+		<class>Barbarian</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Wounded Rage</classFeatName>
+		<class>Barbarian</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Animal Skin</classFeatName>
+		<class>Barbarian</class>
+		<level>6</level>
+		<prerequisite>Animal Instinct</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Attack of Opportunity</classFeatName>
+		<class>Barbarian</class>
+		<level>6</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Brutal Bully</classFeatName>
+		<class>Barbarian</class>
+		<level>6</level>
+		<prerequisite>Athletics||Expert</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Cleave</classFeatName>
+		<class>Barbarian</class>
+		<level>6</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Dragon's Rage Breath</classFeatName>
+		<class>Barbarian</class>
+		<level>6</level>
+		<prerequisite>Dragon Instinct</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Giant's Stature</classFeatName>
+		<class>Barbarian</class>
+		<level>6</level>
+		<prerequisite>Giant Instinct</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Spirits Interference</classFeatName>
+		<class>Barbarian</class>
+		<level>6</level>
+		<prerequisite>Spirit Instinct</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Animal Rage</classFeatName>
+		<class>Barbarian</class>
+		<level>8</level>
+		<prerequisite>Animal Instinct</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Furious Bully</classFeatName>
+		<class>Barbarian</class>
+		<level>8</level>
+		<prerequisite>Athletics||Master</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Renewed Vigor</classFeatName>
+		<class>Barbarian</class>
+		<level>8</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Share Rage</classFeatName>
+		<class>Barbarian</class>
+		<level>8</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Sudden Leap</classFeatName>
+		<class>Barbarian</class>
+		<level>8</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Thrash</classFeatName>
+		<class>Barbarian</class>
+		<level>8</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Come and Get Me</classFeatName>
+		<class>Barbarian</class>
+		<level>10</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Furious Spirit</classFeatName>
+		<class>Barbarian</class>
+		<level>10</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Great Cleave</classFeatName>
+		<class>Barbarian</class>
+		<level>10</level>
+		<prerequisite>Cleave</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Knockback</classFeatName>
+		<class>Barbarian</class>
+		<level>10</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Terrifying Howl</classFeatName>
+		<class>Barbarian</class>
+		<level>10</level>
+		<prerequisite>Intimidating Glare</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Dragon's Rage Wings</classFeatName>
+		<class>Barbarian</class>
+		<level>12</level>
+		<prerequisite>Dragon Instinct</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Furious Grab</classFeatName>
+		<class>Barbarian</class>
+		<level>12</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Predators Pounce</classFeatName>
+		<class>Barbarian</class>
+		<level>12</level>
+		<prerequisite>Animal Instinct</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Spirit's Wrath</classFeatName>
+		<class>Barbarian</class>
+		<level>12</level>
+		<prerequisite>Spirit Instinct</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Titan's Stature</classFeatName>
+		<class>Barbarian</class>
+		<level>12</level>
+		<prerequisite>Giant Instinct|||Giant's Stature</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Awesome Blow</classFeatName>
+		<class>Barbarian</class>
+		<level>14</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Giant's Lunge</classFeatName>
+		<class>Barbarian</class>
+		<level>14</level>
+		<prerequisite>Giant Instinct</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Vengeful Strike</classFeatName>
+		<class>Barbarian</class>
+		<level>14</level>
+		<prerequisite>Come and Get Me</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Whirlwind Strike</classFeatName>
+		<class>Barbarian</class>
+		<level>14</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Collateral Trash</classFeatName>
+		<class>Barbarian</class>
+		<level>16</level>
+		<prerequisite>Thrash</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Dragon Transformation</classFeatName>
+		<class>Barbarian</class>
+		<level>16</level>
+		<prerequisite>Dragon Instinct|||Dragon's Rage Wings</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Reckless Abandon</classFeatName>
+		<class>Barbarian</class>
+		<level>16</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Brutal Critical</classFeatName>
+		<class>Barbarian</class>
+		<level>18</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Perfect Clarity</classFeatName>
+		<class>Barbarian</class>
+		<level>18</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Vicious Evisceration</classFeatName>
+		<class>Barbarian</class>
+		<level>18</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Contagious Rage</classFeatName>
+		<class>Barbarian</class>
+		<level>20</level>
+		<prerequisite>Share Rage</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Quaking Stomp</classFeatName>
+		<class>Barbarian</class>
+		<level>20</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Enigma Muse</classFeatName>
+		<class>Bard</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Maestro Muse</classFeatName>
+		<class>Bard</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Polymath Muse</classFeatName>
+		<class>Bard</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Bardic Lore</classFeatName>
+		<class>Bard</class>
+		<level>1</level>
+		<prerequisite>Enigma Muse</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Lingering Composition</classFeatName>
+		<class>Bard</class>
+		<level>1</level>
+		<prerequisite>Meastro Muse|||focus pool</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Reach Spell</classFeatName>
+		<class>Bard</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Versatile Performance</classFeatName>
+		<class>Bard</class>
+		<level>1</level>
+		<prerequisite>Polymath Muse</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Cantrip Expansion</classFeatName>
+		<class>Bard</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Esoteric Polymath</classFeatName>
+		<class>Bard</class>
+		<level>2</level>
+		<prerequisite>Polymath Muse</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Inspire Competence</classFeatName>
+		<class>Bard</class>
+		<level>2</level>
+		<prerequisite>Meastro Muse</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Loremaster's Etude</classFeatName>
+		<class>Bard</class>
+		<level>2</level>
+		<prerequisite>Enigma Muse|||focus pool</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Multifarious Muse</classFeatName>
+		<class>Bard</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Inspire Defense</classFeatName>
+		<class>Bard</class>
+		<level>4</level>
+		<prerequisite>Maestro Muse</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Melodious Spell</classFeatName>
+		<class>Bard</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Triple Spell</classFeatName>
+		<class>Bard</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Versatile Signature</classFeatName>
+		<class>Bard</class>
+		<level>4</level>
+		<prerequisite>Polymath Muse</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Dirge of Doom</classFeatName>
+		<class>Bard</class>
+		<level>6</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Harmonize</classFeatName>
+		<class>Bard</class>
+		<level>6</level>
+		<prerequisite>Maestro Muse</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Steady Spellcasting</classFeatName>
+		<class>Bard</class>
+		<level>6</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Eclectic Skill</classFeatName>
+		<class>Bard</class>
+		<level>8</level>
+		<prerequisite>Polymath Muse|||Occultism||Master</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Inspire Heroics</classFeatName>
+		<class>Bard</class>
+		<level>8</level>
+		<prerequisite>Maestro Musse|||focus pool</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Know It All</classFeatName>
+		<class>Bard</class>
+		<level>8</level>
+		<prerequisite>Enigma Muse</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>House of Imaginary Walls</classFeatName>
+		<class>Bard</class>
+		<level>10</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Quickened Casting</classFeatName>
+		<class>Bard</class>
+		<level>10</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Unusual Composition</classFeatName>
+		<class>Bard</class>
+		<level>10</level>
+		<prerequisite>Polymath Muse</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Inspirational Focus</classFeatName>
+		<class>Bard</class>
+		<level>12</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Allegro</classFeatName>
+		<class>Bard</class>
+		<level>14</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Soothing Ballad</classFeatName>
+		<class>Bard</class>
+		<level>14</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>True Hypercognition</classFeatName>
+		<class>Bard</class>
+		<level>14</level>
+		<prerequisite>Enigma Muse</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Effortless Concentration</classFeatName>
+		<class>Bard</class>
+		<level>16</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Studious Capacity</classFeatName>
+		<class>Bard</class>
+		<level>16</level>
+		<prerequisite>Enigma Muse|||Occultism||Legendary</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Deep Lore</classFeatName>
+		<class>Bard</class>
+		<level>18</level>
+		<prerequisite>Enigma Muse|||Occultism||Legendary</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Eternal Composition</classFeatName>
+		<class>Bard</class>
+		<level>18</level>
+		<prerequisite>Maestro Muse</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Impossible Polymath</classFeatName>
+		<class>Bard</class>
+		<level>18</level>
+		<prerequisite>Arcana||Trained||||Nature||Trained||||Religion||Trained|||Esoteric Polymath</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Fatal Aria</classFeatName>
+		<class>Bard</class>
+		<level>20</level>
+		<prerequisite>focus pool</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Perfect Encore</classFeatName>
+		<class>Bard</class>
+		<level>20</level>
+		<prerequisite>Magnum Opus</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Symphony of the Muse</classFeatName>
+		<class>Bard</class>
+		<level>20</level>
+		<prerequisite>Harmonize</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Paladin</classFeatName>
+		<class>Champion</class>
+		<level>Initial</level>
+		<prerequisite>Lawful Good</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Redeemer</classFeatName>
+		<class>Champion</class>
+		<level>Initial</level>
+		<prerequisite>Neutral Good</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Liberator</classFeatName>
+		<class>Champion</class>
+		<level>Initial</level>
+		<prerequisite>Chaotic Good</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Deity's Domain</classFeatName>
+		<class>Champion</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Ranged Reprisal</classFeatName>
+		<class>Champion</class>
+		<level>1</level>
+		<prerequisite>Paladin</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Unimpeded Step</classFeatName>
+		<class>Champion</class>
+		<level>1</level>
+		<prerequisite>Liberator</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Weight of Guilt</classFeatName>
+		<class>Champion</class>
+		<level>1</level>
+		<prerequisite>Redeemer</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Divine Grace</classFeatName>
+		<class>Champion</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Dragonslayer Oath</classFeatName>
+		<class>Champion</class>
+		<level>2</level>
+		<prerequisite>tenets</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Fiendsbane Oath</classFeatName>
+		<class>Champion</class>
+		<level>2</level>
+		<prerequisite>tenets</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Shining Oath</classFeatName>
+		<class>Champion</class>
+		<level>2</level>
+		<prerequisite>tenets</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Vengeful Oath</classFeatName>
+		<class>Champion</class>
+		<level>2</level>
+		<prerequisite>tenets</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Aura of Courage</classFeatName>
+		<class>Champion</class>
+		<level>4</level>
+		<prerequisite>tenets</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Divine Health</classFeatName>
+		<class>Champion</class>
+		<level>4</level>
+		<prerequisite>tenets</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Mercy</classFeatName>
+		<class>Champion</class>
+		<level>4</level>
+		<prerequisite>Devotion Spell (lay on hands)</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Attack of Opportunity</classFeatName>
+		<class>Champion</class>
+		<level>6</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Litany Against Wrath</classFeatName>
+		<class>Champion</class>
+		<level>6</level>
+		<prerequisite>Devotion Spell</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Loyal Warhorse</classFeatName>
+		<class>Champion</class>
+		<level>6</level>
+		<prerequisite>Divine Ally (steed)</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Shield Warden</classFeatName>
+		<class>Champion</class>
+		<level>6</level>
+		<prerequisite>Divine Ally (shield)</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Smite Evil</classFeatName>
+		<class>Champion</class>
+		<level>6</level>
+		<prerequisite>Divine Ally (blade)</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Advanced Deity's Domain</classFeatName>
+		<class>Champion</class>
+		<level>8</level>
+		<prerequisite>Deity's Domain</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Greater Mercy</classFeatName>
+		<class>Champion</class>
+		<level>8</level>
+		<prerequisite>Mercy</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Heal Mount</classFeatName>
+		<class>Champion</class>
+		<level>8</level>
+		<prerequisite>Divine Ally (steed)</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Quick Block</classFeatName>
+		<class>Champion</class>
+		<level>8</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Second Ally</classFeatName>
+		<class>Champion</class>
+		<level>8</level>
+		<prerequisite>Divine Ally</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Sense Evil</classFeatName>
+		<class>Champion</class>
+		<level>8</level>
+		<prerequisite>tenets</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Devoted Focus</classFeatName>
+		<class>Champion</class>
+		<level>10</level>
+		<prerequisite>Devotion Spell</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Imposing Destrier</classFeatName>
+		<class>Champion</class>
+		<level>10</level>
+		<prerequisite>Divine Ally (steed)|||Loyal Warhorse</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Litany Against Sloth</classFeatName>
+		<class>Champion</class>
+		<level>10</level>
+		<prerequisite>Devotion Spell|||tenets</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Radiant Blade Spirit</classFeatName>
+		<class>Champion</class>
+		<level>10</level>
+		<prerequisite>Divine Ally (blade)</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Shield of Reckoning</classFeatName>
+		<class>Champion</class>
+		<level>10</level>
+		<prerequisite>Champion's Reaction|||Divine Ally (shield)|||tenets|||Shield Warden</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Affliction Mercy</classFeatName>
+		<class>Champion</class>
+		<level>12</level>
+		<prerequisite>Mercy</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Aura of Faith</classFeatName>
+		<class>Champion</class>
+		<level>12</level>
+		<prerequisite>tenets</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Blade of Justice</classFeatName>
+		<class>Champion</class>
+		<level>12</level>
+		<prerequisite>Paladin</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Champion's Sacrifice</classFeatName>
+		<class>Champion</class>
+		<level>12</level>
+		<prerequisite>tenets</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Divine Wall</classFeatName>
+		<class>Champion</class>
+		<level>12</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Lasting Doubt</classFeatName>
+		<class>Champion</class>
+		<level>12</level>
+		<prerequisite>Redeemer</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Liberating Stride</classFeatName>
+		<class>Champion</class>
+		<level>12</level>
+		<prerequisite>Liberator</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Anchoring Aura</classFeatName>
+		<class>Champion</class>
+		<level>14</level>
+		<prerequisite>Fiendsbane Oath</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Aura of Life</classFeatName>
+		<class>Champion</class>
+		<level>14</level>
+		<prerequisite>Shining Oath</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Aura of Righteousness</classFeatName>
+		<class>Champion</class>
+		<level>14</level>
+		<prerequisite>tenets</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Aura of Vengeance</classFeatName>
+		<class>Champion</class>
+		<level>14</level>
+		<prerequisite>exalt|||Vengeful Oath</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Divine Reflexes</classFeatName>
+		<class>Champion</class>
+		<level>14</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Litany of Righteousness</classFeatName>
+		<class>Champion</class>
+		<level>14</level>
+		<prerequisite>tenets</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Wrymbane Aura</classFeatName>
+		<class>Champion</class>
+		<level>14</level>
+		<prerequisite>Dragonslayer Oath</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Auspicious Mount</classFeatName>
+		<class>Champion</class>
+		<level>16</level>
+		<prerequisite>Divine Ally (steed)|||Imposing Destrier</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Instrument of Zeal</classFeatName>
+		<class>Champion</class>
+		<level>16</level>
+		<prerequisite>Divine Ally (blade)|||tenets</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Shield of Grace</classFeatName>
+		<class>Champion</class>
+		<level>16</level>
+		<prerequisite>Shield Warden</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Celestial Form</classFeatName>
+		<class>Champion</class>
+		<level>18</level>
+		<prerequisite>tenets</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Ultimate Mercy</classFeatName>
+		<class>Champion</class>
+		<level>18</level>
+		<prerequisite>Mercy</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Celestial Mount</classFeatName>
+		<class>Champion</class>
+		<level>20</level>
+		<prerequisite>Divine Ally (steed)|||tenets</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Radiant Blade Master</classFeatName>
+		<class>Champion</class>
+		<level>20</level>
+		<prerequisite>Divine Ally (blade)|||Radiant Blade Spirit</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Shield Paragon</classFeatName>
+		<class>Champion</class>
+		<level>20</level>
+		<prerequisite>Divine Ally (shield)</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Cloistered Cleric</classFeatName>
+		<class>Cleric</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Warpriest</classFeatName>
+		<class>Cleric</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Deadly Simplicity</classFeatName>
+		<class>Cleric</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Domain Initiate</classFeatName>
+		<class>Cleric</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Harming Hands</classFeatName>
+		<class>Cleric</class>
+		<level>1</level>
+		<prerequisite>Harmful Font</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Healing Hands</classFeatName>
+		<class>Cleric</class>
+		<level>1</level>
+		<prerequisite>Healing Font</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Holy Castigation</classFeatName>
+		<class>Cleric</class>
+		<level>1</level>
+		<prerequisite>Lawful Good||||Neutral Good||||Chaotic Good</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Reach Spell</classFeatName>
+		<class>Cleric</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Cantrip Expansion</classFeatName>
+		<class>Cleric</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Communal Healing</classFeatName>
+		<class>Cleric</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Emblazon Armament</classFeatName>
+		<class>Cleric</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Sap Life</classFeatName>
+		<class>Cleric</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Turn Undead</classFeatName>
+		<class>Cleric</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Versatile Font</classFeatName>
+		<class>Cleric</class>
+		<level>2</level>
+		<prerequisite>Neutral God</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Channel Smite</classFeatName>
+		<class>Cleric</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Command Undead</classFeatName>
+		<class>Cleric</class>
+		<level>4</level>
+		<prerequisite>Harmful Font|||Lawful Evil||||Neutral Evil||||Chaotic Evil</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Directed Channel</classFeatName>
+		<class>Cleric</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Improved Communal Healing</classFeatName>
+		<class>Cleric</class>
+		<level>4</level>
+		<prerequisite>Communal Healing</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Necrotic Infusion</classFeatName>
+		<class>Cleric</class>
+		<level>4</level>
+		<prerequisite>Harmful Font|||Lawful Evil||||Neutral Evil||||Chaotic Evil</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Cast Down</classFeatName>
+		<class>Cleric</class>
+		<level>6</level>
+		<prerequisite>Harmful Font||||Healing Font</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Divine Weapon</classFeatName>
+		<class>Cleric</class>
+		<level>6</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Selective Energy</classFeatName>
+		<class>Cleric</class>
+		<level>6</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Steady Spellcasting</classFeatName>
+		<class>Cleric</class>
+		<level>6</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Advanced Domain</classFeatName>
+		<class>Cleric</class>
+		<level>8</level>
+		<prerequisite>Domain Initiate</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Align Armament</classFeatName>
+		<class>Cleric</class>
+		<level>8</level>
+		<prerequisite>Deity=!Neutral</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Channeled Succor</classFeatName>
+		<class>Cleric</class>
+		<level>8</level>
+		<prerequisite>Healing Font</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Cremate Undead</classFeatName>
+		<class>Cleric</class>
+		<level>8</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Emblazon Energy</classFeatName>
+		<class>Cleric</class>
+		<level>8</level>
+		<prerequisite>Emblazon Armament</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Castigating Weapon</classFeatName>
+		<class>Cleric</class>
+		<level>10</level>
+		<prerequisite>Holy Castigation</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Heroic Recovery</classFeatName>
+		<class>Cleric</class>
+		<level>10</level>
+		<prerequisite>Healing Font|||Lawful Good||||Neutral Good||||Chaotic Good</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Improved Command Undead</classFeatName>
+		<class>Cleric</class>
+		<level>10</level>
+		<prerequisite>Command Undead</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Replenishment of War</classFeatName>
+		<class>Cleric</class>
+		<level>10</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Defensive Recovery</classFeatName>
+		<class>Cleric</class>
+		<level>12</level>
+		<prerequisite>Healing Font||||Harmful Font</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Domain Focus</classFeatName>
+		<class>Cleric</class>
+		<level>12</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Emblazon Antimagic</classFeatName>
+		<class>Cleric</class>
+		<level>12</level>
+		<prerequisite>Emblazon Armament</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Shared Replenishment</classFeatName>
+		<class>Cleric</class>
+		<level>12</level>
+		<prerequisite>Replenishment of War</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Deity's Protection</classFeatName>
+		<class>Cleric</class>
+		<level>14</level>
+		<prerequisite>Advanced Domain</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Extend Armament Alignment</classFeatName>
+		<class>Cleric</class>
+		<level>14</level>
+		<prerequisite>Align Armament</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Fast Channel</classFeatName>
+		<class>Cleric</class>
+		<level>14</level>
+		<prerequisite>Harmful Font||||Healing Font</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Swift Banishment</classFeatName>
+		<class>Cleric</class>
+		<level>14</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Eternal Bane</classFeatName>
+		<class>Cleric</class>
+		<level>16</level>
+		<prerequisite>Lawful Evil||||Neutral Evil||||Chaotic Evil</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Eternal Blessing</classFeatName>
+		<class>Cleric</class>
+		<level>16</level>
+		<prerequisite>Lawful Good||||Neutral Good||||Chaotic Good</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Resurrectionist</classFeatName>
+		<class>Cleric</class>
+		<level>16</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Domain Wellspring</classFeatName>
+		<class>Cleric</class>
+		<level>18</level>
+		<prerequisite>Domain Focus</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Echoing Channel</classFeatName>
+		<class>Cleric</class>
+		<level>18</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Improved Switft Banishment</classFeatName>
+		<class>Cleric</class>
+		<level>18</level>
+		<prerequisite>Swift Banishment</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Avatars Audience</classFeatName>
+		<class>Cleric</class>
+		<level>20</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Makers of Miracles</classFeatName>
+		<class>Cleric</class>
+		<level>20</level>
+		<prerequisite>Miraculous Spell</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Metamagic Channel</classFeatName>
+		<class>Cleric</class>
+		<level>20</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Animal</classFeatName>
+		<class>Druid</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Leaf</classFeatName>
+		<class>Druid</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Storm</classFeatName>
+		<class>Druid</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Wild</classFeatName>
+		<class>Druid</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Animal Companion</classFeatName>
+		<class>Druid</class>
+		<level>1</level>
+		<prerequisite>Animal Order</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Leshy Familiar</classFeatName>
+		<class>Druid</class>
+		<level>1</level>
+		<prerequisite>Leaf Order</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Reach Spell</classFeatName>
+		<class>Druid</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Storm Born</classFeatName>
+		<class>Druid</class>
+		<level>1</level>
+		<prerequisite>Storm Order</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Widen Spell</classFeatName>
+		<class>Druid</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Wild Shape</classFeatName>
+		<class>Druid</class>
+		<level>1</level>
+		<prerequisite>Wild Order</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Call of the Wild</classFeatName>
+		<class>Druid</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Enhanced Familiar</classFeatName>
+		<class>Druid</class>
+		<level>2</level>
+		<prerequisite>Familiar</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Order Explorer</classFeatName>
+		<class>Druid</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Poison Resistance</classFeatName>
+		<class>Druid</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Form Control</classFeatName>
+		<class>Druid</class>
+		<level>2</level>
+		<prerequisite>str|14|||Wild Shape</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Mature Animal Companion</classFeatName>
+		<class>Druid</class>
+		<level>4</level>
+		<prerequisite>Animal Companion</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Order Magic</classFeatName>
+		<class>Druid</class>
+		<level>4</level>
+		<prerequisite>Order Explorer</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Thousand Faces</classFeatName>
+		<class>Druid</class>
+		<level>4</level>
+		<prerequisite>Wild Shape</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Woodland Strike</classFeatName>
+		<class>Druid</class>
+		<level>4</level>
+		<prerequisite>Leaf Order</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Green Empathy</classFeatName>
+		<class>Druid</class>
+		<level>6</level>
+		<prerequisite>Leaf Order</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Insect Shape</classFeatName>
+		<class>Druid</class>
+		<level>6</level>
+		<prerequisite>Wild Shape</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Steady Spellcasting</classFeatName>
+		<class>Druid</class>
+		<level>6</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Storm Retribution</classFeatName>
+		<class>Druid</class>
+		<level>6</level>
+		<prerequisite>Storm Order</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Ferocious Shape</classFeatName>
+		<class>Druid</class>
+		<level>8</level>
+		<prerequisite>Wild Shape</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Fey Caller</classFeatName>
+		<class>Druid</class>
+		<level>8</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Incredible Companion</classFeatName>
+		<class>Druid</class>
+		<level>8</level>
+		<prerequisite>Mature Animal Companion</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Soaring Shape</classFeatName>
+		<class>Druid</class>
+		<level>8</level>
+		<prerequisite>Wild Shape</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Wind Caller</classFeatName>
+		<class>Druid</class>
+		<level>8</level>
+		<prerequisite>Storm Order</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Elemental Shape</classFeatName>
+		<class>Druid</class>
+		<level>10</level>
+		<prerequisite>Wild Shape</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Healing Transformation</classFeatName>
+		<class>Druid</class>
+		<level>10</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Overwhelming Energy</classFeatName>
+		<class>Druid</class>
+		<level>10</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Plant Shape</classFeatName>
+		<class>Druid</class>
+		<level>10</level>
+		<prerequisite>Leaf Order||||Wild Shape</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Side by Side</classFeatName>
+		<class>Druid</class>
+		<level>10</level>
+		<prerequisite>Animal Companion</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Dragon Shape</classFeatName>
+		<class>Druid</class>
+		<level>12</level>
+		<prerequisite>Soaring Shape</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Green Tongue</classFeatName>
+		<class>Druid</class>
+		<level>12</level>
+		<prerequisite>Green Empathy</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Primal Focus</classFeatName>
+		<class>Druid</class>
+		<level>12</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Primal Summons</classFeatName>
+		<class>Druid</class>
+		<level>12</level>
+		<prerequisite>Call of the Wild</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Specialized Companion</classFeatName>
+		<class>Druid</class>
+		<level>14</level>
+		<prerequisite>Incredible Companion</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Timeless Nature</classFeatName>
+		<class>Druid</class>
+		<level>14</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Verdant Metamorphosis</classFeatName>
+		<class>Druid</class>
+		<level>14</level>
+		<prerequisite>Leaf Order</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Effortless Concentration</classFeatName>
+		<class>Druid</class>
+		<level>16</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Impaling Briars</classFeatName>
+		<class>Druid</class>
+		<level>16</level>
+		<prerequisite>Leaf Order</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Monstrosity Shape</classFeatName>
+		<class>Druid</class>
+		<level>16</level>
+		<prerequisite>Wild Shape</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Invoke Disaster</classFeatName>
+		<class>Druid</class>
+		<level>18</level>
+		<prerequisite>Wind Caller</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Perfect Form Control</classFeatName>
+		<class>Druid</class>
+		<level>18</level>
+		<prerequisite>str|18|||Form Control</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Primal Wellspring</classFeatName>
+		<class>Druid</class>
+		<level>18</level>
+		<prerequisite>Wild Focus</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Hierophant's Power</classFeatName>
+		<class>Druid</class>
+		<level>20</level>
+		<prerequisite>Nature||Legendary</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Leyline Conduit</classFeatName>
+		<class>Druid</class>
+		<level>20</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>True Shapeshifter</classFeatName>
+		<class>Druid</class>
+		<level>20</level>
+		<prerequisite>Dragon Shape||||Wild Shape</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Double Slice</classFeatName>
+		<class>Fighter</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Exacting Strike</classFeatName>
+		<class>Fighter</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Point-Blank Shot</classFeatName>
+		<class>Fighter</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Power Attack</classFeatName>
+		<class>Fighter</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Reactive Shield</classFeatName>
+		<class>Fighter</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Snagging Strike</classFeatName>
+		<class>Fighter</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Sudden Charge</classFeatName>
+		<class>Fighter</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Aggressive Block</classFeatName>
+		<class>Fighter</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Assisting Shot</classFeatName>
+		<class>Fighter</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Brutish Shove</classFeatName>
+		<class>Fighter</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Combat Grab</classFeatName>
+		<class>Fighter</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Dueling Parry</classFeatName>
+		<class>Fighter</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Intimidating Strike</classFeatName>
+		<class>Fighter</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Lunge</classFeatName>
+		<class>Fighter</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Double Shot</classFeatName>
+		<class>Fighter</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Dual-Handed Assault</classFeatName>
+		<class>Fighter</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Knockdown</classFeatName>
+		<class>Fighter</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Powerful Shove</classFeatName>
+		<class>Fighter</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Quick Reversal</classFeatName>
+		<class>Fighter</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Shielded Stride</classFeatName>
+		<class>Fighter</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Swipe</classFeatName>
+		<class>Fighter</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Twin Parry</classFeatName>
+		<class>Fighter</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Advanced Weapon Training</classFeatName>
+		<class>Fighter</class>
+		<level>6</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Advantageous Assault</classFeatName>
+		<class>Fighter</class>
+		<level>6</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Disarming Stance</classFeatName>
+		<class>Fighter</class>
+		<level>6</level>
+		<prerequisite>Athletics||Trained</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Furious Focus</classFeatName>
+		<class>Fighter</class>
+		<level>6</level>
+		<prerequisite>Power Attack</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Guardian's Deflection</classFeatName>
+		<class>Fighter</class>
+		<level>6</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Reflexive Shield</classFeatName>
+		<class>Fighter</class>
+		<level>6</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Revealing Stab</classFeatName>
+		<class>Fighter</class>
+		<level>6</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Shatter Defenses</classFeatName>
+		<class>Fighter</class>
+		<level>6</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Shield Warden</classFeatName>
+		<class>Fighter</class>
+		<level>6</level>
+		<prerequisite>Shield Block</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Triple Shot</classFeatName>
+		<class>Fighter</class>
+		<level>6</level>
+		<prerequisite>Double Shot</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Blind-Fight</classFeatName>
+		<class>Fighter</class>
+		<level>8</level>
+		<prerequisite>Perception||Master</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Dueling Riposte</classFeatName>
+		<class>Fighter</class>
+		<level>8</level>
+		<prerequisite>Dueling Parry</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Felling Strike</classFeatName>
+		<class>Fighter</class>
+		<level>8</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Incredible Aim</classFeatName>
+		<class>Fighter</class>
+		<level>8</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Mobile Shot Stance</classFeatName>
+		<class>Fighter</class>
+		<level>8</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Positioning Assault</classFeatName>
+		<class>Fighter</class>
+		<level>8</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Quick Shield Block</classFeatName>
+		<class>Fighter</class>
+		<level>8</level>
+		<prerequisite>Shield Block|||Reactive Shield</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Sudden Leap</classFeatName>
+		<class>Fighter</class>
+		<level>8</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Agile Grace</classFeatName>
+		<class>Fighter</class>
+		<level>10</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Certain Strike</classFeatName>
+		<class>Fighter</class>
+		<level>10</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Combat Reflexes</classFeatName>
+		<class>Fighter</class>
+		<level>10</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Debilitating Shot</classFeatName>
+		<class>Fighter</class>
+		<level>10</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Disarming Twist</classFeatName>
+		<class>Fighter</class>
+		<level>10</level>
+		<prerequisite>Athletics||Trained</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Disruptive Stance</classFeatName>
+		<class>Fighter</class>
+		<level>10</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Fearsome Brute</classFeatName>
+		<class>Fighter</class>
+		<level>10</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Improved Knockdown</classFeatName>
+		<class>Fighter</class>
+		<level>10</level>
+		<prerequisite>Knockdown</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Mirror Shield</classFeatName>
+		<class>Fighter</class>
+		<level>10</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Twin Riposte</classFeatName>
+		<class>Fighter</class>
+		<level>10</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Brutal Finish</classFeatName>
+		<class>Fighter</class>
+		<level>12</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Dueling Dance</classFeatName>
+		<class>Fighter</class>
+		<level>12</level>
+		<prerequisite>Dueling Parry</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Flinging Shove</classFeatName>
+		<class>Fighter</class>
+		<level>12</level>
+		<prerequisite>Aggressive Block||||Brutish Shove</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Improved Dueling Riposte</classFeatName>
+		<class>Fighter</class>
+		<level>12</level>
+		<prerequisite>Dueling Riposte</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Incredible Ricochet</classFeatName>
+		<class>Fighter</class>
+		<level>12</level>
+		<prerequisite>Incredible Aim</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Lunging Stance</classFeatName>
+		<class>Fighter</class>
+		<level>12</level>
+		<prerequisite>Attack of Opportunity||||Lunge</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Paragon's Guard</classFeatName>
+		<class>Fighter</class>
+		<level>12</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Spring Attack</classFeatName>
+		<class>Fighter</class>
+		<level>12</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Desperate Finisher</classFeatName>
+		<class>Fighter</class>
+		<level>14</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Determination</classFeatName>
+		<class>Fighter</class>
+		<level>14</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Guiding Finish</classFeatName>
+		<class>Fighter</class>
+		<level>14</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Guiding Riposte</classFeatName>
+		<class>Fighter</class>
+		<level>14</level>
+		<prerequisite>Twin Riposte</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Stance Savant</classFeatName>
+		<class>Fighter</class>
+		<level>14</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Two-Weapon Flurry</classFeatName>
+		<class>Fighter</class>
+		<level>14</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Whirlwind Strike</classFeatName>
+		<class>Fighter</class>
+		<level>14</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Graceful Poise</classFeatName>
+		<class>Fighter</class>
+		<level>16</level>
+		<prerequisite>Double Slice</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Improved Reflexive Shield</classFeatName>
+		<class>Fighter</class>
+		<level>16</level>
+		<prerequisite>Reflexive Shield</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Multishot Stance</classFeatName>
+		<class>Fighter</class>
+		<level>16</level>
+		<prerequisite>Triple Shot</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Twinned Defense</classFeatName>
+		<class>Fighter</class>
+		<level>16</level>
+		<prerequisite>Twin Parry</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Impossible Volley</classFeatName>
+		<class>Fighter</class>
+		<level>18</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Savage</classFeatName>
+		<class>Fighter</class>
+		<level>18</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Boundless Reprisals</classFeatName>
+		<class>Fighter</class>
+		<level>20</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Weapon Supremacy</classFeatName>
+		<class>Fighter</class>
+		<level>20</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Crane Stance</classFeatName>
+		<class>Monk</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Dragon Stance</classFeatName>
+		<class>Monk</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Ki Rush</classFeatName>
+		<class>Monk</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Ki Strike</classFeatName>
+		<class>Monk</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Monastic Weaponry</classFeatName>
+		<class>Monk</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Mountain Stance</classFeatName>
+		<class>Monk</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Tiger Stance</classFeatName>
+		<class>Monk</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Wolf Stance</classFeatName>
+		<class>Monk</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Brawling Focus</classFeatName>
+		<class>Monk</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Crushing Grab</classFeatName>
+		<class>Monk</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Dancing Leaf</classFeatName>
+		<class>Monk</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Elemental Fist</classFeatName>
+		<class>Monk</class>
+		<level>2</level>
+		<prerequisite>Ki Strike</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Stunning Fist</classFeatName>
+		<class>Monk</class>
+		<level>2</level>
+		<prerequisite>Flurry of Blows</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Deflect Arrow</classFeatName>
+		<class>Monk</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Flurry of Maneuvers</classFeatName>
+		<class>Monk</class>
+		<level>4</level>
+		<prerequisite>Athletics||Expert</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Flying Kicks</classFeatName>
+		<class>Monk</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Guarded Movement</classFeatName>
+		<class>Monk</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Stand Still</classFeatName>
+		<class>Monk</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Wholeness Body</classFeatName>
+		<class>Monk</class>
+		<level>4</level>
+		<prerequisite>Ki Spells</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Abundant Step</classFeatName>
+		<class>Monk</class>
+		<level>6</level>
+		<prerequisite>Incredible Movement|||Ki Spells</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Crane Flutter</classFeatName>
+		<class>Monk</class>
+		<level>6</level>
+		<prerequisite>Crane Stance</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Dragon Roar</classFeatName>
+		<class>Monk</class>
+		<level>6</level>
+		<prerequisite>Dragon Stance</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Ki Blast</classFeatName>
+		<class>Monk</class>
+		<level>6</level>
+		<prerequisite>Ki Spells</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Mountain Stronghold</classFeatName>
+		<class>Monk</class>
+		<level>6</level>
+		<prerequisite>Mountain Stance</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Tiger Slash</classFeatName>
+		<class>Monk</class>
+		<level>6</level>
+		<prerequisite>Tiger Stance</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Water Step</classFeatName>
+		<class>Monk</class>
+		<level>6</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Whirling Throw</classFeatName>
+		<class>Monk</class>
+		<level>6</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Wolf Drag</classFeatName>
+		<class>Monk</class>
+		<level>6</level>
+		<prerequisite>Wolf Stance</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Arrow Snatching</classFeatName>
+		<class>Monk</class>
+		<level>8</level>
+		<prerequisite>Deflect Arrow</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Ironblood Stance</classFeatName>
+		<class>Monk</class>
+		<level>8</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Mixed Maneuver</classFeatName>
+		<class>Monk</class>
+		<level>8</level>
+		<prerequisite>Athletics||Master</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Tangled Forest Stance</classFeatName>
+		<class>Monk</class>
+		<level>8</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Wall Run</classFeatName>
+		<class>Monk</class>
+		<level>8</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Wild Winds Initiate</classFeatName>
+		<class>Monk</class>
+		<level>8</level>
+		<prerequisite>Ki Spells</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Knockback Strike</classFeatName>
+		<class>Monk</class>
+		<level>10</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Sleeper Hold</classFeatName>
+		<class>Monk</class>
+		<level>10</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Wind Jump</classFeatName>
+		<class>Monk</class>
+		<level>10</level>
+		<prerequisite>Ki Spells</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Winding Flow</classFeatName>
+		<class>Monk</class>
+		<level>10</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Diamond Soul</classFeatName>
+		<class>Monk</class>
+		<level>12</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Disrupt Ki</classFeatName>
+		<class>Monk</class>
+		<level>12</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Improved Knockback</classFeatName>
+		<class>Monk</class>
+		<level>12</level>
+		<prerequisite>Athletics||Master</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Meditative Focus</classFeatName>
+		<class>Monk</class>
+		<level>12</level>
+		<prerequisite>Ki Spells</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Stance Savant</classFeatName>
+		<class>Monk</class>
+		<level>12</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Ironblood Surge</classFeatName>
+		<class>Monk</class>
+		<level>14</level>
+		<prerequisite>Ironblood Stance</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Mountain Quake</classFeatName>
+		<class>Monk</class>
+		<level>14</level>
+		<prerequisite>Mountain Stronghold</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Tangled Forest Rake</classFeatName>
+		<class>Monk</class>
+		<level>14</level>
+		<prerequisite>Tangled Forest Stance</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Timeless Body</classFeatName>
+		<class>Monk</class>
+		<level>14</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Tongue of Sun and Moon</classFeatName>
+		<class>Monk</class>
+		<level>14</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Wild Winds Gust</classFeatName>
+		<class>Monk</class>
+		<level>14</level>
+		<prerequisite>Wild Winds Initiate</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Enlightened Presence</classFeatName>
+		<class>Monk</class>
+		<level>16</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Master of Many Styles</classFeatName>
+		<class>Monk</class>
+		<level>16</level>
+		<prerequisite>Stance Savant</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Quivering Palm</classFeatName>
+		<class>Monk</class>
+		<level>16</level>
+		<prerequisite>Ki Spells</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Shattering Strike</classFeatName>
+		<class>Monk</class>
+		<level>16</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Diamond Fists</classFeatName>
+		<class>Monk</class>
+		<level>18</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Empty Body</classFeatName>
+		<class>Monk</class>
+		<level>18</level>
+		<prerequisite>Ki Spells</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Meditative Wellspring</classFeatName>
+		<class>Monk</class>
+		<level>18</level>
+		<prerequisite>Meditative Focus</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Swift River</classFeatName>
+		<class>Monk</class>
+		<level>18</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Enduring Quickness</classFeatName>
+		<class>Monk</class>
+		<level>20</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Fuse Stance</classFeatName>
+		<class>Monk</class>
+		<level>20</level>
+		<prerequisite>2 stances??</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Impossible Technique</classFeatName>
+		<class>Monk</class>
+		<level>20</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Flurry</classFeatName>
+		<class>Ranger</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Precision</classFeatName>
+		<class>Ranger</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Outwit</classFeatName>
+		<class>Ranger</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Animal Companion</classFeatName>
+		<class>Ranger</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Crossbow Ace</classFeatName>
+		<class>Ranger</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Hunted Shot</classFeatName>
+		<class>Ranger</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Monster Hunter</classFeatName>
+		<class>Ranger</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Twin Takedown</classFeatName>
+		<class>Ranger</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Favored Terrain</classFeatName>
+		<class>Ranger</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Hunter's Aim</classFeatName>
+		<class>Ranger</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Monster Warden</classFeatName>
+		<class>Ranger</class>
+		<level>2</level>
+		<prerequisite>Monster Hunter</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Wild Empathy</classFeatName>
+		<class>Ranger</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Companion's Cry</classFeatName>
+		<class>Ranger</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Disrupt Prey</classFeatName>
+		<class>Ranger</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Far Shot</classFeatName>
+		<class>Ranger</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Favored Enemy</classFeatName>
+		<class>Ranger</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Running Reload</classFeatName>
+		<class>Ranger</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Scout's Warning</classFeatName>
+		<class>Ranger</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Snare Specialist</classFeatName>
+		<class>Ranger</class>
+		<level>4</level>
+		<prerequisite>Crafting||Expert|||Snare Crafting</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Twin Parry</classFeatName>
+		<class>Ranger</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Mature Animal Companion</classFeatName>
+		<class>Ranger</class>
+		<level>6</level>
+		<prerequisite>Animal Companion</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Quick Snares</classFeatName>
+		<class>Ranger</class>
+		<level>6</level>
+		<prerequisite>Crafting||Expert|||Snare Specialist</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Skirmish Strike</classFeatName>
+		<class>Ranger</class>
+		<level>6</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Snap Shot</classFeatName>
+		<class>Ranger</class>
+		<level>6</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Swift Tracker</classFeatName>
+		<class>Ranger</class>
+		<level>6</level>
+		<prerequisite>Survival||Expert|||Experienced Tracker</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Blind-Fight</classFeatName>
+		<class>Ranger</class>
+		<level>8</level>
+		<prerequisite>Perception||Master</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Deadly Aim</classFeatName>
+		<class>Ranger</class>
+		<level>8</level>
+		<prerequisite>Weapon Specialization</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Hazard Finder</classFeatName>
+		<class>Ranger</class>
+		<level>8</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Powerful Snares</classFeatName>
+		<class>Ranger</class>
+		<level>8</level>
+		<prerequisite>Crafting||Master|||Snare Specialist</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Terrain Master</classFeatName>
+		<class>Ranger</class>
+		<level>8</level>
+		<prerequisite>Wild Stride|||Survival||Master|||Favored Terrain</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Warden's Boon</classFeatName>
+		<class>Ranger</class>
+		<level>8</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Camouflage</classFeatName>
+		<class>Ranger</class>
+		<level>10</level>
+		<prerequisite>Stealth||Master</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Incredible Companion</classFeatName>
+		<class>Ranger</class>
+		<level>10</level>
+		<prerequisite>Mature Animal Companion</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Master Monster Hunter</classFeatName>
+		<class>Ranger</class>
+		<level>10</level>
+		<prerequisite>Nature||Master|||Monster Hunter</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Penetrating Shot</classFeatName>
+		<class>Ranger</class>
+		<level>10</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Twin Riposte</classFeatName>
+		<class>Ranger</class>
+		<level>10</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Warden's Step</classFeatName>
+		<class>Ranger</class>
+		<level>10</level>
+		<prerequisite>Stealth||Master</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Distracting Shot</classFeatName>
+		<class>Ranger</class>
+		<level>12</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Double Prey</classFeatName>
+		<class>Ranger</class>
+		<level>12</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Lightning Snares</classFeatName>
+		<class>Ranger</class>
+		<level>12</level>
+		<prerequisite>Crafting||Master|||Snare Specialist</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Second Sting</classFeatName>
+		<class>Ranger</class>
+		<level>12</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Side by Side</classFeatName>
+		<class>Ranger</class>
+		<level>12</level>
+		<prerequisite>Animal Companion</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Sense the Unseen</classFeatName>
+		<class>Ranger</class>
+		<level>14</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Shared Prey</classFeatName>
+		<class>Ranger</class>
+		<level>14</level>
+		<prerequisite>Double Prey|||Warden's Boon</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Stealthy Companion</classFeatName>
+		<class>Ranger</class>
+		<level>14</level>
+		<prerequisite>Camouflage</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Targeting Shot</classFeatName>
+		<class>Ranger</class>
+		<level>14</level>
+		<prerequisite>Hunter's Aim</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Warden's Guidance</classFeatName>
+		<class>Ranger</class>
+		<level>14</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Greater Distracting Shot</classFeatName>
+		<class>Ranger</class>
+		<level>16</level>
+		<prerequisite>Distracting Shot</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Improved Twin Riposte</classFeatName>
+		<class>Ranger</class>
+		<level>16</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Legendary Monster Hunter</classFeatName>
+		<class>Ranger</class>
+		<level>16</level>
+		<prerequisite>Nature||Legendary|||Master Monster Hunter</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Specialized Companion</classFeatName>
+		<class>Ranger</class>
+		<level>16</level>
+		<prerequisite>Incredible Companion</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Ubiquitous Snares</classFeatName>
+		<class>Ranger</class>
+		<level>16</level>
+		<prerequisite>Snare Specialist</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Impossible Flurry</classFeatName>
+		<class>Ranger</class>
+		<level>18</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Impossible Volley</classFeatName>
+		<class>Ranger</class>
+		<level>18</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Manifold Edge</classFeatName>
+		<class>Ranger</class>
+		<level>18</level>
+		<prerequisite>Hunter's Edge|||Masterful Hunter</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Masterful Companion</classFeatName>
+		<class>Ranger</class>
+		<level>18</level>
+		<prerequisite>Masterful Hunter|||Animal Companion</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Perfect Shot</classFeatName>
+		<class>Ranger</class>
+		<level>18</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Shadow Hunter</classFeatName>
+		<class>Ranger</class>
+		<level>18</level>
+		<prerequisite>Camouflage</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Legendary Shot</classFeatName>
+		<class>Ranger</class>
+		<level>20</level>
+		<prerequisite>Masterful Hunter|||Perception||Legendary|||Far Shot</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>To the Ends of the Earth</classFeatName>
+		<class>Ranger</class>
+		<level>20</level>
+		<prerequisite>Survival||Legendary</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Triple Threat</classFeatName>
+		<class>Ranger</class>
+		<level>20</level>
+		<prerequisite>Shared Prey</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Ultimate Skirmisher</classFeatName>
+		<class>Ranger</class>
+		<level>20</level>
+		<prerequisite>Wild Stride</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Ruffian</classFeatName>
+		<class>Rogue</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Scoundrel</classFeatName>
+		<class>Rogue</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Thief</classFeatName>
+		<class>Rogue</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Nimble Dodge</classFeatName>
+		<class>Rogue</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Trap Finder</classFeatName>
+		<class>Rogue</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Twin Feint</classFeatName>
+		<class>Rogue</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>You're Next</classFeatName>
+		<class>Rogue</class>
+		<level>1</level>
+		<prerequisite>Intimidation||Trained</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Brutal Beating</classFeatName>
+		<class>Rogue</class>
+		<level>2</level>
+		<prerequisite>Ruffian</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Distracting Feint</classFeatName>
+		<class>Rogue</class>
+		<level>2</level>
+		<prerequisite>Scoundrel</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Minor Magic</classFeatName>
+		<class>Rogue</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Mobility</classFeatName>
+		<class>Rogue</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Quick Draw</classFeatName>
+		<class>Rogue</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Unbalancing Blow</classFeatName>
+		<class>Rogue</class>
+		<level>2</level>
+		<prerequisite>Thief</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Battle Assessment</classFeatName>
+		<class>Rogue</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Dread Striker</classFeatName>
+		<class>Rogue</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Magical Trickster</classFeatName>
+		<class>Rogue</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Poison Weapon</classFeatName>
+		<class>Rogue</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Reactive Pursuit</classFeatName>
+		<class>Rogue</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Sabotage</classFeatName>
+		<class>Rogue</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Scout's Warning</classFeatName>
+		<class>Rogue</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Gang Up</classFeatName>
+		<class>Rogue</class>
+		<level>6</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Light Step</classFeatName>
+		<class>Rogue</class>
+		<level>6</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Twist the Knife</classFeatName>
+		<class>Rogue</class>
+		<level>6</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Blind-Fight</classFeatName>
+		<class>Rogue</class>
+		<level>8</level>
+		<prerequisite>Perception||Master</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Delay Trap</classFeatName>
+		<class>Rogue</class>
+		<level>8</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Improved Poison Weapon</classFeatName>
+		<class>Rogue</class>
+		<level>8</level>
+		<prerequisite>Poison Weapon</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Nimble Roll</classFeatName>
+		<class>Rogue</class>
+		<level>8</level>
+		<prerequisite>Nimble Dodge</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Opportune Backstab</classFeatName>
+		<class>Rogue</class>
+		<level>8</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Sidestep</classFeatName>
+		<class>Rogue</class>
+		<level>8</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Sly Striker</classFeatName>
+		<class>Rogue</class>
+		<level>8</level>
+		<prerequisite>Sneak Attack</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Precise Debilitations</classFeatName>
+		<class>Rogue</class>
+		<level>10</level>
+		<prerequisite>Thief|||Debilitating Strike</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Sneak Savant</classFeatName>
+		<class>Rogue</class>
+		<level>10</level>
+		<prerequisite>Stealth||Master</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Tactical Debilitations</classFeatName>
+		<class>Rogue</class>
+		<level>10</level>
+		<prerequisite>Scoundrel|||Debilitating Strike</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Vicious Debilitations</classFeatName>
+		<class>Rogue</class>
+		<level>10</level>
+		<prerequisite>Ruffian|||Debilitating Strike</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Critical Debilitation</classFeatName>
+		<class>Rogue</class>
+		<level>12</level>
+		<prerequisite>Debilitating Strike</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Fantastic Leap</classFeatName>
+		<class>Rogue</class>
+		<level>12</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Felling Shot</classFeatName>
+		<class>Rogue</class>
+		<level>12</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Reactive Interference</classFeatName>
+		<class>Rogue</class>
+		<level>12</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Spring From The Shadows</classFeatName>
+		<class>Rogue</class>
+		<level>12</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Defensive Roll</classFeatName>
+		<class>Rogue</class>
+		<level>14</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Instant Opening</classFeatName>
+		<class>Rogue</class>
+		<level>14</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Leave An Opening</classFeatName>
+		<class>Rogue</class>
+		<level>14</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Sense the Unseen</classFeatName>
+		<class>Rogue</class>
+		<level>14</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Blank State</classFeatName>
+		<class>Rogue</class>
+		<level>16</level>
+		<prerequisite>Deception||Legendary</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Cloud Step</classFeatName>
+		<class>Rogue</class>
+		<level>16</level>
+		<prerequisite>Acrobatics||Legendary</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Cognitive Loophole</classFeatName>
+		<class>Rogue</class>
+		<level>16</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Dispelling Slice</classFeatName>
+		<class>Rogue</class>
+		<level>16</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Perfect Distraction</classFeatName>
+		<class>Rogue</class>
+		<level>16</level>
+		<prerequisite>Deception||Legendary</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Implausible Infiltration</classFeatName>
+		<class>Rogue</class>
+		<level>18</level>
+		<prerequisite>Acrobatics||Legendary|||Quick Squeeze</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Powerful Sneak</classFeatName>
+		<class>Rogue</class>
+		<level>18</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Trickster's Ace</classFeatName>
+		<class>Rogue</class>
+		<level>18</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Hidden Paragon</classFeatName>
+		<class>Rogue</class>
+		<level>20</level>
+		<prerequisite>Stealth||Legendary</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Impossible Striker</classFeatName>
+		<class>Rogue</class>
+		<level>20</level>
+		<prerequisite>Sly Striker</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Reactive Distraction</classFeatName>
+		<class>Rogue</class>
+		<level>20</level>
+		<prerequisite>Deception||Legendary|||Perfect Distraction</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Aberrant</classFeatName>
+		<class>Sorcerer</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Angelic</classFeatName>
+		<class>Sorcerer</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Demonic</classFeatName>
+		<class>Sorcerer</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Diabolic</classFeatName>
+		<class>Sorcerer</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Dragonic</classFeatName>
+		<class>Sorcerer</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Elemental</classFeatName>
+		<class>Sorcerer</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Fey</classFeatName>
+		<class>Sorcerer</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Hag</classFeatName>
+		<class>Sorcerer</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Imperial</classFeatName>
+		<class>Sorcerer</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Undead</classFeatName>
+		<class>Sorcerer</class>
+		<level>Initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Counterspell</classFeatName>
+		<class>Sorcerer</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Dangerous Sorcery</classFeatName>
+		<class>Sorcerer</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Familiar</classFeatName>
+		<class>Sorcerer</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Reach Spell</classFeatName>
+		<class>Sorcerer</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Widen Spell</classFeatName>
+		<class>Sorcerer</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Cantrip Expansion</classFeatName>
+		<class>Sorcerer</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Enhanced Familiar</classFeatName>
+		<class>Sorcerer</class>
+		<level>2</level>
+		<prerequisite>Familiar</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Arcane Evolution</classFeatName>
+		<class>Sorcerer</class>
+		<level>4</level>
+		<prerequisite>Bloodline (arcana)</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Bespell Weapon</classFeatName>
+		<class>Sorcerer</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Divine Evolution</classFeatName>
+		<class>Sorcerer</class>
+		<level>4</level>
+		<prerequisite>Bloodline (divine)</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Occult Evolution</classFeatName>
+		<class>Sorcerer</class>
+		<level>4</level>
+		<prerequisite>Bloodline (occult)</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Primal Evolution</classFeatName>
+		<class>Sorcerer</class>
+		<level>4</level>
+		<prerequisite>Bloodline (primal)</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Advanced Bloodline</classFeatName>
+		<class>Sorcerer</class>
+		<level>6</level>
+		<prerequisite>Bloodline Spell</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Steady Spellcasting</classFeatName>
+		<class>Sorcerer</class>
+		<level>6</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Bloodline Resistance</classFeatName>
+		<class>Sorcerer</class>
+		<level>8</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Crossblooded Evolution</classFeatName>
+		<class>Sorcerer</class>
+		<level>8</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Greates Bloodline</classFeatName>
+		<class>Sorcerer</class>
+		<level>10</level>
+		<prerequisite>Bloodline Spell</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Overwhelming Energy</classFeatName>
+		<class>Sorcerer</class>
+		<level>10</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Quickened Casting</classFeatName>
+		<class>Sorcerer</class>
+		<level>10</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Bloodline Focus</classFeatName>
+		<class>Sorcerer</class>
+		<level>12</level>
+		<prerequisite>Bloodline Spell</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Magic Sence</classFeatName>
+		<class>Sorcerer</class>
+		<level>12</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Interweave Dispel</classFeatName>
+		<class>Sorcerer</class>
+		<level>14</level>
+		<prerequisite>Dispel Magic</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Reflect Spell</classFeatName>
+		<class>Sorcerer</class>
+		<level>14</level>
+		<prerequisite>Counterspell</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Effortless Concentration</classFeatName>
+		<class>Sorcerer</class>
+		<level>16</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Greater Mental Evolution</classFeatName>
+		<class>Sorcerer</class>
+		<level>16</level>
+		<prerequisite>Arcane Evolution||||Occult Evolution</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Greater Vital Evolution</classFeatName>
+		<class>Sorcerer</class>
+		<level>16</level>
+		<prerequisite>Divine Evolution||||Primal Evolution</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Bloodline Wellspring</classFeatName>
+		<class>Sorcerer</class>
+		<level>18</level>
+		<prerequisite>Bloodline Focus</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Greater Crossblooded Evolution</classFeatName>
+		<class>Sorcerer</class>
+		<level>18</level>
+		<prerequisite>Crossblooded Evolution</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Bloodline Conduit</classFeatName>
+		<class>Sorcerer</class>
+		<level>20</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Bloodline Perfection</classFeatName>
+		<class>Sorcerer</class>
+		<level>20</level>
+		<prerequisite>Bloodline Paragon</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Metamagic Mastery</classFeatName>
+		<class>Sorcerer</class>
+		<level>20</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Specialist</classFeatName>
+		<class>Wizard</class>
+		<level>initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Arcane Bond</classFeatName>
+		<class>Wizard</class>
+		<level>initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Arcane Thesis</classFeatName>
+		<class>Wizard</class>
+		<level>initial</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Counterspell</classFeatName>
+		<class>Wizard</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Eschew Materials</classFeatName>
+		<class>Wizard</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Familiar</classFeatName>
+		<class>Wizard</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Hand of the Apprentice</classFeatName>
+		<class>Wizard</class>
+		<level>1</level>
+		<prerequisite>Specialist (universalist)</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Reach Spell</classFeatName>
+		<class>Wizard</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Widen Spell</classFeatName>
+		<class>Wizard</class>
+		<level>1</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Cantrip Expansion</classFeatName>
+		<class>Wizard</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Conceal Spell</classFeatName>
+		<class>Wizard</class>
+		<level>2</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Enhanced Familiar</classFeatName>
+		<class>Wizard</class>
+		<level>2</level>
+		<prerequisite>Familiar</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Bespell Weapon</classFeatName>
+		<class>Wizard</class>
+		<level>4</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Linked Focus</classFeatName>
+		<class>Wizard</class>
+		<level>4</level>
+		<prerequisite>Arcane Bond|||Arcane School</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Silent Spell</classFeatName>
+		<class>Wizard</class>
+		<level>4</level>
+		<prerequisite>Conceal Spell</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Spell Penetration</classFeatName>
+		<class>Wizard</class>
+		<level>6</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Steady Spellcasting</classFeatName>
+		<class>Wizard</class>
+		<level>6</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Advanced School Spell</classFeatName>
+		<class>Wizard</class>
+		<level>8</level>
+		<prerequisite>Arcane School</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Bond Conservation</classFeatName>
+		<class>Wizard</class>
+		<level>8</level>
+		<prerequisite>Arcane Bond</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Universal Versatility</classFeatName>
+		<class>Wizard</class>
+		<level>8</level>
+		<prerequisite>Specialist (universalist)|||Hand of the Apprentice</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Overwhelming Energy</classFeatName>
+		<class>Wizard</class>
+		<level>10</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Quickened Casting</classFeatName>
+		<class>Wizard</class>
+		<level>10</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Scroll Savant</classFeatName>
+		<class>Wizard</class>
+		<level>10</level>
+		<prerequisite>Crafting||Expert</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Clever Counterspell</classFeatName>
+		<class>Wizard</class>
+		<level>12</level>
+		<prerequisite>Counterspell|||Quick Recognize</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Magic Sense</classFeatName>
+		<class>Wizard</class>
+		<level>12</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Bonded Focus</classFeatName>
+		<class>Wizard</class>
+		<level>14</level>
+		<prerequisite>Arcane Bond</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Reflect Spell</classFeatName>
+		<class>Wizard</class>
+		<level>14</level>
+		<prerequisite>Counterspell</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Superior Bond</classFeatName>
+		<class>Wizard</class>
+		<level>14</level>
+		<prerequisite>Arcane Bond</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Effortless Concentration</classFeatName>
+		<class>Wizard</class>
+		<level>16</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Spell Tinker</classFeatName>
+		<class>Wizard</class>
+		<level>16</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Infinite Possibilities</classFeatName>
+		<class>Wizard</class>
+		<level>18</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Reprepare Spell</classFeatName>
+		<class>Wizard</class>
+		<level>18</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Archwizard's Might</classFeatName>
+		<class>Wizard</class>
+		<level>20</level>
+		<prerequisite>Archwizard's Spellcraft</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Metamagic Mastery</classFeatName>
+		<class>Wizard</class>
+		<level>20</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+	<classFeat>
+		<classFeatName>Spell Combination</classFeatName>
+		<class>Wizard</class>
+		<level>20</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</classFeat>
+</ClassFeats>
