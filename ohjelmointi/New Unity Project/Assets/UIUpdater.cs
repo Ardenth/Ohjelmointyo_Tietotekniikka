@@ -21,7 +21,7 @@ public class UIUpdater : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Character baselineChar = new Character();
+        //Character baselineChar = new Character();
         mods = Character.UpdateMods(hello);
         //textMesH = GetComponent<TextMeshProUGUI>();
         strengthchar = GameObject.Find("StrengthChar").GetComponent<TextMeshProUGUI>();
@@ -31,7 +31,7 @@ public class UIUpdater : MonoBehaviour
         wisdomchar = GameObject.Find("WisdomChar").GetComponent<TextMeshProUGUI>();
         charismachar = GameObject.Find("CharismaChar").GetComponent<TextMeshProUGUI>();
         //testing requirementparse
-        string[] testsplit = Character.RequirementParse(testing);
+        //string[] testsplit = Character.RequirementParse(testing);
 
     }
 

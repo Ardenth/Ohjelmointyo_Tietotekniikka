@@ -17,7 +17,10 @@ public class TabGroup   : MonoBehaviour
 
 
 
-    //allocates the tab for later use
+    /// <summary>
+    /// allocating buttons for use
+    /// </summary>
+    /// <param name="button">button which will be allocated for use for the TabGroup</param>
     public void Allocate(TabButton button)
     {
         if(tabButtons == null)
@@ -27,11 +30,21 @@ public class TabGroup   : MonoBehaviour
         tabButtons.Add(button);
     }
 
+
+
+
     //public void TabExit(TabButton button)
     //{
         //ResetTabs();
     //}
 
+
+
+
+    /// <summary>
+    /// functionality for currently selected tab
+    /// </summary>
+    /// <param name="button">which selected tab's state is being altered</param>
     public void TabSelected(TabButton button)
     {
         ResetTabs();
@@ -50,6 +63,9 @@ public class TabGroup   : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// reset tabs to basic state
+    /// </summary>
     public void ResetTabs()
     {
 

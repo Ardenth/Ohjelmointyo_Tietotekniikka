@@ -23,6 +23,10 @@ public class TabButton : MonoBehaviour, IPointerClickHandler//, IPointerExitHand
     //    tabGroup.TabExit(this);
     //}
 
+    /// <summary>
+    /// Function for Tab's functionality on click
+    /// </summary>
+    /// <param name="eventData">Mouse click event data</param>
     public void OnPointerClick(PointerEventData eventData)
     {
         tabGroup.TabSelected(this);
