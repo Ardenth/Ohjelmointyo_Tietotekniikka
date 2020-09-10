@@ -16,44 +16,46 @@ public class UIUpdater : MonoBehaviour
     public static int[] mods = new int[6];
     public static int[] hello = new int[] { 12, 14, 16, 18, 19, 12 };
     public string testing = "hellooo||hellomydude";
+    Character baseline = new Character();
 
 
     // Start is called before the first frame update
     void Start()
     {
         //Character baselineChar = new Character();
-        mods = Character.UpdateMods(hello);
+        baseline.SetCharStat(hello);
+        baseline.UpdateMods();
+        baseline.LevelUp(4);
         //textMesH = GetComponent<TextMeshProUGUI>();
+        //testing requirementparse
+        //string[] testsplit = Character.RequirementParse(testing);
+
+    }
+
+    /// <summary>
+    /// Update character sheet's statistics and modifiers based on the character's information
+    /// </summary>
+    void UIModUpdate()
+    {
         strengthchar = GameObject.Find("StrengthChar").GetComponent<TextMeshProUGUI>();
         dexteritychar = GameObject.Find("DexterityChar").GetComponent<TextMeshProUGUI>();
         constitutionchar = GameObject.Find("ConstitutionChar").GetComponent<TextMeshProUGUI>();
         intelligencechar = GameObject.Find("IntelligenceChar").GetComponent<TextMeshProUGUI>();
         wisdomchar = GameObject.Find("WisdomChar").GetComponent<TextMeshProUGUI>();
         charismachar = GameObject.Find("CharismaChar").GetComponent<TextMeshProUGUI>();
-        //testing requirementparse
-        //string[] testsplit = Character.RequirementParse(testing);
 
-    }
+        strengthchar.text = "Strength: " + baseline.GetStat("Str").ToString() + "\n Mod: +" + baseline.GetMod("Str").ToString();
+        dexteritychar.text = "Dexterity: " + baseline.GetStat("Dex").ToString() + "\n Mod: +" + baseline.GetMod("Dex").ToString();
+        constitutionchar.text = "Constitution: " + baseline.GetStat("Con").ToString() + "\n Mod: +" + baseline.GetMod("Con").ToString();
+        intelligencechar.text = "Intelligence: " + baseline.GetStat("Int").ToString() + "\n Mod: +" + baseline.GetMod("Int").ToString();
+        wisdomchar.text = "Wisdom: " + baseline.GetStat("Wis").ToString() + "\n Mod: +" + baseline.GetMod("Wis").ToString();
+        charismachar.text = "Charisma: " + baseline.GetStat("Cha").ToString() + "\n Mod: +" + baseline.GetMod("Cha").ToString();
 
-    //Update character sheet's statistics and modifiers based on the pre-determined character's information
-    void UIModUpdate()
-    {
-        strengthchar.text = "Strength: " + hello[0].ToString() + "\n Mod: +" + mods[0].ToString();
-        dexteritychar.text = "Dexterity: " + hello[1].ToString() + "\n Mod: +" + mods[1].ToString();
-        constitutionchar.text = "Constitution: " + hello[2].ToString() + "\n Mod: +" + mods[2].ToString();
-        intelligencechar.text = "Intelligence: " + hello[3].ToString() + "\n Mod: +" + mods[3].ToString();
-        wisdomchar.text = "Wisdom: " + hello[4].ToString() + "\n Mod: +" + mods[4].ToString();
-        charismachar.text = "Charisma: " + hello[5].ToString() + "\n Mod: +" + mods[5].ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        UIModUpdate();
-        //
-        //if (gameObject.name == "StrengthChar (1)")
-        //{
-        //    textMesH.text = "Strength: " + Character.stats[0].ToString() + "\n Mod: +" + (Character.statsMod[0]+2).ToString();
-        //}
+        UIModUpdate(); //change it so only if something happens
     }
 }
