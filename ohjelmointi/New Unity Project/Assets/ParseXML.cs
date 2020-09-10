@@ -9,25 +9,38 @@ public class ParseXML : MonoBehaviour
     void Start()
     {
         List<Dictionary<string, string>> generalFeatDic = ParseGeneralFeat();
+        List<Dictionary<string, string>> skillFeatDic = ParseSkillFeat();
+        List<Dictionary<string, string>> classFeatDic = ParseClassFeat();
+        List<Dictionary<string, string>> ancestryFeatDic = ParseAncestryFeat();
+        List<Dictionary<string, string>> ancestryDic = ParseAncestry();
+        List<Dictionary<string, string>> backgroundDic = ParseBackground();
+        List<Dictionary<string, string>> proficiencyDic = ParseProficiency();
+        List<Dictionary<string, string>> classAdvDic = ParseAdvancement();
+        List<Dictionary<string, string>> alchemistProgDic = ParseClassProgression("alchemist");
+
+
         //add other dictionaries
+
+        //loop class dictionaries works
+        string[] playableClasses = { "alchemist", "barbarian", "bard", "champion", "cleric", "druid", "fighter", "monk", "ranger", "rogue", "sorcerer", "wizard" };
+        List<Dictionary<string, string>>[] classProgDicArray = new List<Dictionary<string, string>>[12];
+        for (int i = 0; i < classProgDicArray.Length; i++)
+        {
+            classProgDicArray[i] = ParseClassProgression(playableClasses[i]);
+        }
         Dictionary<string, string> generalFeats = generalFeatDic[1];
+        Dictionary<string, string> alchemistProg = alchemistProgDic[1];
+        Dictionary<string,string> alchemistProg1 = classProgDicArray[0][1];
         Debug.Log(generalFeats["featname"]);
         Debug.Log(generalFeats["level"]); 
         Debug.Log(generalFeats["prerequisite"]);
         Debug.Log(generalFeats["description"]);
-
+        Debug.Log(alchemistProg["advancement1"]);
+        Debug.Log(alchemistProg1["advancement1"]);
 
         //creating dictionaries with a loop? would help with classes...
-/*
-    string[] playableClasses = { "Alchemist", "Barbarian", "Bard", "Champion", "Cleric", "Druid", "Fighter", "Monk", "Ranger", "Rogue", "Sorcerer", "Wizard" };
-    List<Dictionary<string, string>>[] classProgDicArray = new List<Dictionary<string, string>>[playableClasses.Length]; //save the classProgDic as an array for each progression
-    for (int i = 0; i < playableClasses.Length; i++)
-    {
-        classProgDicArray[i] = ParseClassProgression(playableClasses[i]);
-    }
-    Dictionary<string, string> characprog = classProgDicArray[0][1]; //alchemist's second progression
-    Debug.Log(characprog["advancement1"]); //alchemist's second progression, advancement1 value
-*/
+
+
     }
 
     /// <summary>
@@ -102,7 +115,7 @@ public class ParseXML : MonoBehaviour
     {
         TextAsset txtXmlAsset = Resources.Load<TextAsset>("feats_class");
         var doc = XDocument.Parse(txtXmlAsset.text);
-        var allDict = doc.Element("AncestryFeats").Elements("ancestryFeat");
+        var allDict = doc.Element("ClassFeats").Elements("classFeat");
         List<Dictionary<string, string>> allTextDic = new List<Dictionary<string, string>>();
         string profInfo;
         XElement element;
@@ -151,7 +164,6 @@ public class ParseXML : MonoBehaviour
                 dic.Add(elementNames[i], profInfo);
             }
             allTextDic.Add(dic);
-
         }
 
 
@@ -229,7 +241,7 @@ public class ParseXML : MonoBehaviour
     /// <returns></returns>
     public List<Dictionary<string, string>> ParseAdvancement()
 {
-    TextAsset txtXmlAsset = Resources.Load<TextAsset>("Class_advancement");
+    TextAsset txtXmlAsset = Resources.Load<TextAsset>("class_advancement");
     var doc = XDocument.Parse(txtXmlAsset.text);
 
     var allDict = doc.Element("Advancements").Elements("advancement");
@@ -277,7 +289,6 @@ public class ParseXML : MonoBehaviour
         foreach (var oneDict in allDict)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();
-
             for (int i = 0; i < elementNames.Length; i++)
             {
                 element = oneDict.Element(elementNames[i]);
@@ -288,14 +299,13 @@ public class ParseXML : MonoBehaviour
 
         }
 
-
         return allTextDic;
     }
 
     //class progressions (a ton how?) (multiple cases based on string parameter that specifies the class?)
     public List<Dictionary<string, string>> ParseClassProgression(string className)
     {
-        TextAsset txtXmlAsset = Resources.Load<TextAsset>("class_progression_"+className);
+        TextAsset txtXmlAsset = Resources.Load<TextAsset>("class_progression_" + className);
         var doc = XDocument.Parse(txtXmlAsset.text);
 
         var allDict = doc.Element("Progressions").Elements("progression");
