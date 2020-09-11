@@ -737,7 +737,7 @@
 	</ancestryFeat>
 	<ancestryFeat>
 		<name>Unconventional Expertise</name>
-		<ancestry>Human</ancestry>
+    <ancestry>Human</ancestry>
 		<level>13</level>
 		<prerequisite>Unconventional Weaponry</prerequisite>
 		<description>none</description>
@@ -745,7 +745,7 @@
 	<ancestryFeat>
 		<name>Elf Avatism</name>
 		<ancestry>Half-Elf</ancestry>
-		<level>1</level>
+		<level>1*</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
