@@ -15,7 +15,6 @@ public class UIUpdater : MonoBehaviour
     private TextMeshProUGUI charismachar;
     public static int[] mods = new int[6];
     public static int[] hello = new int[] { 12, 14, 16, 18, 19, 12 };
-    public string testing = "hellooo||hellomydude";
     Character baseline = new Character();
 
 
@@ -26,6 +25,9 @@ public class UIUpdater : MonoBehaviour
         baseline.SetCharStat(hello);
         baseline.UpdateMods();
         baseline.LevelUp(4);
+        baseline.IncreaseSkill("Acrobatics");
+        baseline.IncreaseSkill("Acrobatics|Master");
+        baseline.IncreaseSkill("Acrobatics");
         //textMesH = GetComponent<TextMeshProUGUI>();
         //testing requirementparse
         //string[] testsplit = Character.RequirementParse(testing);

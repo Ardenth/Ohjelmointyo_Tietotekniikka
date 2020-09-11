@@ -5,20 +5,30 @@ using UnityEngine;
 
 public class ParseXML : MonoBehaviour
 {
+    //might have to think of the formatting of the XML files anew... Keys need to be same in general, skills, ancestry, class feats AND class advancement???? (notepad++ ReplaceAll)
+
+
     public static List<Dictionary<string, string>>[] classProgDicArray = new List<Dictionary<string, string>>[12];
     public static string[] playableClasses = { "alchemist", "barbarian", "bard", "champion", "cleric", "druid", "fighter", "monk", "ranger", "rogue", "sorcerer", "wizard" };
+    public static List<Dictionary<string, string>> generalFeatDic;
+    public static List<Dictionary<string, string>> skillFeatDic;
+    public static List<Dictionary<string, string>> classFeatDic;
+    public static List<Dictionary<string, string>> ancestryFeatDic;
+    public static List<Dictionary<string, string>> ancestryDic;
+    public static List<Dictionary<string, string>> backgroundDic;
+    public static List<Dictionary<string, string>> proficiencyDic;
+    public static List<Dictionary<string, string>> classAdvDic;
     // Start is called before the first frame update
     void Start()
     {
-        List<Dictionary<string, string>> generalFeatDic = ParseGeneralFeat();
-        List<Dictionary<string, string>> skillFeatDic = ParseSkillFeat();
-        List<Dictionary<string, string>> classFeatDic = ParseClassFeat();
-        List<Dictionary<string, string>> ancestryFeatDic = ParseAncestryFeat();
-        List<Dictionary<string, string>> ancestryDic = ParseAncestry();
-        List<Dictionary<string, string>> backgroundDic = ParseBackground();
-        List<Dictionary<string, string>> proficiencyDic = ParseProficiency();
-        List<Dictionary<string, string>> classAdvDic = ParseAdvancement();
-        List<Dictionary<string, string>> alchemistProgDic = ParseClassProgression("alchemist");
+        generalFeatDic = ParseGeneralFeat();
+        skillFeatDic = ParseSkillFeat();
+        classFeatDic = ParseClassFeat();
+        ancestryFeatDic = ParseAncestryFeat();
+        ancestryDic = ParseAncestry();
+        backgroundDic = ParseBackground();
+        proficiencyDic = ParseProficiency();
+        classAdvDic = ParseAdvancement();
 
 
         //add other dictionaries

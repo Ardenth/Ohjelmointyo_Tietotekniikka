@@ -25,7 +25,7 @@
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
-		<advName>Fear(Initial)</advName>
+		<advName>Feat(Initial)</advName>
 		<class>Alchemist||||Barbarian||||Bard|||Champion||||Cleric||||Druid||||Fighter||||Monk||||Ranger||||Rogue||||Sorcerer||||Wizard</class>
 		<effect>route class feat, initial</effect>
 		<description>placeholder</description>

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using UnityEditor.CrashReporting;
 using UnityEngine;
 
 class Character
@@ -26,6 +27,9 @@ class Character
 
     internal int characterLevel = 0;
     internal string characterClass;
+
+    //consider creating stats and statsMod into dictionaries for easier management through Keys?
+    // internal Dictionary<string, int> stats = new Dictionary<string, stat> { {"Strength", 10}, {"Dexterity", 10}, {"Constitution", 10}, {"Intelligence", 10}, {"Wisdom", 10}, {"Charisma", 10}};
     internal int[] stats = new int[] { 10, 10, 10, 10, 10, 10 };
     internal int[] statsMod = new int[] { 10, 10, 10, 10, 10, 10 };
     internal List<Dictionary<string, string>> classProgDic = new List<Dictionary<string, string>>();
@@ -52,6 +56,16 @@ class Character
     };
 
     internal List<Dictionary<string, string>> featsDic = new List<Dictionary<string, string>>()
+    {
+        new Dictionary<string, string>()
+        {
+            {"name", "name of the feat"},
+            {"type","the type of the feat" },
+            {"description","description of the feat" }
+        }
+    };
+
+    internal List<Dictionary<string, string>> advDic = new List<Dictionary<string, string>>()
     {
         new Dictionary<string, string>()
         {
@@ -146,7 +160,7 @@ class Character
         return newString;
     }
 
-    internal string[] RequirementParse(string parse)
+    internal string[] RequirementParse(string parse)                                    //                              ----------------------------------------            Untested
     {
         string[] newString = parse.Split(new[] { "||" }, StringSplitOptions.None);
         Debug.Log(newString[1]); //testing
@@ -297,14 +311,41 @@ class Character
         return false;
     }
 
-    //muuta haluttua skillia korkeammaksi
-    //parametrina kyseisen stringin nimi
-    //untrained => trained => expert => master => legendary
-    //saatetaan muuttaa ylikirjoittamiseksi yhden tason nousun sijaan, jolloin tarvitaan parametriksi myos mika on haluttu taso
-    //dictionary parametrilla muutetaan taso
+
+    /// <summary>
+    /// Increases skill to the given value in the string parameter OR increases the skill by one tier
+    /// </summary>
+    /// <param name="skillName">Information in a string for which skill to increase and possibly to what tier</param>
     internal void IncreaseSkill(string skillName)
     {
-        //
+        List<string> skillsKeys = new List<string>(skills.Keys);
+        string[] skillTraining = { "Untrained", "Trained", "Expert", "Master", "Legendary" };
+        if (skillName.Contains("|"))    //if the string for the skill contains the value it will be raised to
+        {
+            string[] skillNameArr = StringParse(skillName);
+            Debug.Log("Before " + this.skills[skillNameArr[0]]);
+            this.skills[skillNameArr[0]] = skillNameArr[1];
+            Debug.Log("After " + this.skills[skillNameArr[0]]);
+        }
+        else                            //if the string for the skill does not contain the value it will be raised one tier higher
+        {
+            for (int i = 0; i < skillsKeys.Count; i++)                          //find correct skill =>
+            {
+                if (skillsKeys[i] == skillName)                                 //if correct skill is found =>
+                {
+                    for (int j = 0; j < skillTraining.Length; j++)              //find correct skill's tier =>
+                    {
+                        if (this.skills[skillName] == skillTraining[j])         //if correct skill is found => increase it by one
+                        {
+                            Debug.Log("Before " + this.skills[skillName]);
+                            this.skills[skillName] = skillTraining[j+1];
+                            Debug.Log("After " + this.skills[skillName]);
+                            break;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     //turha mutta myohempaa varten
@@ -365,7 +406,71 @@ class Character
                 break;
             }
 
+
+
             Debug.Log(advancement); //lists the advancements
+        }
+    }
+
+    /// <summary>
+    /// Adds the specified advancement to the character                         FOR FEATS DOES NOT CURRENTLY FILTER AVAILABLE ONES ------------- Untested
+    /// </summary>
+    /// <param name="advancementName">requested advancement</param>
+    internal void AddAdvancement(string advancementName)
+    {
+        var random = new System.Random();
+        int index;
+        if (advancementName.Contains("Feat"))
+        {
+            string[] splitFeat = advancementName.Split(' ');
+            switch (splitFeat[0])
+            {
+                case ("General"):
+                    index = random.Next(ParseXML.generalFeatDic.Count);
+                    this.featsDic.Add(ParseXML.generalFeatDic[index]);
+                    break;
+                case ("Skill"):
+                    index = random.Next(ParseXML.skillFeatDic.Count);
+                    this.featsDic.Add(ParseXML.skillFeatDic[index]);
+                    break;
+                case ("Ancestry"):
+                    index = random.Next(ParseXML.ancestryFeatDic.Count);
+                    this.featsDic.Add(ParseXML.ancestryFeatDic[index]);
+                    break;
+                case ("Initial"):                                           //level = initial && characterClass ---- prerequisites
+                    index = random.Next(ParseXML.classFeatDic.Count);
+                    this.featsDic.Add(ParseXML.classFeatDic[index]);
+                    break;
+                default:                                                    //level = characterLevel && characterClass ---- prerequisites
+                    index = random.Next(ParseXML.classFeatDic.Count);
+                    this.featsDic.Add(ParseXML.classFeatDic[index]);
+                    break;
+            }
+        }
+        else
+        {
+            if (advancementName == "AbilityBoost")      //applies boost to a stat
+            {
+                index = random.Next(stats.Length);
+                this.stats[index] += 2;
+            }
+            else if (advancementName == "SkillIncrease") //increases the tier of a skill by one
+            {
+                List<string> skillsKeys = new List<string>(skills.Keys);
+                index = random.Next(skillsKeys.Count);
+                string skillToAdd = skillsKeys[index];
+                this.IncreaseSkill(skillToAdd);
+            }
+            else
+            {
+                for (int i = 0; i < ParseXML.classAdvDic.Count; i++)
+                {
+                    if (ParseXML.classAdvDic[i]["advName"] == advancementName)
+                    {
+                        this.advDic.Add(ParseXML.classAdvDic[i]);
+                    }
+                }
+            }
         }
     }
 }
