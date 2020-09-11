@@ -25,10 +25,6 @@ public class UIUpdater : MonoBehaviour
         baseline.SetCharStat(hello);
         baseline.UpdateMods();
         baseline.LevelUp(4);
-        baseline.IncreaseSkill("Acrobatics");
-        baseline.IncreaseSkill("Acrobatics|Master");
-        baseline.IncreaseSkill("Acrobatics");
-        //textMesH = GetComponent<TextMeshProUGUI>();
         //testing requirementparse
         //string[] testsplit = Character.RequirementParse(testing);
 

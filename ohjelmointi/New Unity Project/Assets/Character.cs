@@ -65,16 +65,6 @@ class Character
         }
     };
 
-    internal List<Dictionary<string, string>> advDic = new List<Dictionary<string, string>>()
-    {
-        new Dictionary<string, string>()
-        {
-            {"name", "name of the feat"},
-            {"type","the type of the feat" },
-            {"description","description of the feat" }
-        }
-    };
-
 
 
 
@@ -362,8 +352,15 @@ class Character
         }
         this.characterLevel++;
         this.FindProgression();
+        Debug.Log("Listing owned feats after each levelup: ");
+        for (int i = 0; i < featsDic.Count; i++)
+        {
+            Debug.Log(featsDic[i]["name"]);
+        }
 
-        //recursive
+        
+            
+            //recursive
         levels--;
         if (levels >= 1)
         {
@@ -405,22 +402,24 @@ class Character
             {
                 break;
             }
+            this.AddAdvancement(advancement);
 
 
 
-            Debug.Log(advancement); //lists the advancements
         }
     }
 
     /// <summary>
-    /// Adds the specified advancement to the character                         FOR FEATS DOES NOT CURRENTLY FILTER AVAILABLE ONES ------------- Untested
+    /// Adds the specified advancement to the character                         FOR FEATS DOES NOT CURRENTLY FILTER AVAILABLE ONES ------------- Untested --------- consider adding to the dictionary current level and feat type
+    /// consider adding to the dictionary current level and feat type, which would mean to define variable for the dic and then add current level and case type into it as last 2 Key variables
     /// </summary>
     /// <param name="advancementName">requested advancement</param>
     internal void AddAdvancement(string advancementName)
     {
+        Dictionary<string, string> advancementAdd = new Dictionary<string, string>();
         var random = new System.Random();
         int index;
-        if (advancementName.Contains("Feat"))
+        if (advancementName.Contains("Feat"))                               // if case for Feats
         {
             string[] splitFeat = advancementName.Split(' ');
             switch (splitFeat[0])
@@ -447,7 +446,7 @@ class Character
                     break;
             }
         }
-        else
+        else                                                              // else case for other type of advancements, such as boost, skill or overall class specific
         {
             if (advancementName == "AbilityBoost")      //applies boost to a stat
             {
@@ -465,12 +464,51 @@ class Character
             {
                 for (int i = 0; i < ParseXML.classAdvDic.Count; i++)
                 {
-                    if (ParseXML.classAdvDic[i]["advName"] == advancementName)
+                    if (ParseXML.classAdvDic[i]["name"] == advancementName)
                     {
-                        this.advDic.Add(ParseXML.classAdvDic[i]);
+                        this.featsDic.Add(ParseXML.classAdvDic[i]);                 //feats or adv dic? -------- should be fine if only name and description wanted
                     }
                 }
             }
         }
+    }
+
+
+
+    /*  things to remember:
+     *  levels
+     *  types: class/ancestry/skill
+     *  prerequisites: skills/feats
+     *  no duplicate entries to take
+     *  special case for initial feat, how to define?
+     */
+    /// <summary>
+    /// Filters dictionaries based on the character information and the dictionary type (the dic type format allows to know what to filter) and returns them for further use
+    /// </summary>
+    /// <param name="dicToFilter"></param>
+    /// <param name="dicType"></param>
+    /// <returns></returns>
+    internal List<Dictionary<string, string>> FilterDictionary(List<Dictionary<string,string>> dicToFilter, string dicType)
+    {
+        List<Dictionary<string, string>> filteredDic = new List<Dictionary<string, string>>();
+
+        switch (dicType)
+        {
+
+
+            default:
+                break;
+        }
+
+        foreach (var item in dicToFilter)
+        {
+            //&& !this.featsDic.Contains(item)
+            if (this.characterLevel >= Int32.Parse(item["level"]) && item.ContainsValue(this.characterClass))
+            {
+
+            }
+        }
+
+        return filteredDic;
     }
 }

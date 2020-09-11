@@ -7,6 +7,8 @@ public class ParseXML : MonoBehaviour
 {
     //might have to think of the formatting of the XML files anew... Keys need to be same in general, skills, ancestry, class feats AND class advancement???? (notepad++ ReplaceAll)
 
+    //change XML -files to have universal Key for the name of the information
+
 
     public static List<Dictionary<string, string>>[] classProgDicArray = new List<Dictionary<string, string>>[12];
     public static string[] playableClasses = { "alchemist", "barbarian", "bard", "champion", "cleric", "druid", "fighter", "monk", "ranger", "rogue", "sorcerer", "wizard" };
@@ -42,7 +44,7 @@ public class ParseXML : MonoBehaviour
         Dictionary<string, string> generalFeats = generalFeatDic[1];
         Dictionary<string, string> alchemistProg = alchemistProgDic[1];
         Dictionary<string,string> alchemistProg1 = classProgDicArray[0][1];
-        Debug.Log(generalFeats["featname"]);
+        Debug.Log(generalFeats["name"]);
         Debug.Log(generalFeats["level"]); 
         Debug.Log(generalFeats["prerequisite"]);
         Debug.Log(generalFeats["description"]);
@@ -67,7 +69,7 @@ public class ParseXML : MonoBehaviour
         string profInfo;
         XElement element;
         string[] elementNames = new string[]
-        { "featname", "level", "prerequisite", "description"};
+        { "name", "level", "prerequisite", "description"};
         foreach (var oneDict in allDict)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();
@@ -99,7 +101,7 @@ public class ParseXML : MonoBehaviour
         string profInfo;
         XElement element;
         string[] elementNames = new string[]
-        { "featname", "level", "prerequisite", "description"};
+        { "name", "level", "prerequisite", "description"};
         foreach (var oneDict in allDict)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();
@@ -131,7 +133,7 @@ public class ParseXML : MonoBehaviour
         string profInfo;
         XElement element;
         string[] elementNames = new string[]
-        { "classFeatName", "class", "level", "prerequisite", "description"};
+        { "name", "class", "level", "prerequisite", "description"};
         foreach (var oneDict in allDict)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();
@@ -163,7 +165,7 @@ public class ParseXML : MonoBehaviour
         string profInfo;
         XElement element;
         string[] elementNames = new string[]
-        { "ancFeatName", "ancestry", "level", "prerequisite", "description"};
+        { "name", "ancestry", "level", "prerequisite", "description"};
         foreach (var oneDict in allDict)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();
@@ -260,7 +262,7 @@ public class ParseXML : MonoBehaviour
     string profInfo;
     XElement element;
     string[] elementNames = new string[]
-    {"advName", "class", "effect", "description" };
+    {"name", "class", "effect", "description" };
     foreach (var oneDict in allDict)
     {
         Dictionary<string, string> dic = new Dictionary<string, string>();

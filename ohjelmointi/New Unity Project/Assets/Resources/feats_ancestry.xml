@@ -1,833 +1,833 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <AncestryFeats xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<ancestryFeat>
-		<ancFeatName>Death Warden</ancFeatName>
+		<name>Death Warden</name>
 		<ancestry>Dwarf</ancestry>
 		<level>Initial</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Forge</ancFeatName>
+		<name>Forge</name>
 		<ancestry>Dwarf</ancestry>
 		<level>Initial</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Rock</ancFeatName>
+		<name>Rock</name>
 		<ancestry>Dwarf</ancestry>
 		<level>Initial</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Strong-Blooded</ancFeatName>
+		<name>Strong-Blooded</name>
 		<ancestry>Dwarf</ancestry>
 		<level>Initial</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Dwarven Lore</ancFeatName>
+		<name>Dwarven Lore</name>
 		<ancestry>Dwarf</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Dwarven Weapon Familiarity</ancFeatName>
+		<name>Dwarven Weapon Familiarity</name>
 		<ancestry>Dwarf</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Rock Runner</ancFeatName>
+		<name>Rock Runner</name>
 		<ancestry>Dwarf</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Stonecunning</ancFeatName>
+		<name>Stonecunning</name>
 		<ancestry>Dwarf</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Unburdened Iron</ancFeatName>
+		<name>Unburdened Iron</name>
 		<ancestry>Dwarf</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Vengeful Hatred</ancFeatName>
+		<name>Vengeful Hatred</name>
 		<ancestry>Dwarf</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Boulder Roll</ancFeatName>
+		<name>Boulder Roll</name>
 		<ancestry>Dwarf</ancestry>
 		<level>5</level>
 		<prerequisite>Rock Runner</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Dwarven Weapon Cunning</ancFeatName>
+		<name>Dwarven Weapon Cunning</name>
 		<ancestry>Dwarf</ancestry>
 		<level>5</level>
 		<prerequisite>Dwarven Weapon Familiarity</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Mountain's Stoutness</ancFeatName>
+		<name>Mountain's Stoutness</name>
 		<ancestry>Dwarf</ancestry>
 		<level>9</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Stonewalker</ancFeatName>
+		<name>Stonewalker</name>
 		<ancestry>Dwarf</ancestry>
 		<level>9</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Dwarven Weapon Expertise</ancFeatName>
+		<name>Dwarven Weapon Expertise</name>
 		<ancestry>Dwarf</ancestry>
 		<level>13</level>
 		<prerequisite>Dwarven Weapon Familiarity</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Arctic Elf</ancFeatName>
+		<name>Arctic Elf</name>
 		<ancestry>Elf</ancestry>
 		<level>Initial</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Cavern Elf</ancFeatName>
+		<name>Cavern Elf</name>
 		<ancestry>Elf</ancestry>
 		<level>Initial</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Seer Elf</ancFeatName>
+		<name>Seer Elf</name>
 		<ancestry>Elf</ancestry>
 		<level>Initial</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Whisper Elf</ancFeatName>
+		<name>Whisper Elf</name>
 		<ancestry>Elf</ancestry>
 		<level>Initial</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Woodland Elf</ancFeatName>
+		<name>Woodland Elf</name>
 		<ancestry>Elf</ancestry>
 		<level>Initial</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Ancestral Longevity</ancFeatName>
+		<name>Ancestral Longevity</name>
 		<ancestry>Elf</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Elven Lore</ancFeatName>
+		<name>Elven Lore</name>
 		<ancestry>Elf</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Elven Weapon Familiarity</ancFeatName>
+		<name>Elven Weapon Familiarity</name>
 		<ancestry>Elf</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Forlorn</ancFeatName>
+		<name>Forlorn</name>
 		<ancestry>Elf</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Nimble Elf</ancFeatName>
+		<name>Nimble Elf</name>
 		<ancestry>Elf</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Otherworldly Magic</ancFeatName>
+		<name>Otherworldly Magic</name>
 		<ancestry>Elf</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Unwavering Mien</ancFeatName>
+		<name>Unwavering Mien</name>
 		<ancestry>Elf</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Ageless Patience</ancFeatName>
+		<name>Ageless Patience</name>
 		<ancestry>Elf</ancestry>
 		<level>5</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Elven Weapon Elegance</ancFeatName>
+		<name>Elven Weapon Elegance</name>
 		<ancestry>Elf</ancestry>
 		<level>5</level>
 		<prerequisite>Elven Weapon Familiarity</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Elf Step</ancFeatName>
+		<name>Elf Step</name>
 		<ancestry>Elf</ancestry>
 		<level>9</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Expert Longevity</ancFeatName>
+		<name>Expert Longevity</name>
 		<ancestry>Elf</ancestry>
 		<level>9</level>
 		<prerequisite>Ancestral Longevity</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Universal Longevity</ancFeatName>
+		<name>Universal Longevity</name>
 		<ancestry>Elf</ancestry>
 		<level>13</level>
 		<prerequisite>Expert Longevity</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Elven Weapon Expertise</ancFeatName>
+		<name>Elven Weapon Expertise</name>
 		<ancestry>Elf</ancestry>
 		<level>13</level>
 		<prerequisite>Elven Weapon Familiarity</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Chameleon Gnome</ancFeatName>
+		<name>Chameleon Gnome</name>
 		<ancestry>Gnome</ancestry>
 		<level>Initial</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Fey-touched Gnome</ancFeatName>
+		<name>Fey-touched Gnome</name>
 		<ancestry>Gnome</ancestry>
 		<level>Initial</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Sensate Gnome</ancFeatName>
+		<name>Sensate Gnome</name>
 		<ancestry>Gnome</ancestry>
 		<level>Initial</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Umbral Gnome</ancFeatName>
+		<name>Umbral Gnome</name>
 		<ancestry>Gnome</ancestry>
 		<level>Initial</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Wellspring Gnome</ancFeatName>
+		<name>Wellspring Gnome</name>
 		<ancestry>Gnome</ancestry>
 		<level>Initial</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Animal Accomplice</ancFeatName>
+		<name>Animal Accomplice</name>
 		<ancestry>Gnome</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Burrow Elocutionist</ancFeatName>
+		<name>Burrow Elocutionist</name>
 		<ancestry>Gnome</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Fey Fellowship</ancFeatName>
+		<name>Fey Fellowship</name>
 		<ancestry>Gnome</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>First World Magic</ancFeatName>
+		<name>First World Magic</name>
 		<ancestry>Gnome</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Gnome Obsession</ancFeatName>
+		<name>Gnome Obsession</name>
 		<ancestry>Gnome</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Gnome Weapon Familiarity</ancFeatName>
+		<name>Gnome Weapon Familiarity</name>
 		<ancestry>Gnome</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Illusion Sense</ancFeatName>
+		<name>Illusion Sense</name>
 		<ancestry>Gnome</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Animal Elocutionist</ancFeatName>
+		<name>Animal Elocutionist</name>
 		<ancestry>Gnome</ancestry>
 		<level>5</level>
 		<prerequisite>Burrow Elocutionist</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Energized Font</ancFeatName>
+		<name>Energized Font</name>
 		<ancestry>Gnome</ancestry>
 		<level>5</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Gnome Weapon Innovator</ancFeatName>
+		<name>Gnome Weapon Innovator</name>
 		<ancestry>Gnome</ancestry>
 		<level>5</level>
 		<prerequisite>Gnome Weapon Familiarity</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>First World Adept</ancFeatName>
+		<name>First World Adept</name>
 		<ancestry>Gnome</ancestry>
 		<level>9</level>
 		<prerequisite>First World Magic</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Vivacious Conduit</ancFeatName>
+		<name>Vivacious Conduit</name>
 		<ancestry>Gnome</ancestry>
 		<level>9</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Gnome Weapon Expertise</ancFeatName>
+		<name>Gnome Weapon Expertise</name>
 		<ancestry>Gnome</ancestry>
 		<level>13</level>
 		<prerequisite>Gnome Weapon Familiarity</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Charhide Goblin</ancFeatName>
+		<name>Charhide Goblin</name>
 		<ancestry>Goblin</ancestry>
 		<level>Initial</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Irongut Goblin</ancFeatName>
+		<name>Irongut Goblin</name>
 		<ancestry>Goblin</ancestry>
 		<level>Initial</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Razortooth Goblin</ancFeatName>
+		<name>Razortooth Goblin</name>
 		<ancestry>Goblin</ancestry>
 		<level>Initial</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Snow Goblin</ancFeatName>
+		<name>Snow Goblin</name>
 		<ancestry>Goblin</ancestry>
 		<level>Initial</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Unbreakable Goblin</ancFeatName>
+		<name>Unbreakable Goblin</name>
 		<ancestry>Goblin</ancestry>
 		<level>Initial</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Burn It!</ancFeatName>
+		<name>Burn It!</name>
 		<ancestry>Goblin</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>City Scavenger</ancFeatName>
+		<name>City Scavenger</name>
 		<ancestry>Goblin</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Goblin Lore</ancFeatName>
+		<name>Goblin Lore</name>
 		<ancestry>Goblin</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Goblin Scuttle</ancFeatName>
+		<name>Goblin Scuttle</name>
 		<ancestry>Goblin</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Goblin Song</ancFeatName>
+		<name>Goblin Song</name>
 		<ancestry>Goblin</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Goblin Weapon Familiarity</ancFeatName>
+		<name>Goblin Weapon Familiarity</name>
 		<ancestry>Goblin</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Junk Tinker</ancFeatName>
+		<name>Junk Tinker</name>
 		<ancestry>Goblin</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Rough Rider</ancFeatName>
+		<name>Rough Rider</name>
 		<ancestry>Goblin</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Very Sneaky</ancFeatName>
+		<name>Very Sneaky</name>
 		<ancestry>Goblin</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Goblin Weapon Frenzy</ancFeatName>
+		<name>Goblin Weapon Frenzy</name>
 		<ancestry>Goblin</ancestry>
 		<level>5</level>
 		<prerequisite>Gnome Weapon Familiarity</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Cave Climber</ancFeatName>
+		<name>Cave Climber</name>
 		<ancestry>Goblin</ancestry>
 		<level>9</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Skittering Scuttle</ancFeatName>
+		<name>Skittering Scuttle</name>
 		<ancestry>Goblin</ancestry>
 		<level>9</level>
 		<prerequisite>Goblin Scuttle</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Goblin Weapon Expertise</ancFeatName>
+		<name>Goblin Weapon Expertise</name>
 		<ancestry>Goblin</ancestry>
 		<level>13</level>
 		<prerequisite>Goblin Weapon Familiarity</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Very, Very Sneaky</ancFeatName>
+		<name>Very, Very Sneaky</name>
 		<ancestry>Goblin</ancestry>
 		<level>13</level>
 		<prerequisite>Very Sneaky</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Gutsy Halfling</ancFeatName>
+		<name>Gutsy Halfling</name>
 		<ancestry>Halfling</ancestry>
 		<level>Initial</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Hillock Halfling</ancFeatName>
+		<name>Hillock Halfling</name>
 		<ancestry>Halfling</ancestry>
 		<level>Initial</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Nomadic Halfling</ancFeatName>
+		<name>Nomadic Halfling</name>
 		<ancestry>Halfling</ancestry>
 		<level>Initial</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Twilight Halfling</ancFeatName>
+		<name>Twilight Halfling</name>
 		<ancestry>Halfling</ancestry>
 		<level>Initial</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Wildwood Halfling</ancFeatName>
+		<name>Wildwood Halfling</name>
 		<ancestry>Halfling</ancestry>
 		<level>Initial</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Distracting Shadows</ancFeatName>
+		<name>Distracting Shadows</name>
 		<ancestry>Halfling</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Halfling Lore</ancFeatName>
+		<name>Halfling Lore</name>
 		<ancestry>Halfling</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Halfling Luck</ancFeatName>
+		<name>Halfling Luck</name>
 		<ancestry>Halfling</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Halfling Weapon Familiarity</ancFeatName>
+		<name>Halfling Weapon Familiarity</name>
 		<ancestry>Halfling</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Sure Feet</ancFeatName>
+		<name>Sure Feet</name>
 		<ancestry>Halfling</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Titan Slinger</ancFeatName>
+		<name>Titan Slinger</name>
 		<ancestry>Halfling</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Unfettered Halfling</ancFeatName>
+		<name>Unfettered Halfling</name>
 		<ancestry>Halfling</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Watchful Halfling</ancFeatName>
+		<name>Watchful Halfling</name>
 		<ancestry>Halfling</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Cultural Adaptation</ancFeatName>
+		<name>Cultural Adaptation</name>
 		<ancestry>Halfling</ancestry>
 		<level>5</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Halfling Weapon Trickster</ancFeatName>
+		<name>Halfling Weapon Trickster</name>
 		<ancestry>Halfling</ancestry>
 		<level>5</level>
 		<prerequisite>Halfling Weapon Familiarity</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Guiding Luck</ancFeatName>
+		<name>Guiding Luck</name>
 		<ancestry>Halfling</ancestry>
 		<level>9</level>
 		<prerequisite>Halfling Luck</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Irrepressible</ancFeatName>
+		<name>Irrepressible</name>
 		<ancestry>Halfling</ancestry>
 		<level>9</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Ceaseless Shadow</ancFeatName>
+		<name>Ceaseless Shadow</name>
 		<ancestry>Halfling</ancestry>
 		<level>13</level>
 		<prerequisite>Distracting Shadow</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Halfling Weapon Expertise</ancFeatName>
+		<name>Halfling Weapon Expertise</name>
 		<ancestry>Halfling</ancestry>
 		<level>13</level>
 		<prerequisite>Halfling Weapon Familiarity</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Half-Elf</ancFeatName>
+		<name>Half-Elf</name>
 		<ancestry>Human</ancestry>
 		<level>Initial</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Half-Orc</ancFeatName>
+		<name>Half-Orc</name>
 		<ancestry>Human</ancestry>
 		<level>Initial</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Skilled Heritage</ancFeatName>
+		<name>Skilled Heritage</name>
 		<ancestry>Human</ancestry>
 		<level>Initial</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Versatile Heritage</ancFeatName>
+		<name>Versatile Heritage</name>
 		<ancestry>Human</ancestry>
 		<level>Initial</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Adapted Cantrip</ancFeatName>
+		<name>Adapted Cantrip</name>
 		<ancestry>Human</ancestry>
 		<level>1</level>
 		<prerequisite>spellcaster</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Cooperative Nature</ancFeatName>
+		<name>Cooperative Nature</name>
 		<ancestry>Human</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>General Training</ancFeatName>
+		<name>General Training</name>
 		<ancestry>Human</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Haughty Obstinacy</ancFeatName>
+		<name>Haughty Obstinacy</name>
 		<ancestry>Human</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Natural Ambition</ancFeatName>
+		<name>Natural Ambition</name>
 		<ancestry>Human</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Natural Skill</ancFeatName>
+		<name>Natural Skill</name>
 		<ancestry>Human</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Unconventional Weaponry</ancFeatName>
+		<name>Unconventional Weaponry</name>
 		<ancestry>Human</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Adaptive Adept</ancFeatName>
+		<name>Adaptive Adept</name>
 		<ancestry>Human</ancestry>
 		<level>5</level>
 		<prerequisite>Adaptive Cantrip</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Clever Improviser</ancFeatName>
+		<name>Clever Improviser</name>
 		<ancestry>Human</ancestry>
 		<level>5</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Cooperative Soul</ancFeatName>
+		<name>Cooperative Soul</name>
 		<ancestry>Human</ancestry>
 		<level>9</level>
 		<prerequisite>Cooperative Nature</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Incredible Improvisation</ancFeatName>
+		<name>Incredible Improvisation</name>
 		<ancestry>Human</ancestry>
 		<level>9</level>
 		<prerequisite>Clever Improviser</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Multitalented</ancFeatName>
+		<name>Multitalented</name>
 		<ancestry>Human</ancestry>
 		<level>9</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Unconventional Expertise</ancFeatName>
+		<name>Unconventional Expertise</name>
 		<ancestry>Human</ancestry>
 		<level>13</level>
 		<prerequisite>Unconventional Weaponry</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Elf Avatism</ancFeatName>
+		<name>Elf Avatism</name>
 		<ancestry>Half-Elf</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Inspire Imitation</ancFeatName>
-		<ancestry>Half-Elf</ancestry>
-		<level>5</level>
-		<prerequisite>none</prerequisite>
-		<description>none</description>
-	</ancestryFeat>
-	<ancestryFeat>
-		<ancFeatName>Supernatural Charm</ancFeatName>
+		<name>Inspire Imitation</name>
 		<ancestry>Half-Elf</ancestry>
 		<level>5</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Monstrous Peacemaker</ancFeatName>
+		<name>Supernatural Charm</name>
+		<ancestry>Half-Elf</ancestry>
+		<level>5</level>
+		<prerequisite>none</prerequisite>
+		<description>none</description>
+	</ancestryFeat>
+	<ancestryFeat>
+		<name>Monstrous Peacemaker</name>
 		<ancestry>Half-Orc</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Orc Ferocity</ancFeatName>
+		<name>Orc Ferocity</name>
 		<ancestry>Half-Orc</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Orc Sight</ancFeatName>
+		<name>Orc Sight</name>
 		<ancestry>Half-Orc</ancestry>
 		<level>1</level>
 		<prerequisite>low-light vision</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Orc Superstition</ancFeatName>
+		<name>Orc Superstition</name>
 		<ancestry>Half-Orc</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Orc Weapon Familiarity</ancFeatName>
+		<name>Orc Weapon Familiarity</name>
 		<ancestry>Half-Orc</ancestry>
 		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Orc Weapon Carnage</ancFeatName>
+		<name>Orc Weapon Carnage</name>
 		<ancestry>Half-Orc</ancestry>
 		<level>5</level>
 		<prerequisite>Orc Weapon Familiarity</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Victorious Vigor</ancFeatName>
+		<name>Victorious Vigor</name>
 		<ancestry>Half-Orc</ancestry>
 		<level>5</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Pervasive Superstition</ancFeatName>
+		<name>Pervasive Superstition</name>
 		<ancestry>Half-Orc</ancestry>
 		<level>9</level>
 		<prerequisite>Orc Superstition</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Incredible Ferocity</ancFeatName>
+		<name>Incredible Ferocity</name>
 		<ancestry>Half-Orc</ancestry>
 		<level>13</level>
 		<prerequisite>Orc Ferocity</prerequisite>
 		<description>none</description>
 	</ancestryFeat>
 	<ancestryFeat>
-		<ancFeatName>Orc Weapon Expertise</ancFeatName>
+		<name>Orc Weapon Expertise</name>
 		<ancestry>Half-Orc</ancestry>
 		<level>13</level>
 		<prerequisite>Orc Weapon Familiarity</prerequisite>
