@@ -1,0 +1,999 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Feats xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<feat>
+		<name>Assurance</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Skill||Trained</prerequisite>
+=======
+		<prerequisite>Skill|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Dubious Knowledge</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Recall Knowledge||Trained</prerequisite>
+=======
+		<prerequisite>Recall Knowledge|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Quick Identification</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Arcana||Trained||||Nature||Trained||||Occultism||Trained||||Religion||Trained</prerequisite>
+=======
+		<prerequisite>Arcana|Trained||Nature|Trained||Occultism|Trained||Religion|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>Identify Magic in 1 minute or less</description>
+	</feat>
+	<feat>
+		<name>Recognize Spell</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Arcana||Trained||||Nature||Trained||||Occultism||Trained||||Religion||Trained</prerequisite>
+=======
+		<prerequisite>Arcana|Trained||Nature|Trained||Occultism|Trained||Religion|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>Identify a spell as a reaction as it's being cast</description>
+	</feat>
+	<feat>
+		<name>Skill Training</name>
+		<level>1</level>
+		<prerequisite>int|12</prerequisite>
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Trick Magic Item</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Arcana||Trained||||Nature||Trained||||Occultism||Trained||||Religion||Trained</prerequisite>
+=======
+		<prerequisite>Arcana|Trained||Nature|Trained||Occultism|Trained||Religion|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Automatic Knowledge</name>
+		<level>2</level>
+<<<<<<< HEAD
+		<prerequisite>Recall Knowledge||Expert|||Assurance||Skill</prerequisite>
+=======
+		<prerequisite>Recall Knowledge|Expert||Assurance|Skill</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Magical Shorthand</name>
+		<level>2</level>
+<<<<<<< HEAD
+		<prerequisite>Arcana||Expert||||Nature||Expert||||Occultism||Expert||||Religion||Expert</prerequisite>
+=======
+		<prerequisite>Arcana|Expert||Nature|Expert||Occultism|Expert||Religion|Expert</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Quick Recognition</name>
+		<level>7</level>
+<<<<<<< HEAD
+		<prerequisite>Arcana||Master||||Nature||Master||||Occultism||Master||||Religion||Master|||||Recognize Spell</prerequisite>
+=======
+		<prerequisite>Arcana|Master||Nature|Master||Occultism|Master||Religion|Master|||Recognize Spell</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Cat Fall</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Acrobatics||Trained</prerequisite>
+=======
+		<prerequisite>Acrobatics|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Quick Squeeze</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Acrobatics||Trained</prerequisite>
+=======
+		<prerequisite>Acrobatics|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Steady Balance</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Acrobatics||Trained</prerequisite>
+=======
+		<prerequisite>Acrobatics|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Nimble Crawl</name>
+		<level>2</level>
+<<<<<<< HEAD
+		<prerequisite>Acrobatics||Expert</prerequisite>
+=======
+		<prerequisite>Acrobatics|Expert</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Kin Up</name>
+		<level>7</level>
+<<<<<<< HEAD
+		<prerequisite>Acrobatics||Master</prerequisite>
+=======
+		<prerequisite>Acrobatics|Master</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Arcane Sense</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Arcana||Master</prerequisite>
+=======
+		<prerequisite>Arcana|Master</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Unified Theory</name>
+		<level>15</level>
+<<<<<<< HEAD
+		<prerequisite>Arcana||Legendary</prerequisite>
+=======
+		<prerequisite>Arcana|Legendary</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Combat Climber</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Athletics||Trained</prerequisite>
+=======
+		<prerequisite>Athletics|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Hefty Hauler</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Athletics||Trained</prerequisite>
+=======
+		<prerequisite>Athletics|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Quick Jump</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Athletics||Trained</prerequisite>
+=======
+		<prerequisite>Athletics|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Titan Wrestler</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Athletics||Trained</prerequisite>
+=======
+		<prerequisite>Athletics|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Underwater Marauder</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Athletics||Trained</prerequisite>
+=======
+		<prerequisite>Athletics|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Powerful Leap</name>
+		<level>2</level>
+<<<<<<< HEAD
+		<prerequisite>Athletics||Expert</prerequisite>
+=======
+		<prerequisite>Athletics|Expert</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Rapid Mantel</name>
+		<level>2</level>
+<<<<<<< HEAD
+		<prerequisite>Athletics||Expert</prerequisite>
+=======
+		<prerequisite>Athletics|Expert</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Quick Climb</name>
+		<level>7</level>
+<<<<<<< HEAD
+		<prerequisite>Athletics||Master</prerequisite>
+=======
+		<prerequisite>Athletics|Master</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Quick Swim</name>
+		<level>7</level>
+<<<<<<< HEAD
+		<prerequisite>Athletics||Master</prerequisite>
+=======
+		<prerequisite>Athletics|Master</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Wall Jump</name>
+		<level>7</level>
+<<<<<<< HEAD
+		<prerequisite>Athletics||Master</prerequisite>
+=======
+		<prerequisite>Athletics|Master</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Cloud Jump</name>
+		<level>15</level>
+<<<<<<< HEAD
+		<prerequisite>Athletics||Legendary</prerequisite>
+=======
+		<prerequisite>Athletics|Legendary</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Alchemical Crafting</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Crafting||Trained</prerequisite>
+=======
+		<prerequisite>Crafting|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Quick Repair</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Crafting||Trained</prerequisite>
+=======
+		<prerequisite>Crafting|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Snare Crafting</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Crafting||Trained</prerequisite>
+=======
+		<prerequisite>Crafting|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Specialty Crafting</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Crafting||Trained</prerequisite>
+=======
+		<prerequisite>Crafting|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Magical Crafting</name>
+		<level>2</level>
+<<<<<<< HEAD
+		<prerequisite>Crafting||Expert</prerequisite>
+=======
+		<prerequisite>Crafting|Expert</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Impeccable Crafting</name>
+		<level>7</level>
+<<<<<<< HEAD
+		<prerequisite>Crafting||Master|||||Specialty Crafting</prerequisite>
+=======
+		<prerequisite>Crafting|Master|||Specialty Crafting</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Inventor</name>
+		<level>7</level>
+<<<<<<< HEAD
+		<prerequisite>Crafting||Master</prerequisite>
+=======
+		<prerequisite>Crafting|Master</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Craft Anything</name>
+		<level>15</level>
+<<<<<<< HEAD
+		<prerequisite>Crafting||Legendary</prerequisite>
+=======
+		<prerequisite>Crafting|Legendary</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Charming Liar</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Deception||Trained</prerequisite>
+=======
+		<prerequisite>Deception|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Lengthy Diversion</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Deception||Trained</prerequisite>
+=======
+		<prerequisite>Deception|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Lie to Me</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Deception||Trained</prerequisite>
+=======
+		<prerequisite>Deception|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Confabulator</name>
+		<level>2</level>
+<<<<<<< HEAD
+		<prerequisite>Deception||Expert</prerequisite>
+=======
+		<prerequisite>Deception|Expert</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Quick Disguise</name>
+		<level>2</level>
+<<<<<<< HEAD
+		<prerequisite>Deception||Expert</prerequisite>
+=======
+		<prerequisite>Deception|Expert</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Slippery Secrets</name>
+		<level>7</level>
+<<<<<<< HEAD
+		<prerequisite>Deception||Master</prerequisite>
+=======
+		<prerequisite>Deception|Master</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Bargain Hunter</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Diplomacy||Trained</prerequisite>
+=======
+		<prerequisite>Diplomacy|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Group Impression</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Diplomacy||Trained</prerequisite>
+=======
+		<prerequisite>Diplomacy|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Hobnobber</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Diplomacy||Trained</prerequisite>
+=======
+		<prerequisite>Diplomacy|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Glad-Hand</name>
+		<level>2</level>
+<<<<<<< HEAD
+		<prerequisite>Diplomacy||Expert</prerequisite>
+=======
+		<prerequisite>Diplomacy|Expert</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Shameless Request</name>
+		<level>7</level>
+<<<<<<< HEAD
+		<prerequisite>Diplomacy||Master</prerequisite>
+=======
+		<prerequisite>Diplomacy|Master</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Legendary Negotiation</name>
+		<level>15</level>
+<<<<<<< HEAD
+		<prerequisite>Diplomacy||Legendary</prerequisite>
+=======
+		<prerequisite>Diplomacy|Legendary</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Group Coercion</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Intimidation||Trained</prerequisite>
+=======
+		<prerequisite>Intimidation|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Intimidating Glare</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Intimidation||Trained</prerequisite>
+=======
+		<prerequisite>Intimidation|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Quick Coercion</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Intimidation||Trained</prerequisite>
+=======
+		<prerequisite>Intimidation|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Intimidating Prowess</name>
+		<level>2</level>
+<<<<<<< HEAD
+		<prerequisite>str|16|||Intimidation||Expert</prerequisite>
+=======
+		<prerequisite>str|16||Intimidation|Expert</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Lasting Coercion</name>
+		<level>2</level>
+<<<<<<< HEAD
+		<prerequisite>Intimidation||Expert</prerequisite>
+=======
+		<prerequisite>Intimidation|Expert</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Battle Cry</name>
+		<level>7</level>
+<<<<<<< HEAD
+		<prerequisite>Intimidation||Master</prerequisite>
+=======
+		<prerequisite>Intimidation|Master</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Terrified Retreat</name>
+		<level>7</level>
+<<<<<<< HEAD
+		<prerequisite>Intimidation||Master</prerequisite>
+=======
+		<prerequisite>Intimidation|Master</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Scare to Death</name>
+		<level>15</level>
+<<<<<<< HEAD
+		<prerequisite>Intimidation||Legendary</prerequisite>
+=======
+		<prerequisite>Intimidation|Legendary</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Additional Lore</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Lore||Trained</prerequisite>
+=======
+		<prerequisite>Lore|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Experienced Professional</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Lore||Trained</prerequisite>
+=======
+		<prerequisite>Lore|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Unmistakable Lore</name>
+		<level>2</level>
+<<<<<<< HEAD
+		<prerequisite>Lore||Expert</prerequisite>
+=======
+		<prerequisite>Lore|Expert</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Legendary Professional</name>
+		<level>15</level>
+<<<<<<< HEAD
+		<prerequisite>Lore||Legendary</prerequisite>
+=======
+		<prerequisite>Lore|Legendary</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Battle Medicine</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Medicine||Trained</prerequisite>
+=======
+		<prerequisite>Medicine|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Continual Recovery</name>
+		<level>2</level>
+<<<<<<< HEAD
+		<prerequisite>Medicine||Expert</prerequisite>
+=======
+		<prerequisite>Medicine|Expert</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Robust Recovery</name>
+		<level>2</level>
+<<<<<<< HEAD
+		<prerequisite>Medicine||Expert</prerequisite>
+=======
+		<prerequisite>Medicine|Expert</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Ward Medic</name>
+		<level>2</level>
+<<<<<<< HEAD
+		<prerequisite>Medicine||Expert</prerequisite>
+=======
+		<prerequisite>Medicine|Expert</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Legendary Medic</name>
+		<level>15</level>
+<<<<<<< HEAD
+		<prerequisite>Medicine||Legendary</prerequisite>
+=======
+		<prerequisite>Medicine|Legendary</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Natural Medicine</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Nature||Trained</prerequisite>
+=======
+		<prerequisite>Nature|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Train Animal</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Nature||Trained</prerequisite>
+=======
+		<prerequisite>Nature|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Bonded Animal</name>
+		<level>2</level>
+<<<<<<< HEAD
+		<prerequisite>Nature||Expert</prerequisite>
+=======
+		<prerequisite>Nature|Expert</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Oddity Identification</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Occultism||Trained</prerequisite>
+=======
+		<prerequisite>Occultism|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Bizarre Magic</name>
+		<level>7</level>
+<<<<<<< HEAD
+		<prerequisite>Occultism||Master</prerequisite>
+=======
+		<prerequisite>Occultism|Master</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Fascinating Performance</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Performance||Trained</prerequisite>
+=======
+		<prerequisite>Performance|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Impressive Performance</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Performance||Trained</prerequisite>
+=======
+		<prerequisite>Performance|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Virtuosic Performance</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Performance||Trained</prerequisite>
+=======
+		<prerequisite>Performance|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Legendary Peformance</name>
+		<level>15</level>
+<<<<<<< HEAD
+		<prerequisite>Performance||Legendary|||||Virtuosic Performance</prerequisite>
+=======
+		<prerequisite>Performance|Legendary|||Virtuosic Performance</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Student of the Canon</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Religion||Trained</prerequisite>
+=======
+		<prerequisite>Religion|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Divine Guidance</name>
+		<level>15</level>
+<<<<<<< HEAD
+		<prerequisite>Religion||Legendary</prerequisite>
+=======
+		<prerequisite>Religion|Legendary</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Courtly Graces</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Society||Trained</prerequisite>
+=======
+		<prerequisite>Society|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Multilingual</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Society||Trained</prerequisite>
+=======
+		<prerequisite>Society|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Read Lips</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Society||Trained</prerequisite>
+=======
+		<prerequisite>Society|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Sign Language</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Society||Trained</prerequisite>
+=======
+		<prerequisite>Society|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Streetwise</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Society||Trained</prerequisite>
+=======
+		<prerequisite>Society|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Connections</name>
+		<level>2</level>
+<<<<<<< HEAD
+		<prerequisite>Society||Expert|||||Courtly Graces</prerequisite>
+=======
+		<prerequisite>Society|Expert|||Courtly Graces</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Legendary Codebreaker</name>
+		<level>15</level>
+<<<<<<< HEAD
+		<prerequisite>Society||Legendary</prerequisite>
+=======
+		<prerequisite>Society|Legendary</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Legendary Linguist</name>
+		<level>15</level>
+<<<<<<< HEAD
+		<prerequisite>Society||Legendary|||||Multilingual</prerequisite>
+=======
+		<prerequisite>Society|Legendary|||Multilingual</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Experienced Smuggler</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Stealth||Trained</prerequisite>
+=======
+		<prerequisite>Stealth|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Terrain Stalker</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Stealth||Trained</prerequisite>
+=======
+		<prerequisite>Stealth|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Quiet Allies</name>
+		<level>2</level>
+<<<<<<< HEAD
+		<prerequisite>Stealth||Expert</prerequisite>
+=======
+		<prerequisite>Stealth|Expert</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Foil Senses</name>
+		<level>7</level>
+<<<<<<< HEAD
+		<prerequisite>Stealth||Master</prerequisite>
+=======
+		<prerequisite>Stealth|Master</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Swift Sneak</name>
+		<level>7</level>
+<<<<<<< HEAD
+		<prerequisite>Stealth||Master</prerequisite>
+=======
+		<prerequisite>Stealth|Master</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Legendary Sneak</name>
+		<level>15</level>
+<<<<<<< HEAD
+		<prerequisite>Stealth||Legendary|||||Swift Sneak</prerequisite>
+=======
+		<prerequisite>Stealth|Legendary|||Swift Sneak</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Experienced Tracker</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Survival||Trained</prerequisite>
+=======
+		<prerequisite>Survival|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Forager</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Survival||Trained</prerequisite>
+=======
+		<prerequisite>Survival|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Survey Wildlife</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Survival||Trained</prerequisite>
+=======
+		<prerequisite>Survival|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Terrain Expertise</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Survival||Trained</prerequisite>
+=======
+		<prerequisite>Survival|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Planar Survival</name>
+		<level>7</level>
+<<<<<<< HEAD
+		<prerequisite>Survival||Master</prerequisite>
+=======
+		<prerequisite>Survival|Master</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Legendary Survivalist</name>
+		<level>15</level>
+<<<<<<< HEAD
+		<prerequisite>Survival||Legendary</prerequisite>
+=======
+		<prerequisite>Survival|Legendary</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Pickpocket</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Thievery||Trained</prerequisite>
+=======
+		<prerequisite>Thievery|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Subtle Theft</name>
+		<level>1</level>
+<<<<<<< HEAD
+		<prerequisite>Thievery||Trained</prerequisite>
+=======
+		<prerequisite>Thievery|Trained</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Wary Disarmament</name>
+		<level>2</level>
+<<<<<<< HEAD
+		<prerequisite>Thievery||Expert</prerequisite>
+=======
+		<prerequisite>Thievery|Expert</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Quick Unlock</name>
+		<level>7</level>
+<<<<<<< HEAD
+		<prerequisite>Thievery||Master</prerequisite>
+=======
+		<prerequisite>Thievery|Master</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+	<feat>
+		<name>Legendary Thief</name>
+		<level>15</level>
+<<<<<<< HEAD
+		<prerequisite>Thievery||Legendary|||||Pickpocket</prerequisite>
+=======
+		<prerequisite>Thievery|Legendary|||Pickpocket</prerequisite>
+>>>>>>> parent of eb9fa81... asd
+		<description>none</description>
+	</feat>
+</Feats>
