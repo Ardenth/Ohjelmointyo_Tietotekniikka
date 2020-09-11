@@ -5,7 +5,6 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using UnityEditor.CrashReporting;
 using UnityEngine;
-using UnityEngine.Analytics;
 
 class Character
 {
@@ -15,8 +14,6 @@ class Character
     //Character Advancement and changes to the character details
     //Generate character
     //Manipulation to automated character generation (randomizer for start)
-
-    //ONLY Advancements work, no feats?
 
 
     /*LEVELUP:
@@ -30,7 +27,6 @@ class Character
 
     internal int characterLevel = 0;
     internal string characterClass;
-    internal string characterAncestry;
 
     //consider creating stats and statsMod into dictionaries for easier management through Keys?
     // internal Dictionary<string, int> stats = new Dictionary<string, stat> { {"Strength", 10}, {"Dexterity", 10}, {"Constitution", 10}, {"Intelligence", 10}, {"Wisdom", 10}, {"Charisma", 10}};
@@ -39,7 +35,7 @@ class Character
     internal List<Dictionary<string, string>> classProgDic = new List<Dictionary<string, string>>();
     //TODO: lore maaritys
     //Skill luonti
-    internal Dictionary<string, string> skills = new Dictionary<string, string>
+    internal Dictionary<string,string> skills = new Dictionary<string, string>
     {
         {"Acrobatics","Untrained" },
         {"Arcana","Untrained" },
@@ -56,13 +52,7 @@ class Character
         {"Society","Untrained" },
         {"Stealth","Untrained" },
         {"Survival","Untrained" },
-        {"Thievery","Untrained" },
-
-        {"Recall Knowledge", "Untrained" },
-        {"Skill", "Untrained" },
-        {"Skill Training", "Untrained" },
-        {"Performance", "UnTrained" },
-        {"Perception", "untrained" }
+        {"Thievery","Untrained" }
     };
 
     internal List<Dictionary<string, string>> featsDic = new List<Dictionary<string, string>>()
@@ -292,10 +282,6 @@ class Character
         return false;
     }
 
-    //TODO: CheckSkills vs Check Requirement
-    //check skills tarkistaa omasta, check requirement paattaa meneeko check feat vai check skill => KORJAA REQUIREMENTS TARKISTUKSEEN
-
-
     //tarkistetaan onko hahmon skilli tarvittavalla tasolla (boolean return, string parametri?)
     //string parametri olisi skill||taso => joka menee parsen kautta takaisin aliohjelmaan
     //jossa se tarkastetaan tietokannan kautta
@@ -307,21 +293,11 @@ class Character
     /// <returns></returns>
     internal bool CheckSkills(string featInfo)
     {
-        string statistics =  "str Str dex Dex con Con int Int wis Wis cha Cha" ;
-
-        string[] featInfoParsed;
-        featInfoParsed = StringParse(featInfo);
-
-
-        if (statistics.Contains(featInfoParsed[0]) || featInfoParsed[0] == "none")                     // check the stat
-        {
-            return true;
-        }
+        string[] featInfoParsed = StringParse(featInfo);
         if (this.skills[featInfoParsed[0]] == featInfoParsed[1])
         {
             return true;
         }
-
         return false;
     }
 
@@ -362,16 +338,21 @@ class Character
         }
     }
 
+    //turha mutta myohempaa varten
+    internal void AddFeat(Dictionary<string, string> featToAdd)
+    {
+        this.featsDic.Add(featToAdd);
+    }
+
     internal void LevelUp(int levels)
     {
         if (this.characterLevel == 0)
         {
             this.RandomClass();
-            this.RandomAncestry();
         }
         this.characterLevel++;
         this.FindProgression();
-        Debug.Log("Listing owned feats after each levelup: "+ this.characterLevel);
+        Debug.Log("Listing owned feats after each levelup: ");
         for (int i = 0; i < featsDic.Count; i++)
         {
             Debug.Log(featsDic[i]["name"]);
@@ -393,16 +374,6 @@ class Character
         var classes = new List<string> { "alchemist", "barbarian", "bard", "champion", "cleric", "druid", "fighter", "monk", "ranger", "rogue", "sorcerer", "wizard" };
         int index = random.Next(classes.Count);
         this.characterClass = classes[index];
-        Debug.Log("character class: "+this.characterClass);
-    }
-
-    internal void RandomAncestry()
-    {
-        var random = new System.Random();
-        int index = random.Next(ParseXML.ancestryDic.Count);
-        Dictionary<string, string> ancestry = ParseXML.ancestryDic[index];
-
-        this.characterAncestry = ancestry["ancName"];
     }
 
     //saatetaan liittaa LevelUp (miksi etsia progression jos niita ei lisata?)
@@ -438,17 +409,6 @@ class Character
         }
     }
 
-
-
-
-    //UNDER HEAVY WORK
-
-
-
-
-
-
-
     /// <summary>
     /// Adds the specified advancement to the character                         FOR FEATS DOES NOT CURRENTLY FILTER AVAILABLE ONES ------------- Untested --------- consider adding to the dictionary current level and feat type
     /// consider adding to the dictionary current level and feat type, which would mean to define variable for the dic and then add current level and case type into it as last 2 Key variables
@@ -456,7 +416,7 @@ class Character
     /// <param name="advancementName">requested advancement</param>
     internal void AddAdvancement(string advancementName)
     {
-        List<Dictionary<string, string>> advancementFilteredDics = new List<Dictionary<string, string>>();
+        Dictionary<string, string> advancementAdd = new Dictionary<string, string>();
         var random = new System.Random();
         int index;
         if (advancementName.Contains("Feat"))                               // if case for Feats
@@ -465,47 +425,24 @@ class Character
             switch (splitFeat[0])
             {
                 case ("General"):
-                    advancementFilteredDics = this.FilterDictionary(ParseXML.generalFeatDic, splitFeat[0]);
-                    index = random.Next(advancementFilteredDics.Count);
-                    if (advancementFilteredDics.Count == 0)
-                    {
-                        break;
-                    }
-                    this.featsDic.Add(advancementFilteredDics[index]);
+                    index = random.Next(ParseXML.generalFeatDic.Count);
+                    this.featsDic.Add(ParseXML.generalFeatDic[index]);
                     break;
                 case ("Skill"):
-                    advancementFilteredDics = this.FilterDictionary(ParseXML.skillFeatDic, splitFeat[0]);
-                    index = random.Next(advancementFilteredDics.Count);
-                    if (advancementFilteredDics.Count == 0)
-                    {
-                        break;
-                    }
-                    this.featsDic.Add(advancementFilteredDics[index]);
+                    index = random.Next(ParseXML.skillFeatDic.Count);
+                    this.featsDic.Add(ParseXML.skillFeatDic[index]);
                     break;
                 case ("Ancestry"):
-                    advancementFilteredDics = this.FilterDictionary(ParseXML.ancestryFeatDic, splitFeat[0]);
-                    index = random.Next(advancementFilteredDics.Count);
-                    if (advancementFilteredDics.Count == 0)
-                    {
-                        break;
-                    }
-                    this.featsDic.Add(advancementFilteredDics[index]);
+                    index = random.Next(ParseXML.ancestryFeatDic.Count);
+                    this.featsDic.Add(ParseXML.ancestryFeatDic[index]);
                     break;
-                    /*
                 case ("Initial"):                                           //level = initial && characterClass ---- prerequisites
-                    advancementFilteredDics = this.FilterDictionary(ParseXML.classFeatDic, splitFeat[0]);
-                    index = random.Next(advancementFilteredDics.Count);
-                    this.featsDic.Add(advancementFilteredDics[index]);
+                    index = random.Next(ParseXML.classFeatDic.Count);
+                    this.featsDic.Add(ParseXML.classFeatDic[index]);
                     break;
-                    */
                 default:                                                    //level = characterLevel && characterClass ---- prerequisites
-                    advancementFilteredDics = this.FilterDictionary(ParseXML.classFeatDic, splitFeat[0]);
-                    index = random.Next(advancementFilteredDics.Count);
-                    if (advancementFilteredDics.Count == 0)
-                    {
-                        break;
-                    }
-                    this.featsDic.Add(advancementFilteredDics[index]);
+                    index = random.Next(ParseXML.classFeatDic.Count);
+                    this.featsDic.Add(ParseXML.classFeatDic[index]);
                     break;
             }
         }
@@ -540,18 +477,13 @@ class Character
 
     /*  things to remember:
      *  levels
-     *  types: class/ancestry/skill(general)
+     *  types: class/ancestry/skill
      *  prerequisites: skills/feats
      *  no duplicate entries to take
      *  special case for initial feat, how to define?
-     *  only feats!!!
      */
-    /// <summary>                                                                                                                                                       ------------UNTESTED----------
-    /// 
+    /// <summary>
     /// Filters dictionaries based on the character information and the dictionary type (the dic type format allows to know what to filter) and returns them for further use
-    /// 
-    ///             ------------------- create adding initial feat (check if feats contain initial for ancestry or class) 
-    ///             ------------------- does not currently allow duplicates of any kind (even though some feats allow for added benefits)
     /// </summary>
     /// <param name="dicToFilter"></param>
     /// <param name="dicType"></param>
@@ -559,51 +491,22 @@ class Character
     internal List<Dictionary<string, string>> FilterDictionary(List<Dictionary<string,string>> dicToFilter, string dicType)
     {
         List<Dictionary<string, string>> filteredDic = new List<Dictionary<string, string>>();
-        int featLevelPreq;
-        //different cases for if you are adding in class/ancestry initial feat? Such as initialClass or initialAncestry?
 
         switch (dicType)
         {
-            case ("Skill"):
-            case ("General"):
-                foreach (var item in dicToFilter)
-                { 
-                    //if prerequisite and no duplicates is fine //I spent hour trying to do something that I had made into method already...
-                    if ((this.CheckSkills(item["prerequisite"]) || item["prerequisite"] == "none") && !this.CheckFeats(item["name"]))            
-                    {
-                        filteredDic.Add(item);
-                    }
-                }
-                break;
-            case ("Ancestry"):
-                foreach (var item in dicToFilter)
-                {
-                    if (item["level"] != "Initial" && item["level"] != "initial")                     // parse level into int form while avoiding "initial" -string error
-                    {
-                        featLevelPreq = int.Parse(item["level"]);
-                        //if level, prerequisites, ancestry and no duplicates is fine //I spent hour trying to do something that I had made into method already...
-                        if (this.characterLevel >= featLevelPreq && (this.CheckFeats(item["prerequisite"]) || item["prerequisite"] == "none") && item["ancestry"].Contains(this.characterAncestry) && !this.CheckFeats(item["name"]))            
-                        {
-                            filteredDic.Add(item);
-                        }
-                    }
-                }
-                break;
-            default:
-                foreach (var item in dicToFilter)
-                {
-                    if (item["level"] != "Initial" && item["level"] != "initial")                     // parse level into int form while avoiding "initial" -string error
-                    {
-                        featLevelPreq = int.Parse(item["level"]);
-                        //if level, prerequisites, class and no duplicates is fine //I spent hour trying to do something that I had made into method already...
-                        if (this.characterLevel >= featLevelPreq && (this.CheckFeats(item["prerequisite"]) || item["prerequisite"] == "none") && item["class"].Contains(this.characterClass) && !this.CheckFeats(item["name"]))
-                        {
-                            filteredDic.Add(item);
-                        }
-                    }
 
-                }
+
+            default:
                 break;
+        }
+
+        foreach (var item in dicToFilter)
+        {
+            //&& !this.featsDic.Contains(item)
+            if (this.characterLevel >= Int32.Parse(item["level"]) && item.ContainsValue(this.characterClass))
+            {
+
+            }
         }
 
         return filteredDic;
