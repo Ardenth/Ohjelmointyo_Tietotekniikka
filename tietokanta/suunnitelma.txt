@@ -9,15 +9,15 @@ Skill | Trained
 
 -
 
-|| = OR
-&& = AND
+- = OR
+/ = AND
 
 --
 
 Kaikki aikaisemmat XML =>
- |||| => AND => &&
+ ||| => AND => /
 
- ||| => OR => || (VAI ESIMERKIKSI -)
+ |||| => OR => - (VAI ESIMERKIKSI -)
  || => |
 
 EI TARVITA || SPLITTERIA

@@ -71,7 +71,7 @@
 	</proficiency>
 	<proficiency>
 		<class>Champion</class>
-		<initialBoost>Strength||||Dexterity</initialBoost>
+		<initialBoost>Strength-Dexterity</initialBoost>
 		<hp>10+Con</hp>
 		<fortitudeSave>Fortitude|Expert</fortitudeSave>
 		<reflexSave>Reflex|Trained</reflexSave>
@@ -140,13 +140,13 @@
 	</proficiency>
 	<proficiency>
 		<class>Fighter</class>
-		<initialBoost>Strength||||Dexterity</initialBoost>
+		<initialBoost>Strength-Dexterity</initialBoost>
 		<hp>8+Con</hp>
 		<fortitudeSave>Fortitude|Expert</fortitudeSave>
 		<reflexSave>Reflex|Expert</reflexSave>
 		<willSave>Will|Trained</willSave>
 		<skill1>Perception|Expert</skill1>
-		<skill2>Acrobatics|Trained||||Athletics|Trained</skill2>
+		<skill2>Acrobatics|Trained-Athletics|Trained</skill2>
 		<skill3>none</skill3>
 		<languages>3+Int|Trained</languages>
 		<attack1>Unarmed|Expert</attack1>
@@ -163,7 +163,7 @@
 	</proficiency>
 	<proficiency>
 		<class>Monk</class>
-		<initialBoost>Strength||||Dexterity</initialBoost>
+		<initialBoost>Strength-Dexterity</initialBoost>
 		<hp>10+Con</hp>
 		<fortitudeSave>Fortitude|Expert</fortitudeSave>
 		<reflexSave>Reflex|Expert</reflexSave>
@@ -186,7 +186,7 @@
 	</proficiency>
 	<proficiency>
 		<class>Ranger</class>
-		<initialBoost>Strength||||Dexterity</initialBoost>
+		<initialBoost>Strength-Dexterity</initialBoost>
 		<hp>10+Con</hp>
 		<fortitudeSave>Fortitude|Expert</fortitudeSave>
 		<reflexSave>Reflex|Expert</reflexSave>

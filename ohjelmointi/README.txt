@@ -39,3 +39,17 @@ jonka kautta hyodynsin menetelmaa IPointerClickHandler ja IPointerExitHandler
 (harkintana onko IPointerExitHandler tarvetta, tuotin koska mahdollista kayttoa tulevaisuudessa)
 
 Generate -button sailyy, silla se ei ole valilehtien vaihtoa varten
+
+12.9:
+
+XML files =>
+
+Key | Element
+
+Skill | Trained
+
+
+-
+| = definer for skill or feat (| or ||)
+- = OR  (||||)
+/ = AND (|||)

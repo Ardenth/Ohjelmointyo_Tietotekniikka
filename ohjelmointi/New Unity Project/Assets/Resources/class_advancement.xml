@@ -2,43 +2,43 @@
 <Advancements xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<advancement>
 		<name>Feat(Class)</name>
-		<class>Alchemist||||Barbarian||||Bard|||Champion||||Cleric||||Druid||||Fighter||||Monk||||Ranger||||Rogue||||Sorcerer||||Wizard</class>
+		<class>Alchemist-Barbarian-Bard/Champion-Cleric-Druid-Fighter-Monk-Ranger-Rogue-Sorcerer-Wizard</class>
 		<effect>route class feat</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Feat(Skill)</name>
-		<class>Alchemist||||Barbarian||||Bard|||Champion||||Cleric||||Druid||||Fighter||||Monk||||Ranger||||Rogue||||Sorcerer||||Wizard</class>
+		<class>Alchemist-Barbarian-Bard/Champion-Cleric-Druid-Fighter-Monk-Ranger-Rogue-Sorcerer-Wizard</class>
 		<effect>route skill feat</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Feat(General)</name>
-		<class>Alchemist||||Barbarian||||Bard|||Champion||||Cleric||||Druid||||Fighter||||Monk||||Ranger||||Rogue||||Sorcerer||||Wizard</class>
+		<class>Alchemist-Barbarian-Bard/Champion-Cleric-Druid-Fighter-Monk-Ranger-Rogue-Sorcerer-Wizard</class>
 		<effect>route general feat</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Feat(Ancestry)</name>
-		<class>Alchemist||||Barbarian||||Bard|||Champion||||Cleric||||Druid||||Fighter||||Monk||||Ranger||||Rogue||||Sorcerer||||Wizard</class>
+		<class>Alchemist-Barbarian-Bard/Champion-Cleric-Druid-Fighter-Monk-Ranger-Rogue-Sorcerer-Wizard</class>
 		<effect>route ancestry feat</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Fear(Initial)</name>
-		<class>Alchemist||||Barbarian||||Bard|||Champion||||Cleric||||Druid||||Fighter||||Monk||||Ranger||||Rogue||||Sorcerer||||Wizard</class>
+		<class>Alchemist-Barbarian-Bard/Champion-Cleric-Druid-Fighter-Monk-Ranger-Rogue-Sorcerer-Wizard</class>
 		<effect>route class feat, initial</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>SkillIncrease</name>
-		<class>Alchemist||||Barbarian||||Bard|||Champion||||Cleric||||Druid||||Fighter||||Monk||||Ranger||||Rogue||||Sorcerer||||Wizard</class>
+		<class>Alchemist-Barbarian-Bard/Champion-Cleric-Druid-Fighter-Monk-Ranger-Rogue-Sorcerer-Wizard</class>
 		<effect>skills[randomskill[++]]</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>AbilityBoost</name>
-		<class>Alchemist||||Barbarian||||Bard|||Champion||||Cleric||||Druid||||Fighter||||Monk||||Ranger||||Rogue||||Sorcerer||||Wizard</class>
+		<class>Alchemist-Barbarian-Bard/Champion-Cleric-Druid-Fighter-Monk-Ranger-Rogue-Sorcerer-Wizard</class>
 		<effect>Characteristic|++</effect>
 		<description>placeholder</description>
 	</advancement>
@@ -69,12 +69,12 @@
 	<advancement>
 		<name>Alchemical Weapon Expertise</name>
 		<class>Alchemist</class>
-		<effect>Simple|Expert|||Bombs|Expert</effect>
+		<effect>Simple|Expert/Bombs|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Iron Will</name>
-		<class>Alchemist||||Ranger</class>
+		<class>Alchemist-Ranger</class>
 		<effect>Will|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
@@ -92,7 +92,7 @@
 	</advancement>
 	<advancement>
 		<name>Alertness</name>
-		<class>Alchemist||||Champion||||Cleric||||Druid||||Monk||||Sorcerer||||Wizard</class>
+		<class>Alchemist-Champion-Cleric-Druid-Monk-Sorcerer-Wizard</class>
 		<effect>Perception|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
@@ -104,7 +104,7 @@
 	</advancement>
 	<advancement>
 		<name>Juggernaut</name>
-		<class>Alchemist||||Barbarian||||Champion||||Fighter||||Ranger</class>
+		<class>Alchemist-Barbarian-Champion-Fighter-Ranger</class>
 		<effect>Fortitude|Master</effect>
 		<description>placeholder</description>
 	</advancement>
@@ -122,13 +122,13 @@
 	</advancement>
 	<advancement>
 		<name>Light Armor Expertise</name>
-		<class>Alchemist||||Bard||||Rogue</class>
-		<effect>Light|Expert|||Unarmored|Expert</effect>
+		<class>Alchemist-Bard-Rogue</class>
+		<effect>Light|Expert/Unarmored|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Weapon Specialization</name>
-		<class>Alchemist||||Barbarian||||Bard|||Champion||||Cleric||||Druid||||Fighter||||Monk||||Ranger||||Rogue||||Sorcerer||||Wizard</class>
+		<class>Alchemist-Barbarian-Bard/Champion-Cleric-Druid-Fighter-Monk-Ranger-Rogue-Sorcerer-Wizard</class>
 		<effect>placeholder</effect>
 		<description>placeholder</description>
 	</advancement>
@@ -140,7 +140,7 @@
 	</advancement>
 	<advancement>
 		<name>Evasion</name>
-		<class>Alchemist||||Fighter||||Ranger||||Rogue</class>
+		<class>Alchemist-Fighter-Ranger-Rogue</class>
 		<effect>Reflex|Master</effect>
 		<description>placeholder</description>
 	</advancement>
@@ -158,8 +158,8 @@
 	</advancement>
 	<advancement>
 		<name>Light Armor Mastery</name>
-		<class>Alchemist||||Rogue</class>
-		<effect>Light|Master|||Unarmored|Master</effect>
+		<class>Alchemist-Rogue</class>
+		<effect>Light|Master/Unarmored|Master</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -170,19 +170,19 @@
 	</advancement>
 	<advancement>
 		<name>Deny Advantage</name>
-		<class>Barbarian||||Rogue</class>
+		<class>Barbarian-Rogue</class>
 		<effect>placeholder</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Brutality</name>
 		<class>Barbarian</class>
-		<effect>Simple|Expert|||Martial|Expert|||Unarmed|Expert</effect>
+		<effect>Simple|Expert/Martial|Expert/Unarmed|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Lightning Reflexes</name>
-		<class>Barbarian||||Bard||||Champion||||Cleric||||Druid||||Sorcerer||||Wizard</class>
+		<class>Barbarian-Bard-Champion-Cleric-Druid-Sorcerer-Wizard</class>
 		<effect>Reflex|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
@@ -206,19 +206,19 @@
 	</advancement>
 	<advancement>
 		<name>Medium Armor Expertise</name>
-		<class>Barbarian||||Druid||||Ranger</class>
-		<effect>Light|Expert|||Medium|Expert|||Unarmored|Expert</effect>
+		<class>Barbarian-Druid-Ranger</class>
+		<effect>Light|Expert/Medium|Expert/Unarmored|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Weapon Fury</name>
 		<class>Barbarian</class>
-		<effect>Simple|Master|||Martial|Master|||Unarmed|Master</effect>
+		<effect>Simple|Master/Martial|Master/Unarmed|Master</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Greater Weapon Specialization</name>
-		<class>Barbarian||||Champion||||Fighter||||Monk||||Ranger||||Rogue</class>
+		<class>Barbarian-Champion-Fighter-Monk-Ranger-Rogue</class>
 		<effect>placeholder</effect>
 		<description>placeholder</description>
 	</advancement>
@@ -243,7 +243,7 @@
 	<advancement>
 		<name>Armor of Fury</name>
 		<class>Barbarian</class>
-		<effect>Light|Master|||Medium|Master|||Unarmored|Master</effect>
+		<effect>Light|Master/Medium|Master/Unarmored|Master</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -266,25 +266,25 @@
 	</advancement>
 	<advancement>
 		<name>Signature Spells</name>
-		<class>Bard||||Sorcerer</class>
+		<class>Bard-Sorcerer</class>
 		<effect>placeholder</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Expert Spellcaster</name>
-		<class>Bard||||Druid||||Sorcerer||||Wizard</class>
+		<class>Bard-Druid-Sorcerer-Wizard</class>
 		<effect>SpellDC|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Great Fortitude</name>
-		<class>Bard||||Druid||||Rogue</class>
+		<class>Bard-Druid-Rogue</class>
 		<effect>Fortitude|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Resolve</name>
-		<class>Bard||||Cleric||||Druid||||Wizard</class>
+		<class>Bard-Cleric-Druid-Wizard</class>
 		<effect>Will|Master</effect>
 		<description>placeholder</description>
 	</advancement>
@@ -296,13 +296,13 @@
 	</advancement>
 	<advancement>
 		<name>Vigilant Senses</name>
-		<class>Bard||||Ranger</class>
+		<class>Bard-Ranger</class>
 		<effect>Perception|Master</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Master Spellcaster</name>
-		<class>Bard||||Druid||||Sorcerer||||Wizard</class>
+		<class>Bard-Druid-Sorcerer-Wizard</class>
 		<effect>SpellDC|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
@@ -320,13 +320,13 @@
 	</advancement>
 	<advancement>
 		<name>Legendary Spellcaster</name>
-		<class>Bard||||Druid||||Sorcerer</class>
+		<class>Bard-Druid-Sorcerer</class>
 		<effect>SpellDC|Legendary</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Deity</name>
-		<class>Champion||||Cleric</class>
+		<class>Champion-Cleric</class>
 		<effect>placeholder</effect>
 		<description>placeholder</description>
 	</advancement>
@@ -350,7 +350,7 @@
 	</advancement>
 	<advancement>
 		<name>Shield Block</name>
-		<class>Champion||||Druid||||Fighter</class>
+		<class>Champion-Druid-Fighter</class>
 		<effect>General Feat(Shield Block)</effect>
 		<description>placeholder</description>
 	</advancement>
@@ -362,14 +362,14 @@
 	</advancement>
 	<advancement>
 		<name>Weapon Expertise</name>
-		<class>Champion||||Ranger</class>
-		<effect>Simple|Expert|||Martial|Expert</effect>
+		<class>Champion-Ranger</class>
+		<effect>Simple|Expert/Martial|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Armor Expertise</name>
-		<class>Champion||||Fighter</class>
-		<effect>Light|Expert|||Medium|Expert|||Heavy|Expert|||Unarmored|Expert</effect>
+		<class>Champion-Fighter</class>
+		<effect>Light|Expert/Medium|Expert/Heavy|Expert/Unarmored|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -398,20 +398,20 @@
 	</advancement>
 	<advancement>
 		<name>Armor Mastery</name>
-		<class>Champion||||Fighter</class>
-		<effect>Light|Master|||Medium|Master|||Heavy|Master|||Unarmored|Master</effect>
+		<class>Champion-Fighter</class>
+		<effect>Light|Master/Medium|Master/Heavy|Master/Unarmored|Master</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Weapon Mastery</name>
-		<class>Champion||||Ranger</class>
-		<effect>Simple|Master|||Martial|Master</effect>
+		<class>Champion-Ranger</class>
+		<effect>Simple|Master/Martial|Master</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Legendary Armor</name>
 		<class>Champion</class>
-		<effect>Light|Legendary|||Medium|Legendary|||Heavy|Legendary|||Unarmored|Legendary</effect>
+		<effect>Light|Legendary/Medium|Legendary/Heavy|Legendary/Unarmored|Legendary</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -507,7 +507,7 @@
 	<advancement>
 		<name>Druid Weapon Expertise</name>
 		<class>Druid</class>
-		<effect>Simple|Expert|||Unarmed|Expert</effect>
+		<effect>Simple|Expert/Unarmed|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -555,7 +555,7 @@
 	<advancement>
 		<name>Weapon Legend</name>
 		<class>Fighter</class>
-		<effect>Simple|Master|||Martial|Master|||Advanced|Expert</effect>
+		<effect>Simple|Master/Martial|Master/Advanced|Expert</effect>
 		<description>Weapon Grp Versatile Legend effects</description>
 	</advancement>
 	<advancement>
@@ -567,7 +567,7 @@
 	<advancement>
 		<name>Versatile Legend</name>
 		<class>Fighter</class>
-		<effect>Simple|Legendary|||Martial|Legendary|||Advanced|Master|||ClassDC|Master</effect>
+		<effect>Simple|Legendary/Martial|Legendary/Advanced|Master/ClassDC|Master</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -585,7 +585,7 @@
 	<advancement>
 		<name>Movement Increase(10)</name>
 		<class>Monk</class>
-		<effect>BaseSpeed++|||BaseSpeed++</effect>
+		<effect>BaseSpeed++/BaseSpeed++</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -603,7 +603,7 @@
 	<advancement>
 		<name>Expert Strikes</name>
 		<class>Monk</class>
-		<effect>Simple|Expert|||Unarmed|Expert</effect>
+		<effect>Simple|Expert/Unarmed|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -639,7 +639,7 @@
 	<advancement>
 		<name>Master Strikes</name>
 		<class>Monk</class>
-		<effect>Simple|Master|||Unarmed|Master</effect>
+		<effect>Simple|Master/Unarmed|Master</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -651,7 +651,7 @@
 	<advancement>
 		<name>Graceful Legend</name>
 		<class>Monk</class>
-		<effect>ClassDC|Master|||Unarmored|Legendary</effect>
+		<effect>ClassDC|Master/Unarmored|Legendary</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -692,13 +692,13 @@
 	</advancement>
 	<advancement>
 		<name>Improved Evasion</name>
-		<class>Ranger||||Rogue</class>
+		<class>Ranger-Rogue</class>
 		<effect>placeholder</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Incredible Senses</name>
-		<class>Ranger||||Rogue</class>
+		<class>Ranger-Rogue</class>
 		<effect>placeholder</effect>
 		<description>placeholder</description>
 	</advancement>
@@ -711,7 +711,7 @@
 	<advancement>
 		<name>Second Skin</name>
 		<class>Ranger</class>
-		<effect>Light|Master|||Medium|||Master|||Unarmored|Master</effect>
+		<effect>Light|Master/Medium/Master/Unarmored|Master</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -794,7 +794,7 @@
 	</advancement>
 	<advancement>
 		<name>Magical Fortitude</name>
-		<class>Sorcerer||||Wizard</class>
+		<class>Sorcerer-Wizard</class>
 		<effect>placeholder</effect>
 		<description>placeholder</description>
 	</advancement>
@@ -806,7 +806,7 @@
 	</advancement>
 	<advancement>
 		<name>Defensive Robes</name>
-		<class>Sorcerer||||Wizard</class>
+		<class>Sorcerer-Wizard</class>
 		<effect>Unarmored|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
@@ -818,7 +818,7 @@
 	</advancement>
 	<advancement>
 		<name>Spell Repertoire</name>
-		<class>Sorcerer||||Bard</class>
+		<class>Sorcerer-Bard</class>
 		<effect>placeholder</effect>
 		<description>placeholder</description>
 	</advancement>
@@ -854,55 +854,55 @@
 	</advancement>
 	<advancement>
 		<name>Spell Level 1</name>
-		<class>Bard||||Cleric||||Druid||||Sorcerer||||Wizard</class>
+		<class>Bard-Cleric-Druid-Sorcerer-Wizard</class>
 		<effect>placeholder</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Spell Level 2</name>
-		<class>Bard||||Cleric||||Druid||||Sorcerer||||Wizard</class>
+		<class>Bard-Cleric-Druid-Sorcerer-Wizard</class>
 		<effect>placeholder</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Spell Level 3</name>
-		<class>Bard||||Cleric||||Druid||||Sorcerer||||Wizard</class>
+		<class>Bard-Cleric-Druid-Sorcerer-Wizard</class>
 		<effect>placeholder</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Spell Level 4</name>
-		<class>Bard||||Cleric||||Druid||||Sorcerer||||Wizard</class>
+		<class>Bard-Cleric-Druid-Sorcerer-Wizard</class>
 		<effect>placeholder</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Spell Level 5</name>
-		<class>Bard||||Cleric||||Druid||||Sorcerer||||Wizard</class>
+		<class>Bard-Cleric-Druid-Sorcerer-Wizard</class>
 		<effect>placeholder</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Spell Level 6</name>
-		<class>Bard||||Cleric||||Druid||||Sorcerer||||Wizard</class>
+		<class>Bard-Cleric-Druid-Sorcerer-Wizard</class>
 		<effect>placeholder</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Spell Level 7</name>
-		<class>Bard||||Cleric||||Druid||||Sorcerer||||Wizard</class>
+		<class>Bard-Cleric-Druid-Sorcerer-Wizard</class>
 		<effect>placeholder</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Spell Level 8</name>
-		<class>Bard||||Cleric||||Druid||||Sorcerer||||Wizard</class>
+		<class>Bard-Cleric-Druid-Sorcerer-Wizard</class>
 		<effect>placeholder</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Spell Level 9</name>
-		<class>Bard||||Cleric||||Druid||||Sorcerer||||Wizard</class>
+		<class>Bard-Cleric-Druid-Sorcerer-Wizard</class>
 		<effect>placeholder</effect>
 		<description>placeholder</description>
 	</advancement>
