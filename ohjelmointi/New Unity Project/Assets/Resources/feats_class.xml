@@ -1740,7 +1740,7 @@
     <name>Form Control</name>
     <class>Druid</class>
     <level>2</level>
-    <prerequisite>str|14/Wild Shape</prerequisite>
+    <prerequisite>Strength|14/Wild Shape</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
@@ -1950,7 +1950,7 @@
     <name>Perfect Form Control</name>
     <class>Druid</class>
     <level>18</level>
-    <prerequisite>str|18/Form Control</prerequisite>
+    <prerequisite>Strength|18/Form Control</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>

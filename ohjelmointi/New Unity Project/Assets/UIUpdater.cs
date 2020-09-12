@@ -21,13 +21,17 @@ public class UIUpdater : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Character baselineChar = new Character();
         baseline.SetCharStat(hello);
         baseline.UpdateMods();
         baseline.LevelUp(4);
-        //testing requirementparse
-        //string[] testsplit = Character.RequirementParse(testing);
 
+        //testing requirementparse
+        Debug.Log(baseline.CheckRequirement("Strength|15"));
+        Debug.Log(baseline.CheckRequirement("Dexterity|15"));
+        Debug.Log(baseline.CheckRequirement("Constitution|15"));
+        Debug.Log(baseline.CheckRequirement("Intelligence|15"));
+        Debug.Log(baseline.CheckRequirement("Wisdom|15"));
+        Debug.Log(baseline.CheckRequirement("Charisma|15"));
     }
 
     /// <summary>
@@ -42,12 +46,12 @@ public class UIUpdater : MonoBehaviour
         wisdomchar = GameObject.Find("WisdomChar").GetComponent<TextMeshProUGUI>();
         charismachar = GameObject.Find("CharismaChar").GetComponent<TextMeshProUGUI>();
 
-        strengthchar.text = "Strength: " + baseline.GetStat("Str").ToString() + "\n Mod: +" + baseline.GetMod("Str").ToString();
-        dexteritychar.text = "Dexterity: " + baseline.GetStat("Dex").ToString() + "\n Mod: +" + baseline.GetMod("Dex").ToString();
-        constitutionchar.text = "Constitution: " + baseline.GetStat("Con").ToString() + "\n Mod: +" + baseline.GetMod("Con").ToString();
-        intelligencechar.text = "Intelligence: " + baseline.GetStat("Int").ToString() + "\n Mod: +" + baseline.GetMod("Int").ToString();
-        wisdomchar.text = "Wisdom: " + baseline.GetStat("Wis").ToString() + "\n Mod: +" + baseline.GetMod("Wis").ToString();
-        charismachar.text = "Charisma: " + baseline.GetStat("Cha").ToString() + "\n Mod: +" + baseline.GetMod("Cha").ToString();
+        strengthchar.text = "Strength: " + baseline.GetStat("Strength").ToString() + "\n Mod: +" + baseline.GetMod("Strength").ToString();
+        dexteritychar.text = "Dexterity: " + baseline.GetStat("Dexterity").ToString() + "\n Mod: +" + baseline.GetMod("Dexterity").ToString();
+        constitutionchar.text = "Constitution: " + baseline.GetStat("Constitution").ToString() + "\n Mod: +" + baseline.GetMod("Constitution").ToString();
+        intelligencechar.text = "Intelligence: " + baseline.GetStat("Intelligence").ToString() + "\n Mod: +" + baseline.GetMod("Intelligence").ToString();
+        wisdomchar.text = "Wisdom: " + baseline.GetStat("Wisdom").ToString() + "\n Mod: +" + baseline.GetMod("Wisdom").ToString();
+        charismachar.text = "Charisma: " + baseline.GetStat("Charisma").ToString() + "\n Mod: +" + baseline.GetMod("Charisma").ToString();
 
     }
 

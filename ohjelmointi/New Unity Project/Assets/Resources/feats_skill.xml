@@ -27,7 +27,7 @@
 	<feat>
 		<name>Skill Training</name>
 		<level>1</level>
-		<prerequisite>int|12</prerequisite>
+		<prerequisite>Intelligence|12</prerequisite>
 		<description>none</description>
 	</feat>
 	<feat>
@@ -303,7 +303,7 @@
 	<feat>
 		<name>Intimidating Prowess</name>
 		<level>2</level>
-		<prerequisite>str|16/Intimidation|Expert</prerequisite>
+		<prerequisite>Strength|16/Intimidation|Expert</prerequisite>
 		<description>none</description>
 	</feat>
 	<feat>

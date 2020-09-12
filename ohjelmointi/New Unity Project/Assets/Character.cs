@@ -34,8 +34,8 @@ class Character
 
     //consider creating stats and statsMod into dictionaries for easier management through Keys?
     // internal Dictionary<string, int> stats = new Dictionary<string, stat> { {"Strength", 10}, {"Dexterity", 10}, {"Constitution", 10}, {"Intelligence", 10}, {"Wisdom", 10}, {"Charisma", 10}};
-    internal int[] stats = new int[] { 10, 10, 10, 10, 10, 10 };
-    internal int[] statsMod = new int[] { 10, 10, 10, 10, 10, 10 };
+    internal Dictionary<string, int> statsDic = new Dictionary<string, int> { { "Strength", 10 }, { "Dexterity", 10 }, { "Constitution", 10 }, { "Intelligence", 10 }, { "Wisdom", 10 }, { "Charisma", 10 } };
+    internal Dictionary<string, int> statsModsDic = new Dictionary<string, int> { { "Strength", 10 }, { "Dexterity", 10 }, { "Constitution", 10 }, { "Intelligence", 10 }, { "Wisdom", 10 }, { "Charisma", 10 } };
     internal List<Dictionary<string, string>> classProgDic = new List<Dictionary<string, string>>();
     //TODO: lore maaritys
     //Skill luonti
@@ -75,6 +75,13 @@ class Character
         }
     };
 
+    internal List<Dictionary<string, string>> languageDic = new List<Dictionary<string, string>>()
+    {
+        new Dictionary<string, string>()
+        {
+            {"language", "name of the language"},
+        }
+    };
 
 
 
@@ -83,63 +90,19 @@ class Character
     internal void UpdateCharStat(string stat)
     {
         string[] statSplit = StringParse(stat);
+        //for dictionary
         if (statSplit.Length < 2)
         {
-            switch (statSplit[0]) //Boost tapauksessa (char creation)
-            {
-                case "Strength":
-                    this.stats[0] = stats[0] + 2;
-                    break;
-                case "Dexterity":
-                    this.stats[1] = stats[1] + 2;
-                    break;
-                case "Constitution":
-                    this.stats[2] = stats[2] + 2;
-                    break;
-                case "Intelligence":
-                    this.stats[3] = stats[3] + 2;
-                    break;
-                case "Wisdom":
-                    this.stats[4] = stats[4] + 2;
-                    break;
-                case "Charisma":
-                    this.stats[5] = stats[5] + 2;
-                    break;
-                default:
-                    Debug.Log("no stat");
-                    break;
-
-            }
+            this.statsDic[stat] += 2;
         }
         else
         {
-            switch (statSplit[0]) //stat|15 => stattia nimelta 'stat' kasvatetaan 15 arvolla
-            {
-                case "Strength":
-                    this.stats[0] = stats[0] + int.Parse(statSplit[1]);
-                    break;
-                case "Dexterity":
-                    this.stats[1] = stats[1] + int.Parse(statSplit[1]);
-                    break;
-                case "Constitution":
-                    this.stats[2] = stats[2] + int.Parse(statSplit[1]);
-                    break;
-                case "Intelligence":
-                    this.stats[3] = stats[3] + int.Parse(statSplit[1]);
-                    break;
-                case "Wisdom":
-                    this.stats[4] = stats[4] + int.Parse(statSplit[1]);
-                    break;
-                case "Charisma":
-                    this.stats[5] = stats[5] + int.Parse(statSplit[1]);
-                    break;
-                default:
-                    Debug.Log("no stat");
-                    break;
-
-            }
+            this.statsDic[statSplit[0]] = int.Parse(statSplit[1]);
         }
+
+        UpdateMods();
     }
+
 
     /// <summary>
     /// Sets the statistics of the character to match the array
@@ -147,42 +110,160 @@ class Character
     /// <param name="statsWanted">Wanted character stats</param>
     internal void SetCharStat(int[] statsWanted)
     {
-        for (int i = 0; i < this.stats.Length; i++)
+        int index = 0;
+        List<string> keys = new List<string>(statsDic.Keys);
+        foreach (string key in keys)
         {
-            this.stats[i] = statsWanted[i];
+            statsDic[key] = statsWanted[index];
+            index++;
         }
+
+        UpdateMods();
     }
 
+
     //creates skills into understandable skillName|trainingLevel or strength|15 and so forth.
+    //miksi ei suoraan aina????-----------------------------------------------------------------------------
     internal string[] StringParse(string parse)
     {
         string[] newString = parse.Split('|');
         return newString;
     }
 
-    internal string[] RequirementParse(string parse)                                    //                              ----------------------------------------            Untested
+    //creates skills into understandable skillName|trainingLevel or strength|15 and so forth.
+    public static string[] StringParser(string parse)
     {
-        string[] newString = parse.Split(new[] { "||" }, StringSplitOptions.None);
-        Debug.Log(newString[1]); //testing
+        string[] newString = parse.Split('|');
         return newString;
     }
 
-    //REQUIRES CHANGING TO THE CHARACTER STATS
-    internal int[] UpdateMods(int[] statArray)
+
+    public static List<string[]> RequirementParse(string parse)                                    //                              ----------------------------------------            Untested
     {
-        int[] statsMod = new int[6];
-        for (int i = 0; i < statArray.Length; i++)
+        List<string[]> throughParseAnd = new List<string[]>();
+        if (parse.Contains("/"))
         {
-            statsMod[i] = ((statArray[i]-10)/2);
+            List<string> parseAnd = parse.Split('/').ToList();
+
+            if (parse.Contains("-"))
+            {
+                foreach (string statement in parseAnd)
+                {
+                    List<string> parseOr;
+                    parseOr = (statement.Split('-').ToList());
+                }
+            }
+            else
+            {
+                // when split with |, the size of each array is always only 2
+                foreach (string statement in parseAnd)
+                {
+                    Debug.Log(statement);
+                    //check requirement
+                    throughParseAnd.Add(StringParser(statement));
+                }
+            }
         }
-        return statsMod;
+
+
+        throughParseAnd[0].ToList().ForEach(i => Debug.Log(i.ToString()));
+        throughParseAnd[1].ToList().ForEach(i => Debug.Log(i.ToString()));
+        return throughParseAnd;
+    }
+
+
+    //muokataan requirementparse tutkimaan onko kaikki vaatimukset toimivia ja palauttaa listan boolean arvoja, joiden avulla voidaan tehdä päätös. Eli jos on OR statement, se tulkkaa onko kyseinen oikein vai väärin
+
+    public static List<bool> RequirementParseBool(string parse)                                    //                              ----------------------------------------            Untested
+    {
+        List<string[]> throughParseAnd = new List<string[]>();
+        List<bool> returning = new List<bool>();
+        if (parse.Contains("/"))
+        {
+            List<string> parseAnd = parse.Split('/').ToList();
+
+            if (parse.Contains("-"))
+            {
+                foreach (string statement in parseAnd)
+                {
+                    List<string> parseOr;
+                    parseOr = (statement.Split('-').ToList());
+                }
+            }
+            else
+            {
+                // when split with |, the size of each array is always only 2
+                foreach (string statement in parseAnd)
+                {
+                    Debug.Log(statement);
+                    //check requirement
+                    throughParseAnd.Add(StringParser(statement));
+                }
+            }
+        }
+
+
+        throughParseAnd[0].ToList().ForEach(i => Debug.Log(i.ToString()));
+        throughParseAnd[1].ToList().ForEach(i => Debug.Log(i.ToString()));
+        return returning;
+    }
+
+    internal bool CheckRequirement(string requirement)
+    {
+        //requirement contains information in two pieces
+        if (requirement.Contains('|'))
+        {
+            string[] requirementArr = requirement.Split('|');
+            //requirement type: statistic
+            if (this.statsDic.ContainsKey(requirementArr[0]))
+            {
+                Debug.Log("requirement: "+requirementArr[1]);
+                Debug.Log("owned: " +this.statsDic[requirementArr[0]]);
+                if (this.statsDic[requirementArr[0]] >= int.Parse(requirementArr[1]))
+                {
+                    return true;
+                }
+            }
+            //requirement type: skill
+            else if (this.skills.ContainsKey(requirementArr[0]))
+            {
+                if (this.skills[requirementArr[0]] == requirementArr[1])
+                {
+                    return true;
+                }
+            }
+        }
+        else
+        {
+            if (requirement == "none")
+            {
+                return true;
+            }
+            else
+            {
+                //requirement type: feat
+                for (int i = 0; i < this.featsDic.Count; i++)
+                {
+                    Dictionary<string, string> feat = this.featsDic[i];
+                    if (feat["name"] == requirement)
+                    {
+                        return true;
+                    }
+                }
+            }
+        }
+
+        return false;
     }
 
     internal void UpdateMods()
     {
-        for (int i = 0; i < this.stats.Length; i++)
+        int index = 0;
+        List<string> keys = new List<string>(this.statsDic.Keys);
+        foreach (string key in keys)
         {
-            this.statsMod[i] = ((this.stats[i] - 10) / 2);
+            this.statsModsDic[key] = ((this.statsDic[key] - 10)/2);
+            index++;
         }
     }
 
@@ -194,39 +275,9 @@ class Character
     /// <returns>Returns the statistic specified in the given parameter</returns>
     internal int GetStat(string statName)
     {
-        statName.First().ToString().ToUpper();
-        int characterStat = 0;
-        switch (statName)
-        {
-            case ("Strength"):
-            case ("Str"):
-                characterStat = this.stats[0];
-            break;
-            case ("Dexterity"):
-            case ("Dex"):
-                characterStat = this.stats[1];
-                break;
-            case ("Constitution"):
-            case ("Con"):
-                characterStat = this.stats[2];
-                break;
-            case ("Intelligence"):
-            case ("Int"):
-                characterStat = this.stats[3];
-                break;
-            case ("Wisdom"):
-            case ("Wis"):
-                characterStat = this.stats[4];
-                break;
-            case ("Charisma"):
-            case ("Cha"):
-                characterStat = this.stats[5];
-                break;
-            default:
-                break;
-        }
-        return characterStat;
+        return statsDic[statName];
     }
+
 
     /// <summary>
     /// Used to get a specific statistic's modifier of the character
@@ -235,39 +286,9 @@ class Character
     /// <returns>Returns the statistics's modifier specified in the given parameter</returns>
     internal int GetMod(string statName)
     {
-        statName.First().ToString().ToUpper();
-        int statMod = 0;
-        switch (statName)
-        {
-            case ("Strength"):
-            case ("Str"):
-                statMod = stats[0];
-                break;
-            case ("Dexterity"):
-            case ("Dex"):
-                statMod = stats[1];
-                break;
-            case ("Constitution"):
-            case ("Con"):
-                statMod = stats[2];
-                break;
-            case ("Intelligence"):
-            case ("Int"):
-                statMod = stats[3];
-                break;
-            case ("Wisdom"):
-            case ("Wis"):
-                statMod = stats[4];
-                break;
-            case ("Charisma"):
-            case ("Cha"):
-                statMod = stats[5];
-                break;
-            default:
-                break;
-        }
-        return statMod;
+        return statsModsDic[statName];
     }
+
 
     internal List<Dictionary<string, string>> GetFeats()
     {
@@ -307,18 +328,19 @@ class Character
     /// <returns></returns>
     internal bool CheckSkills(string featInfo)
     {
-        string statistics =  "str Str dex Dex con Con int Int wis Wis cha Cha" ;
+        string statistics =  "Strength, Constitution, Dexterity, Intelligence, Wisdom, Charisma" ;
 
-        string[] featInfoParsed;
-        featInfoParsed = StringParse(featInfo);
+        string[] featInfoParsed = StringParse(featInfo);
 
-
+        //return CheckRequirement(featInfo);
         if (statistics.Contains(featInfoParsed[0]) || featInfoParsed[0] == "none")                     // check the stat
         {
+            Debug.Log("requirement: "+featInfoParsed[0]);
             return true;
         }
         if (this.skills[featInfoParsed[0]] == featInfoParsed[1])
         {
+            Debug.Log("| accepttable");
             return true;
         }
 
@@ -362,6 +384,7 @@ class Character
         }
     }
 
+
     internal void LevelUp(int levels)
     {
         if (this.characterLevel == 0)
@@ -387,6 +410,7 @@ class Character
         }
     }
 
+
     internal void RandomClass()
     {
         var random = new System.Random();
@@ -396,6 +420,7 @@ class Character
         Debug.Log("character class: "+this.characterClass);
     }
 
+
     internal void RandomAncestry()
     {
         var random = new System.Random();
@@ -404,6 +429,7 @@ class Character
 
         this.characterAncestry = ancestry["ancName"];
     }
+
 
     //saatetaan liittaa LevelUp (miksi etsia progression jos niita ei lisata?)
     internal void FindProgression()
@@ -437,6 +463,8 @@ class Character
 
         }
     }
+
+
 
 
 
@@ -513,8 +541,10 @@ class Character
         {
             if (advancementName == "AbilityBoost")      //applies boost to a stat
             {
-                index = random.Next(stats.Length);
-                this.stats[index] += 2;
+                List<string> keyList = new List<string>(statsDic.Keys);
+                System.Random rand = new System.Random();
+                string randomKey = keyList[rand.Next(keyList.Count)];
+                UpdateCharStat(randomKey);
             }
             else if (advancementName == "SkillIncrease") //increases the tier of a skill by one
             {
@@ -523,7 +553,7 @@ class Character
                 string skillToAdd = skillsKeys[index];
                 this.IncreaseSkill(skillToAdd);
             }
-            else
+            else                                        //specified class advancement in the levelup gets added
             {
                 for (int i = 0; i < ParseXML.classAdvDic.Count; i++)
                 {

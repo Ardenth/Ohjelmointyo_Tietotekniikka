@@ -33,13 +33,13 @@
 	<feat>
 		<name>Fast Recovery</name>
 		<level>1</level>
-		<prerequisite>con|5</prerequisite>
+		<prerequisite>Constitution|5</prerequisite>
 		<description>none</description>
 	</feat>
 	<feat>
 		<name>Feather Step</name>
 		<level>1</level>
-		<prerequisite>dex|4</prerequisite>
+		<prerequisite>Dexterity|4</prerequisite>
 		<description>none</description>
 	</feat>
 	<feat>
@@ -99,7 +99,7 @@
 	<feat>
 		<name>Incredible Investiture</name>
 		<level>11</level>
-		<prerequisite>cha|16</prerequisite>
+		<prerequisite>Charisma|16</prerequisite>
 		<description>none</description>
 	</feat>
 	<feat>
@@ -129,7 +129,7 @@
 	<feat>
 		<name>Skill Training</name>
 		<level>1</level>
-		<prerequisite>int|12</prerequisite>
+		<prerequisite>Intelligence|12</prerequisite>
     <description>none</description>
 	</feat>
 	<feat>
@@ -405,7 +405,7 @@
 	<feat>
 		<name>Intimidating Prowess</name>
 		<level>2</level>
-		<prerequisite>str|16/Intimidation|Expert</prerequisite>
+		<prerequisite>Strength|16/Intimidation|Expert</prerequisite>
 		<description>none</description>
 	</feat>
 	<feat>
