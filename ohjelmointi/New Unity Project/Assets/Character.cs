@@ -38,8 +38,9 @@ class Character
     internal Dictionary<string, int> statsDic = new Dictionary<string, int> { { "Strength", 10 }, { "Dexterity", 10 }, { "Constitution", 10 }, { "Intelligence", 10 }, { "Wisdom", 10 }, { "Charisma", 10 } };
     internal Dictionary<string, int> statsModsDic = new Dictionary<string, int> { { "Strength", 10 }, { "Dexterity", 10 }, { "Constitution", 10 }, { "Intelligence", 10 }, { "Wisdom", 10 }, { "Charisma", 10 } };
     internal List<Dictionary<string, string>> classProgDic = new List<Dictionary<string, string>>();
+    
     //TODO: lore maaritys
-    //Skill luonti
+    //character's skills
     internal Dictionary<string, string> skills = new Dictionary<string, string>
     {
         {"Acrobatics","Untrained" },
@@ -60,31 +61,46 @@ class Character
         {"Thievery","Untrained" },
 
         {"Recall Knowledge", "Untrained" },
-        {"Skill", "Untrained" },
-        {"Skill Training", "Untrained" },
-        {"Performance", "UnTrained" },
+        {"Skill", "Untrained" },                //requirement, should be read only. A certain feat requires a skill to be at least trained. Most likely have to do a special case for this feat (Feat name = Assurance)
+        {"Performance", "Untrained" },
         {"Perception", "untrained" }
     };
 
+    //character's known feats
     internal List<Dictionary<string, string>> featsDic = new List<Dictionary<string, string>>();
 
-    internal List<Dictionary<string, string>> languageDic = new List<Dictionary<string, string>>();
+    //character's known languages
+    internal Dictionary<string, string> languages = new Dictionary<string, string>();
+    // example: LangName, trained, etc.
+
+    //character's features: hp, size, speed, etc.
+    internal Dictionary<string, string> characterFeatures = new Dictionary<string, string>()
+    {
+        {"hp", "" },{"size", "" },{"speed", "" },
+        {"fortitudeSave", "" },{"reflexSave", "" },{"willSave", "" },
+        {"unarmed", "" },{"simple", "" },{"martial", "" },{"advanced", "" },{"attackSpecial", "" },                 //attackSpecial used as a definition for others, such as bombs or initial weapons
+        {"unarmored", "" },{"light", "" },{"medium", "" },{"heavy", "" },
+        {"classDC", "" },{"spellDC", "" },
+        {"trait", "" },{"special", "" }    //special as feat (darkvision, lowlight vision, keen eyes), requirement for advances (characters can have both lowlight vision and darkvision)
+
+    };
 
 
-
-
-    //determine how correct stat gets increased
-    internal void UpdateCharStat(string stat)
+    /// <summary>
+    /// Updates character's statistics from a string, either by an increment of 2 or to a specific value
+    /// </summary>
+    /// <param name="stat"></param>
+    internal void UpdateCharStat(string stat)                       //Design choice made due to XML files holding the required information
     {
         string[] statSplit = stat.Split('|');
         //for dictionary
-        if (statSplit.Length < 2)
+        if (statSplit.Length < 2)                                   //parameter only has key for statistic, thus increase it by increment of 2
         {
             this.statsDic[stat] += 2;
         }
         else
         {
-            this.statsDic[statSplit[0]] = int.Parse(statSplit[1]);
+            this.statsDic[statSplit[0]] = int.Parse(statSplit[1]);  //parameter holds information to what value the statistic will be increased, thus increase statistic to given value
         }
 
         UpdateMods();
@@ -92,7 +108,7 @@ class Character
 
 
     /// <summary>
-    /// Sets the statistics of the character to match the array
+    /// Sets the character's statistics with the parameter
     /// </summary>
     /// <param name="statsWanted">Wanted character stats</param>
     internal void SetCharStat(int[] statsWanted)
@@ -109,12 +125,22 @@ class Character
     }
 
 
+    /// <summary>
+    /// Capitalize first character for a string
+    /// </summary>
+    /// <param name="str">String to capitalize</param>
+    /// <returns>Capitalized parameter string</returns>
     internal string CapitalizeFirstChar(string str)
     {
         return str?.First().ToString().ToUpper() + str?.Substring(1).ToLower();
     }
 
 
+    /// <summary>
+    /// Parses bool value for the given string parameter for an advancement
+    /// </summary>
+    /// <param name="requirement">string for the advancement requirement</param>
+    /// <returns>bool value of the string parameter</returns>
     internal bool ParseRequirement(string requirement)
     {
         List<string> requirementList = requirement.Split('/').ToList();
@@ -139,6 +165,11 @@ class Character
     }
 
 
+    /// <summary>
+    /// Parses the value for the OR statement for the given string parameter
+    /// </summary>
+    /// <param name="requirement">advancements's string requirement which will be parsed for bool information</param>
+    /// <returns>bool value of the string parameter</returns>
     internal bool ParseRequirementOr(string requirement)
     {
         List<string> requirementList = requirement.Split('-').ToList();
@@ -147,7 +178,7 @@ class Character
         {
             truthList.Add(CheckRequirement(req));
         }
-        if (!truthList.Contains(false))
+        if (truthList.Contains(true))
         {
             return true;
         }
@@ -155,6 +186,11 @@ class Character
     }
 
 
+    /// <summary>
+    /// Checks through parameter string if the requirement holds true for the character
+    /// </summary>
+    /// <param name="requirement">string requirement for the check, either feat name or skill|tier</param>
+    /// <returns>bool value for character's qualifications</returns>
     internal bool CheckRequirement(string requirement)
     {
         //requirement contains information in two pieces
@@ -213,6 +249,10 @@ class Character
         return false;
     }
 
+
+    /// <summary>
+    /// Updates character's stat modifiers to match the statistics
+    /// </summary>
     internal void UpdateMods()
     {
         int index = 0;
@@ -232,7 +272,7 @@ class Character
     /// <returns>Returns the statistic specified in the given parameter</returns>
     internal int GetStat(string statName)
     {
-        return statsDic[statName];
+        return this.statsDic[statName];
     }
 
 
@@ -243,22 +283,14 @@ class Character
     /// <returns>Returns the statistics's modifier specified in the given parameter</returns>
     internal int GetMod(string statName)
     {
-        return statsModsDic[statName];
+        return this.statsModsDic[statName];
     }
 
 
     internal List<Dictionary<string, string>> GetFeats()
     {
-        return featsDic;
+        return this.featsDic;
     }
-
-    //TODO: CheckSkills vs Check Requirement
-    //check skills tarkistaa omasta, check requirement paattaa meneeko check feat vai check skill => KORJAA REQUIREMENTS TARKISTUKSEEN
-
-
-    //tarkistetaan onko hahmon skilli tarvittavalla tasolla (boolean return, string parametri?)
-    //string parametri olisi skill||taso => joka menee parsen kautta takaisin aliohjelmaan
-    //jossa se tarkastetaan tietokannan kautta
 
 
     /// <summary>
@@ -267,7 +299,7 @@ class Character
     /// <param name="skillName">Information in a string for which skill to increase and possibly to what tier</param>
     internal void IncreaseSkill(string skillName)
     {
-        List<string> skillsKeys = new List<string>(skills.Keys);
+        List<string> skillsKeys = new List<string>(this.skills.Keys);
         string[] skillTraining = { "Untrained", "Trained", "Expert", "Master", "Legendary" };
         if (skillName.Contains("|"))    //if the string for the skill contains the value it will be raised to
         {
@@ -276,15 +308,24 @@ class Character
         }
         else                            //if the string for the skill does not contain the value it will be raised one tier higher
         {
-            for (int i = 0; i < skillsKeys.Count; i++)                          //find correct skill =>
+            if (this.skills[skillName] == "Legendary")  //check if the skill is at max tier
             {
-                if (skillsKeys[i] == skillName)                                 //if correct skill is found =>
+                while (this.skills[skillName] == "Legendary")
                 {
-                    for (int j = 0; j < skillTraining.Length; j++)              //find correct skill's tier =>
+                    var random = new System.Random();         //not truly random (System.Random) is based on a time, thus will make loop go through couple of times
+                    int index = random.Next(skillsKeys.Count);
+                    skillName = skillsKeys[index];      //randomize a new skill if already at full tier
+                }
+            }
+            foreach (var skill in skillsKeys)   
+            {
+                if (skill == skillName)     //find the correct skill
+                {
+                    for (int i = 0; i < skillTraining.Length; i++)      
                     {
-                        if (this.skills[skillName] == skillTraining[j])         //if correct skill is found => increase it by one
+                        if (this.skills[skill] == skillTraining[i])     //find out the skill's tier
                         {
-                            this.skills[skillName] = skillTraining[j+1];
+                            this.skills[skill] = skillTraining[i + 1];
                             break;
                         }
                     }
@@ -294,6 +335,10 @@ class Character
     }
 
 
+    /// <summary>
+    /// Levels character up
+    /// </summary>
+    /// <param name="levels">Desired character level</param>
     internal void LevelUp(int levels)
     {
         if (this.characterLevel == 0)
@@ -303,15 +348,14 @@ class Character
         }
         this.characterLevel++;
         this.FindProgression();
-        Debug.Log("Owned feats at level: "+ this.characterLevel);
+
+
+        //Debug.Log("Owned feats at level: " + this.characterLevel);
         for (int i = 0; i < featsDic.Count; i++)
         {
-            Debug.Log(featsDic[i]["name"]);
+            //Debug.Log(featsDic[i]["name"]);
         }
-
-        
-            
-            //recursive
+        //recursive
         levels--;
         if (levels >= 1)
         {
@@ -320,6 +364,9 @@ class Character
     }
 
 
+    /// <summary>
+    /// Defines the class for the character randomly and assigns Initial Feat                                   ---- Lacks application of class modifiers
+    /// </summary>
     internal void RandomClass()
     {
         var random = new System.Random();
@@ -327,9 +374,37 @@ class Character
         int index = random.Next(classes.Count);
         this.characterClass = classes[index];
         Debug.Log("character class: "+this.characterClass);
+
+        //apply initial feat for your class
+        List<Dictionary<string, string>> InitialFeatDic = new List<Dictionary<string, string>>();
+        foreach (var item in ParseXML.classFeatDic)
+        {
+            //if the initial Feat for your class exists
+            if (item["level"].ToLower() == "initial" && item["class"].Contains(CapitalizeFirstChar(this.characterClass)))
+            {
+                InitialFeatDic.Add(item);
+            }
+
+        }
+        index = random.Next(InitialFeatDic.Count);
+        if (index > 0)
+        {
+            this.featsDic.Add(InitialFeatDic[index]);
+            Debug.Log("INITIAL FEAT FOUND: " + InitialFeatDic[index]["name"]);
+        }
+        else
+        {
+            Debug.Log(this.characterClass + " does not have an initial feat");
+        }
+
+        //apply class proficiencies
+        // METHOD
     }
 
 
+    /// <summary>
+    /// Defines the character's ancestry randomly                                                               ---- Lacks application of ancestry modifiers
+    /// </summary>
     internal void RandomAncestry()
     {
         var random = new System.Random();
@@ -340,7 +415,39 @@ class Character
     }
 
 
-    //saatetaan liittaa LevelUp (miksi etsia progression jos niita ei lisata?)
+    /// <summary>
+    /// Defines the character's background                                                                      ---- Lacks implementation
+    /// </summary>
+    internal void RandomBackground()
+    {
+        //
+    }
+
+
+    /// <summary>
+    /// Applies the effect of the advancement to this character                                                 ---- Currently only applies skill increases
+    /// </summary>
+    /// <param name="advancement">dictionary which contains the information of the advancement</param>
+    internal void ApplyAdvancementEffect(Dictionary<string,string> advancement)
+    {
+        string effect = advancement["effect"];
+
+        if (effect.Contains("|"))
+        {
+            string[] effectArr = effect.Split('|');
+            if (skills.ContainsKey(effectArr[0]))
+            {
+                IncreaseSkill(effect);
+            }
+
+        }
+
+    }
+
+
+    /// <summary>
+    /// Finds the progression table used for the character
+    /// </summary>
     internal void FindProgression()
     {
         int charLevel = this.characterLevel;
@@ -374,18 +481,6 @@ class Character
     }
 
 
-
-
-
-
-    //UNDER HEAVY WORK
-
-
-
-
-
-
-
     /// <summary>
     /// Adds the specified advancement to the character
     /// consider adding to the dictionary current level and feat type, which would mean to define variable for the dic and then add current level and case type into it as last 2 Key variables
@@ -393,37 +488,43 @@ class Character
     /// <param name="advancementName">requested advancement</param>
     internal void AddAdvancement(string advancementName)
     {
-        List<Dictionary<string, string>> advancementFilteredDics = new List<Dictionary<string, string>>();
         var random = new System.Random();
         int index;
-        if (advancementName.Contains("Feat"))                               // if case for Feats, so effects can be applied specifically depending on the XML table
+        if (advancementName.Contains("Feat") && advancementName != "Feat(Initial)")                               // if case for Feats and relevant XML file
         {
+
+            //can be made to have less repetition, not done to test specifically skill feat's functionality
             if (advancementName == "Feat(General)")
             {
-                advancementFilteredDics = this.FilterDictionary(ParseXML.generalFeatDic, advancementName);
+                List<Dictionary<string, string>>  advancementFilteredDics = this.FilterDictionary(ParseXML.generalFeatDic, advancementName);
                 index = random.Next(advancementFilteredDics.Count);
                 this.featsDic.Add(advancementFilteredDics[index]);
             }
             else if (advancementName == "Feat(Skill)")
             {
-                advancementFilteredDics = this.FilterDictionary(ParseXML.skillFeatDic, advancementName);
+                List<Dictionary<string, string>>  advancementFilteredDics = this.FilterDictionary(ParseXML.skillFeatDic, advancementName);
                 index = random.Next(advancementFilteredDics.Count);
-                this.featsDic.Add(advancementFilteredDics[index]);
+
+                //currently character skills aren't being increased through the feat effects or advancement effects, thus the character does not ALWAYS have feat choices to choose from. Will be fixed as more gets implemented
+                if (index > 0)
+                {
+                    this.featsDic.Add(advancementFilteredDics[index]);
+                }
             }
             else if (advancementName == "Feat(Ancestry)")
             {
-                advancementFilteredDics = this.FilterDictionary(ParseXML.ancestryFeatDic, advancementName);
+                List<Dictionary<string, string>>  advancementFilteredDics = this.FilterDictionary(ParseXML.ancestryFeatDic, advancementName);
                 index = random.Next(advancementFilteredDics.Count);
                 this.featsDic.Add(advancementFilteredDics[index]);
             }
             else if (advancementName == "Feat(Class)")
             {
-                advancementFilteredDics = this.FilterDictionary(ParseXML.classFeatDic, advancementName);
+                List<Dictionary<string, string>>  advancementFilteredDics = this.FilterDictionary(ParseXML.classFeatDic, advancementName);
                 index = random.Next(advancementFilteredDics.Count);
                 this.featsDic.Add(advancementFilteredDics[index]);
             }
         }
-        else                                                              // else case for other type of advancements, such as boost, skill or overall class specific
+        else   // else case for other type of advancements, such as boost, skill or overall class specific
         {
             if (advancementName == "Ability Boost")      //applies boost to a stat
             {
@@ -440,13 +541,13 @@ class Character
                 this.IncreaseSkill(skillToAdd);
                 
             }
-            else                                        //specified class advancement in the levelup gets added
+            else //specified class advancement in the levelup gets added
             {
                 for (int i = 0; i < ParseXML.classAdvDic.Count; i++)
                 {
                     if (ParseXML.classAdvDic[i]["name"] == advancementName)
                     {
-                        this.featsDic.Add(ParseXML.classAdvDic[i]);                 //feats or adv dic? -------- should be fine if only name and description wanted
+                        this.featsDic.Add(ParseXML.classAdvDic[i]);
                     }
                 }
             }
@@ -463,16 +564,14 @@ class Character
      *  special case for initial feat, how to define?
      *  only feats!!!
      */
-    /// <summary>                                                                                                                                                       ------------UNTESTED----------
-    /// 
-    /// Filters dictionaries based on the character information and the dictionary type (the dic type format allows to know what to filter) and returns them for further use
-    /// 
-    ///             ------------------- create adding initial feat (check if feats contain initial for ancestry or class) 
-    ///             ------------------- does not currently allow duplicates of any kind (even though some feats allow for added benefits)
+
+    /// <summary>
+    /// Filters a new dictionary for use, based on the character information and the dictionary type (the dic type format allows to know what to filter)
+    ///             ------------------- does not currently allow duplicates of any kind (even though some feats allow for multiple selection)
     /// </summary>
-    /// <param name="dicToFilter"></param>
-    /// <param name="dicType"></param>
-    /// <returns></returns>
+    /// <param name="dicToFilter">Dictionary to filter through</param>
+    /// <param name="dicType">The type of dictionary the filterable dictionary is</param>
+    /// <returns>Filtered dictionary with character's qualifications</returns>
     internal List<Dictionary<string, string>> FilterDictionary(List<Dictionary<string,string>> dicToFilter, string dicType)
     {
         List<Dictionary<string, string>> filteredDic = new List<Dictionary<string, string>>();

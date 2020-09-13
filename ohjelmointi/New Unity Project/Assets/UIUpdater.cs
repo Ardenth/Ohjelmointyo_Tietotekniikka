@@ -23,7 +23,7 @@ public class UIUpdater : MonoBehaviour
     {
         baseline.SetCharStat(hello);
         baseline.UpdateMods();
-        baseline.LevelUp(10);
+        baseline.LevelUp(20);
 
         //testing requirementparse
     }

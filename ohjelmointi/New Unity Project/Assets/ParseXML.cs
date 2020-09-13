@@ -57,9 +57,9 @@ public class ParseXML : MonoBehaviour
     }
 
     /// <summary>
-    ///  
+    ///  Parses general feat XML -file to dictionary
     /// </summary>
-    /// <returns></returns>
+    /// <returns>Parsed dictionary</returns>
     public List<Dictionary<string, string>> ParseGeneralFeat()
     {
         TextAsset txtXmlAsset = Resources.Load<TextAsset>("feats_general");
@@ -89,9 +89,9 @@ public class ParseXML : MonoBehaviour
     }
 
     /// <summary>
-    /// 
+    ///  Parses skill feat XML -file to dictionary
     /// </summary>
-    /// <returns></returns>
+    /// <returns>Parsed dictionary</returns>
     public List<Dictionary<string, string>> ParseSkillFeat()
     {
         TextAsset txtXmlAsset = Resources.Load<TextAsset>("feats_skill");
@@ -121,9 +121,9 @@ public class ParseXML : MonoBehaviour
     }
 
     /// <summary>
-    /// 
+    ///  Parses class feat XML -file to dictionary
     /// </summary>
-    /// <returns></returns>
+    /// <returns>Parsed dictionary</returns>
     public List<Dictionary<string, string>> ParseClassFeat()
     {
         TextAsset txtXmlAsset = Resources.Load<TextAsset>("feats_class");
@@ -153,9 +153,9 @@ public class ParseXML : MonoBehaviour
     }
 
     /// <summary>
-    /// 
+    ///  Parses ancestry feat XML -file to dictionary
     /// </summary>
-    /// <returns></returns>
+    /// <returns>Parsed dictionary</returns>
     public List<Dictionary<string, string>> ParseAncestryFeat()
     {
         TextAsset txtXmlAsset = Resources.Load<TextAsset>("feats_ancestry");
@@ -184,9 +184,9 @@ public class ParseXML : MonoBehaviour
     }
 
     /// <summary>
-    /// 
+    ///  Parses ancestries XML -file to dictionary
     /// </summary>
-    /// <returns></returns>
+    /// <returns>Parsed dictionary</returns>
     public List<Dictionary<string, string>> ParseAncestry()
     {
         TextAsset txtXmlAsset = Resources.Load<TextAsset>("ancestry");
@@ -216,9 +216,9 @@ public class ParseXML : MonoBehaviour
     }
 
     /// <summary>
-    /// 
+    ///  Parses backgrounds XML -file to dictionary
     /// </summary>
-    /// <returns></returns>
+    /// <returns>Parsed dictionary</returns>
     public List<Dictionary<string, string>> ParseBackground()
     {
         TextAsset txtXmlAsset = Resources.Load<TextAsset>("backgrounds");
@@ -249,9 +249,9 @@ public class ParseXML : MonoBehaviour
     }
 
     /// <summary>
-    /// 
+    ///  Parses advancements XML -file to dictionary
     /// </summary>
-    /// <returns></returns>
+    /// <returns>Parsed dictionary</returns>
     public List<Dictionary<string, string>> ParseAdvancement()
 {
     TextAsset txtXmlAsset = Resources.Load<TextAsset>("class_advancement");
@@ -282,9 +282,9 @@ public class ParseXML : MonoBehaviour
 }
 
     /// <summary>
-    /// 
+    ///  Parses proficiencies XML -file to dictionary
     /// </summary>
-    /// <returns></returns>
+    /// <returns>Parsed dictionary</returns>
     public List<Dictionary<string, string>> ParseProficiency()
     {
         TextAsset txtXmlAsset = Resources.Load<TextAsset>("proficiencies");
@@ -297,8 +297,8 @@ public class ParseXML : MonoBehaviour
         string[] elementNames = new string[]
         {"class", "initialBoost", "hp", "fortitudeSave", "reflexSave", "willSave",
                 "skill1", "skill2", "skill3", "languages",
-                "attack1", "attack2", "attack3", "attack4", "attackSpecial",
-                "defense1", "defense2", "defense3", "defense4", "classDC", "spellDC"};
+                "unarmed", "simple", "martial", "advanced", "attackSpecial",
+                "unarmored", "light", "medium", "heavy", "classDC", "spellDC"};
         foreach (var oneDict in allDict)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();
@@ -315,7 +315,11 @@ public class ParseXML : MonoBehaviour
         return allTextDic;
     }
 
-    //class progressions (a ton how?) (multiple cases based on string parameter that specifies the class?)
+    /// <summary>
+    /// Parses class progression XML -file to dictionary
+    /// </summary>
+    /// <param name="className">class for XML -file specification</param>
+    /// <returns>parsed class dictionary based on the parameter</returns>
     public List<Dictionary<string, string>> ParseClassProgression(string className)
     {
         TextAsset txtXmlAsset = Resources.Load<TextAsset>("class_progression_" + className);

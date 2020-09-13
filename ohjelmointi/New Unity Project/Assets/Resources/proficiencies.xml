@@ -4,276 +4,276 @@
 		<class>Alchemist</class>
 		<initialBoost>Intelligence</initialBoost>
 		<hp>8+Con</hp>
-		<fortitudeSave>Fortitude|Expert</fortitudeSave>
-		<reflexSave>Reflex|Expert</reflexSave>
-		<willSave>Will|Trained</willSave>
+		<fortitudeSave>Expert</fortitudeSave>
+		<reflexSave>Expert</reflexSave>
+		<willSave>Trained</willSave>
 		<skill1>Perception|Trained</skill1>
 		<skill2>Crafting|Trained</skill2>
 		<skill3>none</skill3>
 		<languages>3+Int|Trained</languages>
-		<attack1>Unarmed|Trained</attack1>
-		<attack2>Simple|Trained</attack2>
-		<attack3>none</attack3>
-		<attack4>none</attack4>
+		<unarmed>Trained</unarmed>
+		<simple>Trained</simple>
+		<martial>Untrained</martial>
+		<advanced>Untrained</advanced>
 		<attackSpecial>Bomb|Trained</attackSpecial>
-		<defense1>Unarmored|Trained</defense1>
-		<defense2>Light|Trained</defense2>
-		<defense3>none</defense3>
-		<defense4>none</defense4>
-		<classDC>ClassDC|Trained</classDC>
-		<spellDC>SpellDC|Trained</spellDC>
+		<unarmored>Trained</unarmored>
+		<light>Trained</light>
+		<medium>Untrained</medium>
+		<heavy>Untrained</heavy>
+		<classDC>Trained</classDC>
+		<spellDC>Trained</spellDC>
 	</proficiency>
 	<proficiency>
 		<class>Barbarian</class>
 		<initialBoost>Strength</initialBoost>
 		<hp>12+Con</hp>
-		<fortitudeSave>Fortitude|Expert</fortitudeSave>
-		<reflexSave>Reflex|Trained</reflexSave>
-		<willSave>Will|Expert</willSave>
+		<fortitudeSave>Expert</fortitudeSave>
+		<reflexSave>Trained</reflexSave>
+		<willSave>Expert</willSave>
 		<skill1>Perception|Expert</skill1>
 		<skill2>Athletics|Trained</skill2>
 		<skill3>none</skill3>
 		<languages>3+Int|Trained</languages>
-		<attack1>Unarmed|Trained</attack1>
-		<attack2>Simple|Trained</attack2>
-		<attack3>Martial|Trained</attack3>
-		<attack4>none</attack4>
-		<attackSpecial>none</attackSpecial>
-		<defense1>Unarmored|Trained</defense1>
-		<defense2>Light|Trained</defense2>
-		<defense3>Medium|Trained</defense3>
-		<defense4>none</defense4>
-		<classDC>ClassDC|Trained</classDC>
-		<spellDC>none</spellDC>
+		<unarmed>Trained</unarmed>
+		<simple>Trained</simple>
+		<martial>Trained</martial>
+		<advanced>Untrained</advanced>
+		<attackSpecial>Untrained</attackSpecial>
+		<unarmored>Trained</unarmored>
+		<light>Trained</light>
+		<medium>Trained</medium>
+		<heavy>Untrained</heavy>
+		<classDC>Trained</classDC>
+		<spellDC>Untrained</spellDC>
 	</proficiency>
 	<proficiency>
 		<class>Bard</class>
 		<initialBoost>Charisma</initialBoost>
 		<hp>8+Con</hp>
-		<fortitudeSave>Fortitude|Trained</fortitudeSave>
-		<reflexSave>Reflex|Trained</reflexSave>
-		<willSave>Will|Expert</willSave>
+		<fortitudeSave>Trained</fortitudeSave>
+		<reflexSave>Trained</reflexSave>
+		<willSave>Expert</willSave>
 		<skill1>Perception|Expert</skill1>
 		<skill2>Performance|Trained</skill2>
 		<skill3>Occultism|Trained</skill3>
 		<languages>4+Int|Trained</languages>
-		<attack1>Unarmed|Trained</attack1>
-		<attack2>Simple|Trained</attack2>
-		<attack3>none</attack3>
-		<attack4>none</attack4>
-		<attackSpecial>Others|Trained</attackSpecial>
-		<defense1>Unarmored|Trained</defense1>
-		<defense2>Light|Trained</defense2>
-		<defense3>none</defense3>
-		<defense4>none</defense4>
-		<classDC>ClassDC|Trained</classDC>
-		<spellDC>SpellDC|Trained</spellDC>
+		<unarmed>Trained</unarmed>
+		<simple>Trained</simple>
+		<martial>Untrained</martial>
+		<advanced>Untrained</advanced>
+		<attackSpecial>Trained</attackSpecial>
+		<unarmored>Trained</unarmored>
+		<light>Trained</light>
+		<medium>Untrained</medium>
+		<heavy>Untrained</heavy>
+		<classDC>Trained</classDC>
+		<spellDC>Trained</spellDC>
 	</proficiency>
 	<proficiency>
 		<class>Champion</class>
 		<initialBoost>Strength-Dexterity</initialBoost>
 		<hp>10+Con</hp>
-		<fortitudeSave>Fortitude|Expert</fortitudeSave>
-		<reflexSave>Reflex|Trained</reflexSave>
-		<willSave>Will|Expert</willSave>
+		<fortitudeSave>Expert</fortitudeSave>
+		<reflexSave>Trained</reflexSave>
+		<willSave>Expert</willSave>
 		<skill1>Perception|Trained</skill1>
 		<skill2>Religion|Trained</skill2>
 		<skill3>Deity|Trained</skill3>
 		<languages>2+Int|Trained</languages>
-		<attack1>Unarmed|Trained</attack1>
-		<attack2>Simple|Trained</attack2>
-		<attack3>Martial|Trained</attack3>
-		<attack4>none</attack4>
-		<attackSpecial>none</attackSpecial>
-		<defense1>Unarmored|Trained</defense1>
-		<defense2>Light|Trained</defense2>
-		<defense3>Medium|Trained</defense3>
-		<defense4>Heavy|Trained</defense4>
-		<classDC>ClassDC|Trained</classDC>
-		<spellDC>SpellDC|Trained</spellDC>
+		<unarmed>Trained</unarmed>
+		<simple>Trained</simple>
+		<martial>Trained</martial>
+		<advanced>Untrained</advanced>
+		<attackSpecial>Untrained</attackSpecial>
+		<unarmored>Trained</unarmored>
+		<light>Trained</light>
+		<medium>Trained</medium>
+		<heavy>Trained</heavy>
+		<classDC>Trained</classDC>
+		<spellDC>Trained</spellDC>
 	</proficiency>
 	<proficiency>
 		<class>Cleric</class>
 		<initialBoost>Wisdom</initialBoost>
 		<hp>8+Con</hp>
-		<fortitudeSave>Fortitude|Trained</fortitudeSave>
-		<reflexSave>Reflex|Trained</reflexSave>
-		<willSave>Will|Expert</willSave>
+		<fortitudeSave>Trained</fortitudeSave>
+		<reflexSave>Trained</reflexSave>
+		<willSave>Expert</willSave>
 		<skill1>Perception|Trained</skill1>
 		<skill2>Religion|Trained</skill2>
 		<skill3>Deity|Trained</skill3>
 		<languages>2+Int|Trained</languages>
-		<attack1>Unarmed|Trained</attack1>
-		<attack2>Simple|Trained</attack2>
-		<attack3>none</attack3>
-		<attack4>none</attack4>
-		<attackSpecial>none</attackSpecial>
-		<defense1>Unarmored|Trained</defense1>
-		<defense2>none</defense2>
-		<defense3>none</defense3>
-		<defense4>none</defense4>
-		<classDC>ClassDC|Trained</classDC>
-		<spellDC>SpellDC|Trained</spellDC>
+		<unarmed>Trained</unarmed>
+		<simple>Trained</simple>
+		<martial>Untrained</martial>
+		<advanced>Untrained</advanced>
+		<attackSpecial>Untrained</attackSpecial>
+		<unarmored>Trained</unarmored>
+		<light>Untrained</light>
+		<medium>Untrained</medium>
+		<heavy>Untrained</heavy>
+		<classDC>Trained</classDC>
+		<spellDC>Trained</spellDC>
 	</proficiency>
 	<proficiency>
 		<class>Druid</class>
 		<initialBoost>Wisdom</initialBoost>
 		<hp>8+Con</hp>
-		<fortitudeSave>Fortitude|Trained</fortitudeSave>
-		<reflexSave>Reflex|Trained</reflexSave>
-		<willSave>Will|Expert</willSave>
+		<fortitudeSave>Trained</fortitudeSave>
+		<reflexSave>Trained</reflexSave>
+		<willSave>Expert</willSave>
 		<skill1>Perception|Trained</skill1>
 		<skill2>Nature|Trained</skill2>
 		<skill3>Order|Trained</skill3>
 		<languages>2+Int|Trained</languages>
-		<attack1>Unarmed|Trained</attack1>
-		<attack2>Simple|Trained</attack2>
-		<attack3>none</attack3>
-		<attack4>none</attack4>
-		<attackSpecial>none</attackSpecial>
-		<defense1>Unarmored|Trained</defense1>
-		<defense2>Light|Trained</defense2>
-		<defense3>Medium|Trained</defense3>
-		<defense4>none</defense4>
-		<classDC>ClassDC|Trained</classDC>
-		<spellDC>SpellDC|Trained</spellDC>
+		<unarmed>Trained</unarmed>
+		<simple>Trained</simple>
+		<martial>Untrained</martial>
+		<advanced>Untrained</advanced>
+		<attackSpecial>Untrained</attackSpecial>
+		<unarmored>Trained</unarmored>
+		<light>Trained</light>
+		<medium>Trained</medium>
+		<heavy>Untrained</heavy>
+		<classDC>Trained</classDC>
+		<spellDC>Trained</spellDC>
 	</proficiency>
 	<proficiency>
 		<class>Fighter</class>
 		<initialBoost>Strength-Dexterity</initialBoost>
 		<hp>8+Con</hp>
-		<fortitudeSave>Fortitude|Expert</fortitudeSave>
-		<reflexSave>Reflex|Expert</reflexSave>
-		<willSave>Will|Trained</willSave>
+		<fortitudeSave>Expert</fortitudeSave>
+		<reflexSave>Expert</reflexSave>
+		<willSave>Trained</willSave>
 		<skill1>Perception|Expert</skill1>
 		<skill2>Acrobatics|Trained-Athletics|Trained</skill2>
 		<skill3>none</skill3>
 		<languages>3+Int|Trained</languages>
-		<attack1>Unarmed|Expert</attack1>
-		<attack2>Simple|Expert</attack2>
-		<attack3>Martial|Expert</attack3>
-		<attack4>Advanced|Trained</attack4>
-		<attackSpecial>none</attackSpecial>
-		<defense1>Unarmored|Trained</defense1>
-		<defense2>Light|Trained</defense2>
-		<defense3>Medium|Trained</defense3>
-		<defense4>Heavy|Trained</defense4>
-		<classDC>ClassDC|Trained</classDC>
-		<spellDC>none</spellDC>
+		<unarmed>Expert</unarmed>
+		<simple>Expert</simple>
+		<martial>Expert</martial>
+		<advanced>Trained</advanced>
+		<attackSpecial>Untrained</attackSpecial>
+		<unarmored>Trained</unarmored>
+		<light>Trained</light>
+		<medium>Trained</medium>
+		<heavy>Trained</heavy>
+		<classDC>Trained</classDC>
+		<spellDC>Untrained</spellDC>
 	</proficiency>
 	<proficiency>
 		<class>Monk</class>
 		<initialBoost>Strength-Dexterity</initialBoost>
 		<hp>10+Con</hp>
-		<fortitudeSave>Fortitude|Expert</fortitudeSave>
-		<reflexSave>Reflex|Expert</reflexSave>
-		<willSave>Will|Expert</willSave>
+		<fortitudeSave>Expert</fortitudeSave>
+		<reflexSave>Expert</reflexSave>
+		<willSave>Expert</willSave>
 		<skill1>Perception|Trained</skill1>
 		<skill2>none</skill2>
 		<skill3>none</skill3>
 		<languages>4+Int|Trained</languages>
-		<attack1>Unarmed|Trained</attack1>
-		<attack2>Simple|Trained</attack2>
-		<attack3>none</attack3>
-		<attack4>none</attack4>
-		<attackSpecial>none</attackSpecial>
-		<defense1>Unarmored|Trained</defense1>
-		<defense2>none</defense2>
-		<defense3>none</defense3>
-		<defense4>none</defense4>
-		<classDC>ClassDC|Trained</classDC>
-		<spellDC>none</spellDC>
+		<unarmed>Trained</unarmed>
+		<simple>Trained</simple>
+		<martial>Untrained</martial>
+		<advanced>Untrained</advanced>
+		<attackSpecial>Untrained</attackSpecial>
+		<unarmored>Trained</unarmored>
+		<light>Untrained</light>
+		<medium>Untrained</medium>
+		<heavy>Untrained</heavy>
+		<classDC>Trained</classDC>
+		<spellDC>Untrained</spellDC>
 	</proficiency>
 	<proficiency>
 		<class>Ranger</class>
 		<initialBoost>Strength-Dexterity</initialBoost>
 		<hp>10+Con</hp>
-		<fortitudeSave>Fortitude|Expert</fortitudeSave>
-		<reflexSave>Reflex|Expert</reflexSave>
-		<willSave>Will|Trained</willSave>
+		<fortitudeSave>Expert</fortitudeSave>
+		<reflexSave>Expert</reflexSave>
+		<willSave>Trained</willSave>
 		<skill1>Perception|Expert</skill1>
 		<skill2>Nature|Trained</skill2>
 		<skill3>Survival|Trained</skill3>
 		<languages>4+Int|Trained</languages>
-		<attack1>Unarmed|Trained</attack1>
-		<attack2>Simple|Trained</attack2>
-		<attack3>Martial|Trained</attack3>
-		<attack4>none</attack4>
-		<attackSpecial>none</attackSpecial>
-		<defense1>Unarmored|Trained</defense1>
-		<defense2>Light|Trained</defense2>
-		<defense3>Medium|Trained</defense3>
-		<defense4>none</defense4>
-		<classDC>ClassDC|Trained</classDC>
-		<spellDC>none</spellDC>
+		<unarmed>Trained</unarmed>
+		<simple>Trained</simple>
+		<martial>Trained</martial>
+		<advanced>Untrained</advanced>
+		<attackSpecial>Untrained</attackSpecial>
+		<unarmored>Trained</unarmored>
+		<light>Trained</light>
+		<medium>Trained</medium>
+		<heavy>Untrained</heavy>
+		<classDC>Trained</classDC>
+		<spellDC>Untrained</spellDC>
 	</proficiency>
 	<proficiency>
 		<class>Rogue</class>
 		<initialBoost>Dexterity</initialBoost>
 		<hp>8+Con</hp>
-		<fortitudeSave>Fortitude|Trained</fortitudeSave>
-		<reflexSave>Reflex|Expert</reflexSave>
-		<willSave>Will|Expert</willSave>
+		<fortitudeSave>Trained</fortitudeSave>
+		<reflexSave>Expert</reflexSave>
+		<willSave>Expert</willSave>
 		<skill1>Perception|Expert</skill1>
 		<skill2>none</skill2>
 		<skill3>none</skill3>
 		<languages>7+Int|Trained</languages>
-		<attack1>Unarmed|Trained</attack1>
-		<attack2>Simple|Trained</attack2>
-		<attack3>none</attack3>
-		<attack4>none</attack4>
-		<attackSpecial>none</attackSpecial>
-		<defense1>Unarmored|Trained</defense1>
-		<defense2>Light|Trained</defense2>
-		<defense3>none</defense3>
-		<defense4>none</defense4>
-		<classDC>ClassDC|Trained</classDC>
-		<spellDC>none</spellDC>
+		<unarmed>Trained</unarmed>
+		<simple>Trained</simple>
+		<martial>Untrained</martial>
+		<advanced>Untrained</advanced>
+		<attackSpecial>Untrained</attackSpecial>
+		<unarmored>Trained</unarmored>
+		<light>Trained</light>
+		<medium>Untrained</medium>
+		<heavy>Untrained</heavy>
+		<classDC>Trained</classDC>
+		<spellDC>Untrained</spellDC>
 	</proficiency>
 	<proficiency>
 		<class>Sorcerer</class>
 		<initialBoost>Charisma</initialBoost>
 		<hp>6+Con</hp>
-		<fortitudeSave>Fortitude|Trained</fortitudeSave>
-		<reflexSave>Reflex|Trained</reflexSave>
-		<willSave>Will|Expert</willSave>
+		<fortitudeSave>Trained</fortitudeSave>
+		<reflexSave>Trained</reflexSave>
+		<willSave>Expert</willSave>
 		<skill1>Perception|Trained</skill1>
 		<skill2>none</skill2>
 		<skill3>Bloodline|Trained</skill3>
 		<languages>2+Int|Trained</languages>
-		<attack1>Unarmed|Trained</attack1>
-		<attack2>Simple|Trained</attack2>
-		<attack3>none</attack3>
-		<attack4>none</attack4>
-		<attackSpecial>none</attackSpecial>
-		<defense1>Unarmored|Trained</defense1>
-		<defense2>none</defense2>
-		<defense3>none</defense3>
-		<defense4>none</defense4>
-		<classDC>ClassDC|Trained</classDC>
-		<spellDC>SpellDC|Trained</spellDC>
+		<unarmed>Trained</unarmed>
+		<simple>Trained</simple>
+		<martial>Untrained</martial>
+		<advanced>Untrained</advanced>
+		<attackSpecial>Untrained</attackSpecial>
+		<unarmored>Trained</unarmored>
+		<light>Untrained</light>
+		<medium>Untrained</medium>
+		<heavy>Untrained</heavy>
+		<classDC>Trained</classDC>
+		<spellDC>Trained</spellDC>
 	</proficiency>
 	<proficiency>
 		<class>Wizard</class>
 		<initialBoost>Intelligence</initialBoost>
 		<hp>6+Con</hp>
-		<fortitudeSave>Fortitude|Trained</fortitudeSave>
-		<reflexSave>Reflex|Trained</reflexSave>
-		<willSave>Will|Expert</willSave>
+		<fortitudeSave>Trained</fortitudeSave>
+		<reflexSave>Trained</reflexSave>
+		<willSave>Expert</willSave>
 		<skill1>Perception|Trained</skill1>
 		<skill2>none</skill2>
 		<skill3>none</skill3>
 		<languages>2+Int|Trained</languages>
-		<attack1>Unarmed|Trained</attack1>
-		<attack2>none</attack2>
-		<attack3>none</attack3>
-		<attack4>none</attack4>
-		<attackSpecial>Others|Trained</attackSpecial>
-		<defense1>Unarmored|Trained</defense1>
-		<defense2>none</defense2>
-		<defense3>none</defense3>
-		<defense4>none</defense4>
-		<classDC>ClassDC|Trained</classDC>
-		<spellDC>SpellDC|Trained</spellDC>
+		<unarmed>Trained</unarmed>
+		<simple>Untrained</simple>
+		<martial>Untrained</martial>
+		<advanced>Untrained</advanced>
+		<attackSpecial>Trained</attackSpecial>
+		<unarmored>Trained</unarmored>
+		<light>Untrained</light>
+		<medium>Untrained</medium>
+		<heavy>Untrained</heavy>
+		<classDC>Trained</classDC>
+		<spellDC>Trained</spellDC>
 	</proficiency>
 </Proficiencies>
