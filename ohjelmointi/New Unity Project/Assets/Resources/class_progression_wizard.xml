@@ -9,14 +9,14 @@
 		<advancement5>Arcane School</advancement5>
 		<advancement6>Initial Feat</advancement6>
 		<advancement7>Arcane Bond</advancement7>
-		<advancement8>Wizard Feat</advancement8>
+		<advancement8>Feat(Class)</advancement8>
 		<advancement9>none</advancement9>
 		<advancement10>none</advancement10>
 	</progression>
 	<progression>
 		<level>2</level>
-		<advancement1>Wizard Feat</advancement1>
-		<advancement2>Skill Feat</advancement2>
+		<advancement1>Feat(Class)</advancement1>
+		<advancement2>Feat(Skill)</advancement2>
 		<advancement3>none</advancement3>
 		<advancement4>none</advancement4>
 		<advancement5>none</advancement5>
@@ -29,7 +29,7 @@
 	<progression>
 		<level>3</level>
 		<advancement1>Spell Level 2</advancement1>
-		<advancement2>General Feat</advancement2>
+		<advancement2>Feat(General)</advancement2>
 		<advancement3>Skill Increase</advancement3>
 		<advancement4>none</advancement4>
 		<advancement5>none</advancement5>
@@ -41,8 +41,8 @@
 	</progression>
 	<progression>
 		<level>4</level>
-		<advancement1>Wizard Feat</advancement1>
-		<advancement2>Skill Feat</advancement2>
+		<advancement1>Feat(Class)</advancement1>
+		<advancement2>Feat(Skill)</advancement2>
 		<advancement3>none</advancement3>
 		<advancement4>none</advancement4>
 		<advancement5>none</advancement5>
@@ -56,7 +56,7 @@
 		<level>5</level>
 		<advancement1>Spell level 3</advancement1>
 		<advancement2>Ability Boost</advancement2>
-		<advancement3>Ancestry Feat</advancement3>
+		<advancement3>Feat(Ancestry)</advancement3>
 		<advancement4>Lightning Reflexes</advancement4>
 		<advancement5>Skill Increase</advancement5>
 		<advancement6>none</advancement6>
@@ -67,8 +67,8 @@
 	</progression>
 	<progression>
 		<level>6</level>
-		<advancement1>Wizard Feat</advancement1>
-		<advancement2>Skill Feat</advancement2>
+		<advancement1>Feat(Class)</advancement1>
+		<advancement2>Feat(Skill)</advancement2>
 		<advancement3>none</advancement3>
 		<advancement4>none</advancement4>
 		<advancement5>none</advancement5>
@@ -82,7 +82,7 @@
 		<level>7</level>
 		<advancement1>Spell Level 4</advancement1>
 		<advancement2>Expert Spellcaster</advancement2>
-		<advancement3>General Feat</advancement3>
+		<advancement3>Feat(General)</advancement3>
 		<advancement4>Skill Increase</advancement4>
 		<advancement5>none</advancement5>
 		<advancement6>none</advancement6>
@@ -93,8 +93,8 @@
 	</progression>
 	<progression>
 		<level>8</level>
-		<advancement1>Wizard Feat</advancement1>
-		<advancement2>Skill Feat</advancement2>
+		<advancement1>Feat(Class)</advancement1>
+		<advancement2>Feat(Skill)</advancement2>
 		<advancement3>none</advancement3>
 		<advancement4>none</advancement4>
 		<advancement5>none</advancement5>
@@ -107,7 +107,7 @@
 	<progression>
 		<level>9</level>
 		<advancement1>Spell Level 5</advancement1>
-		<advancement2>Ancestry Feat</advancement2>
+		<advancement2>Feat(Ancestry)</advancement2>
 		<advancement3>Magical Fortitude</advancement3>
 		<advancement4>Skill Increase</advancement4>
 		<advancement5>none</advancement5>
@@ -119,8 +119,8 @@
 	</progression>
 	<progression>
 		<level>10</level>
-		<advancement1>Wizard Feat</advancement1>
-		<advancement2>Skill Feat</advancement2>
+		<advancement1>Feat(Class)</advancement1>
+		<advancement2>Feat(Skill)</advancement2>
 		<advancement3>Ability Boost</advancement3>
 		<advancement4>none</advancement4>
 		<advancement5>none</advancement5>
@@ -134,7 +134,7 @@
 		<level>11</level>
 		<advancement1>Spell Level 6</advancement1>
 		<advancement2>Alertness</advancement2>
-		<advancement3>General Feat</advancement3>
+		<advancement3>Feat(General)</advancement3>
 		<advancement4>Skill Increase</advancement4>
 		<advancement5>Wizard Weapon Expertise</advancement5>
 		<advancement6>none</advancement6>
@@ -145,8 +145,8 @@
 	</progression>
 	<progression>
 		<level>12</level>
-		<advancement1>Wizard Feat</advancement1>
-		<advancement2>Skill Feat</advancement2>
+		<advancement1>Feat(Class)</advancement1>
+		<advancement2>Feat(Skill)</advancement2>
 		<advancement3>none</advancement3>
 		<advancement4>none</advancement4>
 		<advancement5>none</advancement5>
@@ -159,7 +159,7 @@
 	<progression>
 		<level>13</level>
 		<advancement1>Spell Level 7</advancement1>
-		<advancement2>Ancestry Feat</advancement2>
+		<advancement2>Feat(Ancestry)</advancement2>
 		<advancement3>Defensive Robes</advancement3>
 		<advancement4>Skill Increase</advancement4>
 		<advancement5>Weapon Specialization</advancement5>
@@ -171,8 +171,8 @@
 	</progression>
 	<progression>
 		<level>14</level>
-		<advancement1>Wizard Feat</advancement1>
-		<advancement2>Skill Feat</advancement2>
+		<advancement1>Feat(Class)</advancement1>
+		<advancement2>Feat(Skill)</advancement2>
 		<advancement3>none</advancement3>
 		<advancement4>none</advancement4>
 		<advancement5>none</advancement5>
@@ -186,7 +186,7 @@
 		<level>15</level>
 		<advancement1>Spell Level 8</advancement1>
 		<advancement2>Ability boost</advancement2>
-		<advancement3>General Feat</advancement3>
+		<advancement3>Feat(General)</advancement3>
 		<advancement4>Master Spellcaster</advancement4>
 		<advancement5>Skill Increase</advancement5>
 		<advancement6>none</advancement6>
@@ -197,8 +197,8 @@
 	</progression>
 	<progression>
 		<level>16</level>
-		<advancement1>Wizard Feat</advancement1>
-		<advancement2>Skill Feat</advancement2>
+		<advancement1>Feat(Class)</advancement1>
+		<advancement2>Feat(Skill)</advancement2>
 		<advancement3>none</advancement3>
 		<advancement4>none</advancement4>
 		<advancement5>none</advancement5>
@@ -211,7 +211,7 @@
 	<progression>
 		<level>17</level>
 		<advancement1>Spell Level 9</advancement1>
-		<advancement2>Ancestry Feat</advancement2>
+		<advancement2>Feat(Ancestry)</advancement2>
 		<advancement3>Resolve</advancement3>
 		<advancement4>Skill Increase</advancement4>
 		<advancement5>none</advancement5>
@@ -223,8 +223,8 @@
 	</progression>
 	<progression>
 		<level>18</level>
-		<advancement1>Wizard Feat</advancement1>
-		<advancement2>Skill Feat</advancement2>
+		<advancement1>Feat(Class)</advancement1>
+		<advancement2>Feat(Skill)</advancement2>
 		<advancement3>none</advancement3>
 		<advancement4>none</advancement4>
 		<advancement5>none</advancement5>
@@ -238,7 +238,7 @@
 		<level>19</level>
 		<advancement1>Archwizard's Spellcraft</advancement1>
 		<advancement2>Legendary Archwizard</advancement2>
-		<advancement3>General Feat</advancement3>
+		<advancement3>Feat(General)</advancement3>
 		<advancement4>Skill Increase</advancement4>
 		<advancement5>none</advancement5>
 		<advancement6>none</advancement6>
@@ -249,8 +249,8 @@
 	</progression>
 	<progression>
 		<level>20</level>
-		<advancement1>Wizard Feat</advancement1>
-		<advancement2>Skill Feat</advancement2>
+		<advancement1>Feat(Class)</advancement1>
+		<advancement2>Feat(Skill)</advancement2>
 		<advancement3>Ability Boost</advancement3>
 		<advancement4>none</advancement4>
 		<advancement5>none</advancement5>

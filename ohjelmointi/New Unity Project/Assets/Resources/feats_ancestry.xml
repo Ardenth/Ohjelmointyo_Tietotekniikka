@@ -745,7 +745,7 @@
 	<ancestryFeat>
 		<name>Elf Avatism</name>
 		<ancestry>Half-Elf</ancestry>
-		<level>1*</level>
+		<level>1</level>
 		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</ancestryFeat>

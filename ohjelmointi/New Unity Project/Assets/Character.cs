@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using UnityEditor.CrashReporting;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.Analytics;
 
@@ -65,23 +66,9 @@ class Character
         {"Perception", "untrained" }
     };
 
-    internal List<Dictionary<string, string>> featsDic = new List<Dictionary<string, string>>()
-    {
-        new Dictionary<string, string>()
-        {
-            {"name", "name of the feat"},
-            {"type","the type of the feat" },
-            {"description","description of the feat" }
-        }
-    };
+    internal List<Dictionary<string, string>> featsDic = new List<Dictionary<string, string>>();
 
-    internal List<Dictionary<string, string>> languageDic = new List<Dictionary<string, string>>()
-    {
-        new Dictionary<string, string>()
-        {
-            {"language", "name of the language"},
-        }
-    };
+    internal List<Dictionary<string, string>> languageDic = new List<Dictionary<string, string>>();
 
 
 
@@ -89,7 +76,7 @@ class Character
     //determine how correct stat gets increased
     internal void UpdateCharStat(string stat)
     {
-        string[] statSplit = StringParse(stat);
+        string[] statSplit = stat.Split('|');
         //for dictionary
         if (statSplit.Length < 2)
         {
@@ -122,91 +109,51 @@ class Character
     }
 
 
-    //creates skills into understandable skillName|trainingLevel or strength|15 and so forth.
-    //miksi ei suoraan aina????-----------------------------------------------------------------------------
-    internal string[] StringParse(string parse)
+    internal string CapitalizeFirstChar(string str)
     {
-        string[] newString = parse.Split('|');
-        return newString;
-    }
-
-    //creates skills into understandable skillName|trainingLevel or strength|15 and so forth.
-    public static string[] StringParser(string parse)
-    {
-        string[] newString = parse.Split('|');
-        return newString;
+        return str?.First().ToString().ToUpper() + str?.Substring(1).ToLower();
     }
 
 
-    public static List<string[]> RequirementParse(string parse)                                    //                              ----------------------------------------            Untested
+    internal bool ParseRequirement(string requirement)
     {
-        List<string[]> throughParseAnd = new List<string[]>();
-        if (parse.Contains("/"))
+        List<string> requirementList = requirement.Split('/').ToList();
+        List<bool> truthList = new List<bool>();
+        foreach (string req in requirementList)
         {
-            List<string> parseAnd = parse.Split('/').ToList();
-
-            if (parse.Contains("-"))
+            if (req.Contains('-'))
             {
-                foreach (string statement in parseAnd)
-                {
-                    List<string> parseOr;
-                    parseOr = (statement.Split('-').ToList());
-                }
+                truthList.Add(ParseRequirementOr(req));
             }
             else
             {
-                // when split with |, the size of each array is always only 2
-                foreach (string statement in parseAnd)
-                {
-                    Debug.Log(statement);
-                    //check requirement
-                    throughParseAnd.Add(StringParser(statement));
-                }
+                truthList.Add(CheckRequirement(req));
             }
         }
-
-
-        throughParseAnd[0].ToList().ForEach(i => Debug.Log(i.ToString()));
-        throughParseAnd[1].ToList().ForEach(i => Debug.Log(i.ToString()));
-        return throughParseAnd;
-    }
-
-
-    //muokataan requirementparse tutkimaan onko kaikki vaatimukset toimivia ja palauttaa listan boolean arvoja, joiden avulla voidaan tehdä päätös. Eli jos on OR statement, se tulkkaa onko kyseinen oikein vai väärin
-
-    public static List<bool> RequirementParseBool(string parse)                                    //                              ----------------------------------------            Untested
-    {
-        List<string[]> throughParseAnd = new List<string[]>();
-        List<bool> returning = new List<bool>();
-        if (parse.Contains("/"))
+        if (!truthList.Contains(false))
         {
-            List<string> parseAnd = parse.Split('/').ToList();
-
-            if (parse.Contains("-"))
-            {
-                foreach (string statement in parseAnd)
-                {
-                    List<string> parseOr;
-                    parseOr = (statement.Split('-').ToList());
-                }
-            }
-            else
-            {
-                // when split with |, the size of each array is always only 2
-                foreach (string statement in parseAnd)
-                {
-                    Debug.Log(statement);
-                    //check requirement
-                    throughParseAnd.Add(StringParser(statement));
-                }
-            }
+            return true;
         }
 
-
-        throughParseAnd[0].ToList().ForEach(i => Debug.Log(i.ToString()));
-        throughParseAnd[1].ToList().ForEach(i => Debug.Log(i.ToString()));
-        return returning;
+        return false;
     }
+
+
+    internal bool ParseRequirementOr(string requirement)
+    {
+        List<string> requirementList = requirement.Split('-').ToList();
+        List<bool> truthList = new List<bool>();
+        foreach (string req in requirementList)
+        {
+            truthList.Add(CheckRequirement(req));
+        }
+        if (!truthList.Contains(false))
+        {
+            return true;
+        }
+        return false;
+    }
+
 
     internal bool CheckRequirement(string requirement)
     {
@@ -217,8 +164,6 @@ class Character
             //requirement type: statistic
             if (this.statsDic.ContainsKey(requirementArr[0]))
             {
-                Debug.Log("requirement: "+requirementArr[1]);
-                Debug.Log("owned: " +this.statsDic[requirementArr[0]]);
                 if (this.statsDic[requirementArr[0]] >= int.Parse(requirementArr[1]))
                 {
                     return true;
@@ -242,17 +187,29 @@ class Character
             else
             {
                 //requirement type: feat
-                for (int i = 0; i < this.featsDic.Count; i++)
-                {
-                    Dictionary<string, string> feat = this.featsDic[i];
-                    if (feat["name"] == requirement)
-                    {
-                        return true;
-                    }
-                }
+                return CheckFeats(requirement);
             }
         }
 
+        return false;
+    }
+
+
+    /// <summary>
+    /// Checks if the feat is found in the character's feat dictionary
+    /// </summary>
+    /// <param name="searchedFeat">the name of the Feat which is being searched</param>
+    /// <returns>boolean value of whether the feat was found or not</returns>
+    internal bool CheckFeats(string searchedFeat)
+    {
+        for (int i = 0; i < this.featsDic.Count; i++)
+        {
+            Dictionary<string, string> feat = this.featsDic[i];
+            if (feat["name"] == searchedFeat)
+            {
+                return true;
+            }
+        }
         return false;
     }
 
@@ -295,24 +252,6 @@ class Character
         return featsDic;
     }
 
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="searchedFeat">the name of the Feat which is being searched</param>
-    /// <returns>boolean value of whether the feat was found or not</returns>
-    internal bool CheckFeats(string searchedFeat)
-    {
-        for (int i = 0; i < this.featsDic.Count; i++)
-        {
-            Dictionary<string,string> feat = this.featsDic[i];
-            if (feat["name"] == searchedFeat)
-            {
-                return true;
-            }
-        }
-        return false;
-    }
-
     //TODO: CheckSkills vs Check Requirement
     //check skills tarkistaa omasta, check requirement paattaa meneeko check feat vai check skill => KORJAA REQUIREMENTS TARKISTUKSEEN
 
@@ -320,32 +259,6 @@ class Character
     //tarkistetaan onko hahmon skilli tarvittavalla tasolla (boolean return, string parametri?)
     //string parametri olisi skill||taso => joka menee parsen kautta takaisin aliohjelmaan
     //jossa se tarkastetaan tietokannan kautta
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="featInfo"></param>
-    /// <returns></returns>
-    internal bool CheckSkills(string featInfo)
-    {
-        string statistics =  "Strength, Constitution, Dexterity, Intelligence, Wisdom, Charisma" ;
-
-        string[] featInfoParsed = StringParse(featInfo);
-
-        //return CheckRequirement(featInfo);
-        if (statistics.Contains(featInfoParsed[0]) || featInfoParsed[0] == "none")                     // check the stat
-        {
-            Debug.Log("requirement: "+featInfoParsed[0]);
-            return true;
-        }
-        if (this.skills[featInfoParsed[0]] == featInfoParsed[1])
-        {
-            Debug.Log("| accepttable");
-            return true;
-        }
-
-        return false;
-    }
 
 
     /// <summary>
@@ -358,10 +271,8 @@ class Character
         string[] skillTraining = { "Untrained", "Trained", "Expert", "Master", "Legendary" };
         if (skillName.Contains("|"))    //if the string for the skill contains the value it will be raised to
         {
-            string[] skillNameArr = StringParse(skillName);
-            Debug.Log("Before " + this.skills[skillNameArr[0]]);
+            string[] skillNameArr = skillName.Split('|');
             this.skills[skillNameArr[0]] = skillNameArr[1];
-            Debug.Log("After " + this.skills[skillNameArr[0]]);
         }
         else                            //if the string for the skill does not contain the value it will be raised one tier higher
         {
@@ -373,9 +284,7 @@ class Character
                     {
                         if (this.skills[skillName] == skillTraining[j])         //if correct skill is found => increase it by one
                         {
-                            Debug.Log("Before " + this.skills[skillName]);
                             this.skills[skillName] = skillTraining[j+1];
-                            Debug.Log("After " + this.skills[skillName]);
                             break;
                         }
                     }
@@ -394,7 +303,7 @@ class Character
         }
         this.characterLevel++;
         this.FindProgression();
-        Debug.Log("Listing owned feats after each levelup: "+ this.characterLevel);
+        Debug.Log("Owned feats at level: "+ this.characterLevel);
         for (int i = 0; i < featsDic.Count; i++)
         {
             Debug.Log(featsDic[i]["name"]);
@@ -478,7 +387,7 @@ class Character
 
 
     /// <summary>
-    /// Adds the specified advancement to the character                         FOR FEATS DOES NOT CURRENTLY FILTER AVAILABLE ONES ------------- Untested --------- consider adding to the dictionary current level and feat type
+    /// Adds the specified advancement to the character
     /// consider adding to the dictionary current level and feat type, which would mean to define variable for the dic and then add current level and case type into it as last 2 Key variables
     /// </summary>
     /// <param name="advancementName">requested advancement</param>
@@ -487,71 +396,49 @@ class Character
         List<Dictionary<string, string>> advancementFilteredDics = new List<Dictionary<string, string>>();
         var random = new System.Random();
         int index;
-        if (advancementName.Contains("Feat"))                               // if case for Feats
+        if (advancementName.Contains("Feat"))                               // if case for Feats, so effects can be applied specifically depending on the XML table
         {
-            string[] splitFeat = advancementName.Split(' ');
-            switch (splitFeat[0])
+            if (advancementName == "Feat(General)")
             {
-                case ("General"):
-                    advancementFilteredDics = this.FilterDictionary(ParseXML.generalFeatDic, splitFeat[0]);
-                    index = random.Next(advancementFilteredDics.Count);
-                    if (advancementFilteredDics.Count == 0)
-                    {
-                        break;
-                    }
-                    this.featsDic.Add(advancementFilteredDics[index]);
-                    break;
-                case ("Skill"):
-                    advancementFilteredDics = this.FilterDictionary(ParseXML.skillFeatDic, splitFeat[0]);
-                    index = random.Next(advancementFilteredDics.Count);
-                    if (advancementFilteredDics.Count == 0)
-                    {
-                        break;
-                    }
-                    this.featsDic.Add(advancementFilteredDics[index]);
-                    break;
-                case ("Ancestry"):
-                    advancementFilteredDics = this.FilterDictionary(ParseXML.ancestryFeatDic, splitFeat[0]);
-                    index = random.Next(advancementFilteredDics.Count);
-                    if (advancementFilteredDics.Count == 0)
-                    {
-                        break;
-                    }
-                    this.featsDic.Add(advancementFilteredDics[index]);
-                    break;
-                    /*
-                case ("Initial"):                                           //level = initial && characterClass ---- prerequisites
-                    advancementFilteredDics = this.FilterDictionary(ParseXML.classFeatDic, splitFeat[0]);
-                    index = random.Next(advancementFilteredDics.Count);
-                    this.featsDic.Add(advancementFilteredDics[index]);
-                    break;
-                    */
-                default:                                                    //level = characterLevel && characterClass ---- prerequisites
-                    advancementFilteredDics = this.FilterDictionary(ParseXML.classFeatDic, splitFeat[0]);
-                    index = random.Next(advancementFilteredDics.Count);
-                    if (advancementFilteredDics.Count == 0)
-                    {
-                        break;
-                    }
-                    this.featsDic.Add(advancementFilteredDics[index]);
-                    break;
+                advancementFilteredDics = this.FilterDictionary(ParseXML.generalFeatDic, advancementName);
+                index = random.Next(advancementFilteredDics.Count);
+                this.featsDic.Add(advancementFilteredDics[index]);
+            }
+            else if (advancementName == "Feat(Skill)")
+            {
+                advancementFilteredDics = this.FilterDictionary(ParseXML.skillFeatDic, advancementName);
+                index = random.Next(advancementFilteredDics.Count);
+                this.featsDic.Add(advancementFilteredDics[index]);
+            }
+            else if (advancementName == "Feat(Ancestry)")
+            {
+                advancementFilteredDics = this.FilterDictionary(ParseXML.ancestryFeatDic, advancementName);
+                index = random.Next(advancementFilteredDics.Count);
+                this.featsDic.Add(advancementFilteredDics[index]);
+            }
+            else if (advancementName == "Feat(Class)")
+            {
+                advancementFilteredDics = this.FilterDictionary(ParseXML.classFeatDic, advancementName);
+                index = random.Next(advancementFilteredDics.Count);
+                this.featsDic.Add(advancementFilteredDics[index]);
             }
         }
         else                                                              // else case for other type of advancements, such as boost, skill or overall class specific
         {
-            if (advancementName == "AbilityBoost")      //applies boost to a stat
+            if (advancementName == "Ability Boost")      //applies boost to a stat
             {
                 List<string> keyList = new List<string>(statsDic.Keys);
                 System.Random rand = new System.Random();
                 string randomKey = keyList[rand.Next(keyList.Count)];
                 UpdateCharStat(randomKey);
             }
-            else if (advancementName == "SkillIncrease") //increases the tier of a skill by one
+            else if (advancementName == "Skill Increase") //increases the tier of a skill by one
             {
                 List<string> skillsKeys = new List<string>(skills.Keys);
                 index = random.Next(skillsKeys.Count);
                 string skillToAdd = skillsKeys[index];
                 this.IncreaseSkill(skillToAdd);
+                
             }
             else                                        //specified class advancement in the levelup gets added
             {
@@ -591,48 +478,49 @@ class Character
         List<Dictionary<string, string>> filteredDic = new List<Dictionary<string, string>>();
         int featLevelPreq;
         //different cases for if you are adding in class/ancestry initial feat? Such as initialClass or initialAncestry?
-
         switch (dicType)
         {
-            case ("Skill"):
-            case ("General"):
+            case ("Feat(Skill)"):
+            case ("Feat(General)"):
                 foreach (var item in dicToFilter)
                 { 
                     //if prerequisite and no duplicates is fine //I spent hour trying to do something that I had made into method already...
-                    if ((this.CheckSkills(item["prerequisite"]) || item["prerequisite"] == "none") && !this.CheckFeats(item["name"]))            
+                    if (this.ParseRequirement(item["prerequisite"]) && !this.CheckFeats(item["name"]))            
                     {
                         filteredDic.Add(item);
                     }
                 }
                 break;
-            case ("Ancestry"):
+            case ("Feat(Ancestry)"):
                 foreach (var item in dicToFilter)
                 {
-                    if (item["level"] != "Initial" && item["level"] != "initial")                     // parse level into int form while avoiding "initial" -string error
+                    if (item["level"].ToLower() != "initial")                     // parse level into int form while avoiding "initial" -string error
                     {
                         featLevelPreq = int.Parse(item["level"]);
                         //if level, prerequisites, ancestry and no duplicates is fine //I spent hour trying to do something that I had made into method already...
-                        if (this.characterLevel >= featLevelPreq && (this.CheckFeats(item["prerequisite"]) || item["prerequisite"] == "none") && item["ancestry"].Contains(this.characterAncestry) && !this.CheckFeats(item["name"]))            
+                        if (this.characterLevel >= featLevelPreq && this.ParseRequirement(item["prerequisite"]) && item["ancestry"].Contains(this.characterAncestry) && !this.CheckFeats(item["name"]))            
                         {
                             filteredDic.Add(item);
                         }
                     }
                 }
                 break;
-            default:
+            case ("Feat(Class)"):
                 foreach (var item in dicToFilter)
                 {
-                    if (item["level"] != "Initial" && item["level"] != "initial")                     // parse level into int form while avoiding "initial" -string error
+                    if (item["level"].ToLower() != "initial")                     // parse level into int form while avoiding "initial" -string error
                     {
                         featLevelPreq = int.Parse(item["level"]);
                         //if level, prerequisites, class and no duplicates is fine //I spent hour trying to do something that I had made into method already...
-                        if (this.characterLevel >= featLevelPreq && (this.CheckFeats(item["prerequisite"]) || item["prerequisite"] == "none") && item["class"].Contains(this.characterClass) && !this.CheckFeats(item["name"]))
+                        if (this.characterLevel >= featLevelPreq && this.ParseRequirement(item["prerequisite"]) && item["class"].Contains(CapitalizeFirstChar(this.characterClass)) && !this.CheckFeats(item["name"]))
                         {
                             filteredDic.Add(item);
                         }
                     }
 
                 }
+                break;
+            default:
                 break;
         }
 

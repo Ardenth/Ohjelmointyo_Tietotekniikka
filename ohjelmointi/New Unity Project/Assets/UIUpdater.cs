@@ -23,15 +23,9 @@ public class UIUpdater : MonoBehaviour
     {
         baseline.SetCharStat(hello);
         baseline.UpdateMods();
-        baseline.LevelUp(4);
+        baseline.LevelUp(10);
 
         //testing requirementparse
-        Debug.Log(baseline.CheckRequirement("Strength|15"));
-        Debug.Log(baseline.CheckRequirement("Dexterity|15"));
-        Debug.Log(baseline.CheckRequirement("Constitution|15"));
-        Debug.Log(baseline.CheckRequirement("Intelligence|15"));
-        Debug.Log(baseline.CheckRequirement("Wisdom|15"));
-        Debug.Log(baseline.CheckRequirement("Charisma|15"));
     }
 
     /// <summary>

@@ -5,8 +5,8 @@
 		<advancement1>Ancestry</advancement1>
 		<advancement2>Background</advancement2>
 		<advancement3>Proficiencies</advancement3>
-		<advancement4>Attack of opportunity</advancement4>
-		<advancement5>Fighter Feat</advancement5>
+		<advancement4>Attack of Opportunity</advancement4>
+		<advancement5>Feat(Class)</advancement5>
 		<advancement6>Shield Block</advancement6>
 		<advancement7>none</advancement7>
 		<advancement8>none</advancement8>
@@ -15,8 +15,8 @@
 	</progression>
 	<progression>
 		<level>2</level>
-		<advancement1>Fighter Feat</advancement1>
-		<advancement2>Skill Feat</advancement2>
+		<advancement1>Feat(Class)</advancement1>
+		<advancement2>Feat(Skill)</advancement2>
 		<advancement3>none</advancement3>
 		<advancement4>none</advancement4>
 		<advancement5>none</advancement5>
@@ -29,7 +29,7 @@
 	<progression>
 		<level>3</level>
 		<advancement1>Bravery</advancement1>
-		<advancement2>General Feat</advancement2>
+		<advancement2>Feat(General)</advancement2>
 		<advancement3>Skill Increase</advancement3>
 		<advancement4>none</advancement4>
 		<advancement5>none</advancement5>
@@ -41,8 +41,8 @@
 	</progression>
 	<progression>
 		<level>4</level>
-		<advancement1>Fighter Feat</advancement1>
-		<advancement2>Skill Feat</advancement2>
+		<advancement1>Feat(Class)</advancement1>
+		<advancement2>Feat(Skill)</advancement2>
 		<advancement3>none</advancement3>
 		<advancement4>none</advancement4>
 		<advancement5>none</advancement5>
@@ -55,7 +55,7 @@
 	<progression>
 		<level>5</level>
 		<advancement1>Ability Boost</advancement1>
-		<advancement2>Ancestry Feat</advancement2>
+		<advancement2>Feat(Ancestry)</advancement2>
 		<advancement3>Fighter Weapon Mastery</advancement3>
 		<advancement4>Skill increase</advancement4>
 		<advancement5>none</advancement5>
@@ -67,8 +67,8 @@
 	</progression>
 	<progression>
 		<level>6</level>
-		<advancement1>Fighter Feat</advancement1>
-		<advancement2>Skill Feat</advancement2>
+		<advancement1>Feat(Class)</advancement1>
+		<advancement2>Feat(Skill)</advancement2>
 		<advancement3>none</advancement3>
 		<advancement4>none</advancement4>
 		<advancement5>none</advancement5>
@@ -81,7 +81,7 @@
 	<progression>
 		<level>7</level>
 		<advancement1>Battlefield Surveyor</advancement1>
-		<advancement2>General Feat</advancement2>
+		<advancement2>Feat(General)</advancement2>
 		<advancement3>Skill Increase</advancement3>
 		<advancement4>Weapon Specialization</advancement4>
 		<advancement5>none</advancement5>
@@ -93,8 +93,8 @@
 	</progression>
 	<progression>
 		<level>8</level>
-		<advancement1>Fighter Feat</advancement1>
-		<advancement2>Skill Feat</advancement2>
+		<advancement1>Feat(Class)</advancement1>
+		<advancement2>Feat(Skill)</advancement2>
 		<advancement3>none</advancement3>
 		<advancement4>none</advancement4>
 		<advancement5>none</advancement5>
@@ -106,7 +106,7 @@
 	</progression>
 	<progression>
 		<level>9</level>
-		<advancement1>Ancestry Feat</advancement1>
+		<advancement1>Feat(Ancestry)</advancement1>
 		<advancement2>Combat Flexibility</advancement2>
 		<advancement3>Juggernaut</advancement3>
 		<advancement4>Skill increase</advancement4>
@@ -119,8 +119,8 @@
 	</progression>
 	<progression>
 		<level>10</level>
-		<advancement1>Fighter Feat</advancement1>
-		<advancement2>Skill Feat</advancement2>
+		<advancement1>Feat(Class)</advancement1>
+		<advancement2>Feat(Skill)</advancement2>
 		<advancement3>Ability Boost</advancement3>
 		<advancement4>none</advancement4>
 		<advancement5>none</advancement5>
@@ -134,7 +134,7 @@
 		<level>11</level>
 		<advancement1>Armor Expertise</advancement1>
 		<advancement2>Fighter Expertise</advancement2>
-		<advancement3>General Feat</advancement3>
+		<advancement3>Feat(General)</advancement3>
 		<advancement4>Skill increase</advancement4>
 		<advancement5>none</advancement5>
 		<advancement6>none</advancement6>
@@ -145,8 +145,8 @@
 	</progression>
 	<progression>
 		<level>12</level>
-		<advancement1>Fighter Feat</advancement1>
-		<advancement2>Skill Feat</advancement2>
+		<advancement1>Feat(Class)</advancement1>
+		<advancement2>Feat(Skill)</advancement2>
 		<advancement3>none</advancement3>
 		<advancement4>none</advancement4>
 		<advancement5>none</advancement5>
@@ -158,7 +158,7 @@
 	</progression>
 	<progression>
 		<level>13</level>
-		<advancement1>Ancestry Feat</advancement1>
+		<advancement1>Feat(Ancestry)</advancement1>
 		<advancement2>Skill Increase</advancement2>
 		<advancement3>Weapon Legend</advancement3>
 		<advancement4>none</advancement4>
@@ -171,8 +171,8 @@
 	</progression>
 	<progression>
 		<level>14</level>
-		<advancement1>Fighter Feat</advancement1>
-		<advancement2>Skill Feat</advancement2>
+		<advancement1>Feat(Class)</advancement1>
+		<advancement2>Feat(Skill)</advancement2>
 		<advancement3>none</advancement3>
 		<advancement4>none</advancement4>
 		<advancement5>none</advancement5>
@@ -186,7 +186,7 @@
 		<level>15</level>
 		<advancement1>Ability Boost</advancement1>
 		<advancement2>Evasion</advancement2>
-		<advancement3>General Feat</advancement3>
+		<advancement3>Feat(General)</advancement3>
 		<advancement4>Greater Weapon Specialization</advancement4>
 		<advancement5>Improved Flexibility</advancement5>
 		<advancement6>Skill Increase</advancement6>
@@ -197,8 +197,8 @@
 	</progression>
 	<progression>
 		<level>16</level>
-		<advancement1>Fighter Feat</advancement1>
-		<advancement2>Skill Feat</advancement2>
+		<advancement1>Feat(Class)</advancement1>
+		<advancement2>Feat(Skill)</advancement2>
 		<advancement3>none</advancement3>
 		<advancement4>none</advancement4>
 		<advancement5>none</advancement5>
@@ -210,7 +210,7 @@
 	</progression>
 	<progression>
 		<level>17</level>
-		<advancement1>Ancestry Feat</advancement1>
+		<advancement1>Feat(Ancestry)</advancement1>
 		<advancement2>Armor Mastery</advancement2>
 		<advancement3>Skill Increase</advancement3>
 		<advancement4>none</advancement4>
@@ -223,8 +223,8 @@
 	</progression>
 	<progression>
 		<level>18</level>
-		<advancement1>Fighter Feat</advancement1>
-		<advancement2>Skill Feat</advancement2>
+		<advancement1>Feat(Class)</advancement1>
+		<advancement2>Feat(Skill)</advancement2>
 		<advancement3>none</advancement3>
 		<advancement4>none</advancement4>
 		<advancement5>none</advancement5>
@@ -236,7 +236,7 @@
 	</progression>
 	<progression>
 		<level>19</level>
-		<advancement1>General Feat</advancement1>
+		<advancement1>Feat(General)</advancement1>
 		<advancement2>Skill Increase</advancement2>
 		<advancement3>Versatile Legend</advancement3>
 		<advancement4>none</advancement4>
@@ -249,8 +249,8 @@
 	</progression>
 	<progression>
 		<level>20</level>
-		<advancement1>Fighter Feat</advancement1>
-		<advancement2>Skill Feat</advancement2>
+		<advancement1>Feat(Class)</advancement1>
+		<advancement2>Feat(Skill)</advancement2>
 		<advancement3>Ability Boost</advancement3>
 		<advancement4>none</advancement4>
 		<advancement5>none</advancement5>

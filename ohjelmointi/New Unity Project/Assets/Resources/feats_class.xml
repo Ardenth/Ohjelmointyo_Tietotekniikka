@@ -232,7 +232,7 @@
     <description>none</description>
   </classFeat>
   <classFeat>
-    <name>Persistent Mutaen</name>
+    <name>Persistent Mutagen</name>
     <class>Alchemist</class>
     <level>16</level>
     <prerequisite>Extend Elixir</prerequisite>
