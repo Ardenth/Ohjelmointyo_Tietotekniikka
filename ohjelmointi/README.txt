@@ -25,6 +25,9 @@ perusteella, jota kaytetaan vastaisuudessa.
  ApplyAdvancementin classAdvancement muutosta ja RandomizeClassissa
  FilterDictionarin kutsua
 
+RandomFromDictionary -metodi?
+- Koodissa jatkuvasti sama patka kirjoitettu eri alueissa,
+ 	metodiksi luonti siivoaisi koodia
 --
 Advancement effect Shield Block (add feat)
 - ei tarvetta siirtaa, silla advancement lasketaan featiksi

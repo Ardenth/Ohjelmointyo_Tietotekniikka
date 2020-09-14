@@ -32,6 +32,7 @@ class Character
     internal int characterLevel = 0;
     internal string characterClass;
     internal string characterAncestry;
+    internal Dictionary<string, string> characterBackground;
 
     //consider creating stats and statsMod into dictionaries for easier management through Keys?
     // internal Dictionary<string, int> stats = new Dictionary<string, stat> { {"Strength", 10}, {"Dexterity", 10}, {"Constitution", 10}, {"Intelligence", 10}, {"Wisdom", 10}, {"Charisma", 10}};
@@ -424,7 +425,7 @@ class Character
         }
 
         //apply class proficiencies
-        // METHOD
+        // METHOD ApplyProficienciesEffects         --- keeping naming consistent
     }
 
 
@@ -440,7 +441,7 @@ class Character
         this.characterAncestry = ancestry["ancName"];
 
         //apply ancestry effects
-        // METHOD
+        // METHOD ApplyAncestryEffects
     }
 
 
@@ -449,8 +450,92 @@ class Character
     /// </summary>
     internal void RandomBackground()
     {
+
+        var random = new System.Random();
+        int index = random.Next(ParseXML.ancestryDic.Count);
+        Dictionary<string, string> background = ParseXML.ancestryDic[index];
+
+        this.characterBackground = background;
+
         //apply background effects
-        // METHOD
+        this.ApplyBackgroundEffects(background);
+    }
+
+    /// <summary>
+    /// Applies effects and bonuses you gain from the background in the parameter to the character sheet
+    /// </summary>
+    /// <param name="backgroundInfo">Background which benefits will be applied</param>
+    internal void ApplyBackgroundEffects(Dictionary<string, string> backgroundInfo)
+    {
+        List<string> keyList = new List<string>(backgroundInfo.Keys);
+        foreach (var key in keyList)
+        {
+            if (backgroundInfo[key] != "none")
+            {
+                switch (key)
+                {
+                    //applies boosts to the character information
+                    case ("boost"):
+                        List<string> boostList = backgroundInfo[key].Split('/').ToList();
+                        foreach (string boost in boostList)
+                        {
+                            //free boost
+                            if (boost == "Free")
+                            {
+                                var rand = new System.Random();
+                                string randomKey = keyList[rand.Next(keyList.Count)];
+                                UpdateCharStat(randomKey);
+                                System.Threading.Thread.Sleep(1);   //forces another random to be created by pausing
+                            }
+                            //otherwise deal with the OR statement
+                            else
+                            {
+                                List<string> boostOrList = boost.Split('-').ToList();
+                                var rand = new System.Random();
+                                int index = rand.Next(boostOrList.Count);
+                                UpdateCharStat(boostOrList[index]);
+                            }
+                        }
+                        break;
+                    //applies stat flaw to the character information
+                    case ("flaw"):
+                        this.statsDic[backgroundInfo[key]] -= 2;
+                        UpdateMods();
+                        break;
+                    //does not currently know how to do Lore(something)
+                    case ("skill"):
+                        List<string> skillList = backgroundInfo[key].Split('/').ToList();
+                        foreach (string adv in skillList)
+                        {
+                            this.IncreaseSkill(backgroundInfo[adv]);
+                        }
+                        break;
+                    //adds the free random feat the character gets
+                    case ("feat"):
+                        //add specific feat by name     (going through the files, seems like it is only skill feats?) -- done after the split idea
+
+
+                        //problem: How to add the different versions of assurance? Create a copy and then redefine the feat's name?
+
+                        //split out '(' => feat's name is always at [0] even if '(' does not exist
+                            //find feat [0] from skillFeatDic.XML to a newly created dictionary variable
+                                //if the length of array is bigger than 1 (so if the feat's name is Assurance, since it is the only one defining something in feats) (or check if feat 0 == Assurance for future expansion possibilities?
+                                    
+                                    //LUO UUSI METODI ASSURANCE TAPAUKSESSA, SILLÄ TÄMÄ SAATTAA TULLA VASTAAN GENERAL/SKILL FEATISSÄKIN - UniqueFeat -metodi?
+                                            //voi sisältää (skill) esimääreen tai antaa sattumanvaraisen Trained skillin?
+                                    
+                                    //rename new dictionary's feat's name -keys name -value to the name before split
+                                //then add the dictionary variable to featsDic
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else
+            {
+                Debug.Log(backgroundInfo["bckgrName"]+" was empty for the key: " + key);
+            }
+        }
     }
 
 
@@ -612,7 +697,8 @@ class Character
                 {
                     while (this.skills[skillToAdd] == "Legendary")
                     {
-                        index = random.Next(skillsKeys.Count); //not truly random (System.Random) is based on a time, thus will make loop go through couple of times
+                        System.Threading.Thread.Sleep(1);     //sleep for 1ms to force a new random value
+                        index = random.Next(skillsKeys.Count);
                         skillToAdd = skillsKeys[index];      //randomize a new skill if already at full tier
                     }
                 }
