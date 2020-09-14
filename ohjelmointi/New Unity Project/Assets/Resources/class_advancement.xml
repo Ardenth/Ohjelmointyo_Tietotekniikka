@@ -69,13 +69,13 @@
 	<advancement>
 		<name>Alchemical Weapon Expertise</name>
 		<class>Alchemist</class>
-		<effect>Simple|Expert/Bombs|Expert</effect>
+		<effect>Simple|Expert/attackSpecial|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
-		<name>Iron Will</name>
+		<name>Iron willSave</name>
 		<class>Alchemist-Ranger</class>
-		<effect>Will|Expert</effect>
+		<effect>willSave|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -105,7 +105,7 @@
 	<advancement>
 		<name>Juggernaut</name>
 		<class>Alchemist-Barbarian-Champion-Fighter-Ranger</class>
-		<effect>Fortitude|Master</effect>
+		<effect>fortitudeSave|Master</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -141,7 +141,7 @@
 	<advancement>
 		<name>Evasion</name>
 		<class>Alchemist-Fighter-Ranger-Rogue</class>
-		<effect>Reflex|Master</effect>
+		<effect>reflexSave|Master</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -183,7 +183,7 @@
 	<advancement>
 		<name>Lightning Reflexes</name>
 		<class>Barbarian-Bard-Champion-Cleric-Druid-Sorcerer-Wizard</class>
-		<effect>Reflex|Expert</effect>
+		<effect>reflexSave|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -201,7 +201,7 @@
 	<advancement>
 		<name>Greater Juggernaut</name>
 		<class>Barbarian</class>
-		<effect>Fortitude|Legendary</effect>
+		<effect>fortitudeSave|Legendary</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -223,9 +223,9 @@
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
-		<name>Indomitable Will</name>
+		<name>Indomitable willSave</name>
 		<class>Barbarian</class>
-		<effect>Will|Master</effect>
+		<effect>willSave|Master</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -277,15 +277,15 @@
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
-		<name>Great Fortitude</name>
+		<name>Great fortitudeSave</name>
 		<class>Bard-Druid-Rogue</class>
-		<effect>Fortitude|Expert</effect>
+		<effect>fortitudeSave|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Resolve</name>
 		<class>Bard-Cleric-Druid-Wizard</class>
-		<effect>Will|Master</effect>
+		<effect>willSave|Master</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -309,7 +309,7 @@
 	<advancement>
 		<name>Greater Resolve</name>
 		<class>Bard</class>
-		<effect>Will|Legendary</effect>
+		<effect>willSave|Legendary</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -351,7 +351,7 @@
 	<advancement>
 		<name>Shield Block</name>
 		<class>Champion-Druid-Fighter</class>
-		<effect>General Feat(Shield Block)</effect>
+		<effect>placeholder</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -385,9 +385,9 @@
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
-		<name>Divine Will</name>
+		<name>Divine willSave</name>
 		<class>Champion</class>
-		<effect>Will|Master</effect>
+		<effect>willSave|Master</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -525,7 +525,7 @@
 	<advancement>
 		<name>Bravery</name>
 		<class>Fighter</class>
-		<effect>Will|Expert</effect>
+		<effect>willSave|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -585,13 +585,13 @@
 	<advancement>
 		<name>Movement Increase(10)</name>
 		<class>Monk</class>
-		<effect>BaseSpeed++/BaseSpeed++</effect>
+		<effect>speed|10</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
 		<name>Movement Increase(5)</name>
 		<class>Monk</class>
-		<effect>BaseSpeed++</effect>
+		<effect>speed|5</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -741,7 +741,7 @@
 	<advancement>
 		<name>Weapon Tricks</name>
 		<class>Rogue</class>
-		<effect>InitialWeapon|Expert</effect>
+		<effect>attackSpecial|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -765,7 +765,7 @@
 	<advancement>
 		<name>Master Tricks</name>
 		<class>Rogue</class>
-		<effect>InitialWeapon|Master</effect>
+		<effect>attackSpecial|Master</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -777,7 +777,7 @@
 	<advancement>
 		<name>Slippery Mind</name>
 		<class>Rogue</class>
-		<effect>Will|Master</effect>
+		<effect>willSave|Master</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -793,7 +793,7 @@
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
-		<name>Magical Fortitude</name>
+		<name>Magical fortitudeSave</name>
 		<class>Sorcerer-Wizard</class>
 		<effect>placeholder</effect>
 		<description>placeholder</description>
@@ -831,7 +831,7 @@
 	<advancement>
 		<name>Wizard Weapon Expertise</name>
 		<class>Wizard</class>
-		<effect>InitialWeapon|Expert</effect>
+		<effect>attackSpecial|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>

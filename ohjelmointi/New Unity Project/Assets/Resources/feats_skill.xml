@@ -39,7 +39,7 @@
 	<feat>
 		<name>Automatic Knowledge</name>
 		<level>2</level>
-		<prerequisite>Recall Knowledge|Expert/Assurance|Skill</prerequisite>
+		<prerequisite>Recall Knowledge|Expert/Assurance(Skill)</prerequisite>
 		<description>none</description>
 	</feat>
 	<feat>

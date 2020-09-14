@@ -29,7 +29,7 @@
 	<progression>
 		<level>3</level>
 		<advancement1>Feat(General)</advancement1>
-		<advancement2>Movement Increase (10)</advancement2>
+		<advancement2>Movement Increase(10)</advancement2>
 		<advancement3>Mystic Strikes</advancement3>
 		<advancement4>Skill Increase</advancement4>
 		<advancement5>none</advancement5>
@@ -81,7 +81,7 @@
 	<progression>
 		<level>7</level>
 		<advancement1>Feat(General)</advancement1>
-		<advancement2>Movement Increase (5)</advancement2>
+		<advancement2>Movement Increase(5)</advancement2>
 		<advancement3>Path to Perfection 1</advancement3>
 		<advancement4>Skill Increase</advancement4>
 		<advancement5>Weapon Specialization</advancement5>
@@ -133,7 +133,7 @@
 	<progression>
 		<level>11</level>
 		<advancement1>Feat(General)</advancement1>
-		<advancement2>Movement Increase (5)</advancement2>
+		<advancement2>Movement Increase(5)</advancement2>
 		<advancement3>Path to Perfection 2</advancement3>
 		<advancement4>Skill Increase</advancement4>
 		<advancement5>none</advancement5>
@@ -187,7 +187,7 @@
 		<advancement1>Ability Boost</advancement1>
 		<advancement2>Feat(General)</advancement2>
 		<advancement3>Greater Weapon Specialization</advancement3>
-		<advancement4>Movement Increase (5)</advancement4>
+		<advancement4>Movement Increase(5)</advancement4>
 		<advancement5>Skill Increase</advancement5>
 		<advancement6>Path to Perfection 3</advancement6>
 		<advancement7>none</advancement7>
@@ -237,7 +237,7 @@
 	<progression>
 		<level>19</level>
 		<advancement1>Feat(General)</advancement1>
-		<advancement2>Movement Increase (5)</advancement2>
+		<advancement2>Movement Increase(5)</advancement2>
 		<advancement3>Perfected Form</advancement3>
 		<advancement4>Skill Increase</advancement4>
 		<advancement5>none</advancement5>

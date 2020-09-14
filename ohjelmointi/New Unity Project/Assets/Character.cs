@@ -61,9 +61,9 @@ class Character
         {"Thievery","Untrained" },
 
         {"Recall Knowledge", "Untrained" },
-        {"Skill", "Untrained" },                //requirement, should be read only. A certain feat requires a skill to be at least trained. Most likely have to do a special case for this feat (Feat name = Assurance)
+        {"Skill", "Untrained" },
         {"Performance", "Untrained" },
-        {"Perception", "untrained" }
+        {"Perception", "Untrained" }
     };
 
     //character's known feats
@@ -81,8 +81,7 @@ class Character
         {"unarmed", "" },{"simple", "" },{"martial", "" },{"advanced", "" },{"attackSpecial", "" },                 //attackSpecial used as a definition for others, such as bombs or initial weapons
         {"unarmored", "" },{"light", "" },{"medium", "" },{"heavy", "" },
         {"classDC", "" },{"spellDC", "" },
-        {"trait", "" },{"special", "" }    //special as feat (darkvision, lowlight vision, keen eyes), requirement for advances (characters can have both lowlight vision and darkvision)
-
+        {"trait", "" },{"special", "" }, {"focusPool", "" }    //special as feat (darkvision, lowlight vision, keen eyes), requirement for advances (characters can have both lowlight vision and darkvision)(XML?)
     };
 
 
@@ -90,7 +89,7 @@ class Character
     /// Updates character's statistics from a string, either by an increment of 2 or to a specific value
     /// </summary>
     /// <param name="stat"></param>
-    internal void UpdateCharStat(string stat)                       //Design choice made due to XML files holding the required information
+    internal void UpdateCharStat(string stat)
     {
         string[] statSplit = stat.Split('|');
         //for dictionary
@@ -128,11 +127,21 @@ class Character
     /// <summary>
     /// Capitalize first character for a string
     /// </summary>
-    /// <param name="str">String to capitalize</param>
+    /// <param name="str">String to capitalize first character for</param>
     /// <returns>Capitalized parameter string</returns>
     internal string CapitalizeFirstChar(string str)
     {
         return str?.First().ToString().ToUpper() + str?.Substring(1).ToLower();
+    }
+
+    /// <summary>
+    /// Lower first character for a string
+    /// </summary>
+    /// <param name="str">String to lower first character for</param>
+    /// <returns>Lowered parameter string</returns>
+    internal string LowerFirstChar(string str)
+    {
+        return str?.First().ToString().ToLower() + str?.Substring(1);
     }
 
 
@@ -287,6 +296,10 @@ class Character
     }
 
 
+    /// <summary>
+    /// Used to get get character's feats as a list dictionary
+    /// </summary>
+    /// <returns>character's feats</returns>
     internal List<Dictionary<string, string>> GetFeats()
     {
         return this.featsDic;
@@ -301,27 +314,20 @@ class Character
     {
         List<string> skillsKeys = new List<string>(this.skills.Keys);
         string[] skillTraining = { "Untrained", "Trained", "Expert", "Master", "Legendary" };
-        if (skillName.Contains("|"))    //if the string for the skill contains the value it will be raised to
+        //if the string for the skill contains the value it will be raised to
+        if (skillName.Contains("|"))
         {
             string[] skillNameArr = skillName.Split('|');
             this.skills[skillNameArr[0]] = skillNameArr[1];
         }
-        else                            //if the string for the skill does not contain the value it will be raised one tier higher
+        //if the string for the skill does not contain the value it will be raised one tier higher
+        else if (skillsKeys.Contains(skillName))
         {
-            if (this.skills[skillName] == "Legendary")  //check if the skill is at max tier
-            {
-                while (this.skills[skillName] == "Legendary")
-                {
-                    var random = new System.Random();         //not truly random (System.Random) is based on a time, thus will make loop go through couple of times
-                    int index = random.Next(skillsKeys.Count);
-                    skillName = skillsKeys[index];      //randomize a new skill if already at full tier
-                }
-            }
-            foreach (var skill in skillsKeys)   
+            foreach (var skill in skillsKeys)
             {
                 if (skill == skillName)     //find the correct skill
                 {
-                    for (int i = 0; i < skillTraining.Length; i++)      
+                    for (int i = 0; i < skillTraining.Length; i++)
                     {
                         if (this.skills[skill] == skillTraining[i])     //find out the skill's tier
                         {
@@ -331,6 +337,24 @@ class Character
                     }
                 }
             }
+        } 
+        //for general/skill feat skill training
+        else if (skillName == "Skill Training")
+        {
+            List<string> skillsKeysUntrained = new List<string>();
+            //create list of untrained skills
+            foreach (string key in skillsKeys)
+            {
+                //add key if untrained
+                if (this.skills[key] == "Untrained")
+                {
+                    skillsKeysUntrained.Add(key);
+                }
+            }
+            var random = new System.Random();
+            int index = random.Next(skillsKeysUntrained.Count);
+            string skillToAdd = skillsKeysUntrained[index];
+            this.IncreaseSkill(skillToAdd);
         }
     }
 
@@ -348,6 +372,8 @@ class Character
         }
         this.characterLevel++;
         this.FindProgression();
+
+        // add levelup hp increase from class
 
 
         //Debug.Log("Owned feats at level: " + this.characterLevel);
@@ -412,6 +438,9 @@ class Character
         Dictionary<string, string> ancestry = ParseXML.ancestryDic[index];
 
         this.characterAncestry = ancestry["ancName"];
+
+        //apply ancestry effects
+        // METHOD
     }
 
 
@@ -420,28 +449,59 @@ class Character
     /// </summary>
     internal void RandomBackground()
     {
-        //
+        //apply background effects
+        // METHOD
     }
 
 
     /// <summary>
-    /// Applies the effect of the advancement to this character                                                 ---- Currently only applies skill increases
+    /// Applies the effect of the advancement to this character                                                 ---- UNTESTED ----                      ---------- UNFINISHED -----
     /// </summary>
     /// <param name="advancement">dictionary which contains the information of the advancement</param>
     internal void ApplyAdvancementEffect(Dictionary<string,string> advancement)
     {
         string effect = advancement["effect"];
-
-        if (effect.Contains("|"))
+        if (effect == "placeholder" || effect == "none")
         {
-            string[] effectArr = effect.Split('|');
-            if (skills.ContainsKey(effectArr[0]))
-            {
-                IncreaseSkill(effect);
-            }
-
+            Debug.Log("no effect for the feat");
+            return;
         }
 
+
+        List<string> effectList = effect.Split('/').ToList();
+        // going through the effects while taking into account the possibility of AND statements
+        foreach (string eff in effectList)
+        {
+            //applies effect for each | effect
+            if (eff.Contains("|"))
+            {
+                string[] effectArr = eff.Split('|');
+                if (skills.ContainsKey(effectArr[0]))
+                {
+                    this.IncreaseSkill(effect);
+                    Debug.Log("skill: " + effectArr[0] + " is now: " + effectArr[1]);
+                }
+                else if (characterFeatures.ContainsKey(effectArr[0].ToLower()))
+                {
+                    if (effectArr[0] == "speed")
+                    {
+                        int nextSpeed;
+                        nextSpeed = int.Parse(characterFeatures[effectArr[0]]) + int.Parse(effectArr[1]);
+                        characterFeatures[effectArr[0]] = nextSpeed.ToString();
+                        Debug.Log("increase speed");
+                    }
+                    else
+                    {
+                        characterFeatures[LowerFirstChar(effectArr[0])] = effectArr[1];
+                        Debug.Log("character feature: " + effectArr[0]+" is now: "+ effectArr[1]);
+                    }
+                }
+            }
+            else
+            {
+                //if the effect is not holding | and isn't placeholder/none
+            }
+        }
     }
 
 
@@ -483,21 +543,26 @@ class Character
 
     /// <summary>
     /// Adds the specified advancement to the character
-    /// consider adding to the dictionary current level and feat type, which would mean to define variable for the dic and then add current level and case type into it as last 2 Key variables
+    /// consider adding to the dictionary current level and feat type, which would mean to define variable for the dic and then add current level and case type into it as last 2 Key variables (UI updating)
     /// </summary>
     /// <param name="advancementName">requested advancement</param>
     internal void AddAdvancement(string advancementName)
     {
         var random = new System.Random();
         int index;
-        if (advancementName.Contains("Feat") && advancementName != "Feat(Initial)")                               // if case for Feats and relevant XML file
+        // connecting feat with xml file and avoiding Initial Feat problems
+        if (advancementName.Contains("Feat") && advancementName != "Feat(Initial)")
         {
-
             //can be made to have less repetition, not done to test specifically skill feat's functionality
             if (advancementName == "Feat(General)")
             {
                 List<Dictionary<string, string>>  advancementFilteredDics = this.FilterDictionary(ParseXML.generalFeatDic, advancementName);
                 index = random.Next(advancementFilteredDics.Count);
+                //Skill Training special case
+                if (advancementFilteredDics[index]["name"] == "Skill Training")
+                {
+                    this.IncreaseSkill(advancementFilteredDics[index]["name"]);          //is it a problem if not this.?
+                }
                 this.featsDic.Add(advancementFilteredDics[index]);
             }
             else if (advancementName == "Feat(Skill)")
@@ -508,6 +573,11 @@ class Character
                 //currently character skills aren't being increased through the feat effects or advancement effects, thus the character does not ALWAYS have feat choices to choose from. Will be fixed as more gets implemented
                 if (index > 0)
                 {
+                    //Skill Training special case
+                    if (advancementFilteredDics[index]["name"] == "Skill Training")
+                    {
+                        this.IncreaseSkill(advancementFilteredDics[index]["name"]);          //is it a problem if not this.?
+                    }
                     this.featsDic.Add(advancementFilteredDics[index]);
                 }
             }
@@ -538,16 +608,25 @@ class Character
                 List<string> skillsKeys = new List<string>(skills.Keys);
                 index = random.Next(skillsKeys.Count);
                 string skillToAdd = skillsKeys[index];
+                if (this.skills[skillToAdd] == "Legendary")  //check if the skill is at max tier
+                {
+                    while (this.skills[skillToAdd] == "Legendary")
+                    {
+                        index = random.Next(skillsKeys.Count); //not truly random (System.Random) is based on a time, thus will make loop go through couple of times
+                        skillToAdd = skillsKeys[index];      //randomize a new skill if already at full tier
+                    }
+                }
                 this.IncreaseSkill(skillToAdd);
-                
             }
-            else //specified class advancement in the levelup gets added
+            //specified class advancement in the levelup gets added
+            else
             {
                 for (int i = 0; i < ParseXML.classAdvDic.Count; i++)
                 {
                     if (ParseXML.classAdvDic[i]["name"] == advancementName)
                     {
                         this.featsDic.Add(ParseXML.classAdvDic[i]);
+                        this.ApplyAdvancementEffect(ParseXML.classAdvDic[i]);
                     }
                 }
             }

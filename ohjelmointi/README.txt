@@ -1,26 +1,34 @@
 
 TODO:
 
-korjaa XML tiedostot tyhjista (ja format)
-- 6.9 loppuvaihe
-
-XML tiedostot Unityyn
-- 6.9 XMLParse toimii ohjelman alussa kaikkien XML tiedostojen muuttajana
-
-UI character sheet
-- 6.9 kehitetaan
-
 (+ generate random character -button,
  joka aktivoi generoinnin ja sheet update
  ja sisaltaa pyynnon halutulle levelille)
 
 Character tiedot (Character sheet) ja ne UI:n sisalle
 
-Level up (UI update)
-
 Random Gen (kayttaa random gen -button)
 
 Random Gen painotus 
+
+--
+Skill Increase rajoitusta levelien perusteella
+- AddAdvancement metodi
+
+Filter classAdvancement XML kerran classille?
+= luodaan RandomizeClass() aikana filteroity lista <Class></Class>
+perusteella, jota kaytetaan vastaisuudessa.
+
+=> kaydaan XML tiedosto kerran lapi mahdollisen 20~ sijaan.
+
+- tarkoittaa FilterDictionary uuden metodin lisaamista,
+ ApplyAdvancementin classAdvancement muutosta ja RandomizeClassissa
+ FilterDictionarin kutsua
+
+--
+Advancement effect Shield Block (add feat)
+- ei tarvetta siirtaa, silla advancement lasketaan featiksi
+	- turhaan kaytetty aikaa tahan
 
 ---------
 6.9:
@@ -53,3 +61,11 @@ Skill | Trained
 | = definer for skill or feat (| or ||)
 - = OR  (||||)
 / = AND (|||)
+
+-------
+DESIGN CHOICES
+Advancement effect Shield Block (add feat)
+- ei tarvetta siirtaa, silla advancement lasketaan featiksi
+	- turhaan kaytetty aikaa tahan
+ELI:
+identtisia, se loytyy general featista ja advancementista
