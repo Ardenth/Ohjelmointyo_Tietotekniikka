@@ -13,15 +13,12 @@ public class UIUpdater : MonoBehaviour
     private TextMeshProUGUI intelligencechar;
     private TextMeshProUGUI wisdomchar;
     private TextMeshProUGUI charismachar;
-    public static int[] mods = new int[6];
-    public static int[] hello = new int[] { 12, 14, 16, 18, 19, 12 };
     Character baseline = new Character();
 
 
     // Start is called before the first frame update
     void Start()
     {
-        baseline.SetCharStat(hello);
         baseline.UpdateMods();
         baseline.LevelUp(20);
 

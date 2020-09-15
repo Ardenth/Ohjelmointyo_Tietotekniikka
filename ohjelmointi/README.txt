@@ -1,6 +1,8 @@
 
 TODO:
 
+Overall design---
+
 (+ generate random character -button,
  joka aktivoi generoinnin ja sheet update
  ja sisaltaa pyynnon halutulle levelille)
@@ -12,27 +14,25 @@ Random Gen (kayttaa random gen -button)
 Random Gen painotus 
 
 --
-Skill Increase rajoitusta levelien perusteella
+TODO:
+
+Specific functionalities---
+
+Skill Increase rajoitusta levelien perusteella (ei viela tarvetta)
 - AddAdvancement metodi
 
-Filter classAdvancement XML kerran classille?
-= luodaan RandomizeClass() aikana filteroity lista <Class></Class>
-perusteella, jota kaytetaan vastaisuudessa.
+Free boosts to prioritize relevant statistics (str, dex)
+- Decided upon WHAT STAT CHARACTER GETS FROM CLASS FREE BONUS
 
-=> kaydaan XML tiedosto kerran lapi mahdollisen 20~ sijaan.
 
-- tarkoittaa FilterDictionary uuden metodin lisaamista,
- ApplyAdvancementin classAdvancement muutosta ja RandomizeClassissa
- FilterDictionarin kutsua
+Random var luonti metodissa
+	- voidaan aina lisata 1 nanosekunin odotus identtisen estamiseksi
+	- puhdistaa koodia
 
-RandomFromDictionary -metodi?
-- Koodissa jatkuvasti sama patka kirjoitettu eri alueissa,
- 	metodiksi luonti siivoaisi koodia
+
+Monk class feats problem, Ki Spells / Ki Pool prerequisite not considered
+
 --
-Advancement effect Shield Block (add feat)
-- ei tarvetta siirtaa, silla advancement lasketaan featiksi
-	- turhaan kaytetty aikaa tahan
-
 ---------
 6.9:
 UI:n kehitys Unityssa oli paljon haastavampaa kuin kuvittelin (talle projektille)
@@ -72,3 +72,5 @@ Advancement effect Shield Block (add feat)
 	- turhaan kaytetty aikaa tahan
 ELI:
 identtisia, se loytyy general featista ja advancementista
+
+-------

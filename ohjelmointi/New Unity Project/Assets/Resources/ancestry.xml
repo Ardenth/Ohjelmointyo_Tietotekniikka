@@ -5,9 +5,9 @@
 		<hp>10</hp>
 		<size>Medium</size>
 		<speed>20</speed>
-		<boost>Constitution-Wisdom/Free</boost>
+		<boost>Constitution/Wisdom/Free</boost>
 		<flaw>Charisma</flaw>
-		<language>Common-Dwarf/intmod</language>
+		<language>Common/Dwarf/intmod</language>
 		<trait>Dwarf/Humanoid</trait>
 		<special>Darkvision</special>
 	</race>
@@ -16,7 +16,7 @@
 		<hp>6</hp>
 		<size>Medium</size>
 		<speed>30</speed>
-		<boost>Dexterity-Intelligence/Free</boost>
+		<boost>Dexterity/Intelligence/Free</boost>
 		<flaw>Constitution</flaw>
 		<language>Common/Elven/intmod</language>
 		<trait>Elf/Humanoid</trait>
@@ -27,9 +27,9 @@
 		<hp>8</hp>
 		<size>Small</size>
 		<speed>25</speed>
-		<boost>Constitution-Charisma/Free</boost>
+		<boost>Constitution/Charisma/Free</boost>
 		<flaw>Strength</flaw>
-		<language>Common/Gnomish-Sylvan/intmod</language>
+		<language>Common/Gnomish/Sylvan/intmod</language>
 		<trait>Gnome/Humanoid</trait>
 		<special>LowLight Vision</special>
 	</race>
@@ -38,7 +38,7 @@
 		<hp>6</hp>
 		<size>Small</size>
 		<speed>25</speed>
-		<boost>Dexterity-Charisma/Free</boost>
+		<boost>Dexterity/Charisma/Free</boost>
 		<flaw>Wisdom</flaw>
 		<language>Common/Goblin/intmod</language>
 		<trait>Goblin/Humanoid</trait>
@@ -49,7 +49,7 @@
 		<hp>6</hp>
 		<size>Small</size>
 		<speed>25</speed>
-		<boost>Dexterity-Wisdom/Free</boost>
+		<boost>Dexterity/Wisdom/Free</boost>
 		<flaw>Strength</flaw>
 		<language>Common/Halfling/intmod</language>
 		<trait>Halfling-Humanoid</trait>
@@ -60,7 +60,7 @@
 		<hp>8</hp>
 		<size>Medium</size>
 		<speed>25</speed>
-		<boost>Free-Free</boost>
+		<boost>Free/Free</boost>
 		<flaw>none</flaw>
 		<language>Common/intmod</language>
 		<trait>Human/Humanoid</trait>

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using UnityEditor;
 using UnityEditor.CrashReporting;
 using UnityEditorInternal;
 using UnityEngine;
@@ -50,8 +51,8 @@ class Character
         {"Crafting","Untrained" },
         {"Deception","Untrained" },
         {"Diplomacy","Untrained" },
+        {"Lore", "Untrained" },
         {"Intimidation","Untrained" },
-        {"Lore","Untrained" },
         {"Medicine","Untrained" },
         {"Nature","Untrained" },
         {"Occultism","Untrained" },
@@ -70,19 +71,15 @@ class Character
     //character's known feats
     internal List<Dictionary<string, string>> featsDic = new List<Dictionary<string, string>>();
 
-    //character's known languages
-    internal Dictionary<string, string> languages = new Dictionary<string, string>();
-    // example: LangName, trained, etc.
-
     //character's features: hp, size, speed, etc.
     internal Dictionary<string, string> characterFeatures = new Dictionary<string, string>()
     {
-        {"hp", "" },{"size", "" },{"speed", "" },
+        {"hp", "0" },{"size", "" },{"speed", "" },
         {"fortitudeSave", "" },{"reflexSave", "" },{"willSave", "" },
         {"unarmed", "" },{"simple", "" },{"martial", "" },{"advanced", "" },{"attackSpecial", "" },                 //attackSpecial used as a definition for others, such as bombs or initial weapons
         {"unarmored", "" },{"light", "" },{"medium", "" },{"heavy", "" },
         {"classDC", "" },{"spellDC", "" },
-        {"trait", "" },{"special", "" }, {"focusPool", "" }    //special as feat (darkvision, lowlight vision, keen eyes), requirement for advances (characters can have both lowlight vision and darkvision)(XML?)
+        {"trait", "" },{"special", "" }, {"focusPool", "" }, {"language", ""}    //special as feat (darkvision, lowlight vision, keen eyes), requirement for advances (characters can have both lowlight vision and darkvision)(XML?)
     };
 
 
@@ -296,6 +293,23 @@ class Character
         return this.statsModsDic[statName];
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="featName"></param>
+    /// <returns></returns>
+    internal Dictionary<string, string> FindGeneralFeat(string featName)
+    {
+        Dictionary<string, string> foundFeat = new Dictionary<string, string>();
+        foreach (var dic in ParseXML.generalFeatDic)
+        {
+            if (dic["name"] == featName)
+            {
+                foundFeat = dic;
+            }
+        }
+        return foundFeat;
+    }
 
     /// <summary>
     /// Used to get get character's feats as a list dictionary
@@ -311,7 +325,7 @@ class Character
     /// Increases skill to the given value in the string parameter OR increases the skill by one tier
     /// </summary>
     /// <param name="skillName">Information in a string for which skill to increase and possibly to what tier</param>
-    internal void IncreaseSkill(string skillName)
+    internal void IncreaseSkill(string skillName)                                                                   
     {
         List<string> skillsKeys = new List<string>(this.skills.Keys);
         string[] skillTraining = { "Untrained", "Trained", "Expert", "Master", "Legendary" };
@@ -326,11 +340,14 @@ class Character
         {
             foreach (var skill in skillsKeys)
             {
-                if (skill == skillName)     //find the correct skill
+
+                //find the correct skill
+                if (skill == skillName)
                 {
                     for (int i = 0; i < skillTraining.Length; i++)
                     {
-                        if (this.skills[skill] == skillTraining[i])     //find out the skill's tier
+                        //find out the skill's tier
+                        if (this.skills[skill] == skillTraining[i])
                         {
                             this.skills[skill] = skillTraining[i + 1];
                             break;
@@ -338,7 +355,24 @@ class Character
                     }
                 }
             }
-        } 
+        }
+
+        //keeping the Lore skill at the highest value of any specific lore skill for the purposes of feats (happens when any of the Lore skills is being changed or increased)
+        if (skillName.Contains("Lore") && skillsKeys.Contains(skillName))
+        {
+            List<int> loreValues = new List<int>();
+            //go through all Lore -skills
+            foreach (string key in skillsKeys)
+            {
+                if (key.Contains("Lore"))
+                {
+                    loreValues.Add(Array.IndexOf(skillTraining, this.skills[key]));
+                }
+            }
+            this.skills["Lore"] = skillTraining[loreValues.Max()];
+        }
+
+        /* LEGACY?
         //for general/skill feat skill training
         else if (skillName == "Skill Training")
         {
@@ -357,6 +391,7 @@ class Character
             string skillToAdd = skillsKeysUntrained[index];
             this.IncreaseSkill(skillToAdd);
         }
+        */
     }
 
 
@@ -396,8 +431,10 @@ class Character
     /// </summary>
     internal void RandomClass()
     {
+        System.Threading.Thread.Sleep(1);
         var random = new System.Random();
         var classes = new List<string> { "alchemist", "barbarian", "bard", "champion", "cleric", "druid", "fighter", "monk", "ranger", "rogue", "sorcerer", "wizard" };
+        System.Threading.Thread.Sleep(1);
         int index = random.Next(classes.Count);
         this.characterClass = classes[index];
         Debug.Log("character class: "+this.characterClass);
@@ -413,6 +450,7 @@ class Character
             }
 
         }
+        System.Threading.Thread.Sleep(1);
         index = random.Next(InitialFeatDic.Count);
         if (index > 0)
         {
@@ -428,29 +466,189 @@ class Character
         // METHOD ApplyProficienciesEffects         --- keeping naming consistent
     }
 
+    internal void ApplyProficienciesEffects()
+    {
+        //
+    }
+
 
     /// <summary>
     /// Defines the character's ancestry randomly                                                               ---- Lacks application of ancestry modifiers
     /// </summary>
     internal void RandomAncestry()
     {
+        System.Threading.Thread.Sleep(1);
         var random = new System.Random();
         int index = random.Next(ParseXML.ancestryDic.Count);
         Dictionary<string, string> ancestry = ParseXML.ancestryDic[index];
 
         this.characterAncestry = ancestry["ancName"];
+        Debug.Log(this.characterAncestry);
 
         //apply ancestry effects
-        // METHOD ApplyAncestryEffects
+        ApplyAncestryEffects(ParseXML.ancestryDic[index]);
+    }
+
+    internal void ApplyAncestryEffects(Dictionary<string, string> ancestryInfo)
+    {
+        List<string> keyList = new List<string>(ancestryInfo.Keys);
+        foreach (var key in keyList)
+        {
+            if (ancestryInfo[key] != "none")
+            {
+                Debug.Log("Ancestry effect found: " + key);
+                switch (key)
+                {
+                    //incrcease character HP by the ancestry's given amount
+                    case ("hp"):
+                        
+                        int newhp = (int.Parse(characterFeatures[key]) + int.Parse(ancestryInfo[key]));
+                        characterFeatures[key] = newhp.ToString();
+                        break;
+
+                    //set the character size
+                    case ("size"):
+                        characterFeatures[key] = ancestryInfo[key];
+                        break;
+
+                    //set the character speed
+                    case ("speed"):
+                        characterFeatures[key] = ancestryInfo[key];
+                        break;
+
+                    //applies boosts to the character's sheet
+                    case ("boost"):
+                        List<string> boostList = ancestryInfo[key].Split('/').ToList();
+                        foreach (string boost in boostList)
+                        {
+                            //free boost
+                            if (boost == "Free")
+                            {
+                                System.Threading.Thread.Sleep(1);//forces another random to be created by pausing
+                                var rand = new System.Random();
+                                List<string> statList = new List<string>(statsDic.Keys);
+                                string randomKey = statList[rand.Next(statList.Count)];
+                                UpdateCharStat(randomKey);
+                            }
+                            //otherwise deal with the stat increase
+                            else
+                            {
+                                UpdateCharStat(boost);
+                            }
+                        }
+                        break;
+
+                    //applies stat flaw to the character's sheet
+                    case ("flaw"):
+                        this.statsDic[ancestryInfo[key]] -= 2;
+                        UpdateMods();
+                        break;
+
+                    //applies languages from the ancestry to the character
+                    case ("language"):
+                        string ancestryLanguages = ancestryInfo[key];
+                        string replacementString = "";
+
+                        //language list of the game to randomize values from
+                        List<string> languages = new List<string>{ 
+                            "Draconic", "Dwarven", "Elven", "Gnomish", "Goblin", "Halfling", "Jotun", "Orcish", "Sylvan", "Undercommon",
+                            "Abyssal", "Aklo", "Aquan", "Auran", "Celestial", "Gnoll", "Ignan", "Infernal", "Necril", "Shadowtongue", "Terran"};
+                        List<string> langListAdd = new List<string>();
+                        int intmod = this.GetMod("Intelligence");
+
+                        //randomize languages up to the intmodifier
+                        for (int i = 0; i < intmod; i++)
+                        {
+                            System.Threading.Thread.Sleep(1);
+                            var random = new System.Random();
+                            int index = random.Next(languages.Count);
+                            string languageToAdd = languages[index];
+                            //check if the random language is already known and randomize new if it is
+                            if (ancestryInfo[key].Contains(languageToAdd) || langListAdd.Contains(languageToAdd))
+                            {
+                                while (ancestryInfo[key].Contains(languageToAdd) || langListAdd.Contains(languageToAdd))
+                                {
+                                    System.Threading.Thread.Sleep(1);     //sleep for 1ms to force a new random value
+                                    index = random.Next(languages.Count);
+                                    languageToAdd = languages[index];      //randomize a new language
+                                }
+                            }
+                            langListAdd.Add(languageToAdd);
+                        }
+
+                        //create a single string from the randomized languages list
+                        foreach  (string lang in langListAdd)
+                        {
+                            if (!replacementString.Contains(","))
+                            {
+                                replacementString = lang;
+                            }
+                            else
+                            {
+                                replacementString = replacementString + ", " + lang;
+                            }
+                        }
+
+                        //reformat ancestry's languages into a more readable form for the user
+                        string ancestryLangProcessed = ancestryLanguages.Replace("/", ", ").Replace("intmod", ", "+replacementString);
+                        Debug.Log(ancestryLangProcessed);
+
+                        //add the ancestry languages to the character's sheet
+                        this.characterFeatures[key] = ancestryLangProcessed;
+                        break;
+
+                    //sets the ancestries traits to the character
+                    case ("trait"):
+                        this.characterFeatures[key] = ancestryInfo[key].Replace("/", ", ");
+                        break;
+
+                    //adds the character feature the character has to the feat list. These are requirements for some feats but are only available through ancestries
+                    case ("special"):
+                        if (ancestryInfo[key] == "none")
+                        {
+                            break;
+                        }
+                        Dictionary<string, string> featToAdd = new Dictionary<string, string>();
+                        switch (ancestryInfo[key])
+                        {
+                            case ("Darkvision"):
+                                featToAdd.Add("name", ancestryInfo[key]);
+                                featToAdd.Add("description", "You can see in darkness and dim light just as well as you can see in bright light, though your vision in darkness is in black and white.");
+                                break;
+                            case ("LowLight Vision"):
+                                featToAdd.Add("name", ancestryInfo[key]);
+                                featToAdd.Add("description", "You can see in dim light as though it were bright light, so you ignore the concealed condition due to dim light.");
+                                break;
+                            case ("Keen Eyes"):
+                                featToAdd.Add("name", ancestryInfo[key]);
+                                featToAdd.Add("description", "Your eyes are sharp, allowingyou to make out small details about concealed or even invisible creatures that othersmight miss." +
+                                    "You gain a + 2circumstance bonus when using the Seek action to find hidden orundetected creatures within 30 feet of you.When you target anopponent that is concealed fromyou or hidden from you, " +
+                                    "reduce the DC of the flat check to 3 for a concealed target or 9 for a hidden one.");
+                                break;
+                            default:
+                                break;
+                        }
+                        this.featsDic.Add(featToAdd);
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+            else
+            {
+                Debug.Log(ancestryInfo["ancName"] + " was empty for the key: " + key);
+            }
+        }
     }
 
 
     /// <summary>
-    /// Defines the character's background                                                                      ---- Lacks implementation
+    /// Defines the character's background                                                                      ---- UNTESTED
     /// </summary>
     internal void RandomBackground()
     {
-
+        System.Threading.Thread.Sleep(1);
         var random = new System.Random();
         int index = random.Next(ParseXML.ancestryDic.Count);
         Dictionary<string, string> background = ParseXML.ancestryDic[index];
@@ -472,6 +670,7 @@ class Character
         {
             if (backgroundInfo[key] != "none")
             {
+                Debug.Log("Background effect found: " + key + "--- it was: "+backgroundInfo[key]);
                 switch (key)
                 {
                     //applies boosts to the character information
@@ -482,6 +681,7 @@ class Character
                             //free boost
                             if (boost == "Free")
                             {
+                                System.Threading.Thread.Sleep(1);
                                 var rand = new System.Random();
                                 string randomKey = keyList[rand.Next(keyList.Count)];
                                 UpdateCharStat(randomKey);
@@ -491,6 +691,7 @@ class Character
                             else
                             {
                                 List<string> boostOrList = boost.Split('-').ToList();
+                                System.Threading.Thread.Sleep(1);
                                 var rand = new System.Random();
                                 int index = rand.Next(boostOrList.Count);
                                 UpdateCharStat(boostOrList[index]);
@@ -502,30 +703,37 @@ class Character
                         this.statsDic[backgroundInfo[key]] -= 2;
                         UpdateMods();
                         break;
-                    //does not currently know how to do Lore(something)
+                    //increases the specified skill value to the given value. Adds the new lore to the dictionary
                     case ("skill"):
                         List<string> skillList = backgroundInfo[key].Split('/').ToList();
                         foreach (string adv in skillList)
                         {
-                            this.IncreaseSkill(backgroundInfo[adv]);
+                            //if there is an OR choice in the advancement
+                            if (adv.Contains('-'))
+                            {
+                                string[] advOrArr = adv.Split('-');
+                                System.Threading.Thread.Sleep(1);
+                                var random = new System.Random();
+                                int index = random.Next(0, advOrArr.Length);
+                                this.IncreaseSkill(advOrArr[index]);
+
+                            }
+                            else
+                            {
+                                this.IncreaseSkill(backgroundInfo[adv]);
+                            }
                         }
                         break;
                     //adds the free random feat the character gets
                     case ("feat"):
-                        //add specific feat by name     (going through the files, seems like it is only skill feats?) -- done after the split idea
-
-
-                        //problem: How to add the different versions of assurance? Create a copy and then redefine the feat's name?
-
-                        //split out '(' => feat's name is always at [0] even if '(' does not exist
-                            //find feat [0] from skillFeatDic.XML to a newly created dictionary variable
-                                //if the length of array is bigger than 1 (so if the feat's name is Assurance, since it is the only one defining something in feats) (or check if feat 0 == Assurance for future expansion possibilities?
-                                    
-                                    //LUO UUSI METODI ASSURANCE TAPAUKSESSA, SILLÄ TÄMÄ SAATTAA TULLA VASTAAN GENERAL/SKILL FEATISSÄKIN - UniqueFeat -metodi?
-                                            //voi sisältää (skill) esimääreen tai antaa sattumanvaraisen Trained skillin?
-                                    
-                                    //rename new dictionary's feat's name -keys name -value to the name before split
-                                //then add the dictionary variable to featsDic
+                        string[] featSplit = backgroundInfo[key].Split('(');
+                        Dictionary<string, string> featToAdd = FindGeneralFeat(featSplit[0]);
+                        /*
+                         *  if featToAdd["name"] == Assurance
+                         *  => Metodi Assurance lisäämiselle? (TrainedSkill) sattumanvaraisesti? - ei kuulu tässä vaiheessa
+                         */
+                        featToAdd["name"] = backgroundInfo[key];
+                        featsDic.Add(featToAdd);
                         break;
                     default:
                         break;
@@ -540,7 +748,7 @@ class Character
 
 
     /// <summary>
-    /// Applies the effect of the advancement to this character                                                 ---- UNTESTED ----                      ---------- UNFINISHED -----
+    /// Applies the effect of the advancement to this character                                                 (else statement? needed?)
     /// </summary>
     /// <param name="advancement">dictionary which contains the information of the advancement</param>
     internal void ApplyAdvancementEffect(Dictionary<string,string> advancement)
@@ -633,6 +841,7 @@ class Character
     /// <param name="advancementName">requested advancement</param>
     internal void AddAdvancement(string advancementName)
     {
+        System.Threading.Thread.Sleep(1);
         var random = new System.Random();
         int index;
         // connecting feat with xml file and avoiding Initial Feat problems
@@ -661,7 +870,7 @@ class Character
                     //Skill Training special case
                     if (advancementFilteredDics[index]["name"] == "Skill Training")
                     {
-                        this.IncreaseSkill(advancementFilteredDics[index]["name"]);          //is it a problem if not this.?
+                        this.IncreaseSkill(advancementFilteredDics[index]["name"]);
                     }
                     this.featsDic.Add(advancementFilteredDics[index]);
                 }
@@ -669,13 +878,16 @@ class Character
             else if (advancementName == "Feat(Ancestry)")
             {
                 List<Dictionary<string, string>>  advancementFilteredDics = this.FilterDictionary(ParseXML.ancestryFeatDic, advancementName);
+                System.Threading.Thread.Sleep(1);
                 index = random.Next(advancementFilteredDics.Count);
                 this.featsDic.Add(advancementFilteredDics[index]);
             }
             else if (advancementName == "Feat(Class)")
             {
                 List<Dictionary<string, string>>  advancementFilteredDics = this.FilterDictionary(ParseXML.classFeatDic, advancementName);
+                System.Threading.Thread.Sleep(1);
                 index = random.Next(advancementFilteredDics.Count);
+                Debug.Log(index);
                 this.featsDic.Add(advancementFilteredDics[index]);
             }
         }
@@ -684,22 +896,30 @@ class Character
             if (advancementName == "Ability Boost")      //applies boost to a stat
             {
                 List<string> keyList = new List<string>(statsDic.Keys);
-                System.Random rand = new System.Random();
+                System.Threading.Thread.Sleep(1);
+                var rand = new System.Random();
                 string randomKey = keyList[rand.Next(keyList.Count)];
                 UpdateCharStat(randomKey);
             }
-            else if (advancementName == "Skill Increase") //increases the tier of a skill by one
+            //increases the tier of a skill by one
+            else if (advancementName == "Skill Increase")
             {
                 List<string> skillsKeys = new List<string>(skills.Keys);
                 index = random.Next(skillsKeys.Count);
+                //random skill
                 string skillToAdd = skillsKeys[index];
-                if (this.skills[skillToAdd] == "Legendary")  //check if the skill is at max tier
+
+
+
+                //if this skill == Lore OR it is at max value => change                 only Lore(X) are allowed to be increased
+                if (skillToAdd == "Lore" || this.skills[skillToAdd] == "Legendary")
                 {
-                    while (this.skills[skillToAdd] == "Legendary")
+                    while (skillToAdd == "Lore" || this.skills[skillToAdd] == "Legendary")
                     {
-                        System.Threading.Thread.Sleep(1);     //sleep for 1ms to force a new random value
+                        System.Threading.Thread.Sleep(1);
                         index = random.Next(skillsKeys.Count);
-                        skillToAdd = skillsKeys[index];      //randomize a new skill if already at full tier
+                        //random skill
+                        skillToAdd = skillsKeys[index];
                     }
                 }
                 this.IncreaseSkill(skillToAdd);
