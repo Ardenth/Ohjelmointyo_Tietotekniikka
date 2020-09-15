@@ -332,8 +332,17 @@ class Character
         //if the string for the skill contains the value it will be raised to
         if (skillName.Contains("|"))
         {
-            string[] skillNameArr = skillName.Split('|');
-            this.skills[skillNameArr[0]] = skillNameArr[1];
+            if (skillName.Contains("Lore"))
+            {
+                string[] skillNameArr = skillName.Split('|');
+                this.skills.Add(skillNameArr[0], skillNameArr[1]);
+                Debug.Log(skillName + " was added");
+            }
+            else
+            {
+                string[] skillNameArr = skillName.Split('|');
+                this.skills[skillNameArr[0]] = skillNameArr[1];
+            }
         }
         //if the string for the skill does not contain the value it will be raised one tier higher
         else if (skillsKeys.Contains(skillName))
@@ -360,6 +369,7 @@ class Character
         //keeping the Lore skill at the highest value of any specific lore skill for the purposes of feats (happens when any of the Lore skills is being changed or increased)
         if (skillName.Contains("Lore") && skillsKeys.Contains(skillName))
         {
+            Debug.Log(skillName + "---- LORE WAS INCREASED IN THE LIST");
             List<int> loreValues = new List<int>();
             //go through all Lore -skills
             foreach (string key in skillsKeys)
@@ -371,6 +381,8 @@ class Character
             }
             this.skills["Lore"] = skillTraining[loreValues.Max()];
         }
+
+
 
         /* LEGACY?
         //for general/skill feat skill training
@@ -404,6 +416,7 @@ class Character
         if (this.characterLevel == 0)
         {
             this.RandomClass();
+            this.RandomBackground();
             this.RandomAncestry();
         }
         this.characterLevel++;
@@ -547,17 +560,16 @@ class Character
                     //applies languages from the ancestry to the character
                     case ("language"):
                         string ancestryLanguages = ancestryInfo[key];
-                        string replacementString = "";
 
                         //language list of the game to randomize values from
                         List<string> languages = new List<string>{ 
                             "Draconic", "Dwarven", "Elven", "Gnomish", "Goblin", "Halfling", "Jotun", "Orcish", "Sylvan", "Undercommon",
                             "Abyssal", "Aklo", "Aquan", "Auran", "Celestial", "Gnoll", "Ignan", "Infernal", "Necril", "Shadowtongue", "Terran"};
                         List<string> langListAdd = new List<string>();
-                        int intmod = this.GetMod("Intelligence");
+                        Debug.Log(this.GetMod("Intelligence"));
 
                         //randomize languages up to the intmodifier
-                        for (int i = 0; i < intmod; i++)
+                        for (int i = 0; i < this.GetMod("Intelligence"); i++)
                         {
                             System.Threading.Thread.Sleep(1);
                             var random = new System.Random();
@@ -573,24 +585,21 @@ class Character
                                     languageToAdd = languages[index];      //randomize a new language
                                 }
                             }
+                            Debug.Log(languageToAdd);
                             langListAdd.Add(languageToAdd);
                         }
 
                         //create a single string from the randomized languages list
-                        foreach  (string lang in langListAdd)
-                        {
-                            if (!replacementString.Contains(","))
-                            {
-                                replacementString = lang;
-                            }
-                            else
-                            {
-                                replacementString = replacementString + ", " + lang;
-                            }
-                        }
+                        string replacementString = string.Join(", ", langListAdd);
 
                         //reformat ancestry's languages into a more readable form for the user
-                        string ancestryLangProcessed = ancestryLanguages.Replace("/", ", ").Replace("intmod", ", "+replacementString);
+                        string ancestryLangProcessed = ancestryLanguages.Replace("/", ", ");
+                        ancestryLangProcessed = ancestryLangProcessed.Replace("intmod", replacementString);
+                        //reformat last ',' out if there is nothing to add
+                        if (this.GetMod("Intelligence") == 0)
+                        {
+                            ancestryLangProcessed = ancestryLangProcessed.Substring(0, ancestryLangProcessed.Length - 2);
+                        }
                         Debug.Log(ancestryLangProcessed);
 
                         //add the ancestry languages to the character's sheet
@@ -650,8 +659,8 @@ class Character
     {
         System.Threading.Thread.Sleep(1);
         var random = new System.Random();
-        int index = random.Next(ParseXML.ancestryDic.Count);
-        Dictionary<string, string> background = ParseXML.ancestryDic[index];
+        int index = random.Next(ParseXML.backgroundDic.Count);
+        Dictionary<string, string> background = ParseXML.backgroundDic[index];
 
         this.characterBackground = background;
 
@@ -668,7 +677,7 @@ class Character
         List<string> keyList = new List<string>(backgroundInfo.Keys);
         foreach (var key in keyList)
         {
-            if (backgroundInfo[key] != "none")
+            if (backgroundInfo[key] != "none" || backgroundInfo[key] != "placeholder")
             {
                 Debug.Log("Background effect found: " + key + "--- it was: "+backgroundInfo[key]);
                 switch (key)
@@ -681,9 +690,10 @@ class Character
                             //free boost
                             if (boost == "Free")
                             {
+                                List<string> statsList = new List<string>(statsDic.Keys);
                                 System.Threading.Thread.Sleep(1);
                                 var rand = new System.Random();
-                                string randomKey = keyList[rand.Next(keyList.Count)];
+                                string randomKey = statsList[rand.Next(statsList.Count)];
                                 UpdateCharStat(randomKey);
                                 System.Threading.Thread.Sleep(1);   //forces another random to be created by pausing
                             }
@@ -720,7 +730,7 @@ class Character
                             }
                             else
                             {
-                                this.IncreaseSkill(backgroundInfo[adv]);
+                                this.IncreaseSkill(adv);
                             }
                         }
                         break;
@@ -887,7 +897,7 @@ class Character
                 List<Dictionary<string, string>>  advancementFilteredDics = this.FilterDictionary(ParseXML.classFeatDic, advancementName);
                 System.Threading.Thread.Sleep(1);
                 index = random.Next(advancementFilteredDics.Count);
-                Debug.Log(index);
+                Debug.Log("available class feats: " + advancementFilteredDics.Count);
                 this.featsDic.Add(advancementFilteredDics[index]);
             }
         }

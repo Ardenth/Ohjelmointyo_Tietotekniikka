@@ -17,7 +17,7 @@
 	<background>
 		<bckgrName>Animal Whisperer</bckgrName>
 		<boost>Free/Wisdom-Charisma</boost>
-		<skill>Nature|Trained/Lore|Trained</skill>
+		<skill>Nature|Trained/Lore(Terrain)|Trained</skill>
 		<feat>Train Animal</feat>
 		<description>placeholder</description>
 	</background>

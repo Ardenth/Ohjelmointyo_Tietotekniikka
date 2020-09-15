@@ -7,7 +7,7 @@
 		<speed>20</speed>
 		<boost>Constitution/Wisdom/Free</boost>
 		<flaw>Charisma</flaw>
-		<language>Common/Dwarf/intmod</language>
+		<language>Common/Dwarven/intmod</language>
 		<trait>Dwarf/Humanoid</trait>
 		<special>Darkvision</special>
 	</race>
