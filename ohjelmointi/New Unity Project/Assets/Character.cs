@@ -132,6 +132,7 @@ class Character
         return str?.First().ToString().ToUpper() + str?.Substring(1).ToLower();
     }
 
+
     /// <summary>
     /// Lower first character for a string
     /// </summary>
@@ -415,12 +416,18 @@ class Character
     {
         if (this.characterLevel == 0)
         {
+            this.characterLevel++;
             this.RandomClass();
             this.RandomBackground();
             this.RandomAncestry();
+            this.FindProgression();
         }
-        this.characterLevel++;
-        this.FindProgression();
+        else
+        {
+            this.characterLevel++;
+            this.FindProgression();
+            //increase hp per con??
+        }
 
         // add levelup hp increase from class
 
@@ -452,8 +459,12 @@ class Character
         this.characterClass = classes[index];
         Debug.Log("character class: "+this.characterClass);
 
+        //applies the progression dic that the character has for the character sheet
+        FindProgressionDic();
+
         //apply initial feat for your class
         List<Dictionary<string, string>> InitialFeatDic = new List<Dictionary<string, string>>();
+        Debug.Log("level when the progression dic is linked: "+classProgDic[0]["level"]);
         foreach (var item in ParseXML.classFeatDic)
         {
             //if the initial Feat for your class exists
@@ -476,12 +487,13 @@ class Character
         }
 
         //apply class proficiencies
-        // METHOD ApplyProficienciesEffects         --- keeping naming consistent
+        ApplyProficienciesEffects();
     }
 
     internal void ApplyProficienciesEffects()
     {
-        //
+        //apply proficiencies
+
     }
 
 
@@ -677,7 +689,7 @@ class Character
         List<string> keyList = new List<string>(backgroundInfo.Keys);
         foreach (var key in keyList)
         {
-            if (backgroundInfo[key] != "none" || backgroundInfo[key] != "placeholder")
+            if (backgroundInfo[key] != "none" && backgroundInfo[key] != "placeholder")
             {
                 Debug.Log("Background effect found: " + key + "--- it was: "+backgroundInfo[key]);
                 switch (key)
@@ -814,19 +826,6 @@ class Character
     internal void FindProgression()
     {
         int charLevel = this.characterLevel;
-        string charClass = this.characterClass;
-        if (this.classProgDic.Count == 0)
-        {
-            for (int i = 0; i < ParseXML.playableClasses.Length; i++)
-            {
-                if (charClass == ParseXML.playableClasses[i])
-                {
-                    this.classProgDic = ParseXML.classProgDicArray[i];
-                    Debug.Log("dictionary for progressions found"); //remove later
-                }
-            }
-        }
-
         Dictionary<string, string> characterProg = this.classProgDic[charLevel-1];
         Dictionary<string, string>.ValueCollection characterProgValues = characterProg.Values;
         foreach (string item in characterProgValues)
@@ -840,6 +839,23 @@ class Character
 
 
 
+        }
+    }
+
+
+    /// <summary>
+    /// Find the correct dictionary for class progression based on character's class
+    /// </summary>
+    internal void FindProgressionDic()
+    {
+        string charClass = this.characterClass;
+        for (int i = 0; i < ParseXML.playableClasses.Length; i++)
+        {
+            if (charClass == ParseXML.playableClasses[i])
+            {
+                this.classProgDic = ParseXML.classProgDicArray[i];
+                Debug.Log("dictionary for progressions found"); //remove later
+            }
         }
     }
 
