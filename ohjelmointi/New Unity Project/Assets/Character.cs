@@ -428,17 +428,18 @@ class Character
             int addedHP = levelUpHP + this.GetMod("Constitution") + int.Parse(this.characterFeatures["hp"]);
             this.characterFeatures["hp"] = addedHP.ToString();
             Debug.Log("current total hp: " + characterFeatures["hp"]);
+            Debug.Log("Levelup finished");
             //increase hp per con??
         }
 
-        // add levelup hp increase from class
 
 
-        //Debug.Log("Owned feats at level: " + this.characterLevel);
+        /*Debug.Log("Owned feats at level: " + this.characterLevel);
         for (int i = 0; i < featsDic.Count; i++)
         {
             //Debug.Log(featsDic[i]["name"]);
         }
+        */
         //recursive
         levels--;
         if (levels >= 1)
@@ -476,9 +477,10 @@ class Character
             }
 
         }
-        System.Threading.Thread.Sleep(1);
+        //Generate random Initial Feat
+        System.Threading.Thread.Sleep(10); //Force a new random event
         index = random.Next(InitialFeatDic.Count);
-        if (index > 0)
+        if (InitialFeatDic.Count() > 0)
         {
             this.featsDic.Add(InitialFeatDic[index]);
             Debug.Log("INITIAL FEAT FOUND: " + InitialFeatDic[index]["name"]);
@@ -498,6 +500,7 @@ class Character
         List<Dictionary<string, string>> classProfs = FilterDictionary(ParseXML.proficiencyDic, "Proficiencies");
         Dictionary<string, string> profs = classProfs[0];
         List<string> keyList = new List<string>(profs.Keys);
+        var random = new System.Random();
         //all proficiencies except the filtering proficiency used to filter list variables based on class
         foreach (string proficiency in keyList.Skip(1))
         {
@@ -536,7 +539,6 @@ class Character
                 for (int i = 0; i < this.GetMod("Intelligence") + langsInt; i++)
                 {
                     System.Threading.Thread.Sleep(1);
-                    var random = new System.Random();
                     int index = random.Next(languages.Count);
                     string languageToAdd = languages[index];
                     //check if the random language is already known and randomize new if it is
@@ -575,7 +577,6 @@ class Character
                     {
                         List<string> primaryStatList = profs[proficiency].Split('-').ToList();
                         System.Threading.Thread.Sleep(1);
-                        var random = new System.Random();
                         int index = random.Next(primaryStatList.Count);
                         UpdateCharStat(primaryStatList[index]);
                         this.characterFeatures[proficiency] = primaryStatList[index];
@@ -615,6 +616,7 @@ class Character
     internal void ApplyAncestryEffects(Dictionary<string, string> ancestryInfo)
     {
         List<string> keyList = new List<string>(ancestryInfo.Keys);
+        var rand = new System.Random();
         foreach (var key in keyList)
         {
             if (ancestryInfo[key] != "none")
@@ -648,7 +650,6 @@ class Character
                             if (boost == "Free")
                             {
                                 System.Threading.Thread.Sleep(1);//forces another random to be created by pausing
-                                var rand = new System.Random();
                                 string randomKey;
                                 if (rand.Next(0, 2) == 0)
                                 {
@@ -753,6 +754,7 @@ class Character
     internal void ApplyBackgroundEffects(Dictionary<string, string> backgroundInfo)
     {
         List<string> keyList = new List<string>(backgroundInfo.Keys);
+        var rand = new System.Random();
         foreach (var key in keyList)
         {
             if (backgroundInfo[key] != "none" && backgroundInfo[key] != "placeholder")
@@ -770,7 +772,6 @@ class Character
                             {
                                 List<string> statsList = new List<string>(statsDic.Keys);
                                 System.Threading.Thread.Sleep(1);
-                                var rand = new System.Random();
                                 string randomKey;
                                 if (rand.Next(0, 2) == 0)
                                 {
@@ -788,7 +789,6 @@ class Character
                             {
                                 List<string> boostOrList = boost.Split('-').ToList();
                                 System.Threading.Thread.Sleep(1);
-                                var rand = new System.Random();
                                 int index = rand.Next(boostOrList.Count);
                                 UpdateCharStat(boostOrList[index]);
                             }
@@ -810,8 +810,7 @@ class Character
                             {
                                 string[] advOrArr = adv.Split('-');
                                 System.Threading.Thread.Sleep(1);
-                                var random = new System.Random();
-                                int index = random.Next(0, advOrArr.Length);
+                                int index = rand.Next(0, advOrArr.Length);
                                 this.IncreaseSkill(advOrArr[index]);
 
                             }
