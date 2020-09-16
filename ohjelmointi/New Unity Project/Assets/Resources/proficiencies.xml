@@ -2,7 +2,7 @@
 <Proficiencies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<proficiency>
 		<class>Alchemist</class>
-		<initialBoost>Intelligence</initialBoost>
+		<primaryStat>Intelligence</primaryStat>
 		<hp>8+Con</hp>
 		<fortitudeSave>Expert</fortitudeSave>
 		<reflexSave>Expert</reflexSave>
@@ -25,7 +25,7 @@
 	</proficiency>
 	<proficiency>
 		<class>Barbarian</class>
-		<initialBoost>Strength</initialBoost>
+		<primaryStat>Strength</primaryStat>
 		<hp>12+Con</hp>
 		<fortitudeSave>Expert</fortitudeSave>
 		<reflexSave>Trained</reflexSave>
@@ -48,7 +48,7 @@
 	</proficiency>
 	<proficiency>
 		<class>Bard</class>
-		<initialBoost>Charisma</initialBoost>
+		<primaryStat>Charisma</primaryStat>
 		<hp>8+Con</hp>
 		<fortitudeSave>Trained</fortitudeSave>
 		<reflexSave>Trained</reflexSave>
@@ -71,7 +71,7 @@
 	</proficiency>
 	<proficiency>
 		<class>Champion</class>
-		<initialBoost>Strength-Dexterity</initialBoost>
+		<primaryStat>Strength-Dexterity</primaryStat>
 		<hp>10+Con</hp>
 		<fortitudeSave>Expert</fortitudeSave>
 		<reflexSave>Trained</reflexSave>
@@ -94,7 +94,7 @@
 	</proficiency>
 	<proficiency>
 		<class>Cleric</class>
-		<initialBoost>Wisdom</initialBoost>
+		<primaryStat>Wisdom</primaryStat>
 		<hp>8+Con</hp>
 		<fortitudeSave>Trained</fortitudeSave>
 		<reflexSave>Trained</reflexSave>
@@ -117,7 +117,7 @@
 	</proficiency>
 	<proficiency>
 		<class>Druid</class>
-		<initialBoost>Wisdom</initialBoost>
+		<primaryStat>Wisdom</primaryStat>
 		<hp>8+Con</hp>
 		<fortitudeSave>Trained</fortitudeSave>
 		<reflexSave>Trained</reflexSave>
@@ -140,7 +140,7 @@
 	</proficiency>
 	<proficiency>
 		<class>Fighter</class>
-		<initialBoost>Strength-Dexterity</initialBoost>
+		<primaryStat>Strength-Dexterity</primaryStat>
 		<hp>8+Con</hp>
 		<fortitudeSave>Expert</fortitudeSave>
 		<reflexSave>Expert</reflexSave>
@@ -163,7 +163,7 @@
 	</proficiency>
 	<proficiency>
 		<class>Monk</class>
-		<initialBoost>Strength-Dexterity</initialBoost>
+		<primaryStat>Strength-Dexterity</primaryStat>
 		<hp>10+Con</hp>
 		<fortitudeSave>Expert</fortitudeSave>
 		<reflexSave>Expert</reflexSave>
@@ -186,7 +186,7 @@
 	</proficiency>
 	<proficiency>
 		<class>Ranger</class>
-		<initialBoost>Strength-Dexterity</initialBoost>
+		<primaryStat>Strength-Dexterity</primaryStat>
 		<hp>10+Con</hp>
 		<fortitudeSave>Expert</fortitudeSave>
 		<reflexSave>Expert</reflexSave>
@@ -209,7 +209,7 @@
 	</proficiency>
 	<proficiency>
 		<class>Rogue</class>
-		<initialBoost>Dexterity</initialBoost>
+		<primaryStat>Dexterity</primaryStat>
 		<hp>8+Con</hp>
 		<fortitudeSave>Trained</fortitudeSave>
 		<reflexSave>Expert</reflexSave>
@@ -232,7 +232,7 @@
 	</proficiency>
 	<proficiency>
 		<class>Sorcerer</class>
-		<initialBoost>Charisma</initialBoost>
+		<primaryStat>Charisma</primaryStat>
 		<hp>6+Con</hp>
 		<fortitudeSave>Trained</fortitudeSave>
 		<reflexSave>Trained</reflexSave>
@@ -255,7 +255,7 @@
 	</proficiency>
 	<proficiency>
 		<class>Wizard</class>
-		<initialBoost>Intelligence</initialBoost>
+		<primaryStat>Intelligence</primaryStat>
 		<hp>6+Con</hp>
 		<fortitudeSave>Trained</fortitudeSave>
 		<reflexSave>Trained</reflexSave>

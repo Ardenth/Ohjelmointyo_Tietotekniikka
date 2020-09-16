@@ -7,7 +7,7 @@
 		<speed>20</speed>
 		<boost>Constitution/Wisdom/Free</boost>
 		<flaw>Charisma</flaw>
-		<language>Common/Dwarven/intmod</language>
+		<languages>Common/Dwarven/intmod</languages>
 		<trait>Dwarf/Humanoid</trait>
 		<special>Darkvision</special>
 	</race>
@@ -18,7 +18,7 @@
 		<speed>30</speed>
 		<boost>Dexterity/Intelligence/Free</boost>
 		<flaw>Constitution</flaw>
-		<language>Common/Elven/intmod</language>
+		<languages>Common/Elven/intmod</languages>
 		<trait>Elf/Humanoid</trait>
 		<special>LowLight Vision</special>
 	</race>
@@ -29,7 +29,7 @@
 		<speed>25</speed>
 		<boost>Constitution/Charisma/Free</boost>
 		<flaw>Strength</flaw>
-		<language>Common/Gnomish/Sylvan/intmod</language>
+		<languages>Common/Gnomish/Sylvan/intmod</languages>
 		<trait>Gnome/Humanoid</trait>
 		<special>LowLight Vision</special>
 	</race>
@@ -40,7 +40,7 @@
 		<speed>25</speed>
 		<boost>Dexterity/Charisma/Free</boost>
 		<flaw>Wisdom</flaw>
-		<language>Common/Goblin/intmod</language>
+		<languages>Common/Goblin/intmod</languages>
 		<trait>Goblin/Humanoid</trait>
 		<special>Darkvision</special>
 	</race>
@@ -51,7 +51,7 @@
 		<speed>25</speed>
 		<boost>Dexterity/Wisdom/Free</boost>
 		<flaw>Strength</flaw>
-		<language>Common/Halfling/intmod</language>
+		<languages>Common/Halfling/intmod</languages>
 		<trait>Halfling-Humanoid</trait>
 		<special>Keen Eyes</special>
 	</race>
@@ -62,7 +62,7 @@
 		<speed>25</speed>
 		<boost>Free/Free</boost>
 		<flaw>none</flaw>
-		<language>Common/intmod</language>
+		<languages>Common/intmod</languages>
 		<trait>Human/Humanoid</trait>
 		<special>none</special>
 	</race>

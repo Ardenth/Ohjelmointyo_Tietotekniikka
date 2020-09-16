@@ -196,7 +196,7 @@ public class ParseXML : MonoBehaviour
         string profInfo;
         XElement element;
         string[] elementNames = new string[]
-        {"ancName", "hp", "size", "speed", "boost", "flaw", "language", "trait", "special" };
+        {"ancName", "hp", "size", "speed", "boost", "flaw", "languages", "trait", "special" };
         foreach (var oneDict in allDict)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();
@@ -295,7 +295,7 @@ public class ParseXML : MonoBehaviour
         string profInfo;
         XElement element;
         string[] elementNames = new string[]
-        {"class", "initialBoost", "hp", "fortitudeSave", "reflexSave", "willSave",
+        {"class", "primaryStat", "hp", "fortitudeSave", "reflexSave", "willSave",
                 "skill1", "skill2", "skill3", "languages",
                 "unarmed", "simple", "martial", "advanced", "attackSpecial",
                 "unarmored", "light", "medium", "heavy", "classDC", "spellDC"};
