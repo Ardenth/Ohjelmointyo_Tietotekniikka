@@ -2622,14 +2622,14 @@
     <name>Wholeness Body</name>
     <class>Monk</class>
     <level>4</level>
-    <prerequisite>Ki Spells</prerequisite>
+    <prerequisite>Ki Rush-Ki Strike</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
     <name>Abundant Step</name>
     <class>Monk</class>
     <level>6</level>
-    <prerequisite>Incredible Movement/Ki Spells</prerequisite>
+    <prerequisite>Ki Rush-Ki Strike</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
@@ -2650,7 +2650,7 @@
     <name>Ki Blast</name>
     <class>Monk</class>
     <level>6</level>
-    <prerequisite>Ki Spells</prerequisite>
+    <prerequisite>Ki Rush-Ki Strike</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
@@ -2727,7 +2727,7 @@
     <name>Wild Winds Initiate</name>
     <class>Monk</class>
     <level>8</level>
-    <prerequisite>Ki Spells</prerequisite>
+    <prerequisite>Ki Rush-Ki Strike</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
@@ -2748,7 +2748,7 @@
     <name>Wind Jump</name>
     <class>Monk</class>
     <level>10</level>
-    <prerequisite>Ki Spells</prerequisite>
+    <prerequisite>Ki Rush-Ki Strike</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
@@ -2783,7 +2783,7 @@
     <name>Meditative Focus</name>
     <class>Monk</class>
     <level>12</level>
-    <prerequisite>Ki Spells</prerequisite>
+    <prerequisite>Ki Rush-Ki Strike</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
@@ -2853,7 +2853,7 @@
     <name>Quivering Palm</name>
     <class>Monk</class>
     <level>16</level>
-    <prerequisite>Ki Spells</prerequisite>
+    <prerequisite>Ki Rush-Ki Strike</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
@@ -2874,7 +2874,7 @@
     <name>Empty Body</name>
     <class>Monk</class>
     <level>18</level>
-    <prerequisite>Ki Spells</prerequisite>
+    <prerequisite>Ki Rush-Ki Strike</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
@@ -2902,7 +2902,7 @@
     <name>Fuse Stance</name>
     <class>Monk</class>
     <level>20</level>
-    <prerequisite>2 stances??</prerequisite>
+    <prerequisite>none</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>

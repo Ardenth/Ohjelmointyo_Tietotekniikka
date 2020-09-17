@@ -253,7 +253,7 @@
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
-		<name>Spellcasting Occult</name>
+		<name>Occult Spellcasting</name>
 		<class>Bard</class>
 		<effect>placeholder</effect>
 		<description>placeholder</description>
@@ -261,7 +261,7 @@
 	<advancement>
 		<name>Composition</name>
 		<class>Bard</class>
-		<effect>FocusPool|1</effect>
+		<effect>placeholder</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -423,7 +423,7 @@
 	<advancement>
 		<name>Divine Spellcasting</name>
 		<class>Cleric</class>
-		<effect>SpellSchool|Divine</effect>
+		<effect>placeholder</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -741,7 +741,7 @@
 	<advancement>
 		<name>Weapon Tricks</name>
 		<class>Rogue</class>
-		<effect>attackSpecial|Expert</effect>
+		<effect>attackSpecial|Expert/Simple|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -765,7 +765,7 @@
 	<advancement>
 		<name>Master Tricks</name>
 		<class>Rogue</class>
-		<effect>attackSpecial|Master</effect>
+		<effect>attackSpecial|Master/Simple|Master</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -792,6 +792,12 @@
 		<effect>ClassDC|Master</effect>
 		<description>placeholder</description>
 	</advancement>
+  <advancement>
+    <name>Sorcerer Spellcasting</name>
+    <class>Sorcerer</class>
+    <effect>placeholder</effect>
+    <description>placeholder</description>
+  </advancement>
 	<advancement>
 		<name>Magical fortitudeSave</name>
 		<class>Sorcerer-Wizard</class>

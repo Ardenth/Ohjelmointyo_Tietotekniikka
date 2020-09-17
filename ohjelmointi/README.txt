@@ -12,7 +12,6 @@ Character tiedot (Character sheet) ja ne UI:n sisalle
 Random Gen (kayttaa random gen -button)
 
 Random Gen painotus
-(ainoastaan stats atm)
 (jaljella advancement painotus(voiko puurakennetta hyodyntaa?))
 ---------
 6.9:
@@ -54,29 +53,35 @@ Ongelmia ja mahdolliset ideoinnit:
 	ratkaisua ennen tekemista, koska ei ollut varmuutta 
 	koodin ratkaisumenetelmista ja luokista.
 
-16.9
-----
+16.9:
+--------
 
 Randomgen on pakko tehda luokaksi, ei ole mahdollista valttaa
 system sleepilla, liikaa aikaa generointiin.
 - Eri ongelma Initial featissa (Mietitaan silti muutosta)
 - Random.Range() -unityn oma?
 	- jos toimii, ratkaisee system.sleep ongelman
+FIXED
+---
 
 Skill Increase rajoitusta levelien perusteella (ei viela tarvetta)
 - Ongelma melkein ainoastaan Rogue -classissa (paljon skill increase)
 - Rajoitetaan randomgenia SkillIncrease vaiheessa, riippuen levelista.
+FIXED
+---
 
 Monk class feats problem, Ki Spells / Ki Pool prerequisite not considered
 	- lisataan class feats Ki Focus/Pool -feat.
 	- tarvetta bard, sorcerer?
+FIXED
+---
 
 Rogue, Cleric, Sorcerer(?) Initial feat ongelma.
 	Cleric kaytannossa oma class? (Warpriest vs Cloistered)
 
-- miten korjata tai ottaa huomioon?
 
 - Cleric: Description tasolla, jos elementtien linkitys ei toimi
+NO FIX Description level
 
 - Rogue: todennakoisesti helposti liitettavissa.
 	- if primaryStat => 
@@ -92,9 +97,34 @@ Rogue, Cleric, Sorcerer(?) Initial feat ongelma.
 		  elementin arvo toiseen?
 		- en loyda menetelmaa, saatetaan jattaa description tasolle
 
+FIXED ROGUE (Medium armor - description tasolla)
+---
 
 Deity valinta (Pitaisiko olla feat, koska kaikilla ei ole samaa efektia)
 	- Tarkoittaa Champion/Cleric efektia aseisiin? Onko muuta?
+FIXED PARTIAL - liian suuri tyo rakentaa taysin toimivaksi - tarvitsee uuden XML
+
 
 Sorcerer Bloodline
 	- pitaisi olla ratkaistavissa descriptionissa
+NO FIX - taytyisi kovakoodata, joka ei ole jarkevaa (sorcerer spellcasting
+						   sisaltaa tiedon)
+---
+Duplicate Free stat boosts character creation (game rule)
+FIXED
+
+--
+17.9
+16:00 - 19:00
+Code Analysis Package did not load correctly VS 2019
+	- korjataan (korjaus kesti 3 tuntia)
+
+Harkintaa: 
+
+Advancement kehityksen ohjausta
+
+Initial feat special
+FIXED ROGUE (Medium armor - description tasolla)
+		
+	HUOM. mahdollisesti voidaan lisata War Priest ja Ruffian
+		kun Light nostetaan, myos Medium nousee

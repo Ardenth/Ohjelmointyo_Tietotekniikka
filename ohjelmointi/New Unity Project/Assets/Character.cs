@@ -80,8 +80,11 @@ class Character
         {"unarmed", "" },{"simple", "" },{"martial", "" },{"advanced", "" },{"attackSpecial", "" },                 //attackSpecial used as a definition for others, such as bombs or initial weapons
         {"unarmored", "" },{"light", "" },{"medium", "" },{"heavy", "" },
         {"classDC", "" },{"spellDC", "" },
-        {"trait", "" },{"special", "" }, {"primaryStat", "" }, {"focusPool", "" }, {"languages", ""}    //special as feat (darkvision, lowlight vision, keen eyes), requirement for advances (characters can have both lowlight vision and darkvision)(XML?)
+        {"trait", "" }, {"primaryStat", "" },{"deity","" }, {"languages", ""}
     };
+
+    //has to be outside of methods or will cause duplicate choices
+    static readonly System.Random rand = new System.Random();
 
 
     /// <summary>
@@ -427,8 +430,6 @@ class Character
             this.FindProgression();
             int addedHP = levelUpHP + this.GetMod("Constitution") + int.Parse(this.characterFeatures["hp"]);
             this.characterFeatures["hp"] = addedHP.ToString();
-            Debug.Log("current total hp: " + characterFeatures["hp"]);
-            Debug.Log("Levelup finished");
             //increase hp per con??
         }
 
@@ -454,11 +455,8 @@ class Character
     /// </summary>
     internal void RandomClass()
     {
-        System.Threading.Thread.Sleep(1);
-        var random = new System.Random();
         var classes = new List<string> { "alchemist", "barbarian", "bard", "champion", "cleric", "druid", "fighter", "monk", "ranger", "rogue", "sorcerer", "wizard" };
-        System.Threading.Thread.Sleep(1);
-        int index = random.Next(classes.Count);
+        int index = rand.Next(classes.Count);
         this.characterClass = classes[index];
         Debug.Log("character class: "+this.characterClass);
 
@@ -478,8 +476,7 @@ class Character
 
         }
         //Generate random Initial Feat
-        System.Threading.Thread.Sleep(10); //Force a new random event
-        index = random.Next(InitialFeatDic.Count);
+        index = rand.Next(InitialFeatDic.Count);
         if (InitialFeatDic.Count() > 0)
         {
             this.featsDic.Add(InitialFeatDic[index]);
@@ -495,12 +492,14 @@ class Character
         ApplyProficienciesEffects();
     }
 
+    /// <summary>
+    /// Applies the effects and bonuses you gain from your class proficiencies
+    /// </summary>
     internal void ApplyProficienciesEffects()
     {
         List<Dictionary<string, string>> classProfs = FilterDictionary(ParseXML.proficiencyDic, "Proficiencies");
         Dictionary<string, string> profs = classProfs[0];
         List<string> keyList = new List<string>(profs.Keys);
-        var random = new System.Random();
         //all proficiencies except the filtering proficiency used to filter list variables based on class
         foreach (string proficiency in keyList.Skip(1))
         {
@@ -538,16 +537,14 @@ class Character
                 //randomize languages up to the intmodifier
                 for (int i = 0; i < this.GetMod("Intelligence") + langsInt; i++)
                 {
-                    System.Threading.Thread.Sleep(1);
-                    int index = random.Next(languages.Count);
+                    int index = rand.Next(languages.Count);
                     string languageToAdd = languages[index];
                     //check if the random language is already known and randomize new if it is
                     if (this.characterFeatures[proficiency].Contains(languageToAdd) || langListAdd.Contains(languageToAdd))
                     {
                         while (this.characterFeatures[proficiency].Contains(languageToAdd) || langListAdd.Contains(languageToAdd))
                         {
-                            System.Threading.Thread.Sleep(1);     //sleep for 1ms to force a new random value
-                            index = random.Next(languages.Count);
+                            index = rand.Next(languages.Count);
                             languageToAdd = languages[index];      //randomize a new language
                         }
                     }
@@ -573,13 +570,27 @@ class Character
             {
                 if (proficiency == "primaryStat")
                 {
-                    if (profs[proficiency].Contains('-'))
+                    if (profs[proficiency].Contains('-') || this.characterClass == "rogue")
                     {
                         List<string> primaryStatList = profs[proficiency].Split('-').ToList();
-                        System.Threading.Thread.Sleep(1);
-                        int index = random.Next(primaryStatList.Count);
+                        //special cases for Rogue initial feats
+                        if (this.CheckFeats("Scoundrel"))
+                        {
+                            primaryStatList.Add("Charisma");
+                        }
+                        else if (this.CheckFeats("Ruffian"))
+                        {
+                            primaryStatList.Add("Strength");
+                            this.skills["Intimidation"] = "Trained";
+                        }
+
+                        int index = rand.Next(primaryStatList.Count);
                         UpdateCharStat(primaryStatList[index]);
                         this.characterFeatures[proficiency] = primaryStatList[index];
+                        foreach (var item in primaryStatList)
+                        {
+                            Debug.Log("Primary stat choices: "+item);
+                        }
                     }
                     else
                     {
@@ -601,9 +612,7 @@ class Character
     /// </summary>
     internal void RandomAncestry()
     {
-        System.Threading.Thread.Sleep(1);
-        var random = new System.Random();
-        int index = random.Next(ParseXML.ancestryDic.Count);
+        int index = rand.Next(ParseXML.ancestryDic.Count);
         Dictionary<string, string> ancestry = ParseXML.ancestryDic[index];
 
         this.characterAncestry = ancestry["ancName"];
@@ -613,10 +622,13 @@ class Character
         ApplyAncestryEffects(ParseXML.ancestryDic[index]);
     }
 
+    /// <summary>
+    /// Applies effects and bonuses you gain from your ancestry
+    /// </summary>
+    /// <param name="ancestryInfo"></param>
     internal void ApplyAncestryEffects(Dictionary<string, string> ancestryInfo)
     {
         List<string> keyList = new List<string>(ancestryInfo.Keys);
-        var rand = new System.Random();
         foreach (var key in keyList)
         {
             if (ancestryInfo[key] != "none")
@@ -644,25 +656,28 @@ class Character
                     //applies boosts to the character's sheet
                     case ("boost"):
                         List<string> boostList = ancestryInfo[key].Split('/').ToList();
+                        List<string> addedFree = new List<string>();
                         foreach (string boost in boostList)
                         {
                             //free boost
                             if (boost == "Free")
                             {
-                                System.Threading.Thread.Sleep(1);//forces another random to be created by pausing
-                                string randomKey;
-                                if (rand.Next(0, 2) == 0)
+                                string randomKey = "Free";
+                                while (boostList.Contains(randomKey) || randomKey == "Free" || addedFree.Contains(randomKey))
                                 {
-                                    randomKey = this.characterFeatures["primaryStat"];
-                                }
-                                else
-                                {
-                                    System.Threading.Thread.Sleep(1);
-                                    List<string> statList = new List<string>(statsDic.Keys);
-                                    randomKey = statList[rand.Next(statList.Count)];
+                                    if (rand.Next(0, 2) == 0)
+                                    {
+                                        randomKey = this.characterFeatures["primaryStat"];
+                                    }
+                                    else
+                                    {
+                                        List<string> statList = new List<string>(statsDic.Keys);
+                                        randomKey = statList[rand.Next(statList.Count)];
+                                    }
+                                    Debug.Log("attempted random key -------- "+randomKey);
                                 }
                                 UpdateCharStat(randomKey);
-                                System.Threading.Thread.Sleep(10);   //forces another random to be created by pausing
+                                addedFree.Add(randomKey);
                             }
                             //otherwise deal with the stat increase
                             else
@@ -736,9 +751,7 @@ class Character
     /// </summary>
     internal void RandomBackground()
     {
-        System.Threading.Thread.Sleep(1);
-        var random = new System.Random();
-        int index = random.Next(ParseXML.backgroundDic.Count);
+        int index = rand.Next(ParseXML.backgroundDic.Count);
         Dictionary<string, string> background = ParseXML.backgroundDic[index];
 
         this.characterBackground = background;
@@ -754,7 +767,6 @@ class Character
     internal void ApplyBackgroundEffects(Dictionary<string, string> backgroundInfo)
     {
         List<string> keyList = new List<string>(backgroundInfo.Keys);
-        var rand = new System.Random();
         foreach (var key in keyList)
         {
             if (backgroundInfo[key] != "none" && backgroundInfo[key] != "placeholder")
@@ -771,7 +783,6 @@ class Character
                             if (boost == "Free")
                             {
                                 List<string> statsList = new List<string>(statsDic.Keys);
-                                System.Threading.Thread.Sleep(1);
                                 string randomKey;
                                 if (rand.Next(0, 2) == 0)
                                 {
@@ -779,7 +790,6 @@ class Character
                                 }
                                 else
                                 {
-                                    System.Threading.Thread.Sleep(1);
                                     randomKey = statsList[rand.Next(statsList.Count)];
                                 }
                                 UpdateCharStat(randomKey);
@@ -788,11 +798,9 @@ class Character
                             else
                             {
                                 List<string> boostOrList = boost.Split('-').ToList();
-                                System.Threading.Thread.Sleep(1);
                                 int index = rand.Next(boostOrList.Count);
                                 UpdateCharStat(boostOrList[index]);
                             }
-                            System.Threading.Thread.Sleep(5);   //forces another random to be created by pausing
                         }
                         break;
                     //applies stat flaw to the character information
@@ -809,7 +817,6 @@ class Character
                             if (adv.Contains('-'))
                             {
                                 string[] advOrArr = adv.Split('-');
-                                System.Threading.Thread.Sleep(1);
                                 int index = rand.Next(0, advOrArr.Length);
                                 this.IncreaseSkill(advOrArr[index]);
 
@@ -852,7 +859,6 @@ class Character
         string effect = advancement["effect"];
         if (effect == "placeholder" || effect == "none")
         {
-            Debug.Log("no effect for the feat");
             return;
         }
 
@@ -865,24 +871,33 @@ class Character
             if (eff.Contains("|"))
             {
                 string[] effectArr = eff.Split('|');
+                //increase skill
                 if (skills.ContainsKey(effectArr[0]))
                 {
                     this.IncreaseSkill(effect);
-                    Debug.Log("skill: " + effectArr[0] + " is now: " + effectArr[1]);
                 }
                 else if (characterFeatures.ContainsKey(effectArr[0].ToLower()))
                 {
+                    //increase speed
                     if (effectArr[0] == "speed")
                     {
                         int nextSpeed;
                         nextSpeed = int.Parse(characterFeatures[effectArr[0]]) + int.Parse(effectArr[1]);
                         characterFeatures[effectArr[0]] = nextSpeed.ToString();
-                        Debug.Log("increase speed");
+                    }
+                    if (effectArr[0] == "deity")
+                    {
+                        string[] deityArr = {"Abadar", "Asmodeus", "Calistria", "Cayden Cailean", "Desna", 
+                                             "Erastil", "Gorum", "Gozreh", "Iomedae", "Irori", "Lamashtu", 
+                                             "Nethys", "Norgorber", "Pharasma", "Rovagug", "Sarenrae", "Shelyn", 
+                                             "Torag", "Urgathoa", "Zon Kuthon"};
+                        int deityIndex = rand.Next(0, deityArr.Length);
+                        characterFeatures[effectArr[0]] = deityArr[deityIndex];
                     }
                     else
                     {
+                        //change character feature
                         characterFeatures[LowerFirstChar(effectArr[0])] = effectArr[1];
-                        Debug.Log("character feature: " + effectArr[0]+" is now: "+ effectArr[1]);
                     }
                 }
             }
@@ -941,8 +956,6 @@ class Character
     /// <param name="advancementName">requested advancement</param>
     internal void AddAdvancement(string advancementName)
     {
-        System.Threading.Thread.Sleep(1);
-        var random = new System.Random();
         int index;
         // connecting feat with xml file and avoiding Initial Feat problems
         if (advancementName.Contains("Feat") && advancementName != "Feat(Initial)")
@@ -951,7 +964,7 @@ class Character
             if (advancementName == "Feat(General)")
             {
                 List<Dictionary<string, string>>  advancementFilteredDics = this.FilterDictionary(ParseXML.generalFeatDic, advancementName);
-                index = random.Next(advancementFilteredDics.Count);
+                index = rand.Next(advancementFilteredDics.Count);
                 //Skill Training special case
                 if (advancementFilteredDics[index]["name"] == "Skill Training")
                 {
@@ -962,7 +975,7 @@ class Character
             else if (advancementName == "Feat(Skill)")
             {
                 List<Dictionary<string, string>>  advancementFilteredDics = this.FilterDictionary(ParseXML.skillFeatDic, advancementName);
-                index = random.Next(advancementFilteredDics.Count);
+                index = rand.Next(advancementFilteredDics.Count);
 
                 //currently character skills aren't being increased through the feat effects or advancement effects, thus the character does not ALWAYS have feat choices to choose from. Will be fixed as more gets implemented
                 if (index > 0)
@@ -978,16 +991,14 @@ class Character
             else if (advancementName == "Feat(Ancestry)")
             {
                 List<Dictionary<string, string>>  advancementFilteredDics = this.FilterDictionary(ParseXML.ancestryFeatDic, advancementName);
-                System.Threading.Thread.Sleep(1);
-                index = random.Next(advancementFilteredDics.Count);
+                index = rand.Next(advancementFilteredDics.Count);
                 this.featsDic.Add(advancementFilteredDics[index]);
             }
             else if (advancementName == "Feat(Class)")
             {
                 List<Dictionary<string, string>>  advancementFilteredDics = this.FilterDictionary(ParseXML.classFeatDic, advancementName);
-                System.Threading.Thread.Sleep(1);
-                index = random.Next(advancementFilteredDics.Count);
-                Debug.Log("available class feats: " + advancementFilteredDics.Count);
+                index = rand.Next(advancementFilteredDics.Count);
+                //Debug.Log("available class feats: " + advancementFilteredDics.Count);
                 this.featsDic.Add(advancementFilteredDics[index]);
             }
         }
@@ -996,8 +1007,6 @@ class Character
             if (advancementName == "Ability Boost")      //applies boost to a stat
             {
                 List<string> keyList = new List<string>(statsDic.Keys);
-                System.Threading.Thread.Sleep(1);
-                var rand = new System.Random();
                 string randomKey;
                 if (rand.Next(0, 2) == 0)
                 {
@@ -1005,29 +1014,50 @@ class Character
                 }
                 else
                 {
-                    System.Threading.Thread.Sleep(1);
                     randomKey = keyList[rand.Next(keyList.Count)];
                 }
-                Debug.Log(randomKey);
                 UpdateCharStat(randomKey);
             }
             //increases the tier of a skill by one
             else if (advancementName == "Skill Increase")
             {
-                List<string> skillsKeys = new List<string>(skills.Keys);
-                index = random.Next(skillsKeys.Count);
+                List<string> skillsKeysUnfiltered = new List<string>(skills.Keys);
+                List<string> skillsKeys = new List<string>();
+
+                //filter skills by the level requirement for skill increases
+                foreach (string key in skillsKeysUnfiltered)
+                {
+                    if (this.characterLevel < 7)
+                    {
+                        if (skills[key] == "Untrained" || skills[key] == "Trained")
+                        {
+                            skillsKeys.Add(key);
+                        }
+                    }
+                    else if (this.characterLevel < 15)
+                    {
+                        if (skills[key] == "Untrained" || skills[key] == "Trained" || skills[key] == "Expert")
+                        {
+                            skillsKeys.Add(key);
+                        }
+                    }
+                    else
+                    {
+                        skillsKeys.Add(key);
+                    }
+                }
+                index = rand.Next(skillsKeys.Count);
                 //random skill
                 string skillToAdd = skillsKeys[index];
 
 
 
-                //if this skill == Lore OR it is at max value => change                 only Lore(X) are allowed to be increased, Lore|X is kept as an tracking tool for feats
+                //only Lore(X) are allowed to be increased, Lore|X is kept as an tracking tool for feats
                 if (skillToAdd == "Lore" || this.skills[skillToAdd] == "Legendary")
                 {
                     while (skillToAdd == "Lore" || this.skills[skillToAdd] == "Legendary")
                     {
-                        System.Threading.Thread.Sleep(1);
-                        index = random.Next(skillsKeys.Count);
+                        index = rand.Next(skillsKeys.Count);
                         //random skill
                         skillToAdd = skillsKeys[index];
                     }
