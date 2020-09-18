@@ -13,6 +13,8 @@ public class UIUpdater : MonoBehaviour
     private TextMeshProUGUI intelligencechar;
     private TextMeshProUGUI wisdomchar;
     private TextMeshProUGUI charismachar;
+    private TextMeshProUGUI advancementName;
+    private TextMeshProUGUI advancementDescr;
     Character baseline = new Character();
 
 
@@ -20,7 +22,7 @@ public class UIUpdater : MonoBehaviour
     void Start()
     {
         baseline.UpdateMods();
-        baseline.LevelUp(20);
+        baseline.LevelUp(1);
 
         //testing requirementparse
     }
@@ -43,6 +45,15 @@ public class UIUpdater : MonoBehaviour
         intelligencechar.text = "Intelligence: " + baseline.GetStat("Intelligence").ToString() + "\n Mod: +" + baseline.GetMod("Intelligence").ToString();
         wisdomchar.text = "Wisdom: " + baseline.GetStat("Wisdom").ToString() + "\n Mod: +" + baseline.GetMod("Wisdom").ToString();
         charismachar.text = "Charisma: " + baseline.GetStat("Charisma").ToString() + "\n Mod: +" + baseline.GetMod("Charisma").ToString();
+
+    }
+
+
+    /// <summary>
+    /// 
+    /// </summary>
+    void UIFeatUpdate()
+    {
 
     }
 

@@ -298,11 +298,12 @@ class Character
         return this.statsModsDic[statName];
     }
 
+
     /// <summary>
-    /// 
+    /// Find the given general feat from the dictionary list
     /// </summary>
-    /// <param name="featName"></param>
-    /// <returns></returns>
+    /// <param name="featName">Feat to search for</param>
+    /// <returns>Found feat's information in dictionary format</returns>
     internal Dictionary<string, string> FindGeneralFeat(string featName)
     {
         Dictionary<string, string> foundFeat = new Dictionary<string, string>();
@@ -330,7 +331,7 @@ class Character
     /// Increases skill to the given value in the string parameter OR increases the skill by one tier
     /// </summary>
     /// <param name="skillName">Information in a string for which skill to increase and possibly to what tier</param>
-    internal void IncreaseSkill(string skillName)                                                                   
+    internal void IncreaseSkill(string skillName)
     {
         List<string> skillsKeys = new List<string>(this.skills.Keys);
         string[] skillTraining = { "Untrained", "Trained", "Expert", "Master", "Legendary" };
@@ -347,6 +348,11 @@ class Character
             {
                 string[] skillNameArr = skillName.Split('|');
                 this.skills[skillNameArr[0]] = skillNameArr[1];
+                //special case for initial feat - Medium armor proficiency increases at the same pace as Light armor proficiency
+                if (skillNameArr[0] == "Light" && (this.CheckFeats("Warpriest") || this.CheckFeats("Ruffian")))
+                {
+                    this.characterFeatures["Medium"] = skillNameArr[1];
+                }
             }
         }
         //if the string for the skill does not contain the value it will be raised one tier higher
@@ -602,8 +608,28 @@ class Character
 
         }
 
-        //apply proficiencies
-
+        //apply 4 last free boosts
+        List<string> keyStatList = new List<string>(statsDic.Keys);
+        string boostSuggestion;
+        int addCount = 0;
+        while (addCount<4)
+        {
+            int index = rand.Next(keyStatList.Count);
+            boostSuggestion = keyStatList[index];
+            //if the primaryStat is not used yet, suggest it
+            if (keyStatList.Contains(this.characterFeatures["primaryStat"]))
+            {
+                boostSuggestion = this.characterFeatures["primaryStat"];
+            }
+            //if the stat is an allowed choice by the game rules, use it
+            if (statsDic[boostSuggestion] < 18)
+            {
+                UpdateCharStat(boostSuggestion);
+                addCount++;
+            }
+            //remove suggested stat from list. If it was used, it can't be taken again. If it was not chosen, it is not an option.
+            keyStatList.Remove(boostSuggestion);
+        }
     }
 
 
@@ -1079,16 +1105,6 @@ class Character
         }
     }
 
-
-
-    /*  things to remember:
-     *  levels
-     *  types: class/ancestry/skill(general)
-     *  prerequisites: skills/feats
-     *  no duplicate entries to take
-     *  special case for initial feat, how to define?
-     *  only feats!!!
-     */
 
     /// <summary>
     /// Filters a new dictionary for use, based on the character information and the dictionary type (the dic type format allows to know what to filter)
