@@ -750,9 +750,9 @@ class Character
                                 break;
                             case ("Keen Eyes"):
                                 featToAdd.Add("name", ancestryInfo[key]);
-                                featToAdd.Add("description", "Your eyes are sharp, allowingyou to make out small details about concealed or even invisible creatures that othersmight miss." +
-                                    "You gain a + 2circumstance bonus when using the Seek action to find hidden orundetected creatures within 30 feet of you.When you target anopponent that is concealed fromyou or hidden from you, " +
-                                    "reduce the DC of the flat check to 3 for a concealed target or 9 for a hidden one.");
+                                featToAdd.Add("description", 
+                                    "You gain a +2 circumstance bonus when using the Seek action to find hidden or undetected creatures within 30 feet of you." +
+                                    " Reduce the DC of the flat check to 3 for a concealed target or 9 for a hidden one.");
                                 break;
                             default:
                                 break;

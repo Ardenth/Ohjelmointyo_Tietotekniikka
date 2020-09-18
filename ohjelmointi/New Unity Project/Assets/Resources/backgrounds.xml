@@ -95,7 +95,7 @@
 		<bckgrName>Field Medic</bckgrName>
 		<boost>Free/Constitution-Wisdom</boost>
 		<skill>Medicine|Trained/Lore(Warfare)|Trained</skill>
-		<feat>Battle Medic</feat>
+		<feat>Battle Medicine</feat>
 		<description>placeholder</description>
 	</background>
 	<background>
@@ -158,7 +158,7 @@
 		<bckgrName>Martial Disciple1</bckgrName>
 		<boost>Free/Strength-Dexterity</boost>
 		<skill>Acrobatics|Trained/Lore(Warfare)|Trained</skill>
-		<feat>Catfall</feat>
+		<feat>Cat Fall</feat>
 		<description>placeholder</description>
 	</background>
 	<background>
@@ -221,28 +221,28 @@
 		<bckgrName>Scholar1</bckgrName>
 		<boost>Free/Intelligence-Wisdom</boost>
 		<skill>Religion|Trained/Lore(Academia)|Trained</skill>
-		<feat>Assurrance(Religion)</feat>
+		<feat>Assurance(Religion)</feat>
 		<description>placeholder</description>
 	</background>
 	<background>
 		<bckgrName>Scholar2</bckgrName>
 		<boost>Free/Intelligence-Wisdom</boost>
 		<skill>Arcana|Trained/Lore(Academia)|Trained</skill>
-		<feat>Assurrance(Arcana)</feat>
+		<feat>Assurance(Arcana)</feat>
 		<description>placeholder</description>
 	</background>
 	<background>
 		<bckgrName>Scholar3</bckgrName>
 		<boost>Free/Intelligence-Wisdom</boost>
 		<skill>Nature|Trained/Lore(Academia)|Trained</skill>
-		<feat>Assurrance(Nature)</feat>
+		<feat>Assurance(Nature)</feat>
 		<description>placeholder</description>
 	</background>
 	<background>
 		<bckgrName>Scholar4</bckgrName>
 		<boost>Free/Intelligence-Wisdom</boost>
 		<skill>Occultism|Trained/Lore(Academia)|Trained</skill>
-		<feat>Assurrance(Occultism)</feat>
+		<feat>Assurance(Occultism)</feat>
 		<description>placeholder</description>
 	</background>
 	<background>

@@ -7,14 +7,15 @@ using UnityEngine.Serialization;
 
 public class UIUpdater : MonoBehaviour
 {
+    [SerializeField]
     private TextMeshProUGUI strengthchar;
     private TextMeshProUGUI constitutionchar;
     private TextMeshProUGUI dexteritychar;
     private TextMeshProUGUI intelligencechar;
     private TextMeshProUGUI wisdomchar;
     private TextMeshProUGUI charismachar;
-    private TextMeshProUGUI advancementName;
-    private TextMeshProUGUI advancementDescr;
+    [SerializeField]
+    private FeatLogControl featControl;
     Character baseline = new Character();
 
 
@@ -23,6 +24,7 @@ public class UIUpdater : MonoBehaviour
     {
         baseline.UpdateMods();
         baseline.LevelUp(1);
+        UIFeatUpdate("FeatContent");
 
         //testing requirementparse
     }
@@ -50,12 +52,25 @@ public class UIUpdater : MonoBehaviour
 
 
     /// <summary>
-    /// 
+    /// Updates Feats on FeatContent of first page
     /// </summary>
-    void UIFeatUpdate()
+    void UIFeatUpdate(string objectName)
     {
-
+        featControl = GameObject.Find(objectName).GetComponent<FeatLogControl>();
+        List<Dictionary<string,string>> featsDictionary = baseline.GetFeats();
+        List<string> featInfo = new List<string>();
+        foreach (var feat in featsDictionary)
+        {
+            featInfo.Clear();
+            featInfo.Add(feat["name"]);
+            Debug.Log(feat["name"]);
+            featInfo.Add(feat["description"]);
+            Debug.Log(feat["description"]);
+            featControl.LogText(featInfo);
+        }
     }
+
+
 
     // Update is called once per frame
     void Update()

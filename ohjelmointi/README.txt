@@ -8,6 +8,7 @@ Overall design---
  ja sisaltaa pyynnon halutulle levelille)
 
 Character tiedot (Character sheet) ja ne UI:n sisalle
+tyon alla
 
 Random Gen (kayttaa random gen -button)
 
