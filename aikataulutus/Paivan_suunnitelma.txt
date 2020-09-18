@@ -1,0 +1,24 @@
+- Valituille feateille lisataan current level ja type (Feat(Class), Feat(General), etc.)
+
+- Feattien listauksen aikana name, current level, type ja description mainitaan (UI muutos?)
+
+- Skill list metodi -- UI (jos tyhja?)
+
+- Feature list metodi (hp, attacks, defences, etc.) -- UI (jos tyhja?)
+
+- Stat list metodi -- UI (aikaisempi raakaversio, muuta siistimmaksi)
+
+Aloita:
+- Randomgen painikkeen rakennus?
+	- Text field, josta numeroarvo levelille
+
+- Dokumentointia
+
+Kokeilua:
+- Feat valinta siivoaminen, oli hetkellisia ratkaisuja errorien ohittamiseksi.
+	- samalla mahdollista kokeilla puurakennetta tai "tyhmaa" painotusta.
+
+- Initial featin valinta muualle? Onko pelille korrekti?
+
+- Puurakenne filteroidyille feateille? Parent on requirement sisalla?
+
