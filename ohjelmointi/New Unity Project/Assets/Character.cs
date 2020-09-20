@@ -8,6 +8,7 @@ using UnityEditor.CrashReporting;
 using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.Analytics;
+using UnityEngine.UIElements;
 
 class Character
 {
@@ -393,10 +394,7 @@ class Character
             this.skills["Lore"] = skillTraining[loreValues.Max()];
         }
 
-
-
-        /* LEGACY?
-        //for general/skill feat skill training
+        //for general/skill feat skill training (to increase a random untrained skill to trained)
         else if (skillName == "Skill Training")
         {
             List<string> skillsKeysUntrained = new List<string>();
@@ -414,7 +412,6 @@ class Character
             string skillToAdd = skillsKeysUntrained[index];
             this.IncreaseSkill(skillToAdd);
         }
-        */
     }
 
 
@@ -983,50 +980,40 @@ class Character
     internal void AddAdvancement(string advancementName)
     {
         int index;
+        List<Dictionary<string, string>> advancementFilteredDics = new List<Dictionary<string, string>>();
         // connecting feat with xml file and avoiding Initial Feat problems
-        if (advancementName.Contains("Feat") && advancementName != "Feat(Initial)")
+        if (advancementName.Contains("Feat") && advancementName != "Feat(Initial)" && advancementName != "Initial Feat")
         {
             //can be made to have less repetition, not done to test specifically skill feat's functionality
             if (advancementName == "Feat(General)")
             {
-                List<Dictionary<string, string>>  advancementFilteredDics = this.FilterDictionary(ParseXML.generalFeatDic, advancementName);
-                index = rand.Next(advancementFilteredDics.Count);
-                //Skill Training special case
-                if (advancementFilteredDics[index]["name"] == "Skill Training")
-                {
-                    this.IncreaseSkill(advancementFilteredDics[index]["name"]);          //is it a problem if not this.?
-                }
-                this.featsDic.Add(advancementFilteredDics[index]);
+                advancementFilteredDics = this.FilterDictionary(ParseXML.generalFeatDic, advancementName);
             }
             else if (advancementName == "Feat(Skill)")
             {
-                List<Dictionary<string, string>>  advancementFilteredDics = this.FilterDictionary(ParseXML.skillFeatDic, advancementName);
-                index = rand.Next(advancementFilteredDics.Count);
-
-                //currently character skills aren't being increased through the feat effects or advancement effects, thus the character does not ALWAYS have feat choices to choose from. Will be fixed as more gets implemented
-                if (index > 0)
-                {
-                    //Skill Training special case
-                    if (advancementFilteredDics[index]["name"] == "Skill Training")
-                    {
-                        this.IncreaseSkill(advancementFilteredDics[index]["name"]);
-                    }
-                    this.featsDic.Add(advancementFilteredDics[index]);
-                }
+                advancementFilteredDics = this.FilterDictionary(ParseXML.skillFeatDic, advancementName);
             }
             else if (advancementName == "Feat(Ancestry)")
             {
-                List<Dictionary<string, string>>  advancementFilteredDics = this.FilterDictionary(ParseXML.ancestryFeatDic, advancementName);
-                index = rand.Next(advancementFilteredDics.Count);
-                this.featsDic.Add(advancementFilteredDics[index]);
+                advancementFilteredDics = this.FilterDictionary(ParseXML.ancestryFeatDic, advancementName);
             }
             else if (advancementName == "Feat(Class)")
             {
-                List<Dictionary<string, string>>  advancementFilteredDics = this.FilterDictionary(ParseXML.classFeatDic, advancementName);
-                index = rand.Next(advancementFilteredDics.Count);
+                advancementFilteredDics = this.FilterDictionary(ParseXML.classFeatDic, advancementName);
                 //Debug.Log("available class feats: " + advancementFilteredDics.Count);
-                this.featsDic.Add(advancementFilteredDics[index]);
             }
+
+            Dictionary<string, string> featToAdd = WeightedFeatChoice(advancementFilteredDics);
+            //currently character skills aren't being increased through the feat effects or advancement effects, thus the character does not ALWAYS have feat choices to choose from. Will be fixed as more gets implemented
+            //Skill Training special case
+            if (featToAdd["name"] == "Skill Training")
+            {
+                this.IncreaseSkill(featToAdd["name"]);
+            }
+            featToAdd.Add("currentLevel",this.characterLevel.ToString());
+            featToAdd.Add("type", advancementName);
+            this.featsDic.Add(featToAdd);
+
         }
         else   // else case for other type of advancements, such as boost, skill or overall class specific
         {
@@ -1105,6 +1092,43 @@ class Character
         }
     }
 
+
+    /// <summary>
+    /// Controls the weighting of the feats to choose from -- Rough version (currently forces 50/50 -choice between feats through progression and all available feats)
+    /// </summary>
+    /// <param name="dicToFilter">List of feats available to choose from</param>
+    /// <returns>Feat that was chosen through means of weighting</returns>
+    internal Dictionary<string,string> WeightedFeatChoice(List<Dictionary<string,string>> dicToFilter)
+    {
+        List<Dictionary<string, string>> weightedFilteredDics = new List<Dictionary<string, string>>();
+        Dictionary<string, string> featToAdd;
+        int index;
+
+        //create a second list of feats with prerequisite (skill being a certain tier or own a certain feat)
+        foreach (var feat in dicToFilter)
+        {
+            if (feat["prerequisite"] != "none")
+            {
+                weightedFilteredDics.Add(feat);
+            }
+        }
+        // 50/50 randomizer to determine which list to choose from; targeted prerequisite or all available feats
+        if(rand.Next(0,2) == 0 && weightedFilteredDics.Count != 0)
+        {
+            index = rand.Next(weightedFilteredDics.Count);
+            Debug.Log("available number of feats in the weighted dic: "+weightedFilteredDics.Count);
+            Debug.Log("weighted system index number: "+index);
+            featToAdd = weightedFilteredDics[index];
+            Debug.Log("FEAT CHOSEN THROUGH WEIGHTED SYSTEM");
+        }
+        else
+        {
+            index = rand.Next(dicToFilter.Count);
+            featToAdd = dicToFilter[index];
+            Debug.Log("FEAT CHOSEN THROUGH NORMAL SYSTEM");
+        }
+        return featToAdd;
+    }
 
     /// <summary>
     /// Filters a new dictionary for use, based on the character information and the dictionary type (the dic type format allows to know what to filter)

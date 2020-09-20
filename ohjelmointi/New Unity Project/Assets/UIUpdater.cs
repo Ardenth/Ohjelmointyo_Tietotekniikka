@@ -23,7 +23,7 @@ public class UIUpdater : MonoBehaviour
     void Start()
     {
         baseline.UpdateMods();
-        baseline.LevelUp(1);
+        baseline.LevelUp(20);
         UIFeatUpdate("FeatContent");
 
         //testing requirementparse
