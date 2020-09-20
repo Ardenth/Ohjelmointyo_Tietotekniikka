@@ -1,3 +1,5 @@
+- Character Frontpage = Character Features?
+	- Tarkeaa: Class, Level, HP?, Deity?, Initial Feat, Languages?
 
 - Feattien listauksen aikana name, current level, type ja description mainitaan (UI muutos?)
 
@@ -11,6 +13,7 @@
  - Sama ongelma kuin Ruffian, etc. Miten hoidetaan?
 
 - LVL 1 ancestry feat puuttuu?
+	- Featteja listaava aliohjelma ensin, helpompi seurata mika feat tyyppi
 
 - Poista perception kasvatus random gen stat increase (nousee ainoastaan advancement effect avulla)
 
