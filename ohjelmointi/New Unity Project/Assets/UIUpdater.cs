@@ -4,18 +4,15 @@ using TMPro;
 using UnityEngine;
 using System.Runtime.InteropServices.ComTypes;
 using UnityEngine.Serialization;
+using System.Linq;
 
 public class UIUpdater : MonoBehaviour
 {
-    [SerializeField]
-    private TextMeshProUGUI strengthchar;
-    private TextMeshProUGUI constitutionchar;
-    private TextMeshProUGUI dexteritychar;
-    private TextMeshProUGUI intelligencechar;
-    private TextMeshProUGUI wisdomchar;
-    private TextMeshProUGUI charismachar;
+    private GameObject statsTab;
     [SerializeField]
     private FeatLogControl featControl;
+    [SerializeField]
+    private SkillLogControl skillControl;
     Character baseline = new Character();
 
 
@@ -23,8 +20,12 @@ public class UIUpdater : MonoBehaviour
     void Start()
     {
         baseline.UpdateMods();
-        baseline.LevelUp(20);
+        baseline.LevelUp(1);
         UIFeatUpdate("FeatContent");
+        UIFeatUpdate("FeatContent2");
+        UISkillUpdate("SkillContent");
+        UISkillUpdate("SkillContent2");
+        UIModUpdate();
 
         //testing requirementparse
     }
@@ -34,39 +35,86 @@ public class UIUpdater : MonoBehaviour
     /// </summary>
     void UIModUpdate()
     {
-        strengthchar = GameObject.Find("StrengthChar").GetComponent<TextMeshProUGUI>();
-        dexteritychar = GameObject.Find("DexterityChar").GetComponent<TextMeshProUGUI>();
-        constitutionchar = GameObject.Find("ConstitutionChar").GetComponent<TextMeshProUGUI>();
-        intelligencechar = GameObject.Find("IntelligenceChar").GetComponent<TextMeshProUGUI>();
-        wisdomchar = GameObject.Find("WisdomChar").GetComponent<TextMeshProUGUI>();
-        charismachar = GameObject.Find("CharismaChar").GetComponent<TextMeshProUGUI>();
-
-        strengthchar.text = "Strength: " + baseline.GetStat("Strength").ToString() + "\n Mod: +" + baseline.GetMod("Strength").ToString();
-        dexteritychar.text = "Dexterity: " + baseline.GetStat("Dexterity").ToString() + "\n Mod: +" + baseline.GetMod("Dexterity").ToString();
-        constitutionchar.text = "Constitution: " + baseline.GetStat("Constitution").ToString() + "\n Mod: +" + baseline.GetMod("Constitution").ToString();
-        intelligencechar.text = "Intelligence: " + baseline.GetStat("Intelligence").ToString() + "\n Mod: +" + baseline.GetMod("Intelligence").ToString();
-        wisdomchar.text = "Wisdom: " + baseline.GetStat("Wisdom").ToString() + "\n Mod: +" + baseline.GetMod("Wisdom").ToString();
-        charismachar.text = "Charisma: " + baseline.GetStat("Charisma").ToString() + "\n Mod: +" + baseline.GetMod("Charisma").ToString();
-
+        statsTab = GameObject.Find("Stats_Tab");
+        foreach  (Transform child in statsTab.transform)
+        {
+            foreach (Transform child2 in child.transform)
+            {
+                string statName = child2.name.Remove(child2.name.Length - 4, 4);
+                if (baseline.GetMod(statName)>=0)
+                {
+                    child2.GetComponent<TextMeshProUGUI>().text = statName + ": " + baseline.GetStat(statName).ToString() + "\n Mod: +" + baseline.GetMod(statName).ToString();
+                }
+                else
+                {
+                    child2.GetComponent<TextMeshProUGUI>().text = statName + ": " + baseline.GetStat(statName).ToString() + "\n Mod: " + baseline.GetMod(statName).ToString();
+                }
+            }
+        }
     }
 
 
     /// <summary>
-    /// Updates Feats on FeatContent of first page
+    /// Update UI feat section
     /// </summary>
+    /// <param name="objectName">Parent object to hold all feat's information</param>
     void UIFeatUpdate(string objectName)
     {
         featControl = GameObject.Find(objectName).GetComponent<FeatLogControl>();
+        GameObject featView = GameObject.Find(objectName);
         List<Dictionary<string,string>> featsDictionary = baseline.GetFeats();
         List<string> featInfo = new List<string>();
+        //Removes all current children from the object
+        foreach (Transform child in featView.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
+        //Adds all character's feats for the object
         foreach (var feat in featsDictionary)
         {
             featInfo.Clear();
             featInfo.Add(feat["name"]);
-            Debug.Log(feat["name"]);
             featInfo.Add(feat["description"]);
-            Debug.Log(feat["description"]);
-            featControl.LogText(featInfo);
+            featControl.LogFeatText(featInfo, objectName);
+        }
+        //leaves only starting tab active
+        if (objectName.Any(char.IsDigit))
+        {
+            GameObject changedObject = GameObject.Find(objectName);
+            GameObject tabView = changedObject.transform.parent.parent.parent.gameObject;
+
+            tabView.SetActive(false);
+        }
+    }
+
+
+    /// <summary>
+    /// Update UI skill section
+    /// </summary>
+    /// <param name="objectName">Parent object to hold all skill's information</param>
+    void UISkillUpdate(string objectName)
+    {
+        skillControl = GameObject.Find(objectName).GetComponent<SkillLogControl>();
+        GameObject skillView = GameObject.Find(objectName);
+
+        //Removes all current children from the object
+        foreach (Transform child in skillView.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
+        Dictionary<string, string> skillsDictionary = baseline.GetSkills();
+        //Adds all skills as children for the object
+        foreach (KeyValuePair<string, string> item in skillsDictionary)
+        {
+            skillControl.LogSkillText(item, objectName);
+        }
+        //leaves only starting tab active
+        if (objectName.Any(char.IsDigit))
+        {
+            GameObject changedObject = GameObject.Find(objectName);
+            GameObject tabView = changedObject.transform.parent.parent.parent.gameObject;
+
+            tabView.SetActive(false);
         }
     }
 
@@ -75,6 +123,5 @@ public class UIUpdater : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UIModUpdate(); //change it so only if something happens
     }
 }

@@ -3847,7 +3847,7 @@
     <name>Arcane Evolution</name>
     <class>Sorcerer</class>
     <level>4</level>
-    <prerequisite>Bloodline (arcana)</prerequisite>
+    <prerequisite>Draconic-Imperial</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
@@ -3861,28 +3861,28 @@
     <name>Divine Evolution</name>
     <class>Sorcerer</class>
     <level>4</level>
-    <prerequisite>Bloodline (divine)</prerequisite>
+    <prerequisite>Angelic-Demonic-Undead-Diabolic</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
     <name>Occult Evolution</name>
     <class>Sorcerer</class>
     <level>4</level>
-    <prerequisite>Bloodline (occult)</prerequisite>
+    <prerequisite>Aberrant-Hag</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
     <name>Primal Evolution</name>
     <class>Sorcerer</class>
     <level>4</level>
-    <prerequisite>Bloodline (primal)</prerequisite>
+    <prerequisite>Elemental-Fey</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
     <name>Advanced Bloodline</name>
     <class>Sorcerer</class>
     <level>6</level>
-    <prerequisite>Bloodline Spell</prerequisite>
+    <prerequisite>none</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
@@ -3910,7 +3910,7 @@
     <name>Greates Bloodline</name>
     <class>Sorcerer</class>
     <level>10</level>
-    <prerequisite>Bloodline Spell</prerequisite>
+    <prerequisite>none</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
@@ -3931,7 +3931,7 @@
     <name>Bloodline Focus</name>
     <class>Sorcerer</class>
     <level>12</level>
-    <prerequisite>Bloodline Spell</prerequisite>
+    <prerequisite>none</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>

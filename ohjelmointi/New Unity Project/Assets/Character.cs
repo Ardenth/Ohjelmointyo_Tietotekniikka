@@ -65,7 +65,6 @@ class Character
         {"Thievery","Untrained" },
 
         {"Recall Knowledge", "Untrained" },
-        {"Skill", "Untrained" },
         {"Performance", "Untrained" },
         {"Perception", "Untrained" }
     };
@@ -319,12 +318,21 @@ class Character
     }
 
     /// <summary>
-    /// Used to get get character's feats as a list dictionary
+    /// Get character's feats as a list dictionary
     /// </summary>
     /// <returns>character's feats</returns>
     internal List<Dictionary<string, string>> GetFeats()
     {
         return this.featsDic;
+    }
+
+    /// <summary>
+    /// Get character's skills as a dictionary
+    /// </summary>
+    /// <returns></returns>
+    internal Dictionary<string, string> GetSkills()
+    {
+        return this.skills;
     }
 
 
@@ -343,7 +351,7 @@ class Character
             {
                 string[] skillNameArr = skillName.Split('|');
                 this.skills.Add(skillNameArr[0], skillNameArr[1]);
-                Debug.Log(skillName + " was added");
+                Debug.Log(skillNameArr[0] + " was added, with tier: "+skillNameArr[1]);
             }
             else
             {
@@ -631,7 +639,7 @@ class Character
 
 
     /// <summary>
-    /// Defines the character's ancestry randomly                                                               ---- Lacks application of ancestry modifiers
+    /// Defines the character's ancestry randomly
     /// </summary>
     internal void RandomAncestry()
     {
@@ -770,7 +778,7 @@ class Character
 
 
     /// <summary>
-    /// Defines the character's background                                                                      ---- UNTESTED
+    /// Defines the character's background randomly
     /// </summary>
     internal void RandomBackground()
     {
@@ -940,17 +948,21 @@ class Character
         int charLevel = this.characterLevel;
         Dictionary<string, string> characterProg = this.classProgDic[charLevel-1];
         Dictionary<string, string>.ValueCollection characterProgValues = characterProg.Values;
-        foreach (string item in characterProgValues)
+        foreach (string item in characterProgValues.Skip(1))
         {
             string advancement = item;
             if (advancement == "none")
             {
                 break;
             }
+            //Skip these cases because they have been controlled in Random class creation due to how they have interactions with each other.
+            //All of these are done when random class is generated due to these interwoven interations
+            //Design choice having to be made due to poor pre-planning of the XML documents, fix in code rather than 10+ files
+            else if (advancement == "Ancestry" || advancement == "Background" || advancement == "Proficiencies" || advancement.Contains("Initial"))
+            {
+                continue;
+            }
             this.AddAdvancement(advancement);
-
-
-
         }
     }
 
@@ -982,7 +994,7 @@ class Character
         int index;
         List<Dictionary<string, string>> advancementFilteredDics = new List<Dictionary<string, string>>();
         // connecting feat with xml file and avoiding Initial Feat problems
-        if (advancementName.Contains("Feat") && advancementName != "Feat(Initial)" && advancementName != "Initial Feat")
+        if (advancementName.Contains("Feat"))
         {
             //can be made to have less repetition, not done to test specifically skill feat's functionality
             if (advancementName == "Feat(General)")
@@ -1002,7 +1014,7 @@ class Character
                 advancementFilteredDics = this.FilterDictionary(ParseXML.classFeatDic, advancementName);
                 //Debug.Log("available class feats: " + advancementFilteredDics.Count);
             }
-
+            Debug.Log(advancementName);
             Dictionary<string, string> featToAdd = WeightedFeatChoice(advancementFilteredDics);
             //currently character skills aren't being increased through the feat effects or advancement effects, thus the character does not ALWAYS have feat choices to choose from. Will be fixed as more gets implemented
             //Skill Training special case
@@ -1080,12 +1092,14 @@ class Character
             //specified class advancement in the levelup gets added
             else
             {
+                Debug.Log("What was the progression in the dic: ------------------------ " + advancementName);
                 for (int i = 0; i < ParseXML.classAdvDic.Count; i++)
                 {
                     if (ParseXML.classAdvDic[i]["name"] == advancementName)
                     {
                         this.featsDic.Add(ParseXML.classAdvDic[i]);
                         this.ApplyAdvancementEffect(ParseXML.classAdvDic[i]);
+                        Debug.Log("advancement added: " +advancementName);
                     }
                 }
             }
@@ -1103,7 +1117,6 @@ class Character
         List<Dictionary<string, string>> weightedFilteredDics = new List<Dictionary<string, string>>();
         Dictionary<string, string> featToAdd;
         int index;
-
         //create a second list of feats with prerequisite (skill being a certain tier or own a certain feat)
         foreach (var feat in dicToFilter)
         {
@@ -1123,6 +1136,7 @@ class Character
         }
         else
         {
+            Debug.Log(dicToFilter.Count);
             index = rand.Next(dicToFilter.Count);
             featToAdd = dicToFilter[index];
             Debug.Log("FEAT CHOSEN THROUGH NORMAL SYSTEM");

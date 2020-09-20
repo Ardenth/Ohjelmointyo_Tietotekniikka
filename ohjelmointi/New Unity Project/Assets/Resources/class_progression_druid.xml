@@ -5,7 +5,7 @@
 		<advancement1>Feat(Ancestry)</advancement1>
 		<advancement2>Background</advancement2>
 		<advancement3>Proficiencies</advancement3>
-		<advancement4>Spellcasting Primal</advancement4>
+		<advancement4>Primal Spellcasting</advancement4>
 		<advancement5>Anathema</advancement5>
 		<advancement6>Language Druidic</advancement6>
 		<advancement7>Feat(Initial)</advancement7>
@@ -56,7 +56,7 @@
 		<level>5</level>
 		<advancement1>Spell Level 3</advancement1>
 		<advancement2>Ability Boost</advancement2>
-		<advancement3>Feat(Ancestry) Feat</advancement3>
+		<advancement3>Feat(Ancestry)</advancement3>
 		<advancement4>Lightning Reflexes</advancement4>
 		<advancement5>Skill Increase</advancement5>
 		<advancement6>none</advancement6>
@@ -107,7 +107,7 @@
 	<progression>
 		<level>9</level>
 		<advancement1>Spell Level 5</advancement1>
-		<advancement2>Feat(Ancestry) Feat</advancement2>
+		<advancement2>Feat(Ancestry)</advancement2>
 		<advancement3>Skill Increase</advancement3>
 		<advancement4>none</advancement4>
 		<advancement5>none</advancement5>
@@ -135,8 +135,8 @@
 		<advancement1>Spell Level 6</advancement1>
 		<advancement2>Druid Weapon Expertise</advancement2>
 		<advancement3>Feat(General)</advancement3>
-		<advancement4>Resolve Skill Increase</advancement4>
-		<advancement5>none</advancement5>
+		<advancement4>Resolve</advancement4>
+		<advancement5>Skill Increase</advancement5>
 		<advancement6>none</advancement6>
 		<advancement7>none</advancement7>
 		<advancement8>none</advancement8>
@@ -159,7 +159,7 @@
 	<progression>
 		<level>13</level>
 		<advancement1>Spell Level 7</advancement1>
-		<advancement2>Feat(Ancestry) Feat</advancement2>
+		<advancement2>Feat(Ancestry)</advancement2>
 		<advancement3>Medium Armor Expertise</advancement3>
 		<advancement4>Skill Increase</advancement4>
 		<advancement5>Weapon Specialization</advancement5>
@@ -211,7 +211,7 @@
 	<progression>
 		<level>17</level>
 		<advancement1>Spell Level 9</advancement1>
-		<advancement2>Feat(Ancestry) Feat</advancement2>
+		<advancement2>Feat(Ancestry)</advancement2>
 		<advancement3>Skill Increase</advancement3>
 		<advancement4>none</advancement4>
 		<advancement5>none</advancement5>

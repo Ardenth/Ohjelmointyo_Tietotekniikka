@@ -1,17 +1,37 @@
-- Valituille feateille lisataan current level ja type (Feat(Class), Feat(General), etc.)
-DONE
-
 
 - Feattien listauksen aikana name, current level, type ja description mainitaan (UI muutos?)
 
 - Description BUTTON -feateille?
 
-- Skill list metodi -- UI (jos tyhja? - Untrained mainitaan)
-
 - Feature list metodi (hp, attacks, defences, etc.) -- UI (jos tyhja? - ei mainita "" tai "none")
 
-- Stat list metodi -- UI (aikaisempi raakaversio, muuta siistimmaksi) 
-	"+-" ja koodi looppiin?
+- Skill Training duplicate salliminen Feat(Skill) vaiheessa
+
+- Sorcerer, Druid - Initial feat skill increase
+ - Sama ongelma kuin Ruffian, etc. Miten hoidetaan?
+
+- LVL 1 ancestry feat puuttuu?
+
+- Poista perception kasvatus random gen stat increase (nousee ainoastaan advancement effect avulla)
+
+- Tab activity randomgen prosessissa?
+	- Start all tabs active => luo gameobject viite jokaiselle tabille
+					=> voi viitata sammutettuun tabiin?
+	- Voiko generointia tehda => all elements.setactive(true)?
+
+TARKEA:
+---
+miten int modifier?
+saatetaan pitaa languages proficiencies, mutta taytyy lisata skill training?
+(ongelma on proficiencies ja ancestry molemmat saattavat kasvatta int)
+(atm proficiencies kasvattaa eniten statteja, joten ancestry parempi olla antamatta kaikkia kielia)
+
+- LANGUAGES INCREASE - Proficiencies => Ancestry
+	(lisakielia ainoastaan intmod, ei esim. 3+intmod)
+		- (3+intmod on skills untrained => trained)
+
+- SKILL INCREASE - Proficiencies (vaarinymmarrus ja skill increase = languages increase atm)
+----
 
 Aloita:
 - Randomgen painikkeen rakennus?
@@ -19,13 +39,7 @@ Aloita:
 
 - Dokumentointia
 
-Kokeilua:
-- Feat valinta siivoaminen, oli hetkellisia ratkaisuja errorien ohittamiseksi.
-DONE
-	- samalla mahdollista kokeilla puurakennetta tai "tyhmaa" painotusta.
-DONE - tyhma painotus
-
-- Initial featin valinta muualle? Onko pelille korrekti?
 
 - Puurakenne filteroidyille feateille? Parent on requirement sisalla?
+	- atm tyhma painotus
 

@@ -15,14 +15,8 @@ public class FeatLogControl : MonoBehaviour
         featItems = new List<GameObject>();
     }
 
-    public void LogText(List<string> newFeatString)
+    public void LogFeatText(List<string> newFeatString, string parentName)
     {
-        if (featItems.Count == 10)
-        {
-            GameObject tempFeat = featItems[0];
-            Destroy(tempFeat.gameObject);
-            featItems.Remove(tempFeat);
-        }
         featTemplate = Resources.Load("Feat") as GameObject;
         GameObject newFeat = Instantiate(featTemplate) as GameObject;
         newFeat.SetActive(true);
@@ -40,7 +34,7 @@ public class FeatLogControl : MonoBehaviour
             }
             i++;
         }
-        newFeat.transform.SetParent(GameObject.Find("FeatContent").transform);
+        newFeat.transform.SetParent(GameObject.Find(parentName).transform);
         newFeat.gameObject.transform.localScale = new Vector3(1, 1, 1);
 
         featItems.Add(newFeat.gameObject);
