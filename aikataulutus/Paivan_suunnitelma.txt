@@ -18,9 +18,6 @@ UI:
 Functionality:
 
 
-- Arcane School (Wizard) ei toimi, lisaa Arcane Schoolin kahdesti
-		Pitaisi olla Arcane School + Specialist TAI Universalist
-	- aikaisempi aliohjelma kutsu ei vapauta if-lauseketta ja pitaa vanhan muuttujan
 --------------------------
 DONE TODAY:
 
@@ -31,6 +28,11 @@ DONE
 DONE
 
 - Fighter skill increase choice buggy - FIX
+DONE
+
+- Arcane School (Wizard) ei toimi, lisaa Arcane Schoolin kahdesti
+		Pitaisi olla Arcane School + Specialist TAI Universalist
+	- aikaisempi aliohjelma kutsu ei vapauta if-lauseketta ja pitaa vanhan muuttujan
 DONE
 -----------
 

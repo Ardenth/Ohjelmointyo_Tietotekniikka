@@ -853,24 +853,24 @@
 		<description>placeholder</description>
 	</advancement>
   <advancement>
-    <name>Arcane School</name>
-    <class>Wizard</class>
-    <effect>Specialist-Universalist</effect>
-    <description>placeholder</description>
-  </advancement>
-  <classFeat>
     <name>Specialist</name>
     <class>Wizard</class>
     <effect>placeholder</effect>
     <description>placeholder</description>
-  </classFeat>
-  <classFeat>
+  </advancement>
+  <advancement>
     <name>Universalist</name>
     <class>Wizard</class>
     <effect>placeholder</effect>
     <description>placeholder</description>
-  </classFeat>
-	<advancement>
+  </advancement>
+  <advancement>
+    <name>Arcane School</name>
+    <class>Wizard</class>
+    <effect>Specialist-Universalist</effect>
+    <description>description</description>
+  </advancement>
+  <advancement>
 		<name>Wizard Weapon Expertise</name>
 		<class>Wizard</class>
 		<effect>attackSpecial|Expert</effect>

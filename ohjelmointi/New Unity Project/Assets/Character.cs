@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.Tracing;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using UnityEditor;
@@ -1123,9 +1124,11 @@ class Character
     /// <param name="advancement">dictionary which contains the information of the advancement</param>
     internal void ApplyAdvancementEffect(Dictionary<string,string> advancement)
     {
+        UnityEngine.Debug.Log("effect application accessed");
         string effect = advancement["effect"];
         if (effect == "placeholder" || effect == "none")
         {
+            UnityEngine.Debug.Log(effect);
             return;
         }
 
@@ -1134,8 +1137,8 @@ class Character
         {
             List<string> schoolChoice = advancement["effect"].Split('-').ToList();
             int index = rand.Next(schoolChoice.Count);
+            UnityEngine.Debug.Log("adding school: " +schoolChoice[index]);
             this.AddAdvancement(schoolChoice[index]);
-            return;
         }
 
         List<string> effectList = effect.Split('/').ToList();
@@ -1219,6 +1222,7 @@ class Character
             {
                 this.classProgDic = ParseXML.classProgDicArray[i];
                 UnityEngine.Debug.Log("dictionary for progressions found"); //remove later
+                break;
             }
         }
     }
@@ -1337,22 +1341,19 @@ class Character
                 UnityEngine.Debug.Log("What is being searched: ------------------------ " + advancementName);
                 for (int i = 0; i < ParseXML.classAdvDic.Count; i++)
                 {
-                    if (i == 0)
-                    {
-                        UnityEngine.Debug.Log("What is being searched WHILE INSIDE LOOP: ------------------------ " + advancementName);
-                    }
                     if (ParseXML.classAdvDic[i]["name"] == advancementName)
                     {
-                        UnityEngine.Debug.Log("advancement found: " + advancementName);
                         featToAdd = ParseXML.classAdvDic[i];
                         featToAdd.Add("currentLevel", this.characterLevel.ToString());
                         featToAdd.Add("type", "Advancement");
                         this.featsDic.Add(featToAdd);
                         UnityEngine.Debug.Log("advancement added: " +advancementName);
-                        this.ApplyAdvancementEffect(ParseXML.classAdvDic[i]);
+                        this.ApplyAdvancementEffect(featToAdd);
+                        return;
                     }
                 }
             }
+
         }
     }
 
