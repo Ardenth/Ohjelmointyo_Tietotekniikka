@@ -10,7 +10,8 @@
 		<skill1>Perception|Trained</skill1>
 		<skill2>Crafting|Trained</skill2>
 		<skill3>none</skill3>
-		<languages>3+Int|Trained</languages>
+		<skills>3+Intelligence|Trained</skills> 
+    <languages>intmod</languages>
 		<unarmed>Trained</unarmed>
 		<simple>Trained</simple>
 		<martial>Untrained</martial>
@@ -33,7 +34,8 @@
 		<skill1>Perception|Expert</skill1>
 		<skill2>Athletics|Trained</skill2>
 		<skill3>none</skill3>
-		<languages>3+Int|Trained</languages>
+		<skills>3+Intelligence|Trained</skills> 
+    <languages>intmod</languages>
 		<unarmed>Trained</unarmed>
 		<simple>Trained</simple>
 		<martial>Trained</martial>
@@ -56,7 +58,8 @@
 		<skill1>Perception|Expert</skill1>
 		<skill2>Performance|Trained</skill2>
 		<skill3>Occultism|Trained</skill3>
-		<languages>4+Int|Trained</languages>
+		<skills>4+Intelligence|Trained</skills> 
+    <languages>intmod</languages>
 		<unarmed>Trained</unarmed>
 		<simple>Trained</simple>
 		<martial>Untrained</martial>
@@ -79,7 +82,8 @@
 		<skill1>Perception|Trained</skill1>
 		<skill2>Religion|Trained</skill2>
 		<skill3>Deity|Trained</skill3>
-		<languages>2+Int|Trained</languages>
+		<skills>2+Intelligence|Trained</skills> 
+    <languages>intmod</languages>
 		<unarmed>Trained</unarmed>
 		<simple>Trained</simple>
 		<martial>Trained</martial>
@@ -102,7 +106,8 @@
 		<skill1>Perception|Trained</skill1>
 		<skill2>Religion|Trained</skill2>
 		<skill3>Deity|Trained</skill3>
-		<languages>2+Int|Trained</languages>
+		<skills>2+Intelligence|Trained</skills> 
+    <languages>intmod</languages>
 		<unarmed>Trained</unarmed>
 		<simple>Trained</simple>
 		<martial>Untrained</martial>
@@ -124,8 +129,9 @@
 		<willSave>Expert</willSave>
 		<skill1>Perception|Trained</skill1>
 		<skill2>Nature|Trained</skill2>
-		<skill3>Order|Trained</skill3>
-		<languages>2+Int|Trained</languages>
+		<skill3>none</skill3>
+		<skills>2+Intelligence|Trained</skills> 
+    <languages>intmod</languages>
 		<unarmed>Trained</unarmed>
 		<simple>Trained</simple>
 		<martial>Untrained</martial>
@@ -148,7 +154,8 @@
 		<skill1>Perception|Expert</skill1>
 		<skill2>Acrobatics|Trained-Athletics|Trained</skill2>
 		<skill3>none</skill3>
-		<languages>3+Int|Trained</languages>
+		<skills>3+Intelligence|Trained</skills> 
+    <languages>intmod</languages>
 		<unarmed>Expert</unarmed>
 		<simple>Expert</simple>
 		<martial>Expert</martial>
@@ -171,7 +178,8 @@
 		<skill1>Perception|Trained</skill1>
 		<skill2>none</skill2>
 		<skill3>none</skill3>
-		<languages>4+Int|Trained</languages>
+		<skills>4+Intelligence|Trained</skills> 
+    <languages>intmod</languages>
 		<unarmed>Trained</unarmed>
 		<simple>Trained</simple>
 		<martial>Untrained</martial>
@@ -194,7 +202,8 @@
 		<skill1>Perception|Expert</skill1>
 		<skill2>Nature|Trained</skill2>
 		<skill3>Survival|Trained</skill3>
-		<languages>4+Int|Trained</languages>
+		<skills>4+Intelligence|Trained</skills> 
+    <languages>intmod</languages>
 		<unarmed>Trained</unarmed>
 		<simple>Trained</simple>
 		<martial>Trained</martial>
@@ -217,7 +226,8 @@
 		<skill1>Perception|Expert</skill1>
 		<skill2>none</skill2>
 		<skill3>none</skill3>
-		<languages>7+Int|Trained</languages>
+		<skills>7+Intelligence|Trained</skills> 
+    <languages>intmod</languages>
 		<unarmed>Trained</unarmed>
 		<simple>Trained</simple>
 		<martial>Untrained</martial>
@@ -239,8 +249,9 @@
 		<willSave>Expert</willSave>
 		<skill1>Perception|Trained</skill1>
 		<skill2>none</skill2>
-		<skill3>Bloodline|Trained</skill3>
-		<languages>2+Int|Trained</languages>
+		<skill3>none</skill3>
+		<skills>2+Intelligence|Trained</skills> 
+    <languages>intmod</languages>
 		<unarmed>Trained</unarmed>
 		<simple>Trained</simple>
 		<martial>Untrained</martial>
@@ -263,7 +274,8 @@
 		<skill1>Perception|Trained</skill1>
 		<skill2>none</skill2>
 		<skill3>none</skill3>
-		<languages>2+Int|Trained</languages>
+		<skills>2+Intelligence|Trained</skills> 
+    <languages>intmod</languages>
 		<unarmed>Trained</unarmed>
 		<simple>Untrained</simple>
 		<martial>Untrained</martial>

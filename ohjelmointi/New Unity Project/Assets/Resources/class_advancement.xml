@@ -25,7 +25,7 @@
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
-		<name>Fear(Initial)</name>
+		<name>Feat(Initial)</name>
 		<class>Alchemist-Barbarian-Bard/Champion-Cleric-Druid-Fighter-Monk-Ranger-Rogue-Sorcerer-Wizard</class>
 		<effect>route class feat, initial</effect>
 		<description>placeholder</description>
@@ -73,7 +73,7 @@
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
-		<name>Iron willSave</name>
+		<name>Iron Will</name>
 		<class>Alchemist-Ranger</class>
 		<effect>willSave|Expert</effect>
 		<description>placeholder</description>
@@ -223,7 +223,7 @@
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
-		<name>Indomitable willSave</name>
+		<name>Indomitable Will</name>
 		<class>Barbarian</class>
 		<effect>willSave|Master</effect>
 		<description>placeholder</description>
@@ -277,7 +277,7 @@
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
-		<name>Great fortitudeSave</name>
+		<name>Great Fortitude</name>
 		<class>Bard-Druid-Rogue</class>
 		<effect>fortitudeSave|Expert</effect>
 		<description>placeholder</description>
@@ -342,6 +342,12 @@
 		<effect>placeholder</effect>
 		<description>placeholder</description>
 	</advancement>
+  <advancement>
+    <name>Tenets of Good</name>
+    <class>Champion</class>
+    <effect>placeholder</effect>
+    <description>placeholder</description>
+  </advancement>
 	<advancement>
 		<name>Devotion Spell</name>
 		<class>Champion</class>
@@ -385,7 +391,7 @@
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
-		<name>Divine willSave</name>
+		<name>Divine Will</name>
 		<class>Champion</class>
 		<effect>willSave|Master</effect>
 		<description>placeholder</description>
@@ -666,6 +672,12 @@
 		<effect>placeholder</effect>
 		<description>placeholder</description>
 	</advancement>
+  <advancement>
+    <name>Hunter's Edge</name>
+    <class>Ranger</class>
+    <effect>placeholder</effect>
+    <description>placeholder</description>
+  </advancement>
 	<advancement>
 		<name>Trackless Step</name>
 		<class>Ranger</class>
@@ -799,7 +811,7 @@
     <description>placeholder</description>
   </advancement>
 	<advancement>
-		<name>Magical fortitudeSave</name>
+		<name>Magical Fortitude</name>
 		<class>Sorcerer-Wizard</class>
 		<effect>placeholder</effect>
 		<description>placeholder</description>
@@ -828,12 +840,36 @@
 		<effect>placeholder</effect>
 		<description>placeholder</description>
 	</advancement>
+  <advancement>
+    <name>Arcane Spellcasting</name>
+    <class>Wizard</class>
+    <effect>placeholder</effect>
+    <description>placeholder</description>
+  </advancement>
 	<advancement>
 		<name>Arcane Bond</name>
 		<class>Wizard</class>
 		<effect>placeholder</effect>
 		<description>placeholder</description>
 	</advancement>
+  <advancement>
+    <name>Arcane School</name>
+    <class>Wizard</class>
+    <effect>Specialist-Universalist</effect>
+    <description>placeholder</description>
+  </advancement>
+  <classFeat>
+    <name>Specialist</name>
+    <class>Wizard</class>
+    <effect>placeholder</effect>
+    <description>placeholder</description>
+  </classFeat>
+  <classFeat>
+    <name>Universalist</name>
+    <class>Wizard</class>
+    <effect>placeholder</effect>
+    <description>placeholder</description>
+  </classFeat>
 	<advancement>
 		<name>Wizard Weapon Expertise</name>
 		<class>Wizard</class>

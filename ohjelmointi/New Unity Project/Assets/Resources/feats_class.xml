@@ -984,42 +984,42 @@
     <name>Dragonslayer Oath</name>
     <class>Champion</class>
     <level>2</level>
-    <prerequisite>tenets</prerequisite>
+    <prerequisite>Tenets of Good</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
     <name>Fiendsbane Oath</name>
     <class>Champion</class>
     <level>2</level>
-    <prerequisite>tenets</prerequisite>
+    <prerequisite>Tenets of Good</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
     <name>Shining Oath</name>
     <class>Champion</class>
     <level>2</level>
-    <prerequisite>tenets</prerequisite>
+    <prerequisite>Tenets of Good</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
     <name>Vengeful Oath</name>
     <class>Champion</class>
     <level>2</level>
-    <prerequisite>tenets</prerequisite>
+    <prerequisite>Tenets of Good</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
     <name>Aura of Courage</name>
     <class>Champion</class>
     <level>4</level>
-    <prerequisite>tenets</prerequisite>
+    <prerequisite>Tenets of Good</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
     <name>Divine Health</name>
     <class>Champion</class>
     <level>4</level>
-    <prerequisite>tenets</prerequisite>
+    <prerequisite>Tenets of Good</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
@@ -1103,7 +1103,7 @@
     <name>Sense Evil</name>
     <class>Champion</class>
     <level>8</level>
-    <prerequisite>tenets</prerequisite>
+    <prerequisite>Tenets of Good</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
@@ -1124,7 +1124,7 @@
     <name>Litany Against Sloth</name>
     <class>Champion</class>
     <level>10</level>
-    <prerequisite>Devotion Spell/tenets</prerequisite>
+    <prerequisite>Devotion Spell/Tenets of Good</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
@@ -1138,7 +1138,7 @@
     <name>Shield of Reckoning</name>
     <class>Champion</class>
     <level>10</level>
-    <prerequisite>Champion's Reaction/Divine Ally (shield)/tenets/Shield Warden</prerequisite>
+    <prerequisite>Champion's Reaction/Divine Ally (shield)/Tenets of Good/Shield Warden</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
@@ -1152,7 +1152,7 @@
     <name>Aura of Faith</name>
     <class>Champion</class>
     <level>12</level>
-    <prerequisite>tenets</prerequisite>
+    <prerequisite>Tenets of Good</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
@@ -1166,7 +1166,7 @@
     <name>Champion's Sacrifice</name>
     <class>Champion</class>
     <level>12</level>
-    <prerequisite>tenets</prerequisite>
+    <prerequisite>Tenets of Good</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
@@ -1208,7 +1208,7 @@
     <name>Aura of Righteousness</name>
     <class>Champion</class>
     <level>14</level>
-    <prerequisite>tenets</prerequisite>
+    <prerequisite>Tenets of Good</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
@@ -1229,7 +1229,7 @@
     <name>Litany of Righteousness</name>
     <class>Champion</class>
     <level>14</level>
-    <prerequisite>tenets</prerequisite>
+    <prerequisite>Tenets of Good</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
@@ -1250,7 +1250,7 @@
     <name>Instrument of Zeal</name>
     <class>Champion</class>
     <level>16</level>
-    <prerequisite>Divine Ally (blade)/tenets</prerequisite>
+    <prerequisite>Divine Ally (blade)/Tenets of Good</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
@@ -1264,7 +1264,7 @@
     <name>Celestial Form</name>
     <class>Champion</class>
     <level>18</level>
-    <prerequisite>tenets</prerequisite>
+    <prerequisite>Tenets of Good</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
@@ -1278,7 +1278,7 @@
     <name>Celestial Mount</name>
     <class>Champion</class>
     <level>20</level>
-    <prerequisite>Divine Ally (steed)/tenets</prerequisite>
+    <prerequisite>Divine Ally (steed)/Tenets of Good</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
@@ -3000,7 +3000,7 @@
     <name>Companion's Cry</name>
     <class>Ranger</class>
     <level>4</level>
-    <prerequisite>none</prerequisite>
+    <prerequisite>Animal Companion</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
@@ -4012,21 +4012,28 @@
     <description>none</description>
   </classFeat>
   <classFeat>
-    <name>Specialist</name>
+    <name>Improved Familiar Attunement</name>
     <class>Wizard</class>
     <level>initial</level>
     <prerequisite>none</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
-    <name>Arcane Bond</name>
+    <name>Metamagic Experimentation</name>
     <class>Wizard</class>
     <level>initial</level>
     <prerequisite>none</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
-    <name>Arcane Thesis</name>
+    <name>Spell Blending</name>
+    <class>Wizard</class>
+    <level>initial</level>
+    <prerequisite>none</prerequisite>
+    <description>none</description>
+  </classFeat>
+  <classFeat>
+    <name>Spell Substitution</name>
     <class>Wizard</class>
     <level>initial</level>
     <prerequisite>none</prerequisite>
@@ -4057,7 +4064,7 @@
     <name>Hand of the Apprentice</name>
     <class>Wizard</class>
     <level>1</level>
-    <prerequisite>Specialist (universalist)</prerequisite>
+    <prerequisite>Universalist</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>
@@ -4148,7 +4155,7 @@
     <name>Universal Versatility</name>
     <class>Wizard</class>
     <level>8</level>
-    <prerequisite>Specialist (universalist)/Hand of the Apprentice</prerequisite>
+    <prerequisite>Universalist/Hand of the Apprentice</prerequisite>
     <description>none</description>
   </classFeat>
   <classFeat>

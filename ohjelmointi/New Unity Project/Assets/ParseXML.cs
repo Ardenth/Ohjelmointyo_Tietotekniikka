@@ -296,7 +296,7 @@ public class ParseXML : MonoBehaviour
         XElement element;
         string[] elementNames = new string[]
         {"class", "primaryStat", "hp", "fortitudeSave", "reflexSave", "willSave",
-                "skill1", "skill2", "skill3", "languages",
+                "skill1", "skill2", "skill3", "skills", "languages",
                 "unarmed", "simple", "martial", "advanced", "attackSpecial",
                 "unarmored", "light", "medium", "heavy", "classDC", "spellDC"};
         foreach (var oneDict in allDict)

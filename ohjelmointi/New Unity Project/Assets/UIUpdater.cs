@@ -9,6 +9,8 @@ using System.Linq;
 public class UIUpdater : MonoBehaviour
 {
     private GameObject statsTab;
+    private GameObject frontPage;
+    private GameObject[] tabObjects;
     [SerializeField]
     private FeatLogControl featControl;
     [SerializeField]
@@ -19,8 +21,10 @@ public class UIUpdater : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        tabObjects = GameObject.FindGameObjectsWithTag("Tab");
         baseline.UpdateMods();
         baseline.LevelUp(1);
+        ControlTabActivity(false);
         UIFeatUpdate("FeatContent");
         UIFeatUpdate("FeatContent2");
         UISkillUpdate("SkillContent");
@@ -53,6 +57,18 @@ public class UIUpdater : MonoBehaviour
         }
     }
 
+    void ControlTabActivity(bool activityState)
+    {
+        if (frontPage == null)
+        {
+            frontPage = GameObject.Find("Tab_View_Character");
+        }
+        foreach (GameObject go in tabObjects)
+        {
+            go.SetActive(activityState);
+        }
+        frontPage.SetActive(true);
+    }
 
     /// <summary>
     /// Update UI feat section
@@ -60,6 +76,7 @@ public class UIUpdater : MonoBehaviour
     /// <param name="objectName">Parent object to hold all feat's information</param>
     void UIFeatUpdate(string objectName)
     {
+        ControlTabActivity(true);
         featControl = GameObject.Find(objectName).GetComponent<FeatLogControl>();
         GameObject featView = GameObject.Find(objectName);
         List<Dictionary<string,string>> featsDictionary = baseline.GetFeats();
@@ -85,6 +102,7 @@ public class UIUpdater : MonoBehaviour
 
             tabView.SetActive(false);
         }
+        ControlTabActivity(false);
     }
 
 
@@ -94,6 +112,7 @@ public class UIUpdater : MonoBehaviour
     /// <param name="objectName">Parent object to hold all skill's information</param>
     void UISkillUpdate(string objectName)
     {
+        ControlTabActivity(true);
         skillControl = GameObject.Find(objectName).GetComponent<SkillLogControl>();
         GameObject skillView = GameObject.Find(objectName);
 
@@ -116,6 +135,7 @@ public class UIUpdater : MonoBehaviour
 
             tabView.SetActive(false);
         }
+        ControlTabActivity(false);
     }
 
 
