@@ -1,3 +1,5 @@
+UI:
+
 - Character Frontpage = Character Features?
 	- Tarkeaa: Class, Level, HP?, Deity?, Initial Feat, Languages?
 
@@ -8,56 +10,28 @@
 
 - Feature list metodi (hp, attacks, defences, etc.) -- UI (jos tyhja? - ei mainita "" tai "none")
 
-- Skill Training duplicate salliminen Feat(Skill) vaiheessa
+- frontPage (Character)
+	Sisaltaa Level, Ancestry, Class maaritteet randomgenille (alussa ainoastaan Level)
+	Sisaltaa Character Features
 
-- LVL 1 ancestry feat puuttuu?
-	- Featteja listaava aliohjelma ensin, helpompi seurata mika feat tyyppi
+
+Functionality:
+
 
 - Arcane School (Wizard) ei toimi, lisaa Arcane Schoolin kahdesti
 		Pitaisi olla Arcane School + Specialist TAI Universalist
+	- aikaisempi aliohjelma kutsu ei vapauta if-lauseketta ja pitaa vanhan muuttujan
 --------------------------
-COMPLETED TODAY:
+DONE TODAY:
 
-- Free Boost, poista sopimaton mahdollisista valinnoista loopissa
+- Skill Training duplicate salliminen Feat(Skill) vaiheessa
 DONE
 
-4 stat boost ajoitus - korjaa ettei hp, kielet ja skillit mene vaarin
+- LVL 1 ancestry feat puuttuu?
 DONE
 
-- Sorcerer, Druid - Initial feat skill increase (huomattiin myos Bard, Rogue ja Wizard)
- - Sama ongelma kuin Ruffian, etc. Miten hoidetaan?
-DONE - HARDCODED
-
-Wizard Initial Feats korjattu (valittiin vaarin)
+- Fighter skill increase choice buggy - FIX
 DONE
-
-FIX CHAMPION TENETS OF GOOD
-DONE
-
-Background identtiset statit (Free + OR) esto
-DONE
-
-- Poista perception kasvatus random gen stat increase (nousee ainoastaan advancement effect avulla)
-DONE
-
-
-- Tab activity randomgen prosessissa?
-	- Start all tabs active => luo gameobject viite jokaiselle tabille
-					=> voi viitata sammutettuun tabiin?
-	- Voiko generointia tehda => all elements.setactive(true)?
-DONE (tabs have tag: Tab)
-
-miten int modifier?
-saatetaan pitaa languages proficiencies, mutta taytyy lisata skill training?
-(ongelma on proficiencies ja ancestry molemmat saattavat kasvatta int)
-(atm proficiencies kasvattaa eniten statteja, joten ancestry parempi olla antamatta kaikkia kielia)
-
-- LANGUAGES INCREASE - Proficiencies => Ancestry
-	(lisakielia ainoastaan intmod, ei esim. 3+intmod)
-		- (3+intmod on skills untrained => trained)
-
-- SKILL INCREASE - Proficiencies (vaarinymmarrus ja skill increase = languages increase atm)
-DONE?
 -----------
 
 Aloita:

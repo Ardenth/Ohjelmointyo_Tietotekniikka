@@ -235,7 +235,7 @@ class Character
             }
             else
             {
-                //requirement type: feat
+                //requirement type: feat - checks if the required feat is found
                 return CheckFeats(requirement);
             }
         }
@@ -256,6 +256,12 @@ class Character
             Dictionary<string, string> feat = this.featsDic[i];
             if (feat["name"] == searchedFeat)
             {
+                // Skill Training never works as a requirement towards a feat due to its functionality (you can get skills to Trained -tier without it)
+                // Thus you can consider it to not exist in the feat dictionary for all purposes (thus allowing duplicates)
+                if (feat["name"] == "Skill Training")
+                {
+                    return false;
+                }
                 return true;
             }
         }
@@ -512,8 +518,9 @@ class Character
         if (InitialFeatDic.Count() > 0)
         {
             this.featsDic.Add(InitialFeatDic[index]);
+            List<string> initialFeatClasses = new List<string>() {"sorcerer", "druid", "bard", "rogue", "wizard"};
             //HARDCODED APPLICATIONS OF SKILLS AND FEATS FOR INITIAL FEAT - needs to be changed when Initial Feat XML -file is created
-            if (this.characterClass == "sorcerer" || this.characterClass == "druid" || this.characterClass == "bard" || this.characterClass == "rogue" || this.characterClass == "wizard")
+            if (initialFeatClasses.Contains(this.characterClass))
             {
                 UnityEngine.Debug.Log("Initial Feat Name to look for: " + InitialFeatDic[index]["name"]);
                 this.ApplyInitialFeatSkills(InitialFeatDic[index]["name"]);
@@ -541,10 +548,12 @@ class Character
         //all proficiencies except the filtering proficiency used to filter list variables based on class
         foreach (string proficiency in keyList.Skip(1))
         {
+            //if the proficiency section is empty
             if (profs[proficiency].Contains("none"))
             {
                 continue;
             }
+            //character's hp value from their class
             else if (proficiency.Contains("hp"))
             {
                 string proficiencyConString = profs[proficiency].Replace("+Con","");
@@ -552,10 +561,21 @@ class Character
                 int proficiencyCon = levelUpHP + this.GetMod("Constitution");
                 this.characterFeatures[proficiency] = proficiencyCon.ToString();
             }
+            //skill1, skill2, skill3, etc.
             else if (proficiency.Contains("skill") && proficiency.Any(char.IsDigit))
             {
-                this.IncreaseSkill(profs[proficiency]);
+                if (profs[proficiency].Contains('-'))
+                {
+                    string[] skillOr = profs[proficiency].Split('-');
+                    int index = rand.Next(skillOr.Length);
+                    this.IncreaseSkill(skillOr[index]);
+                }
+                else
+                {
+                    this.IncreaseSkill(profs[proficiency]);
+                }
             }
+            //character's free skill tier increases
             else if (proficiency == "skills")
             {
 
@@ -835,6 +855,8 @@ class Character
 
         //apply ancestry effects
         ApplyAncestryEffects(ParseXML.ancestryDic[index]);
+        //add the ancestry feat gained when you first get your ancestry
+        this.AddAdvancement("Feat(Ancestry)");
     }
 
     /// <summary>
@@ -886,7 +908,7 @@ class Character
                                         statList.Remove(randomKey);
                                     }
                                     //randomize the free boost with weighting towards class primary stat as 50% vs normal randomization (also has primary stat)
-                                    if (rand.Next(0, 2) == 0)
+                                    if (statList.Contains(this.characterFeatures["primaryStat"]) && rand.Next(0, 2) == 0)
                                     {
                                         randomKey = this.characterFeatures["primaryStat"];
                                     }
@@ -1052,10 +1074,12 @@ class Character
                                 //if randomized skill is already at trained tier, change it to random untrained => trained via Skill Training
                                 if (!advName[0].Contains("Lore") && this.skills[advName[0]] == "Trained")
                                 {
+                                    UnityEngine.Debug.Log("Switched bkgr to Skill Training because it is already Trained: "+advOrArr[index]);
                                     this.IncreaseSkill("Skill Training");
                                 }
                                 else
                                 {
+                                    UnityEngine.Debug.Log("Background Or continues as normal: " + advOrArr[index]);
                                     this.IncreaseSkill(advOrArr[index]);
                                 }
                             }
@@ -1310,17 +1334,22 @@ class Character
             else
             {
                 Dictionary<string, string> featToAdd;
-                UnityEngine.Debug.Log("What was the progression in the dic: ------------------------ " + advancementName);
+                UnityEngine.Debug.Log("What is being searched: ------------------------ " + advancementName);
                 for (int i = 0; i < ParseXML.classAdvDic.Count; i++)
                 {
+                    if (i == 0)
+                    {
+                        UnityEngine.Debug.Log("What is being searched WHILE INSIDE LOOP: ------------------------ " + advancementName);
+                    }
                     if (ParseXML.classAdvDic[i]["name"] == advancementName)
                     {
+                        UnityEngine.Debug.Log("advancement found: " + advancementName);
                         featToAdd = ParseXML.classAdvDic[i];
                         featToAdd.Add("currentLevel", this.characterLevel.ToString());
                         featToAdd.Add("type", "Advancement");
                         this.featsDic.Add(featToAdd);
-                        this.ApplyAdvancementEffect(ParseXML.classAdvDic[i]);
                         UnityEngine.Debug.Log("advancement added: " +advancementName);
+                        this.ApplyAdvancementEffect(ParseXML.classAdvDic[i]);
                     }
                 }
             }
@@ -1382,7 +1411,7 @@ class Character
             case ("Feat(General)"):
                 foreach (var item in dicToFilter)
                 { 
-                    //if prerequisite and no duplicates is fine //I spent hour trying to do something that I had made into method already...
+                    //if prerequisite and no duplicates is fine
                     if (this.ParseRequirement(item["prerequisite"]) && !this.CheckFeats(item["name"]))            
                     {
                         filteredDic.Add(item);
@@ -1395,7 +1424,7 @@ class Character
                     if (item["level"].ToLower() != "initial")                     // parse level into int form while avoiding "initial" -string error
                     {
                         featLevelPreq = int.Parse(item["level"]);
-                        //if level, prerequisites, ancestry and no duplicates is fine //I spent hour trying to do something that I had made into method already...
+                        //if level, prerequisites, ancestry and no duplicates is fine
                         if (this.characterLevel >= featLevelPreq && this.ParseRequirement(item["prerequisite"]) && item["ancestry"].Contains(this.characterAncestry) && !this.CheckFeats(item["name"]))            
                         {
                             filteredDic.Add(item);

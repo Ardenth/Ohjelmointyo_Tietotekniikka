@@ -2,7 +2,7 @@
 <Progressions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<progression>
 		<level>1</level>
-		<advancement1>Feat(Ancestry)</advancement1>
+		<advancement1>Ancestry</advancement1>
 		<advancement2>Background</advancement2>
 		<advancement3>Proficiencies</advancement3>
 		<advancement4>Primal Spellcasting</advancement4>
