@@ -114,14 +114,6 @@ public class UIUpdater : MonoBehaviour
             featInfo.Add(feat["description"]);
             featControl.LogFeatText(featInfo, objectName);
         }
-        //leaves only starting tab active
-        if (objectName.Any(char.IsDigit))
-        {
-            GameObject changedObject = GameObject.Find(objectName);
-            GameObject tabView = changedObject.transform.parent.parent.parent.gameObject;
-
-            tabView.SetActive(false);
-        }
         ControlTabActivity(false);
     }
 
@@ -146,14 +138,6 @@ public class UIUpdater : MonoBehaviour
         foreach (KeyValuePair<string, string> item in skillsDictionary)
         {
             skillControl.LogSkillText(item, objectName);
-        }
-        //leaves only starting tab active
-        if (objectName.Any(char.IsDigit))
-        {
-            GameObject changedObject = GameObject.Find(objectName);
-            GameObject tabView = changedObject.transform.parent.parent.parent.gameObject;
-
-            tabView.SetActive(false);
         }
         ControlTabActivity(false);
     }

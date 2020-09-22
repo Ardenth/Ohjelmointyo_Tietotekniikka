@@ -1,11 +1,6 @@
 UI:
 
-- Front Page: (Character)
-	Sisaltaa Level, Ancestry, Class maaritteet randomgenille (alussa ainoastaan Level)
-	Sisaltaa Character Features
-		- Tarkeaa: Class, Level, HP?, (Deity?), Initial Feat, Languages?
-
-DONE 		- HP, Deity, Languages ainoastaan Features sivulla
+- Front Page: (Character) DONE
 
 - Skill Page: DONE
 
@@ -27,39 +22,24 @@ DONE 		- HP, Deity, Languages ainoastaan Features sivulla
 	- PrimaryStat (koska spellcasting modifier)
 	- SpellDC
 	- Class?
+
+- Korjaa valitun tabin highlight, kun painetaan generointia?
 --
 Functionality:
-
-Korjaa valitun tabin highlight, kun painetaan generointia?
 
 Languages aliohjelma, koska lvl1 jalkeen jos esimerkiksi con tai int kasvaa
 	- con => current hp += character level (koska joka level 1 hp per con)
 	- int => current languages += extra language (koska int mod = 1 language)
-
+DONE
 --------------------------
 DONE TODAY:
 
-Assurance bug
+Languages
 
-background bug
-
-feat details bug
-
-Lore increase bug (initial lore application, only lvl 1)
-
-Frontpage redesign (complete)
-
-FrontPage Update
-
-Randomgen
-- input
+Bugfix randomgen (Unity side)
 -----------
 
 Aloita:
-- Randomgen painikkeen rakennus?
-	- Text field, josta numeroarvo generoitavalle levelille
-	- Delete all children in X places before creating new
-DONE
 
 - Dokumentointia
 
@@ -69,6 +49,12 @@ DONE
 
 -------------------
 FUTURE IMPLEMENTATIONS:
+
+Spells
+- Random gen spelleillei (tarvitsee XML)
+
+Deity
+- Random gen deity ominaisuudet cleric + paladin (esim favored weapon)
 
 Feats
 - pitaisi sisaltaa tageja, esim metamagic Wizard Class feat

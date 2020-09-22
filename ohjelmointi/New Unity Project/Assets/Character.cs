@@ -97,33 +97,36 @@ class Character
     {
         string[] statSplit = stat.Split('|');
         //for dictionary
-        if (statSplit.Length < 2)                                   //parameter only has key for statistic, thus increase it by increment of 2
+        if (statSplit.Length < 2)
         {
+            //parameter only has key for statistic, thus increase it by increment of 2
             this.statsDic[stat] += 2;
+            if (this.characterLevel > 1)
+            {
+                switch (stat)
+                {
+                    case ("Constitution"):
+                        this.levelUpHP++;
+                        int currentHP = int.Parse(this.characterFeatures["hp"]);
+                        this.characterFeatures["hp"] = (currentHP + this.characterLevel).ToString();
+                        UnityEngine.Debug.Log("----------------------------------- HP WAS INCREASED BY " + this.characterLevel.ToString());
+                        break;
+                    case ("Intelligence"):
+                        string newLanguage = this.AddLanguages(1);
+                        this.characterFeatures["languages"] = this.characterFeatures["languages"] + ", " + newLanguage;
+                        UnityEngine.Debug.Log("----------------------------------- NEW LANGUAGE WAS ADDED THROUGH INT INCREASE: "+newLanguage);
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
         else
         {
-            this.statsDic[statSplit[0]] = int.Parse(statSplit[1]);  //parameter holds information to what value the statistic will be increased, thus increase statistic to given value
+            //parameter holds information to what value the statistic will be increased, thus increase statistic to given value
+            this.statsDic[statSplit[0]] = int.Parse(statSplit[1]);
         }
         UnityEngine.Debug.Log("stat increased: " +stat);
-        UpdateMods();
-    }
-
-
-    /// <summary>
-    /// Sets the character's statistics with the parameter
-    /// </summary>
-    /// <param name="statsWanted">Wanted character stats</param>
-    internal void SetCharStat(int[] statsWanted)
-    {
-        int index = 0;
-        List<string> keys = new List<string>(statsDic.Keys);
-        foreach (string key in keys)
-        {
-            statsDic[key] = statsWanted[index];
-            index++;
-        }
-
         UpdateMods();
     }
 
@@ -430,7 +433,6 @@ class Character
                     loreValues.Add(Array.IndexOf(skillTraining, this.skills[key]));
                 }
             }
-            UnityEngine.Debug.Log(skillTraining[loreValues.Max()]);
             this.skills["Lore"] = skillTraining[loreValues.Max()];
         }
 
@@ -598,6 +600,8 @@ class Character
             else if (proficiency == "skills")
             {
 
+
+
                 string[] skillCounter = profs[proficiency].Split('|');
                 //holds in the information of flat value of skills and the modifier to use in the count
                 string[] incTotal = skillCounter[0].Split('+');
@@ -611,48 +615,28 @@ class Character
             //handle adding languages and process the earlier added languages in ancestries to a more readable format - make into method for future?
             else if (proficiency == "languages")
             {
-                //language list of the game to randomize values from
-                List<string> languages = new List<string>{
-                            "Draconic", "Dwarven", "Elven", "Gnomish", "Goblin", "Halfling", "Jotun", "Orcish", "Sylvan", "Undercommon",
-                            "Abyssal", "Aklo", "Aquan", "Auran", "Celestial", "Gnoll", "Ignan", "Infernal", "Necril", "Shadowtongue", "Terran"};
-                List<string> langListAdd = new List<string>();
-
-                //randomize languages up to the intmodifier
-                for (int i = 0; i < this.GetMod("Intelligence") && this.GetMod("Intelligence") != 0; i++)
-                {
-                    int index = rand.Next(languages.Count);
-                    string languageToAdd = languages[index];
-                    //check if the random language is already known and randomize new if it is
-                    if (this.characterFeatures[proficiency].Contains(languageToAdd) || langListAdd.Contains(languageToAdd))
-                    {
-                        while (this.characterFeatures[proficiency].Contains(languageToAdd) || langListAdd.Contains(languageToAdd))
-                        {
-                            index = rand.Next(languages.Count);
-                            languageToAdd = languages[index];      //randomize a new language
-                        }
-                    }
-                    UnityEngine.Debug.Log(languageToAdd);
-                    langListAdd.Add(languageToAdd);
-                }
-
+                
                 //create a single string from the randomized languages list
-                string replacementString = string.Join(", ", langListAdd);
+                string newLanguages = this.AddLanguages(this.GetMod("Intelligence"));
 
-                //reformat ancestry's languages into a more readable form for the user
+
+
+
+                //reformat current languages into a more readable form for the user
                 string langsProcessed = this.characterFeatures[proficiency];
                 langsProcessed = langsProcessed.Replace("/", ", ");
-                langsProcessed = langsProcessed.Replace("intmod", replacementString);
+                langsProcessed = langsProcessed.Replace("intmod", newLanguages);
                 //reformat last ',' out if there is nothing to add
                 if (this.GetMod("Intelligence") == 0)
                 {
                     string langsProcessed1 = langsProcessed.Remove(langsProcessed.Length - 2, 2);
-                    //add the ancestry languages to the character's sheet
+                    //add the languages to the character's sheet
                     this.characterFeatures[proficiency] = langsProcessed1;
                     UnityEngine.Debug.Log(this.characterFeatures[proficiency]);
                 }
                 else
                 {
-                    //add the ancestry languages to the character's sheet
+                    //add the languages to the character's sheet
                     this.characterFeatures[proficiency] = langsProcessed;
                     UnityEngine.Debug.Log(this.characterFeatures[proficiency]);
                 }
@@ -730,6 +714,38 @@ class Character
         }
     }
 
+
+    internal string AddLanguages(int langAmount)
+    {
+        //language list of the game to randomize values from
+        List<string> languages = new List<string>{
+                            "Draconic", "Dwarven", "Elven", "Gnomish", "Goblin", "Halfling", "Jotun", "Orcish", "Sylvan", "Undercommon",
+                            "Abyssal", "Aklo", "Aquan", "Auran", "Celestial", "Gnoll", "Ignan", "Infernal", "Necril", "Shadowtongue", "Terran"};
+        List<string> langListAdd = new List<string>();
+
+        //randomize languages up to the intmodifier
+        for (int i = 0; (i < langAmount) && (langAmount != 0); i++)
+        {
+            int index = rand.Next(languages.Count);
+            string languageToAdd = languages[index];
+            //check if the random language is already known and randomize new if it is
+            if (this.characterFeatures["languages"].Contains(languageToAdd) || langListAdd.Contains(languageToAdd))
+            {
+                while (this.characterFeatures["languages"].Contains(languageToAdd) || langListAdd.Contains(languageToAdd))
+                {
+                    index = rand.Next(languages.Count);
+                    languageToAdd = languages[index];      //randomize a new language
+                }
+            }
+            UnityEngine.Debug.Log(languageToAdd);
+            langListAdd.Add(languageToAdd);
+        }
+
+        //create a single string from the randomized languages list
+        string newLanguages = string.Join(", ", langListAdd);
+
+        return newLanguages;
+    }
 
 
     /// <summary>
@@ -927,7 +943,7 @@ class Character
                                         statList.Remove(randomKey);
                                     }
                                     //randomize the free boost with weighting towards class primary stat as 50% vs normal randomization (also has primary stat)
-                                    if (statList.Contains(this.characterFeatures["primaryStat"]) && rand.Next(0, 2) == 0)
+                                    if (statList.Contains(this.characterFeatures["primaryStat"]) && rand.Next(0, 4) != 0)
                                     {
                                         randomKey = this.characterFeatures["primaryStat"];
                                     }
@@ -1053,7 +1069,7 @@ class Character
                                         UnityEngine.Debug.Log("Attempted Key: " + randomKey + " WAS REMOVED FROM THE LIST");
                                         statsList.Remove(randomKey);
                                     }
-                                    if (rand.Next(0, 2) == 0 && statsList.Contains(this.characterFeatures["primaryStat"]))
+                                    if (rand.Next(0, 4) != 0 && statsList.Contains(this.characterFeatures["primaryStat"]))
                                     {
                                         randomKey = this.characterFeatures["primaryStat"];
                                     }
@@ -1296,7 +1312,7 @@ class Character
             {
                 List<string> keyList = new List<string>(statsDic.Keys);
                 string randomKey;
-                if (rand.Next(0, 2) == 0)
+                if (rand.Next(0, 4) != 0)
                 {
                     randomKey = this.characterFeatures["primaryStat"];
                 }

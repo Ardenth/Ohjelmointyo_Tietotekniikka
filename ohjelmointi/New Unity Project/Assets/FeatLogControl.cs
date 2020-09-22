@@ -10,10 +10,6 @@ public class FeatLogControl : MonoBehaviour
 
     private List<GameObject> featItems;
 
-    private void Start()
-    {
-        featItems = new List<GameObject>();
-    }
 
     public void LogFeatText(List<string> newFeatString, string parentName)
     {

@@ -10,11 +10,6 @@ public class SkillLogControl : MonoBehaviour
 
     private List<GameObject> skillItems;
 
-    private void Start()
-    {
-        skillItems = new List<GameObject>();
-    }
-
     public void LogSkillText(KeyValuePair<string, string> newSkillPair, string parentName)
     {
         skillItems = new List<GameObject>();
