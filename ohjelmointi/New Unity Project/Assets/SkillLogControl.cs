@@ -17,6 +17,7 @@ public class SkillLogControl : MonoBehaviour
 
     public void LogSkillText(KeyValuePair<string, string> newSkillPair, string parentName)
     {
+        skillItems = new List<GameObject>();
         skillTemplate = Resources.Load("Skill") as GameObject;
         GameObject newSkill = Instantiate(skillTemplate) as GameObject;
         newSkill.SetActive(true);

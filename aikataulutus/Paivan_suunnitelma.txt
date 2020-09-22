@@ -1,44 +1,65 @@
 UI:
 
-- Character Frontpage = Character Features?
-	- Tarkeaa: Class, Level, HP?, Deity?, Initial Feat, Languages?
-
-- Feattien listauksen aikana name, current level, type ja description mainitaan (UI muutos?)
-
-- Description BUTTON -feateille?
-	- aikaisemmin listatuista syista (18.9 GITHUB?)
-
-- Feature list metodi (hp, attacks, defences, etc.) -- UI (jos tyhja? - ei mainita "" tai "none")
-
-- frontPage (Character)
+- Front Page: (Character)
 	Sisaltaa Level, Ancestry, Class maaritteet randomgenille (alussa ainoastaan Level)
 	Sisaltaa Character Features
+		- Tarkeaa: Class, Level, HP?, (Deity?), Initial Feat, Languages?
+
+DONE 		- HP, Deity, Languages ainoastaan Features sivulla
+
+- Skill Page: DONE
 
 
+- Feat Page:
+	- Description BUTTON -feateille?
+		- aikaisemmin listatuista syista (18.9 GITHUB?)
+	- Feattien listauksen aikana name, current level, type
+		 ja description mainitaan (UI muutos?)
+
+
+- Feature Page: list metodi (hp, attacks, defences, etc.) 
+	- UI (jos tyhja? - ei mainita "" tai "none")
+
+
+- Spell Page:
+	- Vain Spellcasting liittyvat Featit
+	- Deity?
+	- PrimaryStat (koska spellcasting modifier)
+	- SpellDC
+	- Class?
+--
 Functionality:
 
+Korjaa valitun tabin highlight, kun painetaan generointia?
+
+Languages aliohjelma, koska lvl1 jalkeen jos esimerkiksi con tai int kasvaa
+	- con => current hp += character level (koska joka level 1 hp per con)
+	- int => current languages += extra language (koska int mod = 1 language)
 
 --------------------------
 DONE TODAY:
 
-- Skill Training duplicate salliminen Feat(Skill) vaiheessa
-DONE
+Assurance bug
 
-- LVL 1 ancestry feat puuttuu?
-DONE
+background bug
 
-- Fighter skill increase choice buggy - FIX
-DONE
+feat details bug
 
-- Arcane School (Wizard) ei toimi, lisaa Arcane Schoolin kahdesti
-		Pitaisi olla Arcane School + Specialist TAI Universalist
-	- aikaisempi aliohjelma kutsu ei vapauta if-lauseketta ja pitaa vanhan muuttujan
-DONE
+Lore increase bug (initial lore application, only lvl 1)
+
+Frontpage redesign (complete)
+
+FrontPage Update
+
+Randomgen
+- input
 -----------
 
 Aloita:
 - Randomgen painikkeen rakennus?
 	- Text field, josta numeroarvo generoitavalle levelille
+	- Delete all children in X places before creating new
+DONE
 
 - Dokumentointia
 

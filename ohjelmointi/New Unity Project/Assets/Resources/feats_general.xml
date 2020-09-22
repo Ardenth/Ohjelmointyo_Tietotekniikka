@@ -105,7 +105,7 @@
 	<feat>
 		<name>Assurance</name>
 		<level>1</level>
-		<prerequisite>Skill|Trained</prerequisite>
+		<prerequisite>none</prerequisite>
 		<description>none</description>
 	</feat>
 	<feat>
@@ -141,7 +141,7 @@
 	<feat>
 		<name>Automatic Knowledge</name>
 		<level>2</level>
-		<prerequisite>Recall Knowledge|Expert/Assurance|Skill</prerequisite>
+		<prerequisite>Recall Knowledge|Expert/Assurance</prerequisite>
 		<description>none</description>
 	</feat>
 	<feat>

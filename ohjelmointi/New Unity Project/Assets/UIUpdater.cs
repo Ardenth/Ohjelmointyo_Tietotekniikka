@@ -5,6 +5,8 @@ using UnityEngine;
 using System.Runtime.InteropServices.ComTypes;
 using UnityEngine.Serialization;
 using System.Linq;
+using System;
+using UnityEditorInternal;
 
 public class UIUpdater : MonoBehaviour
 {
@@ -15,6 +17,8 @@ public class UIUpdater : MonoBehaviour
     private FeatLogControl featControl;
     [SerializeField]
     private SkillLogControl skillControl;
+    [SerializeField]
+    private FrontLogControl infoControl;
     Character baseline = new Character();
 
 
@@ -22,16 +26,31 @@ public class UIUpdater : MonoBehaviour
     void Start()
     {
         tabObjects = GameObject.FindGameObjectsWithTag("Tab");
-        baseline.UpdateMods();
-        baseline.LevelUp(1);
         ControlTabActivity(false);
-        UIFeatUpdate("FeatContent");
+        //testing requirementparse
+    }
+
+
+    /// <summary>
+    /// Create a new random character
+    /// </summary>
+    public void GenerateNewCharacter()
+    {
+        ControlTabActivity(true);
+        string levelInfo = GameObject.FindGameObjectWithTag("GenerateLevel").GetComponent<TextMeshProUGUI>().text;
+        //remove the hidden character used in string
+        string levelInfoClean = levelInfo.Replace("\u200B", "");
+        int levels = int.Parse(levelInfoClean);
+        baseline = new Character();
+        baseline.UpdateMods();
+        baseline.LevelUp(levels);
+        //UIFeatUpdate("FeatContent");
         UIFeatUpdate("FeatContent2");
-        UISkillUpdate("SkillContent");
+        //UISkillUpdate("SkillContent");
         UISkillUpdate("SkillContent2");
         UIModUpdate();
-
-        //testing requirementparse
+        UIFrontPageUpdate("CharacterInfo");
+        ControlTabActivity(false);
     }
 
     /// <summary>
@@ -91,6 +110,7 @@ public class UIUpdater : MonoBehaviour
         {
             featInfo.Clear();
             featInfo.Add(feat["name"]);
+            UnityEngine.Debug.Log(feat["name"]);
             featInfo.Add(feat["description"]);
             featControl.LogFeatText(featInfo, objectName);
         }
@@ -138,10 +158,51 @@ public class UIUpdater : MonoBehaviour
         ControlTabActivity(false);
     }
 
-
-
-    // Update is called once per frame
-    void Update()
+    /// <summary>
+    /// Update UI character information section
+    /// </summary>
+    /// <param name="objectName">Parent object for the character info</param>
+    void UIFrontPageUpdate(string objectName)
     {
+        ControlTabActivity(true);
+        infoControl = GameObject.Find(objectName).GetComponent<FrontLogControl>();
+        //add character info
+        List<string> characterInfo = new List<string>();
+        characterInfo.Add(baseline.characterLevel.ToString());
+        characterInfo.Add(baseline.characterAncestry);
+        //if the background's name has a number, remove it before adding
+        if (baseline.characterBackground["bckgrName"].Any(char.IsDigit))
+        {
+            string characterBackground = baseline.characterBackground["bckgrName"];
+            characterInfo.Add(characterBackground.Remove(characterBackground.Length - 1, 1));
+        }
+        else
+        {
+            characterInfo.Add(baseline.characterBackground["bckgrName"]);
+        }
+        characterInfo.Add(baseline.CapitalizeFirstChar(baseline.characterClass));
+        characterInfo.Add(baseline.characterFeatures["primaryStat"]);
+        characterInfo.Add(baseline.classInitialFeat);
+        infoControl.LogFrontText(characterInfo, objectName);
+        ControlTabActivity(false);
     }
+
+
+    /// <summary>
+    /// Update UI Feature information section
+    /// </summary>
+    void UIFeatureUpdate()
+    {
+
+    }
+
+
+    /// <summary>
+    /// Update UI Spell information section (casting type, DC, Spell Levels) -- Can expand to include spell list (need XML)
+    /// </summary>
+    void UISpellUpdate()
+    {
+
+    }
+
 }

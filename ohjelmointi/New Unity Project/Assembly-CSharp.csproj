@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\Character.cs" />
     <Compile Include="Assets\FeatLogControl.cs" />
+    <Compile Include="Assets\FrontLogControl.cs" />
     <Compile Include="Assets\ParseXML.cs" />
     <Compile Include="Assets\SkillLogControl.cs" />
     <Compile Include="Assets\TabButton.cs" />

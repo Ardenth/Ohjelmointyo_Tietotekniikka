@@ -17,6 +17,7 @@ public class FeatLogControl : MonoBehaviour
 
     public void LogFeatText(List<string> newFeatString, string parentName)
     {
+        featItems = new List<GameObject>();
         featTemplate = Resources.Load("Feat") as GameObject;
         GameObject newFeat = Instantiate(featTemplate) as GameObject;
         newFeat.SetActive(true);
