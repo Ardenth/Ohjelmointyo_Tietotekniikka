@@ -6,7 +6,6 @@ using System.Runtime.InteropServices.ComTypes;
 using UnityEngine.Serialization;
 using System.Linq;
 using System;
-using UnityEditorInternal;
 
 public class UIUpdater : MonoBehaviour
 {

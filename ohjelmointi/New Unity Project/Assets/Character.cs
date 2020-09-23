@@ -6,8 +6,6 @@ using System.Diagnostics.Tracing;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using UnityEditor;
-using UnityEditor.CrashReporting;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.Analytics;
 using UnityEngine.UIElements;

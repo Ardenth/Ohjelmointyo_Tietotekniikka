@@ -273,7 +273,7 @@
 	<advancement>
 		<name>Expert Spellcaster</name>
 		<class>Bard-Druid-Sorcerer-Wizard</class>
-		<effect>SpellDC|Expert</effect>
+		<effect>spellDC|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -303,7 +303,7 @@
 	<advancement>
 		<name>Master Spellcaster</name>
 		<class>Bard-Druid-Sorcerer-Wizard</class>
-		<effect>SpellDC|Expert</effect>
+		<effect>spellDC|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -321,7 +321,7 @@
 	<advancement>
 		<name>Legendary Spellcaster</name>
 		<class>Bard-Druid-Sorcerer</class>
-		<effect>SpellDC|Legendary</effect>
+		<effect>spellDC|Legendary</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -381,7 +381,7 @@
 	<advancement>
 		<name>Champion Expertise</name>
 		<class>Champion</class>
-		<effect>ClassDC|Expert</effect>
+		<effect>classDC|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -555,7 +555,7 @@
 	<advancement>
 		<name>Fighter Expertise</name>
 		<class>Fighter</class>
-		<effect>ClassDC|Expert</effect>
+		<effect>classDC|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -573,7 +573,7 @@
 	<advancement>
 		<name>Versatile Legend</name>
 		<class>Fighter</class>
-		<effect>Simple|Legendary/Martial|Legendary/Advanced|Master/ClassDC|Master</effect>
+		<effect>Simple|Legendary/Martial|Legendary/Advanced|Master/classDC|Master</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -627,7 +627,7 @@
 	<advancement>
 		<name>Monk Expertise</name>
 		<class>Monk</class>
-		<effect>ClassDC|Expert</effect>
+		<effect>classDC|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -657,7 +657,7 @@
 	<advancement>
 		<name>Graceful Legend</name>
 		<class>Monk</class>
-		<effect>ClassDC|Master/Unarmored|Legendary</effect>
+		<effect>classDC|Master/Unarmored|Legendary</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -687,7 +687,7 @@
 	<advancement>
 		<name>Ranger Expertise</name>
 		<class>Ranger</class>
-		<effect>ClassDC|Expert</effect>
+		<effect>classDC|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -765,7 +765,7 @@
 	<advancement>
 		<name>Rogue Expertise</name>
 		<class>Rogue</class>
-		<effect>ClassDC|Expert</effect>
+		<effect>classDC|Expert</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
@@ -801,7 +801,7 @@
 	<advancement>
 		<name>Master Strike</name>
 		<class>Rogue</class>
-		<effect>ClassDC|Master</effect>
+		<effect>classDC|Master</effect>
 		<description>placeholder</description>
 	</advancement>
   <advancement>
@@ -885,7 +885,7 @@
 	<advancement>
 		<name>Legendary Archwizard</name>
 		<class>Wizard</class>
-		<effect>SpellDC|Legendary</effect>
+		<effect>spellDC|Legendary</effect>
 		<description>placeholder</description>
 	</advancement>
 	<advancement>
