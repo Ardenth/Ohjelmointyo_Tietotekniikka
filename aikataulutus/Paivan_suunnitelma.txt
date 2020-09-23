@@ -10,7 +10,7 @@ UI:
 		- aikaisemmin listatuista syista (18.9 GITHUB?)
 	- Feattien listauksen aikana name, current level, type
 		 ja description mainitaan (UI muutos?)
-
+DONE
 
 - Feature Page: list metodi (hp, attacks, defences, etc.) 
 	- UI (jos tyhja? - ei mainita "" tai "none")
@@ -27,16 +27,9 @@ UI:
 --
 Functionality:
 
-Languages aliohjelma, koska lvl1 jalkeen jos esimerkiksi con tai int kasvaa
-	- con => current hp += character level (koska joka level 1 hp per con)
-	- int => current languages += extra language (koska int mod = 1 language)
-DONE
 --------------------------
 DONE TODAY:
 
-Languages
-
-Bugfix randomgen (Unity side)
 -----------
 
 Aloita:

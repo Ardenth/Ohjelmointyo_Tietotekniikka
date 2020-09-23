@@ -20,10 +20,19 @@ public class FeatLogControl : MonoBehaviour
         int i = 0;
         foreach (Transform child in newFeat.transform)
         {
-            if (newFeatString[i].Contains("("))
+            //button does not have anything added
+            if (child.name == "Button")
             {
-                string[] formatString = newFeatString[i].Split('(');
-                child.GetComponent<TextMeshProUGUI>().text = formatString[0] + "\n(" + formatString[1];
+                continue;
+            }
+            //description is further down in the child -tree
+            else if (child.name == "FeatPopUp")
+            {
+                Transform childDescription = child.GetChild(0).GetChild(0);
+                Debug.Log(childDescription.name);
+                childDescription.GetComponent<TextMeshProUGUI>().text = newFeatString[i];
+                Transform childIndicator = child.GetChild(0).GetChild(1);
+                childIndicator.GetComponent<TextMeshProUGUI>().text = newFeatString[0];
             }
             else
             {

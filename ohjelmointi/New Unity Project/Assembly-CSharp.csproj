@@ -64,10 +64,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Character.cs" />
+    <Compile Include="Assets\FeatControl.cs" />
     <Compile Include="Assets\FeatLogControl.cs" />
     <Compile Include="Assets\FrontLogControl.cs" />
     <Compile Include="Assets\ParseXML.cs" />
     <Compile Include="Assets\SkillLogControl.cs" />
+    <Compile Include="Assets\SpellLogControl.cs" />
     <Compile Include="Assets\TabButton.cs" />
     <Compile Include="Assets\TabGroup.cs" />
     <Compile Include="Assets\UIUpdater.cs" />

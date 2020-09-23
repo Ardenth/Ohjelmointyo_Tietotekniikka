@@ -525,6 +525,7 @@ class Character
         //apply initial feat for your class
         List<Dictionary<string, string>> InitialFeatDic = new List<Dictionary<string, string>>();
         UnityEngine.Debug.Log("level when the progression dic is linked: "+classProgDic[0]["level"]);
+        //check all the possible Initial feats for the class
         foreach (var item in ParseXML.classFeatDic)
         {
             //if the initial Feat for your class exists
@@ -538,7 +539,10 @@ class Character
         index = rand.Next(InitialFeatDic.Count);
         if (InitialFeatDic.Count() > 0)
         {
-            this.featsDic.Add(InitialFeatDic[index]);
+            Dictionary<string, string> initialFeat = InitialFeatDic[index];
+            initialFeat["currentLevel"] = this.characterLevel.ToString();
+            initialFeat["type"] = "Initial";
+            this.featsDic.Add(initialFeat);
             this.classInitialFeat = InitialFeatDic[index]["name"];
             List<string> initialFeatClasses = new List<string>() {"sorcerer", "druid", "bard", "rogue", "wizard"};
             //HARDCODED APPLICATIONS OF SKILLS AND FEATS FOR INITIAL FEAT - needs to be changed when Initial Feat XML -file is created
@@ -756,23 +760,36 @@ class Character
     {
         if (this.characterClass == "druid")
         {
+            Dictionary<string, string> featToAdd;
             switch (inFeat)
             {
                 case ("Animal"):
                     this.IncreaseSkill("Athletics|Trained");
-                    this.featsDic.Add(FindClassFeat("Animal Companion"));
+                    featToAdd = FindClassFeat("Animal Companion");
+                    featToAdd["currentLevel"] = this.characterLevel.ToString();
+                    featToAdd["type"] = "Feat(Class)";
+                    this.featsDic.Add(featToAdd);
                     break;
                 case ("Leaf"):
                     this.IncreaseSkill("Diplomacy|Trained");
-                    this.featsDic.Add(FindClassFeat("Leshy Familiar"));
+                    featToAdd = FindClassFeat("Leshy Familiar");
+                    featToAdd["currentLevel"] = this.characterLevel.ToString();
+                    featToAdd["type"] = "Feat(Class)";
+                    this.featsDic.Add(featToAdd);
                     break;
                 case ("Storm"):
                     this.IncreaseSkill("Acrobatics|Trained");
-                    this.featsDic.Add(FindClassFeat("Storm Born"));
+                    featToAdd = FindClassFeat("Storm Born");
+                    featToAdd["currentLevel"] = this.characterLevel.ToString();
+                    featToAdd["type"] = "Feat(Class)";
+                    this.featsDic.Add(featToAdd);
                     break;
                 case ("Wild"):
                     this.IncreaseSkill("Intimidation|Trained");
-                    this.featsDic.Add(FindClassFeat("Wild Shape"));
+                    featToAdd = FindClassFeat("Wild Shape");
+                    featToAdd["currentLevel"] = this.characterLevel.ToString();
+                    featToAdd["type"] = "Feat(Class)";
+                    this.featsDic.Add(featToAdd);
                     break;
                 default:
                     break;
@@ -780,16 +797,26 @@ class Character
         }
         else if (this.characterClass == "bard")
         {
+            Dictionary<string, string> featToAdd;
             switch (inFeat)
             {
                 case ("Enigma Muse"):
-                    this.featsDic.Add(FindClassFeat("Bardic Lore"));
+                    featToAdd = FindClassFeat("Bardic Lore");
+                    featToAdd["currentLevel"] = this.characterLevel.ToString();
+                    featToAdd["type"] = "Feat(Class)";
+                    this.featsDic.Add(featToAdd);
                     break;
                 case ("Maestro Muse"):
-                    this.featsDic.Add(FindClassFeat("Lingering Composition"));
+                    featToAdd = FindClassFeat("Lingering Composition");
+                    featToAdd["currentLevel"] = this.characterLevel.ToString();
+                    featToAdd["type"] = "Feat(Class)";
+                    this.featsDic.Add(featToAdd);
                     break;
                 case ("Polymath Muse"):
-                    this.featsDic.Add(FindClassFeat("Versatile Performance"));
+                    featToAdd = FindClassFeat("Versatile Performance");
+                    featToAdd["currentLevel"] = this.characterLevel.ToString();
+                    featToAdd["type"] = "Feat(Class)";
+                    this.featsDic.Add(featToAdd);
                     break;
                 default:
                     break;
@@ -859,16 +886,23 @@ class Character
         }
         else if (this.characterClass == "wizard")
         {
+            Dictionary<string, string> featToAdd;
             switch (inFeat)
             {
                 case ("Improved Familiar Attunement"):
-                    this.featsDic.Add(FindClassFeat("Familiar"));
+                    featToAdd = FindClassFeat("Familiar");
+                    featToAdd["currentLevel"] = this.characterLevel.ToString();
+                    featToAdd["type"] = "Feat(Class)";
+                    this.featsDic.Add(featToAdd);
                     break;
                 case ("Metamagic Experimentation"):
                     //Cannot currently specify feats by tags, so the possible choices are kept in a list
                     List<string> metamagicFeat = new List<string> {"Reach Spell","Widen Spell" };
                     int index = rand.Next(metamagicFeat.Count);
-                    this.featsDic.Add(FindClassFeat(metamagicFeat[index]));
+                    featToAdd = FindClassFeat(metamagicFeat[index]);
+                    featToAdd["currentLevel"] = this.characterLevel.ToString();
+                    featToAdd["type"] = "Feat(Class)";
+                    this.featsDic.Add(featToAdd);
                     break;
                 default:
                     break;
@@ -992,18 +1026,24 @@ class Character
                         switch (ancestryInfo[key])
                         {
                             case ("Darkvision"):
-                                featToAdd.Add("name", ancestryInfo[key]);
-                                featToAdd.Add("description", "You can see in darkness and dim light just as well as you can see in bright light, though your vision in darkness is in black and white.");
+                                featToAdd["name"] = ancestryInfo[key];
+                                featToAdd["currentLevel"] = this.characterLevel.ToString();
+                                featToAdd["type"] = "Special";
+                                featToAdd["description"] = "You can see in darkness and dim light just as well as you can see in bright light, though your vision in darkness is in black and white.";
                                 break;
                             case ("LowLight Vision"):
-                                featToAdd.Add("name", ancestryInfo[key]);
-                                featToAdd.Add("description", "You can see in dim light as though it were bright light, so you ignore the concealed condition due to dim light.");
+                                featToAdd["name"] = ancestryInfo[key];
+                                featToAdd["currentLevel"] = this.characterLevel.ToString();
+                                featToAdd["type"] = "Special";
+                                featToAdd["description"] = "You can see in dim light as though it were bright light, so you ignore the concealed condition due to dim light.";
                                 break;
                             case ("Keen Eyes"):
-                                featToAdd.Add("name", ancestryInfo[key]);
-                                featToAdd.Add("description", 
+                                featToAdd["name"]= ancestryInfo[key];
+                                featToAdd["currentLevel"] = this.characterLevel.ToString();
+                                featToAdd["type"] = "Special";
+                                featToAdd["description"] = 
                                     "You gain a +2 circumstance bonus when using the Seek action to find hidden or undetected creatures within 30 feet of you." +
-                                    " Reduce the DC of the flat check to 3 for a concealed target or 9 for a hidden one.");
+                                    " Reduce the DC of the flat check to 3 for a concealed target or 9 for a hidden one.";
                                 break;
                             default:
                                 break;
@@ -1142,6 +1182,8 @@ class Character
                         string[] featSplit = backgroundInfo[key].Split('(');
                         Dictionary<string, string> featToAdd = FindGeneralFeat(featSplit[0]);
                         featToAdd["name"] = backgroundInfo[key];
+                        featToAdd["currentLevel"] = this.characterLevel.ToString();
+                        featToAdd["type"] = "Background";
                         this.featsDic.Add(featToAdd);
                         break;
                     default:
