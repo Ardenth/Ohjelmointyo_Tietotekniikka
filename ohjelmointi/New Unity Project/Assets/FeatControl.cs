@@ -7,23 +7,22 @@ public class FeatControl : MonoBehaviour
     [SerializeField]
     private List<Transform> Descriptions;
 
+    /// <summary>
+    /// Controls Feats' description to become a popup
+    /// </summary>
     private void Start()
     {
         Descriptions = new List<Transform>();
         Transform parent = this.transform.parent;
-        Debug.Log("PARENTS NAME IN START: "+parent.name);
         foreach (Transform child in parent)
         {
-            Debug.Log(child.name);
             if (child.name == "FeatPopUp")
             {
-                Debug.Log("FeatsPopUp FOUND");
                 Descriptions.Add(child);
                 //determine the parent outside the mask area
                 Transform thisParent = parent.parent.transform.parent.transform.parent;
                 //move the feat description out of the mask area
                 child.SetParent(thisParent);
-                child.position = new Vector3(320, -200, 0);
                 child.gameObject.SetActive(false);
 
             }
@@ -31,25 +30,25 @@ public class FeatControl : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Button for description popups
+    /// </summary>
     public void DescriptionButtonPress()
     {
-
-        Debug.Log("Button was pressed!!");
-        Debug.Log(Descriptions.Count);
         foreach (var child in Descriptions)
         {
             if (child.name == "FeatPopUp")
             {
-                Debug.Log(child.GetSiblingIndex());
-                Debug.Log("found description image");
+                //set true if not active
                 if (child.gameObject.activeSelf != true)
                 {
-                    Debug.Log("trying to set true");
+                    //isn't properly set, force a local position in view
+                    child.localPosition = new Vector3(-40, -40, 0);
                     child.gameObject.SetActive(true);
                 }
+                //otherwise set inactive
                 else
                 {
-                    Debug.Log("trying to set false");
                     child.gameObject.SetActive(false);
                 }
             }

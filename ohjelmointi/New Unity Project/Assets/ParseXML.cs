@@ -5,11 +5,6 @@ using UnityEngine;
 
 public class ParseXML : MonoBehaviour
 {
-    //might have to think of the formatting of the XML files anew... Keys need to be same in general, skills, ancestry, class feats AND class advancement???? (notepad++ ReplaceAll)
-
-    //change XML -files to have universal Key for the name of the information
-
-
     public static List<Dictionary<string, string>>[] classProgDicArray = new List<Dictionary<string, string>>[12];
     public static string[] playableClasses = { "alchemist", "barbarian", "bard", "champion", "cleric", "druid", "fighter", "monk", "ranger", "rogue", "sorcerer", "wizard" };
     public static List<Dictionary<string, string>> generalFeatDic;
@@ -20,7 +15,8 @@ public class ParseXML : MonoBehaviour
     public static List<Dictionary<string, string>> backgroundDic;
     public static List<Dictionary<string, string>> proficiencyDic;
     public static List<Dictionary<string, string>> classAdvDic;
-    // Start is called before the first frame update
+
+    // Prepare dictionaries for character's
     void Start()
     {
         generalFeatDic = ParseGeneralFeat();
@@ -32,28 +28,11 @@ public class ParseXML : MonoBehaviour
         proficiencyDic = ParseProficiency();
         classAdvDic = ParseAdvancement();
 
-
-        //add other dictionaries
-
-        //loop class dictionaries works
+        //loop for class dictionaries
         for (int i = 0; i < classProgDicArray.Length; i++)
         {
             classProgDicArray[i] = ParseClassProgression(playableClasses[i]);
         }
-        /*
-        Dictionary<string, string> generalFeats = generalFeatDic[1];
-        Dictionary<string, string> alchemistProg = alchemistProgDic[1];
-        Dictionary<string,string> alchemistProg1 = classProgDicArray[0][1];
-        Debug.Log(generalFeats["name"]);
-        Debug.Log(generalFeats["level"]); 
-        Debug.Log(generalFeats["prerequisite"]);
-        Debug.Log(generalFeats["description"]);
-        Debug.Log(alchemistProg["advancement1"]);
-        Debug.Log(alchemistProg1["advancement1"]);
-        */
-        //creating dictionaries with a loop? would help with classes...
-
-
     }
 
     /// <summary>

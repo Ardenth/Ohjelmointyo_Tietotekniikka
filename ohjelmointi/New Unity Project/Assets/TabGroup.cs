@@ -6,13 +6,9 @@ using UnityEngine.UIElements;
 
 public class TabGroup   : MonoBehaviour
 {
-    //character tab active on start for highlight?
-
-
     public List<TabButton> tabButtons;
     public Color32 idleColor = new Color32(255,255,255,90); //change colors
     public Color32 activeColor = new Color32(255, 255, 255, 50); //change colors
-    //public TabButton selectedTab;
     public List<GameObject> viewSwap;
 
 
@@ -29,17 +25,6 @@ public class TabGroup   : MonoBehaviour
         }
         tabButtons.Add(button);
     }
-
-
-
-
-    //public void TabExit(TabButton button)
-    //{
-        //ResetTabs();
-    //}
-
-
-
 
     /// <summary>
     /// functionality for currently selected tab

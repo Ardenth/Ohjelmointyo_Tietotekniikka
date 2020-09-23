@@ -4,32 +4,29 @@ UI:
 
 - Skill Page: DONE
 
-
 - Feat Page: DONE
 
-- Feature Page: list metodi (hp, attacks, defences, etc.) 
-	- UI (jos tyhja? - ei mainita "" tai "none")
-DONE
+- Feature Page: DONE
 
 - Spell Page: DONE
 
 
 - Korjaa valitun tabin highlight, kun painetaan generointia?
+- Languages ei nay jos liikaa kielia (Features)
 --
 Functionality:
-
 --------------------------
 DONE TODAY:
 Spell Page
 Feat Page
 Feature Page
+Destroy previous popups on new character build
+Features bug fixed
+HP bug fixed
+Comments
 -----------
 
 Aloita:
-
-- Dokumentointia
-
-
 - Puurakenne filteroidyille feateille? Parent on requirement sisalla?
 	- atm tyhma painotus
 

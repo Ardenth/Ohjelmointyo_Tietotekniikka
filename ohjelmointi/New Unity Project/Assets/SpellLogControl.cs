@@ -11,9 +11,15 @@ public class SpellLogControl : MonoBehaviour
     private List<GameObject> featItems;
 
 
+    /// <summary>
+    /// Log a spell (feat currently) into parent object
+    /// </summary>
+    /// <param name="newFeatString">Spell (feat's) information</param>
+    /// <param name="parentName">parent object's name</param>
     public void LogSpellText(List<string> newFeatString, string parentName)
     {
         featItems = new List<GameObject>();
+        //use feat -prefab
         featTemplate = Resources.Load("Feat") as GameObject;
         GameObject newFeat = Instantiate(featTemplate) as GameObject;
         newFeat.SetActive(true);
@@ -29,7 +35,6 @@ public class SpellLogControl : MonoBehaviour
             else if (child.name == "FeatPopUp")
             {
                 Transform childDescription = child.GetChild(0).GetChild(0);
-                Debug.Log(childDescription.name);
                 childDescription.GetComponent<TextMeshProUGUI>().text = newFeatString[i];
                 Transform childIndicator = child.GetChild(0).GetChild(1);
                 childIndicator.GetComponent<TextMeshProUGUI>().text = newFeatString[0];

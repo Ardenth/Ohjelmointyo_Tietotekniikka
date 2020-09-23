@@ -18,11 +18,6 @@ public class TabButton : MonoBehaviour, IPointerClickHandler//, IPointerExitHand
         tabGroup.Allocate(this);
     }
 
-    //public void OnPointerExit(PointerEventData eventData)
-   // {
-    //    tabGroup.TabExit(this);
-    //}
-
     /// <summary>
     /// Function for Tab's functionality on click
     /// </summary>

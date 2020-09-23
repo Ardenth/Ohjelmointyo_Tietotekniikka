@@ -10,7 +10,11 @@ public class FeatureLogControl : MonoBehaviour
 
     private List<GameObject> featureItems;
 
-
+    /// <summary>
+    /// Logs the Key-Value -pairs with given values
+    /// </summary>
+    /// <param name="newFeaturePair">Key pairs for features. Key|Value</param>
+    /// <param name="parentName">parent object's name</param>
     public void LogFeatureText(KeyValuePair<string, string> newFeaturePair, string parentName)
     {
         featureItems = new List<GameObject>();
@@ -29,6 +33,7 @@ public class FeatureLogControl : MonoBehaviour
             }
             else
             {
+                //do not allow empty fields, give a value
                 if (newFeaturePair.Value == "")
                 {
                     child.GetComponent<TextMeshProUGUI>().text = "none";

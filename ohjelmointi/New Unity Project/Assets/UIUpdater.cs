@@ -29,9 +29,10 @@ public class UIUpdater : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //collect all tabs for use
         tabObjects = GameObject.FindGameObjectsWithTag("Tab");
+        //force basic view
         ControlTabActivity(false);
-        //testing requirementparse
     }
 
 
@@ -40,7 +41,9 @@ public class UIUpdater : MonoBehaviour
     /// </summary>
     public void GenerateNewCharacter()
     {
+        //activate all tabs for editing
         ControlTabActivity(true);
+        //find desired character level
         string levelInfo = GameObject.FindGameObjectWithTag("GenerateLevel").GetComponent<TextMeshProUGUI>().text;
         int levels;
         //deal with null case -- special because of how TextMeshProUGUI works
@@ -54,15 +57,19 @@ public class UIUpdater : MonoBehaviour
         {
             levels = 1;
         }
+        //reset character
         baseline = new Character();
         baseline.UpdateMods();
+        //level up the character
         baseline.LevelUp(levels);
+        //handle UI changes for the character
         UIFeatUpdate("FeatContent2");
         UISkillUpdate("SkillContent2");
         UIFeatureUpdate("FeatureContent2");
         UISpellUpdate("SpellContent2");
         UIModUpdate();
         UIFrontPageUpdate("CharacterInfo");
+        //return to basic view
         ControlTabActivity(false);
     }
 
@@ -89,6 +96,10 @@ public class UIUpdater : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Controls tab's state to allow editing
+    /// </summary>
+    /// <param name="activityState">desired tab state</param>
     void ControlTabActivity(bool activityState)
     {
         if (frontPage == null)
@@ -108,11 +119,23 @@ public class UIUpdater : MonoBehaviour
     /// <param name="objectName">Parent object to hold all feat's information</param>
     void UIFeatUpdate(string objectName)
     {
+        //activate all elements for editing
         ControlTabActivity(true);
         featControl = GameObject.Find(objectName).GetComponent<FeatLogControl>();
         GameObject featView = GameObject.Find(objectName);
+        //get all character's feats
         List<Dictionary<string,string>> featsDictionary = baseline.GetFeats();
         List<string> featInfo = new List<string>();
+        //get featLog parent for old popup's deletion
+        Transform featLog = featView.transform.parent.transform.parent;
+
+        //destroy all popups
+        for (int i = 3; i < featLog.childCount; i++)
+        {
+            Transform currentChild = featLog.GetChild(i);
+            GameObject.Destroy(currentChild.gameObject);
+        }
+
         //Removes all current children from the object
         foreach (Transform child in featView.transform)
         {
@@ -123,12 +146,12 @@ public class UIUpdater : MonoBehaviour
         {
             featInfo.Clear();
             featInfo.Add(feat["name"]);
-            Debug.Log(feat["name"]);
             featInfo.Add(feat["currentLevel"]);
             featInfo.Add(feat["type"]);
             featInfo.Add(feat["description"]);
             featControl.LogFeatText(featInfo, objectName);
         }
+        //return to basic state
         ControlTabActivity(false);
     }
 
@@ -139,9 +162,11 @@ public class UIUpdater : MonoBehaviour
     /// <param name="objectName">Parent object to hold all feat's information</param>
     void UISpellUpdate(string objectName)
     {
+        //activate all elements for editing
         ControlTabActivity(true);
         spellControl = GameObject.Find(objectName).GetComponent<SpellLogControl>();
         GameObject SpellControl = GameObject.Find(objectName);
+        //get all character's feats
         List<Dictionary<string, string>> featsDictionaryFilter = baseline.GetFeats();
         List<Dictionary<string, string>> featsDictionary = new List<Dictionary<string, string>>();
         //control the dictionary to only include spellcasting specific information
@@ -169,12 +194,12 @@ public class UIUpdater : MonoBehaviour
             //clear previous information for use before creating a list for the Log to use
             featInfo.Clear();
             featInfo.Add(feat["name"]);
-            Debug.Log(feat["name"]);
             featInfo.Add(feat["currentLevel"]);
             featInfo.Add(feat["type"]);
             featInfo.Add(feat["description"]);
             spellControl.LogSpellText(featInfo, objectName);
         }
+        //return to basic view
         ControlTabActivity(false);
     }
 
@@ -184,6 +209,7 @@ public class UIUpdater : MonoBehaviour
     /// <param name="objectName">Parent object to hold all skill's information</param>
     void UISkillUpdate(string objectName)
     {
+        //activate all tabs for editing
         ControlTabActivity(true);
         skillControl = GameObject.Find(objectName).GetComponent<SkillLogControl>();
         GameObject SkillContent = GameObject.Find(objectName);
@@ -199,6 +225,7 @@ public class UIUpdater : MonoBehaviour
         {
             skillControl.LogSkillText(item, objectName);
         }
+        //return to basic state
         ControlTabActivity(false);
     }
 
@@ -208,6 +235,7 @@ public class UIUpdater : MonoBehaviour
     /// <param name="objectName">Parent object for the character info</param>
     void UIFrontPageUpdate(string objectName)
     {
+        //activate all tabs for editing
         ControlTabActivity(true);
         infoControl = GameObject.Find(objectName).GetComponent<FrontLogControl>();
         //add character info
@@ -229,6 +257,7 @@ public class UIUpdater : MonoBehaviour
         characterInfo.Add(baseline.classInitialFeat);
         //input information to UI
         infoControl.LogFrontText(characterInfo, objectName);
+        //return to basic state
         ControlTabActivity(false);
     }
 
@@ -239,6 +268,7 @@ public class UIUpdater : MonoBehaviour
     /// <param name="objectName">Parent object to hold all skill's information</param>
     void UIFeatureUpdate(string objectName)
     {
+        //activate all tabs for editing
         ControlTabActivity(true);
         featureControl = GameObject.Find(objectName).GetComponent<FeatureLogControl>();
         GameObject FeatureContent = GameObject.Find(objectName);
@@ -254,6 +284,7 @@ public class UIUpdater : MonoBehaviour
         {
             featureControl.LogFeatureText(item, objectName);
         }
+        //return to basic state
         ControlTabActivity(false);
     }
 

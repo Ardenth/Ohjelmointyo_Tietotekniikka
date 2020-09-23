@@ -14,40 +14,20 @@ using UnityEngine.UIElements;
 
 class Character
 {
-    //TODO:
-    //XML parset
-    //Character information => character UI
-    //Character Advancement and changes to the character details
-    //Generate character
-    //Manipulation to automated character generation (randomizer for start)
-
-    //ONLY Advancements work, no feats?
-
-
-    /*LEVELUP:
-      advancement lapikaynti:
-          katsotaan mita tapahtuu levelupissa
-          kun tulee vastaan esimerkiksi Feat(General) => luodaan lista mahdollisista General Feateista
-          jokaista General Feattia kohden tehdaan tarvittavat tarkistukset requirements elementin kautta
-          taman tarkistuksen aikana kaytetaan RequirementParsea apuna, jonka kautta mennaan RequirementTranslate
-          RequirementTranslate maarittaa mita tulkkia taytyy kayttaa, esimerkiksi StatCheck, ModCheck, FeatCheck tai SkillCheck
-       */
+    //char '-' = OR -statement
+    //char '/' = AND -statement
+    //char '|' = Idenfier for a value for a key. Key|Value
 
     internal int characterLevel = 0;
     internal string characterClass;
     internal string characterAncestry;
     internal string classInitialFeat;
     internal Dictionary<string, string> characterBackground;
-
-    //consider creating stats and statsMod into dictionaries for easier management through Keys?
-    // internal Dictionary<string, int> stats = new Dictionary<string, stat> { {"Strength", 10}, {"Dexterity", 10}, {"Constitution", 10}, {"Intelligence", 10}, {"Wisdom", 10}, {"Charisma", 10}};
     internal Dictionary<string, int> statsDic = new Dictionary<string, int> { { "Strength", 10 }, { "Dexterity", 10 }, { "Constitution", 10 }, { "Intelligence", 10 }, { "Wisdom", 10 }, { "Charisma", 10 } };
     internal Dictionary<string, int> statsModsDic = new Dictionary<string, int> { { "Strength", 10 }, { "Dexterity", 10 }, { "Constitution", 10 }, { "Intelligence", 10 }, { "Wisdom", 10 }, { "Charisma", 10 } };
     internal List<Dictionary<string, string>> classProgDic = new List<Dictionary<string, string>>();
     internal int levelUpHP;
     
-    //TODO: lore maaritys
-    //character's skills
     internal Dictionary<string, string> skills = new Dictionary<string, string>
     {
         {"Acrobatics","Untrained" },
@@ -86,13 +66,13 @@ class Character
         {"trait", "" }, {"primaryStat", "" },{"deity","" }, {"languages", ""}
     };
 
-    //has to be outside of methods or will cause duplicate choices
+    //has to be outside of methods or will cause duplicate random values due to how Random functions (connected to internal clock)
     static readonly System.Random rand = new System.Random();
 
     /// <summary>
     /// Updates character's statistics from a string, either by an increment of 2 or to a specific value
     /// </summary>
-    /// <param name="stat"></param>
+    /// <param name="stat">statistic to increase</param>
     internal void UpdateCharStat(string stat)
     {
         string[] statSplit = stat.Split('|');
@@ -101,20 +81,21 @@ class Character
         {
             //parameter only has key for statistic, thus increase it by increment of 2
             this.statsDic[stat] += 2;
+            //handle stat increases outside of initial character creation
             if (this.characterLevel > 1)
             {
                 switch (stat)
                 {
+                    //character max hp increases when constitution increases
                     case ("Constitution"):
                         this.levelUpHP++;
                         int currentHP = int.Parse(this.characterFeatures["hp"]);
                         this.characterFeatures["hp"] = (currentHP + this.characterLevel).ToString();
-                        UnityEngine.Debug.Log("----------------------------------- HP WAS INCREASED BY " + this.characterLevel.ToString());
                         break;
+                    //character learns new languages when intelligence increases
                     case ("Intelligence"):
-                        string newLanguage = this.AddLanguages(1);
+                        string newLanguage = this.RandomineNewLanguages(1);
                         this.characterFeatures["languages"] = this.characterFeatures["languages"] + ", " + newLanguage;
-                        UnityEngine.Debug.Log("----------------------------------- NEW LANGUAGE WAS ADDED THROUGH INT INCREASE: "+newLanguage);
                         break;
                     default:
                         break;
@@ -126,16 +107,16 @@ class Character
             //parameter holds information to what value the statistic will be increased, thus increase statistic to given value
             this.statsDic[statSplit[0]] = int.Parse(statSplit[1]);
         }
-        UnityEngine.Debug.Log("stat increased: " +stat);
+        //update modifiers after the changes
         UpdateMods();
     }
 
 
     /// <summary>
-    /// Capitalize first character for a string
+    /// Capitalize first character of a string
     /// </summary>
     /// <param name="str">String to capitalize first character for</param>
-    /// <returns>Capitalized parameter string</returns>
+    /// <returns>Capitalized string parameter</returns>
     internal string CapitalizeFirstChar(string str)
     {
         return str?.First().ToString().ToUpper() + str?.Substring(1).ToLower();
@@ -143,10 +124,10 @@ class Character
 
 
     /// <summary>
-    /// Lower first character for a string
+    /// Lower first character of a string
     /// </summary>
     /// <param name="str">String to lower first character for</param>
-    /// <returns>Lowered parameter string</returns>
+    /// <returns>Lowered string parameter</returns>
     internal string LowerFirstChar(string str)
     {
         return str?.First().ToString().ToLower() + str?.Substring(1);
@@ -160,10 +141,13 @@ class Character
     /// <returns>bool value of the string parameter</returns>
     internal bool ParseRequirement(string requirement)
     {
+        //all the requirements done through AND statements (also works for single statements)
         List<string> requirementList = requirement.Split('/').ToList();
+        //all truth values from the requirements
         List<bool> truthList = new List<bool>();
         foreach (string req in requirementList)
         {
+            //handle OR statement through another method and add it as a completed version into the list of AND statements
             if (req.Contains('-'))
             {
                 truthList.Add(ParseRequirementOr(req));
@@ -173,6 +157,7 @@ class Character
                 truthList.Add(CheckRequirement(req));
             }
         }
+        //checks if AND statement holds true (also works without AND statement)
         if (!truthList.Contains(false))
         {
             return true;
@@ -384,7 +369,9 @@ class Character
     /// <param name="skillName">Information in a string for which skill to increase and possibly to what tier</param>
     internal void IncreaseSkill(string skillName)
     {
+        //character's skills dictionary keys (character's skill's names)
         List<string> skillsKeys = new List<string>(this.skills.Keys);
+        //skill training tiers for single increase purposes
         string[] skillTraining = { "Untrained", "Trained", "Expert", "Master", "Legendary" };
         string skillNameParse = skillName;
         //if the string for the skill contains the value it will be raised to
@@ -397,7 +384,6 @@ class Character
             //if the skill is lore, add the lore into the keylist (to increase baseline lore along the way)
             if (skillName.Contains("Lore"))
             {
-                UnityEngine.Debug.Log(skillNameArr[0] + " was added, with tier: "+skillNameArr[1]);
                 skillsKeys.Add(skillNameArr[0]);
             }
             //special case for initial feat - Medium armor proficiency increases at the same pace as Light armor proficiency
@@ -412,13 +398,12 @@ class Character
         {
             foreach (var skill in skillsKeys)
             {
-
                 //find the correct skill
                 if (skill == skillName)
                 {
                     for (int i = 0; i < skillTraining.Length; i++)
                     {
-                        //find out the skill's tier
+                        //find out the skill's tier and increaase it by one level higher (Untrained => Trained, Expert => Master, etc.)
                         if (this.skills[skill] == skillTraining[i])
                         {
                             this.skills[skill] = skillTraining[i + 1];
@@ -428,10 +413,9 @@ class Character
                 }
             }
         }
-        //keeping the Lore skill at the highest value of any specific lore skill for the purposes of feats (happens when any of the Lore skills is being changed or increased)
+        //keeping the Lore skill at the highest value of any specific lore skill for the requirement purposes of advancements (happens when any of the Lore skills is being changed or increased)
         if (skillName.Contains("Lore") && skillsKeys.Contains(skillNameParse))
         {
-            UnityEngine.Debug.Log(skillName + "---- LORE WAS CHANGED IN THE LIST");
             List<int> loreValues = new List<int>();
             //go through all Lore -skills
             foreach (string key in skillsKeys)
@@ -464,19 +448,18 @@ class Character
             //randomize from all untrained skills
             int index = random.Next(skillsKeysUntrained.Count);
             string skillToAdd = skillsKeysUntrained[index];
-            UnityEngine.Debug.Log("Skill Training THE SKILL NAMED: "+skillToAdd);
             this.IncreaseSkill(skillToAdd);
         }
     }
 
 
     /// <summary>
-    /// Levels character up
+    /// Levels character up, used in initial character creation
     /// </summary>
     /// <param name="levels">Desired character level</param>
     internal void LevelUp(int levels)
     {
-        //force correct input
+        //force correct input if user goes above 20 or below 1
         if (levels > 20)
         {
             levels = 20;
@@ -486,6 +469,7 @@ class Character
             levels = 1;
         }
 
+        //character stats from lvl 0 for initialization purposes (random class, etc.)
         if (this.characterLevel == 0)
         {
             this.characterLevel++;
@@ -498,18 +482,9 @@ class Character
             this.FindProgression();
             int addedHP = levelUpHP + this.GetMod("Constitution") + int.Parse(this.characterFeatures["hp"]);
             this.characterFeatures["hp"] = addedHP.ToString();
-            //increase hp per con??
         }
 
-
-
-        /*UnityEngine.Debug.Log("Owned feats at level: " + this.characterLevel);
-        for (int i = 0; i < featsDic.Count; i++)
-        {
-            //UnityEngine.Debug.Log(featsDic[i]["name"]);
-        }
-        */
-        //recursive
+        //recursive leveling
         levels--;
         if (levels >= 1)
         {
@@ -523,17 +498,16 @@ class Character
     /// </summary>
     internal void RandomClass()
     {
+        //possible classes
         var classes = new List<string> { "alchemist", "barbarian", "bard", "champion", "cleric", "druid", "fighter", "monk", "ranger", "rogue", "sorcerer", "wizard" };
         int index = rand.Next(classes.Count);
         this.characterClass = classes[index];
-        UnityEngine.Debug.Log("character class: "+this.characterClass);
 
         //applies the progression dic that the character has for the character sheet
         FindProgressionDic();
 
         //apply initial feat for your class
         List<Dictionary<string, string>> InitialFeatDic = new List<Dictionary<string, string>>();
-        UnityEngine.Debug.Log("level when the progression dic is linked: "+classProgDic[0]["level"]);
         //check all the possible Initial feats for the class
         foreach (var item in ParseXML.classFeatDic)
         {
@@ -544,15 +518,16 @@ class Character
             }
 
         }
-        //Generate random Initial Feat
-        index = rand.Next(InitialFeatDic.Count);
+        //Generate random Initial Feat if there is a choice (Fighter and Monk don't have any)
         if (InitialFeatDic.Count() > 0)
         {
+            index = rand.Next(InitialFeatDic.Count);
             Dictionary<string, string> initialFeat = InitialFeatDic[index];
             initialFeat["currentLevel"] = this.characterLevel.ToString();
             initialFeat["type"] = "Initial";
             this.featsDic.Add(initialFeat);
             this.classInitialFeat = InitialFeatDic[index]["name"];
+            //classes with feats and skills from initial feat, which affect future generation (can't keep on description level)
             List<string> initialFeatClasses = new List<string>() {"sorcerer", "druid", "bard", "rogue", "wizard"};
             //HARDCODED APPLICATIONS OF SKILLS AND FEATS FOR INITIAL FEAT - needs to be changed when Initial Feat XML -file is created
             if (initialFeatClasses.Contains(this.characterClass))
@@ -562,7 +537,6 @@ class Character
         }
         else
         {
-            UnityEngine.Debug.Log(this.characterClass + " does not have an initial feat");
             this.classInitialFeat = "none";
         }
 
@@ -592,12 +566,13 @@ class Character
             {
                 string proficiencyConString = profs[proficiency].Replace("+Con","");
                 this.levelUpHP = int.Parse(proficiencyConString);
-                int proficiencyCon = levelUpHP + this.GetMod("Constitution");
+                int proficiencyCon = levelUpHP + this.GetMod("Constitution") + int.Parse(this.characterFeatures[proficiency]);
                 this.characterFeatures[proficiency] = proficiencyCon.ToString();
             }
-            //set skill1, skill2, skill3, etc. tier level for the determined skill
+            //set skill1, skill2, skill3, etc. tier level increase for the determined skill
             else if (proficiency.Contains("skill") && proficiency.Any(char.IsDigit))
             {
+                //if there is a choice
                 if (profs[proficiency].Contains('-'))
                 {
                     string[] skillOr = profs[proficiency].Split('-');
@@ -609,12 +584,9 @@ class Character
                     this.IncreaseSkill(profs[proficiency]);
                 }
             }
-            //character's free skill tier increases (X + intmod)
+            //character's free skill tier increases (X + intmod), X = flat number
             else if (proficiency == "skills")
             {
-
-
-
                 string[] skillCounter = profs[proficiency].Split('|');
                 //holds in the information of flat value of skills and the modifier to use in the count
                 string[] incTotal = skillCounter[0].Split('+');
@@ -630,12 +602,8 @@ class Character
             {
                 
                 //create a single string from the randomized languages list
-                string newLanguages = this.AddLanguages(this.GetMod("Intelligence"));
-
-
-
-
-                //reformat current languages into a more readable form for the user
+                string newLanguages = this.RandomineNewLanguages(this.GetMod("Intelligence"));
+                //reformat current languages into a more readable form for the user (from ancestry phase)
                 string langsProcessed = this.characterFeatures[proficiency];
                 langsProcessed = langsProcessed.Replace("/", ", ");
                 langsProcessed = langsProcessed.Replace("intmod", newLanguages);
@@ -645,21 +613,18 @@ class Character
                     string langsProcessed1 = langsProcessed.Remove(langsProcessed.Length - 2, 2);
                     //add the languages to the character's sheet
                     this.characterFeatures[proficiency] = langsProcessed1;
-                    UnityEngine.Debug.Log(this.characterFeatures[proficiency]);
                 }
                 else
                 {
                     //add the languages to the character's sheet
                     this.characterFeatures[proficiency] = langsProcessed;
-                    UnityEngine.Debug.Log(this.characterFeatures[proficiency]);
                 }
-
-
             }
             else
             {
                 if (proficiency == "primaryStat")
                 {
+                    //incase there is a choice between primaryStats (Champion, Fighter, etc.)
                     if (profs[proficiency].Contains('-') || this.characterClass == "rogue")
                     {
                         List<string> primaryStatList = profs[proficiency].Split('-').ToList();
@@ -676,10 +641,6 @@ class Character
                         int index = rand.Next(primaryStatList.Count);
                         UpdateCharStat(primaryStatList[index]);
                         this.characterFeatures[proficiency] = primaryStatList[index];
-                        foreach (var item in primaryStatList)
-                        {
-                            UnityEngine.Debug.Log("Primary stat choices: "+item);
-                        }
                     }
                     else
                     {
@@ -691,6 +652,11 @@ class Character
                     this.RandomBackground();
                     //apply last stats for the character to use
                     this.ApplyFourBoosts();
+                }
+                //basic application of proficiency
+                else
+                {
+                    this.characterFeatures[proficiency] = profs[proficiency];
                 }
             }
 
@@ -707,6 +673,7 @@ class Character
         List<string> keyStatList = new List<string>(statsDic.Keys);
         string boostSuggestion;
         int addCount = 0;
+        //4 last free boosts do not allow duplicates (Game Rule)
         while (addCount < 4)
         {
             int index = rand.Next(keyStatList.Count);
@@ -728,7 +695,12 @@ class Character
     }
 
 
-    internal string AddLanguages(int langAmount)
+    /// <summary>
+    /// Randomize new languages for the character to add
+    /// </summary>
+    /// <param name="langAmount">number of languages to add</param>
+    /// <returns>returns the new languages</returns>
+    internal string RandomineNewLanguages(int langAmount)
     {
         //language list of the game to randomize values from
         List<string> languages = new List<string>{
@@ -741,16 +713,15 @@ class Character
         {
             int index = rand.Next(languages.Count);
             string languageToAdd = languages[index];
-            //check if the random language is already known and randomize new if it is
+            //check if the random language is already known, and randomize new if it is
             if (this.characterFeatures["languages"].Contains(languageToAdd) || langListAdd.Contains(languageToAdd))
             {
                 while (this.characterFeatures["languages"].Contains(languageToAdd) || langListAdd.Contains(languageToAdd))
                 {
                     index = rand.Next(languages.Count);
-                    languageToAdd = languages[index];      //randomize a new language
+                    languageToAdd = languages[index];
                 }
             }
-            UnityEngine.Debug.Log(languageToAdd);
             langListAdd.Add(languageToAdd);
         }
 
@@ -925,11 +896,11 @@ class Character
     /// </summary>
     internal void RandomAncestry()
     {
+        //randomize the ancestry
         int index = rand.Next(ParseXML.ancestryDic.Count);
         Dictionary<string, string> ancestry = ParseXML.ancestryDic[index];
 
         this.characterAncestry = ancestry["ancName"];
-        UnityEngine.Debug.Log(this.characterAncestry);
 
         //apply ancestry effects
         ApplyAncestryEffects(ParseXML.ancestryDic[index]);
@@ -940,9 +911,10 @@ class Character
     /// <summary>
     /// Applies effects and bonuses you gain from your ancestry
     /// </summary>
-    /// <param name="ancestryInfo"></param>
+    /// <param name="ancestryInfo">Dictionary for ancestry's information</param>
     internal void ApplyAncestryEffects(Dictionary<string, string> ancestryInfo)
     {
+        //keylist for ancestry information for the dictionary
         List<string> keyList = new List<string>(ancestryInfo.Keys);
         foreach (var key in keyList)
         {
@@ -952,7 +924,6 @@ class Character
                 {
                     //incrcease character HP by the ancestry's given amount
                     case ("hp"):
-                        
                         int newhp = (int.Parse(characterFeatures[key]) + int.Parse(ancestryInfo[key]));
                         characterFeatures[key] = newhp.ToString();
                         break;
@@ -994,7 +965,6 @@ class Character
                                     {
                                         randomKey = statList[rand.Next(statList.Count)];
                                     }
-                                    UnityEngine.Debug.Log("attempted random key -------- "+randomKey);
                                 }
                                 UpdateCharStat(randomKey);
                                 addedFree.Add(randomKey);
@@ -1010,6 +980,7 @@ class Character
                     //applies stat flaw to the character's sheet
                     case ("flaw"):
                         this.statsDic[ancestryInfo[key]] -= 2;
+                        //update after change
                         UpdateMods();
                         break;
 
@@ -1057,16 +1028,13 @@ class Character
                             default:
                                 break;
                         }
+                        //add the created feat into dictionary
                         this.featsDic.Add(featToAdd);
                         break;
 
                     default:
                         break;
                 }
-            }
-            else
-            {
-                UnityEngine.Debug.Log(ancestryInfo["ancName"] + " was empty for the key: " + key);
             }
         }
     }
@@ -1077,6 +1045,7 @@ class Character
     /// </summary>
     internal void RandomBackground()
     {
+        //randomize background for the character
         int index = rand.Next(ParseXML.backgroundDic.Count);
         Dictionary<string, string> background = ParseXML.backgroundDic[index];
 
@@ -1089,13 +1058,14 @@ class Character
     /// <summary>
     /// Applies effects and bonuses you gain from the background in the parameter to the character sheet
     /// </summary>
-    /// <param name="backgroundInfo">Background which benefits will be applied</param>
+    /// <param name="backgroundInfo">Background, which benefits will be applied</param>
     internal void ApplyBackgroundEffects(Dictionary<string, string> backgroundInfo)
     {
+        //keylist for the Dictionary information
         List<string> keyList = new List<string>(backgroundInfo.Keys);
-        UnityEngine.Debug.Log("Character's background is: "+backgroundInfo["bckgrName"]);
         foreach (var key in keyList)
         {
+            //avoid empty cases
             if (backgroundInfo[key] != "none" && backgroundInfo[key] != "placeholder")
             {
                 switch (key)
@@ -1113,11 +1083,12 @@ class Character
                                 List<string> statsList = new List<string>(statsDic.Keys);
                                 while (randomKey == "Free" || appliedBoost.Contains(randomKey))
                                 {
+                                    //remove keys that could not be used at the start of each loop
                                     if (randomKey != "Free")
                                     {
-                                        UnityEngine.Debug.Log("Attempted Key: " + randomKey + " WAS REMOVED FROM THE LIST");
                                         statsList.Remove(randomKey);
                                     }
+                                    //weight towards primary stat choice
                                     if (rand.Next(0, 4) != 0 && statsList.Contains(this.characterFeatures["primaryStat"]))
                                     {
                                         randomKey = this.characterFeatures["primaryStat"];
@@ -1129,7 +1100,7 @@ class Character
                                 }
                                 UpdateCharStat(randomKey);
                             }
-                            //otherwise deal with the OR statement
+                            //otherwise deal with the OR statement of the stat increase choice
                             else
                             {
                                 List<string> boostOrList = boost.Split('-').ToList();
@@ -1142,6 +1113,7 @@ class Character
                     //applies stat flaw to the character information
                     case ("flaw"):
                         this.statsDic[backgroundInfo[key]] -= 2;
+                        //update after changes
                         UpdateMods();
                         break;
                     //increases the specified skill value to the given value. Adds the new lore to the dictionary
@@ -1158,12 +1130,10 @@ class Character
                                 //if randomized skill is already at trained tier, change it to random untrained => trained via Skill Training
                                 if (!advName[0].Contains("Lore") && this.skills[advName[0]] == "Trained")
                                 {
-                                    UnityEngine.Debug.Log("Switched bkgr to Skill Training because it is already Trained: "+advOrArr[index]);
                                     this.IncreaseSkill("Skill Training");
                                 }
                                 else
                                 {
-                                    UnityEngine.Debug.Log("Background Or continues as normal: " + advOrArr[index]);
                                     this.IncreaseSkill(advOrArr[index]);
                                 }
                             }
@@ -1184,10 +1154,7 @@ class Character
                         break;
                     //adds the free random feat the character gets
                     case ("feat"):
-                        /*
-                         *  if featToAdd["name"] == Assurance
-                         *  => Metodi Assurance lisäämiselle? (TrainedSkill) sattumanvaraisesti? - ei kuulu tässä vaiheessa
-                         */
+                        //split the feat with '(' incase there is Assurance feat for search and addition purposes
                         string[] featSplit = backgroundInfo[key].Split('(');
                         Dictionary<string, string> featToAdd = FindGeneralFeat(featSplit[0]);
                         featToAdd["name"] = backgroundInfo[key];
@@ -1204,16 +1171,15 @@ class Character
 
 
     /// <summary>
-    /// Applies the effect of the advancement to this character                                                 (else statement? needed?)
+    /// Applies the effect of the advancement to this character
     /// </summary>
     /// <param name="advancement">dictionary which contains the information of the advancement</param>
     internal void ApplyAdvancementEffect(Dictionary<string,string> advancement)
     {
-        UnityEngine.Debug.Log("effect application accessed");
         string effect = advancement["effect"];
+        //exit early if no effects
         if (effect == "placeholder" || effect == "none")
         {
-            UnityEngine.Debug.Log(effect);
             return;
         }
 
@@ -1222,10 +1188,10 @@ class Character
         {
             List<string> schoolChoice = advancement["effect"].Split('-').ToList();
             int index = rand.Next(schoolChoice.Count);
-            UnityEngine.Debug.Log("adding school: " +schoolChoice[index]);
             this.AddAdvancement(schoolChoice[index]);
         }
 
+        //split multiple effects
         List<string> effectList = effect.Split('/').ToList();
         // going through the effects while taking into account the possibility of AND statements
         foreach (string eff in effectList)
@@ -1248,6 +1214,7 @@ class Character
                         nextSpeed = int.Parse(characterFeatures[effectArr[0]]) + int.Parse(effectArr[1]);
                         characterFeatures[effectArr[0]] = nextSpeed.ToString();
                     }
+                    //select deity from the list if part of class
                     if (effectArr[0] == "deity")
                     {
                         string[] deityArr = {"Abadar", "Asmodeus", "Calistria", "Cayden Cailean", "Desna", 
@@ -1269,13 +1236,15 @@ class Character
 
 
     /// <summary>
-    /// Finds the progression table used for the character
+    /// Apply advancements from the progression table
     /// </summary>
     internal void FindProgression()
     {
         int charLevel = this.characterLevel;
         Dictionary<string, string> characterProg = this.classProgDic[charLevel-1];
+        //contains only the values of the dictionary, since keys don't matter
         Dictionary<string, string>.ValueCollection characterProgValues = characterProg.Values;
+        //avoid the level indicator in the classprogdic
         foreach (string item in characterProgValues.Skip(1))
         {
             string advancement = item;
@@ -1306,7 +1275,6 @@ class Character
             if (charClass == ParseXML.playableClasses[i])
             {
                 this.classProgDic = ParseXML.classProgDicArray[i];
-                UnityEngine.Debug.Log("dictionary for progressions found"); //remove later
                 break;
             }
         }
@@ -1315,17 +1283,15 @@ class Character
 
     /// <summary>
     /// Adds the specified advancement to the character
-    /// consider adding to the dictionary current level and feat type, which would mean to define variable for the dic and then add current level and case type into it as last 2 Key variables (UI updating)
     /// </summary>
     /// <param name="advancementName">requested advancement</param>
     internal void AddAdvancement(string advancementName)
     {
         int index;
         List<Dictionary<string, string>> advancementFilteredDics = new List<Dictionary<string, string>>();
-        // connecting feat with xml file and avoiding Initial Feat problems
+        // connecting feat with xml file and avoiding Initial Feat problems and filter the dictionary based on the requirements
         if (advancementName.Contains("Feat"))
         {
-            //can be made to have less repetition, not done to test specifically skill feat's functionality
             if (advancementName == "Feat(General)")
             {
                 advancementFilteredDics = this.FilterDictionary(ParseXML.generalFeatDic, advancementName);
@@ -1342,25 +1308,25 @@ class Character
             {
                 advancementFilteredDics = this.FilterDictionary(ParseXML.classFeatDic, advancementName);
             }
+            //Feat which will be added, determined by weighted choice system (dumb currently, randomizes between progression or pure random)
             Dictionary<string, string> featToAdd = WeightedFeatChoice(advancementFilteredDics);
-            //currently character skills aren't being increased through the feat effects or advancement effects, thus the character does not ALWAYS have feat choices to choose from. Will be fixed as more gets implemented
             //Skill Training special case
             if (featToAdd["name"] == "Skill Training")
             {
                 this.IncreaseSkill(featToAdd["name"]);
             }
-            UnityEngine.Debug.Log(featToAdd["name"]);
             featToAdd["currentLevel"] = this.characterLevel.ToString();
             featToAdd["type"] = advancementName;
             this.featsDic.Add(featToAdd);
 
         }
-        // else case for other type of advancements, such as boost, skill or overall class specific
+        // else case for other type of advancements, such as boost, skill or class advancement
         else
         {
             //applies boost to a stat
             if (advancementName == "Ability Boost")
             {
+                //keylist for stats
                 List<string> keyList = new List<string>(statsDic.Keys);
                 string randomKey;
                 if (rand.Next(0, 4) != 0)
@@ -1377,11 +1343,11 @@ class Character
             else if (advancementName == "Skill Increase")
             {
                 List<string> skillsKeysUnfiltered = new List<string>(skills.Keys);
-                //cannot be increased through skill increase
+                //perception cannot be increased through skill increase (Game Rule)
                 skillsKeysUnfiltered.Remove("Perception");
                 List<string> skillsKeys = new List<string>();
 
-                //filter skills by the level requirement for skill increases
+                //filter skills by the level requirement for skill increases (Game Rule)
                 foreach (string key in skillsKeysUnfiltered)
                 {
                     if (this.characterLevel < 7)
@@ -1403,8 +1369,8 @@ class Character
                         skillsKeys.Add(key);
                     }
                 }
+                //randomize the skill from filtered list
                 index = rand.Next(skillsKeys.Count);
-                //random skill
                 string skillToAdd = skillsKeys[index];
 
 
@@ -1414,28 +1380,25 @@ class Character
                 {
                     while (skillToAdd == "Lore" || this.skills[skillToAdd] == "Legendary")
                     {
+                        //randomize a skill, only accept skills other than "Lore" or Legendary tier
                         index = rand.Next(skillsKeys.Count);
-                        //random skill
                         skillToAdd = skillsKeys[index];
                     }
                 }
                 this.IncreaseSkill(skillToAdd);
             }
-            //specified class advancement in the levelup gets added
+            //the specified class advancement in the levelup gets added (class' advancement dictionary gets used)
             else
             {
                 Dictionary<string, string> featToAdd;
-                UnityEngine.Debug.Log("What is being searched: ------------------------ " + advancementName);
                 for (int i = 0; i < ParseXML.classAdvDic.Count; i++)
                 {
                     if (ParseXML.classAdvDic[i]["name"] == advancementName)
                     {
                         featToAdd = ParseXML.classAdvDic[i];
-                        UnityEngine.Debug.Log(featToAdd["name"]);
                         featToAdd["currentLevel"] = this.characterLevel.ToString();
                         featToAdd["type"] = "Advancement";
                         this.featsDic.Add(featToAdd);
-                        UnityEngine.Debug.Log("advancement added: " +advancementName);
                         this.ApplyAdvancementEffect(featToAdd);
                         return;
                     }
@@ -1447,7 +1410,7 @@ class Character
 
 
     /// <summary>
-    /// Controls the weighting of the feats to choose from -- Rough version (currently forces 50/50 -choice between feats through progression and all available feats)
+    /// Controls the weighting of the feats to choose from -- Rough weighting
     /// </summary>
     /// <param name="dicToFilter">List of feats available to choose from</param>
     /// <returns>Feat that was chosen through means of weighting</returns>
@@ -1456,7 +1419,7 @@ class Character
         List<Dictionary<string, string>> weightedFilteredDics = new List<Dictionary<string, string>>();
         Dictionary<string, string> featToAdd;
         int index;
-        //create a second list of feats with prerequisite (skill being a certain tier or own a certain feat)
+        //create a second list of feats with prerequisites (skill requirement being a certain tier or own a certain feat, etc.)
         foreach (var feat in dicToFilter)
         {
             if (feat["prerequisite"] != "none")
@@ -1468,23 +1431,19 @@ class Character
         if(rand.Next(0,2) == 0 && weightedFilteredDics.Count != 0)
         {
             index = rand.Next(weightedFilteredDics.Count);
-            UnityEngine.Debug.Log("available number of feats in the weighted dic: "+weightedFilteredDics.Count);
             featToAdd = weightedFilteredDics[index];
-            UnityEngine.Debug.Log("FEAT CHOSEN THROUGH WEIGHTED SYSTEM");
         }
         else
         {
-            UnityEngine.Debug.Log("available number of feats in the normal dic: " + dicToFilter.Count);
             index = rand.Next(dicToFilter.Count);
             featToAdd = dicToFilter[index];
-            UnityEngine.Debug.Log("FEAT CHOSEN THROUGH NORMAL SYSTEM");
         }
         return featToAdd;
     }
 
+
     /// <summary>
-    /// Filters a new dictionary for use, based on the character information and the dictionary type (the dic type format allows to know what to filter)
-    ///             ------------------- does not currently allow duplicates of any kind (even though some feats allow for multiple selection)
+    /// Filters a new dictionary for use, based on the character information and the dictionary type (the dic type allows to know what to filter)
     /// </summary>
     /// <param name="dicToFilter">Dictionary to filter through</param>
     /// <param name="dicType">The type of dictionary the filterable dictionary is</param>
@@ -1493,7 +1452,7 @@ class Character
     {
         List<Dictionary<string, string>> filteredDic = new List<Dictionary<string, string>>();
         int featLevelPreq;
-        //different cases for if you are adding in class/ancestry initial feat? Such as initialClass or initialAncestry?
+        //different cases for different dics and dictypes. Ancestry dictionary filtered for character ancestry, etc.
         switch (dicType)
         {
             case ("Feat(Skill)"):
@@ -1510,7 +1469,8 @@ class Character
             case ("Feat(Ancestry)"):
                 foreach (var item in dicToFilter)
                 {
-                    if (item["level"].ToLower() != "initial")                     // parse level into int form while avoiding "initial" -string error
+                    // parse level into int form while avoiding "initial" -string error (initial feats are handled elsewhere)
+                    if (item["level"].ToLower() != "initial")
                     {
                         featLevelPreq = int.Parse(item["level"]);
                         //if level, prerequisites, ancestry and no duplicates is fine
@@ -1524,7 +1484,8 @@ class Character
             case ("Feat(Class)"):
                 foreach (var item in dicToFilter)
                 {
-                    if (item["level"].ToLower() != "initial")                     // parse level into int form while avoiding "initial" -string error
+                    // parse level into int form while avoiding "initial" -string error (initial feats are handled elsewhere)
+                    if (item["level"].ToLower() != "initial")
                     {
                         featLevelPreq = int.Parse(item["level"]);
                         //if level, prerequisites, class and no duplicates is fine
@@ -1536,6 +1497,7 @@ class Character
 
                 }
                 break;
+                //filter proficiencies for the class (dic contains all classes)
             case ("Proficiencies"):
                 foreach (var item in dicToFilter)
                 {
