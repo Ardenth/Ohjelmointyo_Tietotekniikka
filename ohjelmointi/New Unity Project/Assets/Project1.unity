@@ -2805,8 +2805,9 @@ GameObject:
   - component: {fileID: 538029072}
   - component: {fileID: 538029071}
   - component: {fileID: 538029070}
+  - component: {fileID: 538029075}
   m_Layer: 5
-  m_Name: Content
+  m_Name: FeatureContent2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2927,6 +2928,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 538029068}
   m_CullTransparentMesh: 0
+--- !u!114 &538029075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538029068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cecb1fee290cab479d53cddec79012c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  featureTemplate: {fileID: 5497469266290855370, guid: e24d401969d9e1c4d80481c56496cc18,
+    type: 3}
 --- !u!1 &550636600
 GameObject:
   m_ObjectHideFlags: 0
@@ -10352,6 +10367,7 @@ MonoBehaviour:
   skillControl: {fileID: 0}
   infoControl: {fileID: 0}
   spellControl: {fileID: 0}
+  featureControl: {fileID: 0}
 --- !u!1 &2051248939
 GameObject:
   m_ObjectHideFlags: 0

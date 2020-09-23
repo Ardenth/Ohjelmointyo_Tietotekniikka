@@ -362,10 +362,19 @@ class Character
     /// <summary>
     /// Get character's skills as a dictionary
     /// </summary>
-    /// <returns></returns>
+    /// <returns>character's skills as a dictionary</returns>
     internal Dictionary<string, string> GetSkills()
     {
         return this.skills;
+    }
+
+    /// <summary>
+    /// Get character's features as a dictionary
+    /// </summary>
+    /// <returns>character's features as a dictionary</returns>
+    internal Dictionary<string, string> GetFeatures()
+    {
+        return this.characterFeatures;
     }
 
 

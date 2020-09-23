@@ -21,6 +21,8 @@ public class UIUpdater : MonoBehaviour
     private FrontLogControl infoControl;
     [SerializeField]
     private SpellLogControl spellControl;
+    [SerializeField]
+    private FeatureLogControl featureControl;
     Character baseline = new Character();
 
 
@@ -55,10 +57,9 @@ public class UIUpdater : MonoBehaviour
         baseline = new Character();
         baseline.UpdateMods();
         baseline.LevelUp(levels);
-        //UIFeatUpdate("FeatContent");
         UIFeatUpdate("FeatContent2");
-        //UISkillUpdate("SkillContent");
         UISkillUpdate("SkillContent2");
+        UIFeatureUpdate("FeatureContent2");
         UISpellUpdate("SpellContent2");
         UIModUpdate();
         UIFrontPageUpdate("CharacterInfo");
@@ -133,31 +134,39 @@ public class UIUpdater : MonoBehaviour
 
 
     /// <summary>
-    /// Update UI spell section -- Another controller for future modification. Currently could use FeatLogControl, but create paths for UI for future modification when XML gets implemented for spells
+    /// Update UI spell section -- Another controller for future modification. Currently could use FeatLogControl, but created paths for UI for future modification when XML gets implemented for spells
     /// </summary>
     /// <param name="objectName">Parent object to hold all feat's information</param>
     void UISpellUpdate(string objectName)
     {
         ControlTabActivity(true);
         spellControl = GameObject.Find(objectName).GetComponent<SpellLogControl>();
-        GameObject featView = GameObject.Find(objectName);
-        List<Dictionary<string, string>> featsDictionary = baseline.GetFeats();
-        foreach (var feat in featsDictionary)
+        GameObject SpellControl = GameObject.Find(objectName);
+        List<Dictionary<string, string>> featsDictionaryFilter = baseline.GetFeats();
+        List<Dictionary<string, string>> featsDictionary = new List<Dictionary<string, string>>();
+        //control the dictionary to only include spellcasting specific information
+        foreach (var feat in featsDictionaryFilter)
         {
-            if (!feat["name"].Contains("Spell"))
+            if (feat["name"].Contains("Spell"))
             {
-                featsDictionary.Remove(feat);
+                featsDictionary.Add(feat);
             }
         }
         List<string> featInfo = new List<string>();
         //Removes all current children from the object
-        foreach (Transform child in featView.transform)
+        foreach (Transform child in SpellControl.transform)
         {
             GameObject.Destroy(child.gameObject);
         }
         //Adds all character's feats for the object
         foreach (var feat in featsDictionary)
         {
+            //if the feat dictiary is empty (if the character is not a caster)
+            if (featsDictionary.Count == 0)
+            {
+                break;
+            }
+            //clear previous information for use before creating a list for the Log to use
             featInfo.Clear();
             featInfo.Add(feat["name"]);
             Debug.Log(feat["name"]);
@@ -177,10 +186,10 @@ public class UIUpdater : MonoBehaviour
     {
         ControlTabActivity(true);
         skillControl = GameObject.Find(objectName).GetComponent<SkillLogControl>();
-        GameObject skillView = GameObject.Find(objectName);
+        GameObject SkillContent = GameObject.Find(objectName);
 
         //Removes all current children from the object
-        foreach (Transform child in skillView.transform)
+        foreach (Transform child in SkillContent.transform)
         {
             GameObject.Destroy(child.gameObject);
         }
@@ -218,6 +227,7 @@ public class UIUpdater : MonoBehaviour
         characterInfo.Add(baseline.CapitalizeFirstChar(baseline.characterClass));
         characterInfo.Add(baseline.characterFeatures["primaryStat"]);
         characterInfo.Add(baseline.classInitialFeat);
+        //input information to UI
         infoControl.LogFrontText(characterInfo, objectName);
         ControlTabActivity(false);
     }
@@ -226,9 +236,25 @@ public class UIUpdater : MonoBehaviour
     /// <summary>
     /// Update UI Feature information section
     /// </summary>
-    void UIFeatureUpdate()
+    /// <param name="objectName">Parent object to hold all skill's information</param>
+    void UIFeatureUpdate(string objectName)
     {
+        ControlTabActivity(true);
+        featureControl = GameObject.Find(objectName).GetComponent<FeatureLogControl>();
+        GameObject FeatureContent = GameObject.Find(objectName);
 
+        //Removes all current children from the object
+        foreach (Transform child in FeatureContent.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
+        Dictionary<string, string> featuresDictionary = baseline.GetFeatures();
+        //Adds all skills as children for the object
+        foreach (KeyValuePair<string, string> item in featuresDictionary)
+        {
+            featureControl.LogFeatureText(item, objectName);
+        }
+        ControlTabActivity(false);
     }
 
 

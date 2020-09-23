@@ -5,23 +5,14 @@ UI:
 - Skill Page: DONE
 
 
-- Feat Page:
-	- Description BUTTON -feateille?
-		- aikaisemmin listatuista syista (18.9 GITHUB?)
-	- Feattien listauksen aikana name, current level, type
-		 ja description mainitaan (UI muutos?)
-DONE
+- Feat Page: DONE
 
 - Feature Page: list metodi (hp, attacks, defences, etc.) 
 	- UI (jos tyhja? - ei mainita "" tai "none")
+DONE
 
+- Spell Page: DONE
 
-- Spell Page:
-	- Vain Spellcasting liittyvat Featit
-	- Deity?
-	- PrimaryStat (koska spellcasting modifier)
-	- SpellDC
-	- Class?
 
 - Korjaa valitun tabin highlight, kun painetaan generointia?
 --
@@ -29,7 +20,9 @@ Functionality:
 
 --------------------------
 DONE TODAY:
-
+Spell Page
+Feat Page
+Feature Page
 -----------
 
 Aloita:
