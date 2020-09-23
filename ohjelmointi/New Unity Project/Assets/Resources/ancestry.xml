@@ -52,7 +52,7 @@
 		<boost>Dexterity/Wisdom/Free</boost>
 		<flaw>Strength</flaw>
 		<languages>Common/Halfling/intmod</languages>
-		<trait>Halfling-Humanoid</trait>
+		<trait>Halfling/Humanoid</trait>
 		<special>Keen Eyes</special>
 	</race>
 	<race>

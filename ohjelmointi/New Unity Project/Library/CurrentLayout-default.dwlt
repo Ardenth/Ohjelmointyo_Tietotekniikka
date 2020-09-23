@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -150,7 +150,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 998
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -502,9 +502,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 36380000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: caf5ffffe6f5ffff28f6ffff38f7ffff54f7ffff1cf8ffff6afbffff
+      m_ExpandedIDs: 2af9ffff46f9ffff0afaffff6afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -712,23 +712,23 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 21
+      y: 0
       width: 1158
-      height: 635
-    m_Scale: {x: 0.82682294, y: 0.82682294}
-    m_Translation: {x: 579, y: 317.5}
+      height: 656
+    m_Scale: {x: 0.8541667, y: 0.8541667}
+    m_Translation: {x: 579, y: 328}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -700.2709
+      x: -677.85364
       y: -384
-      width: 1400.5417
+      width: 1355.7073
       height: 768
     m_MinimalGUI: 1
-  m_defaultScale: 0.82682294
+  m_defaultScale: 0.8541667
   m_LastWindowPixelSize: {x: 1158, y: 656}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
