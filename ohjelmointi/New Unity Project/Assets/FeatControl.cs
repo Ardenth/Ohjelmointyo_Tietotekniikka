@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FeatControl : MonoBehaviour
 {
@@ -26,6 +27,10 @@ public class FeatControl : MonoBehaviour
                 child.gameObject.SetActive(false);
 
             }
+            else if (child.name == "Button")
+            {
+                Descriptions.Add(child);
+            }
         }
 
     }
@@ -35,8 +40,10 @@ public class FeatControl : MonoBehaviour
     /// </summary>
     public void DescriptionButtonPress()
     {
+        
         foreach (var child in Descriptions)
         {
+
             if (child.name == "FeatPopUp")
             {
                 //set true if not active
@@ -45,11 +52,13 @@ public class FeatControl : MonoBehaviour
                     //isn't properly set, force a local position in view
                     child.localPosition = new Vector3(-40, -40, 0);
                     child.gameObject.SetActive(true);
+                    Descriptions[0].transform.GetComponent<Image>().color = new Color32(250, 14, 14, 255);
                 }
                 //otherwise set inactive
                 else
                 {
                     child.gameObject.SetActive(false);
+                    Descriptions[0].transform.GetComponent<Image>().color = new Color32(171, 14, 14, 255);
                 }
             }
         }

@@ -7,6 +7,7 @@ UI:
 - Feat Page: DONE
 
 - Feature Page: DONE
+	- myohemmissa versioissa voidaan luoda enemman Character -page kaltaiseksi
 
 - Spell Page: DONE
 
@@ -17,13 +18,6 @@ UI:
 Functionality:
 --------------------------
 DONE TODAY:
-Spell Page
-Feat Page
-Feature Page
-Destroy previous popups on new character build
-Features bug fixed
-HP bug fixed
-Comments
 -----------
 
 Aloita:
